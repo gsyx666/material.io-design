@@ -1,0 +1,4321 @@
+
+
+
+
+
+
+
+
+  
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Basil - Material Design</title>
+
+    <meta itemprop="name"        property="og:title"       name="twitter:title"       content="Basil" />
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Basil is a recipe browsing app that demonstrates how Material Design can be used in the food lifestyle space." />
+    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1HjqRJnLjQU6oih8GHs2j5VlbRwQ8ZAyS/basil-thumbnail-2x1.png" />
+    <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/material-studies/basil.html" />
+    <meta property="og:site_name" content="Material Design" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="https://material.io/favicon.ico">
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NHRPF8');</script>
+        <style>
+      .animatable {
+        opacity: 0;
+        position: relative;
+        top: 16px; 
+        transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+                    top 500ms cubic-bezier(.4,0,.2,1);
+      }
+    </style>
+
+    <link href="../static/m2/css/main.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+    <link rel="preload" href="../static/m2/js/main.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js" as="script">
+  </head>
+
+  <body class="header-show page--article left-rail"
+        data-comp="Global "
+        data-slug-id="basil"
+        data-spec-alias="mio-design"
+         >
+
+    
+
+
+<header class="header js-header" data-comp="Header">
+  
+    <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+    </button>
+  
+
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  <nav class="header__nav" role="navigation">
+    <ul class="header__nav-list header__nav-list--selected">
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/"
+    }
+'>
+      Home
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+    <a href="https://material.io/design"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/design"
+    }
+'>
+      Design
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/develop"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/develop"
+    }
+'>
+      Develop
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/tools"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/tools"
+    }
+'>
+      Tools
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+    </ul>
+  </nav>
+
+  <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform='{"basePath": "/", "ajax": false, "showOnLoad": false}'>
+    <button class="search-form__back js-search-back js-analytics-click" type="button"
+            data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "search back",
+    "action": "click icon",
+    "label": "DEFAULT: ga_label"
+    }
+'>
+      <i class="material-icons">arrow_back</i>
+    </button>
+
+    <input id="search-query" class="search-form__input js-search-input" name="q" type="text" title="query" placeholder="Search" autocomplete="off">
+  </form>
+
+  <button class="header__search header__button js-toggle-search js-analytics-click"
+          data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "search",
+    "action": "click icon",
+    "label": "DEFAULT: ga_label"
+    }
+'>
+    <div class="icons-container mdc-ripple-surface" data-mdc-ripple-is-unbounded>
+      <i class="material-icons header__spyglass" aria-label="Search">search</i>
+      <i class="material-icons header__search-close" aria-label="Close">close</i>
+    </div>
+  </button>
+</header>
+
+    
+
+
+<nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs">
+  
+    <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons" title="Toggle Navigation">menu</i>
+    </button>
+  
+
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  <ol class="container container--large breadcrumbs__list">
+    
+      
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click "
+           href="../material-studies.html"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../material-studies"
+    }
+'>Material studies</a>
+      </li>
+    
+      
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
+           href="basil.html"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../material-studies/basil.html"
+    }
+'>Basil</a>
+      </li>
+    
+      
+      <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
+           href="basil.html#about basil"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "#about basil"
+    }
+'>About Basil</a>
+      </li>
+    
+  </ol>
+</nav>
+    
+  
+    
+
+
+
+<nav class="side-nav" data-comp="SideNav" role="navigation">
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  
+
+  
+    
+    
+
+    
+      
+      <span class="side-nav__section-title">Material System</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../introduction.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../introduction"
+    }
+'>
+            Introduction
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
+                  aria-controls="_nav1"
+                  aria-expanded="true">
+            Material studies
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav1">
+    <ul class="side-nav__submenu" data-menu-state="open">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="about-our-material-studies.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/about-our-material-studies.html"
+    }
+'>
+            About our Material studies
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              side-nav__link--active
+               js-header-show"
+              href="basil.html" aria-current="page" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/basil.html"
+    }
+'>
+            Basil
+          </a>
+
+          
+          
+            <div class="side-nav__articles">
+              <i class="side-nav__progress-bar">
+                <i class="side-nav__scrub js-submenu-scrub"></i>
+              </i>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-about-basil js-analytics-click" href="basil.html#about-basil" data-section-id="about-basil"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#about-basil"
+    }
+'>
+                    <span class="js-anchor-text">About Basil</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-product-architecture js-analytics-click" href="basil.html#product-architecture" data-section-id="product-architecture"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#product-architecture"
+    }
+'>
+                    <span class="js-anchor-text">Product architecture</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-layout js-analytics-click" href="basil.html#layout" data-section-id="layout"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#layout"
+    }
+'>
+                    <span class="js-anchor-text">Layout</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-color js-analytics-click" href="basil.html#color" data-section-id="color"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#color"
+    }
+'>
+                    <span class="js-anchor-text">Color</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-typography js-analytics-click" href="basil.html#typography" data-section-id="typography"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#typography"
+    }
+'>
+                    <span class="js-anchor-text">Typography</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-iconography js-analytics-click" href="basil.html#iconography" data-section-id="iconography"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#iconography"
+    }
+'>
+                    <span class="js-anchor-text">Iconography</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-components js-analytics-click" href="basil.html#components" data-section-id="components"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#components"
+    }
+'>
+                    <span class="js-anchor-text">Components</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-motion js-analytics-click" href="basil.html#motion" data-section-id="motion"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#motion"
+    }
+'>
+                    <span class="js-anchor-text">Motion</span>
+                  </a>
+                </div>
+              
+            </div>
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="crane.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/crane.html"
+    }
+'>
+            Crane
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="fortnightly.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/fortnightly.html"
+    }
+'>
+            Fortnightly
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="owl.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/owl.html"
+    }
+'>
+            Owl
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="rally.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/rally.html"
+    }
+'>
+            Rally
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="reply.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/reply.html"
+    }
+'>
+            Reply
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="shrine.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/shrine.html"
+    }
+'>
+            Shrine
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+      </ul>
+      <span class="side-nav__section-title">Material Foundation</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../foundation-overview.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../foundation-overview"
+    }
+'>
+            Foundation overview
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav3"
+                  aria-expanded="false">
+            Environment
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav3">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/surfaces.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/surfaces.html"
+    }
+'>
+            Surfaces
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/elevation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/elevation.html"
+    }
+'>
+            Elevation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/light-shadows.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/light-shadows.html"
+    }
+'>
+            Light and shadows
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav4"
+                  aria-expanded="false">
+            Layout
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav4">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/understanding-layout.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/understanding-layout.html"
+    }
+'>
+            Understanding layout
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/responsive-layout-grid.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/responsive-layout-grid.html"
+    }
+'>
+            Responsive layout grid
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/spacing-methods.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/spacing-methods.html"
+    }
+'>
+            Spacing methods
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/component-behavior.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/component-behavior.html"
+    }
+'>
+            Component behavior
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/density.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/density.html"
+    }
+'>
+            Density
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav5"
+                  aria-expanded="false">
+            Navigation
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav5">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/understanding-navigation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/understanding-navigation.html"
+    }
+'>
+            Understanding navigation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/navigation-transitions.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/navigation-transitions.html"
+    }
+'>
+            Navigation transitions
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/search.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/search.html"
+    }
+'>
+            Search
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav6"
+                  aria-expanded="false">
+            Color
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav6">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/the-color-system.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/the-color-system.html"
+    }
+'>
+            The color system
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/applying-color-to-ui.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/applying-color-to-ui.html"
+    }
+'>
+            Applying color to UI
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/color-usage.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/color-usage.html"
+    }
+'>
+            Color usage
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/text-legibility.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/text-legibility.html"
+    }
+'>
+            Text legibility
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav7"
+                  aria-expanded="false">
+            Typography
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav7">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/the-type-system.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/the-type-system.html"
+    }
+'>
+            The type system
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/understanding-typography.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/understanding-typography.html"
+    }
+'>
+            Understanding typography
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/language-support.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/language-support.html"
+    }
+'>
+            Language support
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav8"
+                  aria-expanded="false">
+            Iconography
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav8">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/product-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/product-icons.html"
+    }
+'>
+            Product icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/system-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/system-icons.html"
+    }
+'>
+            System icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/animated-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/animated-icons.html"
+    }
+'>
+            Animated icons
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav9"
+                  aria-expanded="false">
+            Shape
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav9">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/about-shape.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/about-shape.html"
+    }
+'>
+            About shape
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-hierarchy.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-hierarchy.html"
+    }
+'>
+            Shape and hierarchy
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-as-expression.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-as-expression.html"
+    }
+'>
+            Shape as expression
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-motion.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-motion.html"
+    }
+'>
+            Shape and motion
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav10"
+                  aria-expanded="false">
+            Motion
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav10">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/understanding-motion.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/understanding-motion.html"
+    }
+'>
+            Understanding motion
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/speed.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/speed.html"
+    }
+'>
+            Speed
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/choreography.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/choreography.html"
+    }
+'>
+            Choreography
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/customization.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/customization.html"
+    }
+'>
+            Customization
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav11"
+                  aria-expanded="false">
+            Interaction
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav11">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/gestures.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/gestures.html"
+    }
+'>
+            Gestures
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/selection.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/selection.html"
+    }
+'>
+            Selection
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/states.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/states.html"
+    }
+'>
+            States
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav12"
+                  aria-expanded="false">
+            Communication
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav12">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/confirmation-acknowledgement.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/confirmation-acknowledgement.html"
+    }
+'>
+            Confirmation &amp; acknowledgement
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/data-formats.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/data-formats.html"
+    }
+'>
+            Data formats
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/empty-states.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/empty-states.html"
+    }
+'>
+            Empty states
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/gesture-education.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/gesture-education.html"
+    }
+'>
+            Gesture education
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/help-feedback.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/help-feedback.html"
+    }
+'>
+            Help &amp; feedback
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/imagery.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/imagery.html"
+    }
+'>
+            Imagery
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/launch-screen.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/launch-screen.html"
+    }
+'>
+            Launch screen
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/onboarding.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/onboarding.html"
+    }
+'>
+            Onboarding
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+      </ul>
+      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../guidelines-overview.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"
+    }
+'>
+            Guidelines overview
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav14"
+                  aria-expanded="false">
+            Material Theming
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav14">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-theming/overview.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/overview.html"
+    }
+'>
+            Overview
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-theming/implementing-your-theme.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/implementing-your-theme.html"
+    }
+'>
+            Implementing your theme
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav15"
+                  aria-expanded="false">
+            Components
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav15">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/app-bars-bottom.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-bottom.html"
+    }
+'>
+            App bars: bottom
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/app-bars-top.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-top.html"
+    }
+'>
+            App bars: top
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/backdrop.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/backdrop.html"
+    }
+'>
+            Backdrop
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/banners.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/banners.html"
+    }
+'>
+            Banners
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/bottom-navigation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/bottom-navigation.html"
+    }
+'>
+            Bottom navigation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/buttons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons.html"
+    }
+'>
+            Buttons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/buttons-floating-action-button.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons-floating-action-button.html"
+    }
+'>
+            Buttons: floating action button
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/cards.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/cards.html"
+    }
+'>
+            Cards
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/chips.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/chips.html"
+    }
+'>
+            Chips
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/data-tables.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/data-tables.html"
+    }
+'>
+            Data tables
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/dialogs.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dialogs.html"
+    }
+'>
+            Dialogs
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/dividers.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dividers.html"
+    }
+'>
+            Dividers
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/image-lists.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/image-lists.html"
+    }
+'>
+            Image lists
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/lists.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/lists.html"
+    }
+'>
+            Lists
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/menus.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/menus.html"
+    }
+'>
+            Menus
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/navigation-drawer.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/navigation-drawer.html"
+    }
+'>
+            Navigation drawer
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/progress-indicators.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/progress-indicators.html"
+    }
+'>
+            Progress indicators
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/selection-controls.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/selection-controls.html"
+    }
+'>
+            Selection controls
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/sheets-bottom.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-bottom.html"
+    }
+'>
+            Sheets: bottom
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/sheets-side.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-side.html"
+    }
+'>
+            Sheets: side
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/sliders.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sliders.html"
+    }
+'>
+            Sliders
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/snackbars.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/snackbars.html"
+    }
+'>
+            Snackbars
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/tabs.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tabs.html"
+    }
+'>
+            Tabs
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/text-fields.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/text-fields.html"
+    }
+'>
+            Text fields
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/tooltips.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tooltips.html"
+    }
+'>
+            Tooltips
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../usability/accessibility.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/accessibility.html"
+    }
+'>
+            Accessibility
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../usability/bidirectionality.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"
+    }
+'>
+            Bidirectionality
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav17"
+                  aria-expanded="false">
+            Platform guidance
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav17">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-bars.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-bars.html"
+    }
+'>
+            Android bars
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-fingerprint.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-fingerprint.html"
+    }
+'>
+            Android fingerprint
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-haptics.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-haptics.html"
+    }
+'>
+            Android haptics
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-icons.html"
+    }
+'>
+            Android icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-navigating-between-apps.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-navigating-between-apps.html"
+    }
+'>
+            Android navigating between apps
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-notifications.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-notifications.html"
+    }
+'>
+            Android notifications
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-permissions.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-permissions.html"
+    }
+'>
+            Android permissions
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-settings.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-settings.html"
+    }
+'>
+            Android settings
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-split-screen.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-split-screen.html"
+    }
+'>
+            Android split-screen
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-swipe-to-refresh.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-swipe-to-refresh.html"
+    }
+'>
+            Android swipe to refresh
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-text-selection-toolbar.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-text-selection-toolbar.html"
+    }
+'>
+            Android text selection toolbar
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-widget.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-widget.html"
+    }
+'>
+            Android widget
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/cross-platform-adaptation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/cross-platform-adaptation.html"
+    }
+'>
+            Cross-platform adaptation
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+
+  </ul>
+</nav>
+  
+
+
+    <main class="main" role="main">
+      
+      
+
+      
+<article class="article" data-comp="Waypoints">
+  <div class="article__intro container container--large js-waypoints-trigger-initial">
+    
+      
+      <nav class="article__nav animatable js-anim-trigger">
+        <span class="eyebrow">Contents</span>
+        <ul>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#about-basil" data-section-id="about-basil"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#about-basil"
+    }
+'>About Basil</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#product-architecture" data-section-id="product-architecture"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#product-architecture"
+    }
+'>Product architecture</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#layout" data-section-id="layout"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#layout"
+    }
+'>Layout</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#color" data-section-id="color"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#color"
+    }
+'>Color</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#typography" data-section-id="typography"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#typography"
+    }
+'>Typography</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#iconography" data-section-id="iconography"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#iconography"
+    }
+'>Iconography</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#components" data-section-id="components"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#components"
+    }
+'>Components</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="basil.html#motion" data-section-id="motion"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#motion"
+    }
+'>Motion</a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+    <h1 class="article__title animatable js-anim-trigger">
+      
+
+      Basil
+
+      
+        
+          <div class="article-controls">
+            
+          </div>
+        
+      
+    </h1>
+
+    
+
+    
+      
+      <div class="article__intro-text animatable js-anim-trigger">
+      <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<h2>Basil is a recipe app that uses Material Design components and Material Theming to create an on-brand experience that is exciting and easy to explore.</h2>
+<figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/12WcnQceK_XdiYVO_0IOeeKzGpwelBSZT/casestudies-basil-main.png" src="basil.html">
+</img></div>
+</div>
+</figure></div>
+      </div>
+    
+  </div>
+
+  <hr />
+
+  
+  <div class="article__body animatable js-show-header js-anim-trigger">
+    
+      
+      <section id="about-basil" class="container container--large js-waypoints-trigger article__section" data-section-title="About Basil" aria-label="About Basil">
+        
+          <h2 class="article__chapter-title">
+            About Basil
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div><p>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<br>
+Basil allows users to browse recipes curated by a group of chefs and bartenders. Its brand and app are designed to be approachable, direct, and delightfully surprising. </br></p>
+<figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1qQwTNqstINSoIBp_nH5X3AaJpeiM1Pen/casestudies-basil-brandattributes.png" src="basil.html">
+</img></div>
+</div>
+</figure><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Funky but functional aesthetic</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil’s bold typography and color are paired with a simple approach to content, creating an app that is exciting to explore, and easy to understand.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><p>Basil’s bold typography and color are paired with a simple approach to content, creating an app that is exciting to explore, and easy to understand. </p></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="product-architecture" class="container container--large js-waypoints-trigger article__section" data-section-title="Product architecture" aria-label="Product architecture">
+        
+          <h2 class="article__chapter-title">
+            Product architecture
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="col-list rich-media"><section class="module col-1"><div class="module"><p>The Basil app’s information architecture has a catalog structure. A catalog contains categorized, hierarchical data, with a top level consisting of peers which may each contain subordinate data.  </p><h2>Four top-level sections</h2><p>Basil’s app is divided into four top-level sections that cover different types of recipes: appetizers, entrées, desserts, and cocktails. Each of these contains a number of recipes, which contain two sub-sections: ingredients and directions.</p><h2>A novel approach to navigation</h2><p>While navigation drawers are often used for catalog structures, Basil’s interaction model uses a number of components to create an experience that is novel and sometimes surprising.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="product-architecture-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1BsZDQcuD127bq8PxBF5WgqBbouG6UGPa/casestudies-basil-family.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-0">
+<p>Basil seen on tablet, mobile, and desktop</p>
+</figcaption>
+</figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Desktop and tablet navigation</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>On desktop and tablet, Basil’s main sections are accessible through persistent tabs. Vertically scroll each section to browse recipes on desktop, and horizontally scroll to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>On desktop and tablet, Basil’s main sections are accessible through persistent tabs. Vertically scroll each section to browse recipes on desktop, and horizontally scroll to browse on tablet.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="product-architecture-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1qIOwaCT0ABa0Ukc408amfEXd_WuVLpDE/casestudies-basil-prodarch-desktop.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-1">
+<p>On desktop, Basil’s entrée section scrolls vertically. Scaled down to 50%.</p>
+</figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"
+    }
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__copy">
+<h2 class="object-card__title">Tabs</h2>
+<p class="object-card__body">Tabs organize high level content in an app content, such as switching between views, data sets, or functional aspects of an app.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="product-architecture-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1n59sfc7oZByAeeH13zCR6itqaf-a0Zij/casestudies-basil-prodarch-tablet.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-2">
+<p>On tablet, Basil’s entrée section is browsed by scrolling horizontally. Scaled down to 50%.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When a recipe is selected, tabs are used to toggle between ingredients and directions. Directions are displayed using a customized stepper component. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="product-architecture-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1avAziEos1Yx7IR9qnFW4P_hrbFK0AkdB/casestudies-basil-prodarch-tablet-tabs.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-3">
+<p>On tablet, this Basil detailed recipe screen uses tabs and steppers.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Mobile navigation </h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>On mobile, Basil’s main sections can be accessed by swiping down to reveal a navigation drawer. Navigation drawers provide access to the navigation destinations of...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>On mobile, Basil’s main sections can be accessed by swiping down to reveal a navigation drawer. </p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/18aCZQpR4osC6JkGc0UbWmyYa7oEKnj5f/01-navdrawer.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/navigation-drawer.html#navigation-drawer"
+    }
+' href="../components/navigation-drawer.html#navigation-drawer" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Rv9sL5l__mR-9cm-3Nm6Bue4okqjmrPx/nav-drawer-thumbnail-1x1-circle.png" style="background-image: url('../assets/1Rv9sL5l__mR-9cm-3Nm6Bue4okqjmrPx/nav-drawer-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Navigation drawer</h2>
+<p class="object-card__body">Navigation drawers provide access to the navigation destinations of your app.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"
+    }
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__copy">
+<h2 class="object-card__title">Tabs</h2>
+<p class="object-card__body">Tabs organize high level content in an app content, such as switching between views, data sets, or functional aspects of an app.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-bottom.html#sheets-bottom"
+    }
+' href="../components/sheets-bottom.html#sheets-bottom" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf/sheets-thumbnail-1x1-circle.png" style="background-image: url('../assets/121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf/sheets-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Sheets: Bottom</h2>
+<p class="object-card__body">Bottom sheets are surfaces containing supplementary content that are anchored to the bottom of the screen.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>After a section is selected, horizontally scroll to browse the recipes within it.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1VKW4PKHYZRpiMEnExiEpAUD2Ehnl1QC1/02-horizontalscroll.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>When a recipe is selected, tabs at the bottom provide access to ingredients and directions.</p><p>When one of bottom tabs is selected, a bottom sheet animates up to fill the screen. The sheet’s transparency expresses that users haven’t navigated to a new page, but are instead viewing a sheet that is in front of the recipe summary page. </p><p>Users can toggle between ingredients and directions on this sheet, or swipe down to move it off-screen.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1HkUavgJxUP_XButPD9gxFIvmjFBWuZ6d/03-tabdrawer.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="layout" class="container container--large js-waypoints-trigger article__section" data-section-title="Layout" aria-label="Layout">
+        
+          <h2 class="article__chapter-title">
+            Layout
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Grid system</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil uses a responsive grid system, which has flexible columns and padding that can resize depending on the screen width (such as mobile, tablet, or...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Basil uses a responsive grid system, which has flexible columns and padding that can resize depending on the screen width (such as mobile, tablet, or desktop). </p><p>This grid system informs where typography is placed, because Basil center-aligns type to sections of its layout.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1bxRegoCnKG_6atpDwTj6igLDv1r6la2H/casestudies-basil-grid.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>Basil’s grid system, scaled down to 50%</p>
+</figcaption></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../layout/responsive-layout-grid.html#responsive-layout-grid"
+    }
+' href="../layout/responsive-layout-grid.html#responsive-layout-grid" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/11oASqhi0SLKrWq_KRSNoiX2X2KfYK43I/layout-thumbnail-1x1-circle.png" style="background-image: url('../assets/11oASqhi0SLKrWq_KRSNoiX2X2KfYK43I/layout-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Responsive Layout Grid</h2>
+<p class="object-card__body">The Material Design responsive layout grid adapts to screen size and orientation. This UI guidance includes a flexible grid that ensures consistency across layouts.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/image-lists.html#image-list"
+    }
+' href="../components/image-lists.html#image-list" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1LPtdxSR57BqRqZ9JKL6X-CuMBgQYsob8/image-list-thumbnail-1x1-circle.png" style="background-image: url('../assets/1LPtdxSR57BqRqZ9JKL6X-CuMBgQYsob8/image-list-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Image List</h2>
+<p class="object-card__body">Image lists display a collection of images in an organized grid.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../layout/component-behavior.html#component-behavior"
+    }
+' href="../layout/component-behavior.html#component-behavior" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1SRT0wdjmgW-KANP2R6zkeb6dq1uuSn7k/layout-thumbnail-1x1-circle.png" style="background-image: url('../assets/1SRT0wdjmgW-KANP2R6zkeb6dq1uuSn7k/layout-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Component behavior</h2>
+<p class="object-card__body">The following guidance describes how components behave, both in the grid and between breakpoints.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil’s headline responsively changes type size to fill the width of the screen on mobile.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="layout-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1-AkPSRLigxtb_QiVLU_oAMdQsj1DbQQf/casestudies-basil-layout-type-1.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="layout-figure-caption-0"><p>The type size of the recipe title dynamically changes to fill the width the screen.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="layout-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1GZdHQ-Y01Pcb6pkVg-uFzcMmf4YIht-h/casestudies-basil-layout-type-2.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="layout-figure-caption-1"><p>The type size of the recipe title dynamically changes to fill the width of the screen.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Elevation</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil doesn’t use shadow to show elevation between UI elements. Instead, it places content at different elevations which are distinguished using parallax motion and opacity....</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil doesn’t use shadow to show elevation between UI elements. Instead, it places content at different elevations which are distinguished using parallax motion and opacity. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="layout-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1rsPHidaFHFb4_pa3OO8xJjIZvKbTH7UY/casestudies-basil-elevation.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="layout-figure-caption-2">
+<p>These three layers look different from one another, and can be distinguished through parallax motion.</p>
+</figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../environment/elevation.html#elevation"
+    }
+' href="../environment/elevation.html#elevation" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1xD7lAloH7IQN5yUKUJ86_VRBemCcOiBY/environment-thumbnail-1x1-circle.png" style="background-image: url('../assets/1xD7lAloH7IQN5yUKUJ86_VRBemCcOiBY/environment-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Elevation</h2>
+<p class="object-card__body">Elevation is the relative distance between two surfaces along the z-axis.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-bottom.html#sheets-bottom"
+    }
+' href="../components/sheets-bottom.html#sheets-bottom" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf/sheets-thumbnail-1x1-circle.png" style="background-image: url('../assets/121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf/sheets-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Sheets: Bottom</h2>
+<p class="object-card__body">Bottom sheets are surfaces containing supplementary content that are anchored to the bottom of the screen.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"
+    }
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__copy">
+<h2 class="object-card__title">Tabs</h2>
+<p class="object-card__body">Tabs organize high level content in an app content, such as switching between views, data sets, or functional aspects of an app.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>Basil expresses elevation differences by using transparency to show stacked layers of UI elements. </p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="layout-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1wdt7pZhLccRMPv3MDktqMXqpKbb3bPC0/04-tabdrawer.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="layout-figure-caption-3"><p>This slightly transparent bottom sheet animates on-screen, allowing the user to see the main recipe screen beneath it. This lets the user know they have not navigated to a new screen, but are instead interacting with a sheet above the content they were just viewing. </p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When text scrolls above imagery, a duotone image treatment ensures text remains legible.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="layout-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1srZVfCOGZ7h8of45KkKvNZ-C1sGZNWDs/casestudies-basil-elevationtransparency-1a.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="layout-figure-caption-4">
+<p>Duotone image treatment</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="color" class="container container--large js-waypoints-trigger article__section" data-section-title="Color" aria-label="Color">
+        
+          <h2 class="article__chapter-title">
+            Color
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Color theme</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil uses a color theme inspired by the deep and rich colors from fruits and vegetables: The Material Design color system helps you choose colors...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil uses a color theme inspired by the deep and rich colors from fruits and vegetables: </p><ul class="lst-kix_esa6fmnj94jc-0 start"><li>Basil’s <strong>primary color </strong>is olive green </li><li>Basil’s <strong>secondary color</strong> is orange</li></ul><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1-FoNiTdukoNd1lKRaIqtBe2Wt_YQqTQO/casestudies-basil-color.png" src="basil.html">
+</img></div>
+</div>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../color/the-color-system.html#the-color-system"
+    }
+' href="../color/the-color-system.html#the-color-system" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Y8aHGqd-cCDfwb6OVpNg45cUfwaQXuy1/color-thumbnail-1x1-circle.png" style="background-image: url('../assets/1Y8aHGqd-cCDfwb6OVpNg45cUfwaQXuy1/color-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">The Color System</h2>
+<p class="object-card__body">The Material Design color system helps you choose colors for your user interface.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../color/applying-color-to-ui.html#applying-color-to-ui"
+    }
+' href="../color/applying-color-to-ui.html#applying-color-to-ui" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO/color-thumbnail-1x1-circle.png" style="background-image: url('../assets/1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO/color-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Applying color to UI</h2>
+<p class="object-card__body">In a UI, color has a variety of roles: from containing meaning, to expressing a look and feel.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="typography" class="container container--large js-waypoints-trigger article__section" data-section-title="Typography" aria-label="Typography">
+        
+          <h2 class="article__chapter-title">
+            Typography
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">  Typefaces</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="typography-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1Wm88g4xxsJDHbg3m1twW0Pq0YQ1JJbpe/casestudies-basil-type.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-0">
+<p>        1.        Montserrat </p><p>        2.        Lekton</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Type scale</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil’s type scale uses two typefaces: Montserrat , and Lekton . The two typefaces make a quirky pair, adding to the character of Basil. Use...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil’s type scale uses two typefaces: 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Montserrat"
+    }
+' href="https://fonts.google.com/specimen/Montserrat" rel="noopener" target="_blank">
+    Montserrat
+  </a>
+, and 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Lekton"
+    }
+' href="https://fonts.google.com/specimen/Lekton" rel="noopener" target="_blank">
+    Lekton
+  </a>
+. The two typefaces make a quirky pair, adding to the character of Basil. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 119.473684211%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="typography-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/19OGNWKvZlFyK6lolnTdSxuueA0eSoAyE/casestudies-basil-typescale.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-1">
+<p>Basil’s type scale</p>
+</figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/the-type-system.html#the-type-system"
+    }
+' href="../typography/the-type-system.html#the-type-system" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD/typography-thumbnail-1x1-circle.png" style="background-image: url('../assets/1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD/typography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">The Type System</h2>
+<p class="object-card__body">Use typography to present your design and content as clearly and efficiently as possible.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Montserrat"
+    }
+' href="https://fonts.google.com/specimen/Montserrat" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT/googlefonts-ext.png" style="background-image: url('../assets/1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT/googlefonts-ext.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Montserrat</h2>
+<p class="object-card__body">Google Fonts</p>
+</div>
+<p class="object-card__label">
+      Related Link
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/understanding-typography.html#understanding-typography"
+    }
+' href="../typography/understanding-typography.html#understanding-typography" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png" style="background-image: url('../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Understanding typography</h2>
+<p class="object-card__body">Typography is critical in establishing hierarchy and expressing brand presence that support an effective digital experience.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Montserrat</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Montserrat a sans serif font with a wide letterforms. Basil uses it as a display typeface, as well as for body, caption, and button text....</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Montserrat a sans serif font with a wide letterforms. Basil uses it as a display typeface, as well as for body, caption, and button text.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="typography-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1AevWR8BX2U_7OMGe2l1b2Ulnb3V0dfKI/casestudies-basil-type-montserrat-1.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-2">
+<p>Montserrat’s letterforms</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="typography-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/12HCpe6MA5iazXr1uXE3GgKn3NurhD9bB/casestudies-basil-type-montserrat-2.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-3">
+<p>Montserrat compared to Roboto</p>
+</figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/the-type-system.html#the-type-system"
+    }
+' href="../typography/the-type-system.html#the-type-system" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD/typography-thumbnail-1x1-circle.png" style="background-image: url('../assets/1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD/typography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">The Type System</h2>
+<p class="object-card__body">Use typography to present your design and content as clearly and efficiently as possible.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Lekton"
+    }
+' href="https://fonts.google.com/specimen/Lekton" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT/googlefonts-ext.png" style="background-image: url('../assets/1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT/googlefonts-ext.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Lekton</h2>
+<p class="object-card__body">Google Fonts</p>
+</div>
+<p class="object-card__label">
+      Related Link
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/understanding-typography.html#understanding-typography"
+    }
+' href="../typography/understanding-typography.html#understanding-typography" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png" style="background-image: url('../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Understanding typography</h2>
+<p class="object-card__body">Typography is critical in establishing hierarchy and expressing brand presence that support an effective digital experience.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Lekton</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Lekton is inspired by some of the typefaces used in Olivetti typewriters. The glyphs are ‘trispaced,’ meaning they are all built using the same three...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Lekton is inspired by some of the typefaces used in Olivetti typewriters. The glyphs are ‘trispaced,’ meaning they are all built using the same three modular units. This produces a typeface with a predictable vertical alignment of characters, similar to a monospace font. Lecton is used for Basil’s smaller headlines, and subtitles. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="typography-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1a76Di-rgQe8VrSNPxglJLVCNY5Uv1bqC/casestudies-basil-type-lekton-1.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-4">
+<p>Lekton’s letterforms</p>
+</figcaption>
+</figure><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="typography-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1GO7KSKL130W4N3L_5LE9yIqmgr_vHQLd/casestudies-basil-type-lekton-2.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-5"><p>Lekton compared to Roboto</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="iconography" class="container container--large js-waypoints-trigger article__section" data-section-title="Iconography" aria-label="Iconography">
+        
+          <h2 class="article__chapter-title">
+            Iconography
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil’s custom icons are designed with a simple, whimsical quality to help make content feel approachable.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="iconography-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1ci_vsM0iYaIQw_-Senaude0uTFgeZgQh/casestudies-basil-icons-alt.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="iconography-figure-caption-0">
+<p>1. Basil’s icons were designed using the same grid structure, 2. A collection of Basil’s icons</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil’s icons use its primary color (olive green). Basil’s secondary color (orange) is used on iconography to indicate if a food type is not included (such as gluten or dairy).</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="iconography-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1E_9kEb3hczRAuv1TKd5u2_CDmKVGzOKm/casestudies-basil-icons-2color.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="iconography-figure-caption-1">
+<p>Basil’s secondary color (orange) is used indicate the recipe is gluten and egg free.</p>
+</figcaption>
+</figure></div></section></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="components" class="container container--large js-waypoints-trigger article__section" data-section-title="Components" aria-label="Components">
+        
+          <h2 class="article__chapter-title">
+            Components
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Lists</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil displays ingredients for each recipe using the list component. Each list uses Basil’s typography and iconography, customized with a line of dots that connect...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil displays ingredients for each recipe using the list component. Each list uses Basil’s typography and iconography, customized with a line of dots that connect each  ingredient to a quantity.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1huFtM-qN_f8qUvfWyI6ZcYof9YKWyp12/casestudies-basil-lists-1.png" src="basil.html">
+</img></div>
+</div>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Bottom sheet</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>On mobile, Basil uses an expanding bottom sheet to provide recipe ingredients and directions. Upon tapping a tab, a full-screen sheet appears in front of...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>On mobile, Basil uses an expanding bottom sheet to provide recipe ingredients and directions. </p><p>Upon tapping a tab, a full-screen sheet appears in front of the content. The user can toggle between recipe ingredients and directions on this sheet. </p><p>The sheet’s background has a slight transparency to let the user know the sheet is above the screen that generated it, and that the user can dismiss the sheet at any time.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1HkUavgJxUP_XButPD9gxFIvmjFBWuZ6d/03-tabdrawer.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/lists.html#lists"
+    }
+' href="../components/lists.html#lists" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1cIfap6uWJWc2t3lZgjkvIF-asVpw7qGd/list-thumbnail-1x1-circle.png" style="background-image: url('../assets/1cIfap6uWJWc2t3lZgjkvIF-asVpw7qGd/list-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Lists</h2>
+<p class="object-card__body">Lists are continuous, vertical display of text or images.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-bottom.html#sheets-bottom"
+    }
+' href="../components/sheets-bottom.html#sheets-bottom" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf/sheets-thumbnail-1x1-circle.png" style="background-image: url('../assets/121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf/sheets-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Sheets: Bottom</h2>
+<p class="object-card__body">Bottom sheets are surfaces containing supplementary content that are anchored to the bottom of the screen.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"
+    }
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__copy">
+<h2 class="object-card__title">Tabs</h2>
+<p class="object-card__body">Tabs organize high level content in an app content, such as switching between views, data sets, or functional aspects of an app.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Tabs</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>On desktop and tablet, Basil uses tabs to navigate between sections. The tabs are distributed equally across a fixed width region, which is aligned to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>On desktop and tablet, Basil uses tabs to navigate between sections. The tabs are distributed equally across a fixed width region, which is aligned to the center of the screen. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 33.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="components-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1iwyeA1792IBDIq4Sadp7h-7HbXHnv8sg/casestudies-basil-tabs-1.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-0">
+<p>Basil uses custom tabs for navigation on desktop and tablet, scaled down to 62.5%</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="components-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1haVryl-_EQGxUwZGIXXrXZlLdEJv8j-W/casestudies-basil-tabs-2-625p.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-1">
+<p>1. A baseline tab</p><br>
+<p>2. Basil’s desktop and tablet navigation tabs use custom typography, color, and states. The custom selected state changes text to a heavier font weight. (Scaled down to 62.5%)</p>
+</br></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>On mobile, tabs allow users to toggle between recipe ingredients and directions. By default, these tabs are displayed at the bottom of a recipe screen. Upon selection, they move to the top of the screen and attach to a surface that allows users to toggle between them.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1xbdlXqRDjK-qHMyj559wKWHBfW20etEs/casestudies-basil-tabs-2.png" src="basil.html">
+</img></div>
+</div>
+</figure><figcaption>
+<p>Recipe detail tabs are displayed first at the bottom of the screen (1). When tapped, they move to the top of the screen, allowing the user to toggle between them (2).</p>
+</figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="components-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/11-ioD0Ccc9Or3zxyRvnIYIajANZQurRT/casestudies-basil-tabs-3.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-2">
+<p>1. A baseline tab </p><br>
+<p>2. Basil’s recipe tabs use custom typography, color, and states. The custom selected state includes a stroke under the selected tab text, which also changes to a heavier font weight.</p>
+</br></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Steppers</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil uses non-linear steppers for recipe directions, so users can move between the different steps in any order they want. Steps use Basil’s typography and...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil uses non-linear steppers for recipe directions, so users can move between the different steps in any order they want. Steps use Basil’s typography and color scheme, with customized vertical spacing.</p><hr class="spacer" role="separator"/></div></section><section class="module-figure col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="components-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1LUJfB9Wd3yjJOBt2zsJ8Jpz7DHd8zbsE/casestudies-basil-steppers-1.png" src="basil.html">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-3">
+<p>(1) Basil uses magnification to focus on the activated stepper, scaled up to 200%</p><br>
+<p>(2) Basil’s stepper appears on the right side of the screen.</p>
+</br></figcaption>
+</figure></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1SsJFp5e-WbeGJr5cBV2_E73QOq-kNtxr/steppers-custom-basil-mobile.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>Basil’s use of stretch motion on steppers demonstrates an elastic style.</p>
+</figcaption></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="motion" class="container container--large js-waypoints-trigger article__section" data-section-title="Motion" aria-label="Motion">
+        
+          <h2 class="article__chapter-title">
+            Motion
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Launch screen</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil’s logo animation plays off the use of parallax throughout the app. The subtle overshoot on the bottom arrow encourages the user to navigate vertically...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil’s logo animation plays off the use of parallax throughout the app. The subtle overshoot on the bottom arrow encourages the user to navigate vertically and explore.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="motion-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1X_luhQzbs0gqKzZ4MTHa4FUjxVhu30yk/01-launch.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-0">
+<p>When launching Basil, a logo animation is displayed.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Navigation transitions</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Basil makes use of emphasized easing, parallax, and condensed transitions when navigating the app. Parallax is used to indicate the elevation between elements and to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil makes use of emphasized easing, parallax, and condensed transitions when navigating the app.</p><h2>Mobile</h2><p>Parallax is used to indicate the elevation between elements and to add visual interest during transitions.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="motion-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1RPL04rH9dRRZ8Y8eH5b0dW-bGdTkQggW/02-parallax.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-1">
+<p>Navigation transitions on mobile make use of parallax.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Tablet and desktop</h2><p>On tablet and desktop, Basil uses condensed transitions to keep the transitions simple and clean. A translation in the z-axis is combined with a fade-through animation to create the condensed transition.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 75.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="motion-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1SqbzZK_luz3iGSbGWRzNeZKNV61EDdp2/04-condensedtransition.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-2">
+<p>Parent-child transitions on tablet and desktop are condensed when clicking on a recipe.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Stretch</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Components like steppers use stretch motion to add an unexpected and delightful tone to simple interactions.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Components like steppers use stretch motion to add an unexpected and delightful tone to simple interactions.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="motion-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1LdeLDE-uMvf0j3LE6N9MaZUG5iDx5oVZ/03-elasticity.mp4" src="basil.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-3">
+<p>The stepper indicator uses elasticity when transitioning between steps.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+
+    
+  </div>
+  
+
+  <div class="container container--large">
+    
+
+
+  <h2>Up next
+    
+      <div class="article-controls">
+        
+      </div>
+    
+  </h2>
+
+
+<div class="suggested-articles"><div><a aria-label="Crane" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../material-studies/crane.html"
+    }
+' href="crane.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1Eh7V4Qaqj3yvat9YSV3gN6CWYGNgaOup/crane-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Material studies</h3>
+<h4 class="suggested-articles__item-subtitle">Crane</h4>
+</a><a aria-label="Fortnightly" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../material-studies/fortnightly.html"
+    }
+' href="fortnightly.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1xpsWT0DfgEuJ8cP1ZV-dGRbe2G7FHncu/fortnightly-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Material studies</h3>
+<h4 class="suggested-articles__item-subtitle">Fortnightly</h4>
+</a><br>
+<a aria-label="Owl" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../material-studies/owl.html"
+    }
+' href="owl.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1-YKh_M7CACGYuWaQiYlXcRoSF4bhU9N-/owl-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Material studies</h3>
+<h4 class="suggested-articles__item-subtitle">Owl</h4>
+</a></div></div>
+  </div>
+</article>
+
+    </main>
+
+    
+      
+
+
+<footer class="footer">
+  <div class="container container--jumbo">
+    <div class="footer-block footer-block--about">
+      
+      <a class="footer-block__logo js-analytics-click" href="https://material.io/"
+         data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "/"
+    }
+'>
+        <img class="footer-block__material-logo animatable js-lazy-image" data-src="../static/m2/images/material_logo.svg" src="basil.html" alt="Material Design"/>
+      </a>
+      <div class="footer-block__content">
+        <p class="footer-block__description">Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</p>
+        <ul class="footer-block__social-nav">
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.github.com/material-components"
+    }
+'>GitHub</a>
+</li>
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.twitter.com/materialdesign"
+    }
+'>Twitter</a>
+</li>
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.youtube.com/googledesign"
+    }
+'>YouTube</a>
+</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-block footer-block--legal">
+      <a class="footer-block__logo js-analytics-click" href="https://www.google.com"
+         data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.google.com"
+    }
+'>
+        <img class="footer-block__google-logo animatable js-lazy-image" data-src="../static/m2/images/google_logo.svg" src="basil.html" alt="Google"/>
+      </a>
+      <div class="footer-block__content">
+        <ul class="footer-block__legal-nav">
+          <li class="footer-block__legal-nav-item">
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://policies.google.com/privacy"
+    }
+'>Privacy Policy</a>
+</li>
+          <li class="footer-block__legal-nav-item">
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://policies.google.com/terms"
+    }
+'>Terms of Service</a>
+</li><li class="footer-block__legal-nav-item"><a href="javascript:void(0)" class="footer-block__legal-nav-link" onclick="try{userfeedback.api.startFeedback({'productId': '1027542', 'bucket': 'material_spec', 'locale': 'en', 'allowNonLoggedInFeedback': true});return false;}catch(e){}">Feedback</a></li></ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+        <div class="ui-mask js-ui-mask"></div>
+
+    
+      <div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
+    <header class="lightbox__header">
+      <div class="lightbox__header-title">
+        <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+        </span>
+        <h2 class="lightbox__title js-lightbox-title"></h2>
+      </div>
+
+      <div class="lightbox__actions">
+        <button type="button" name="button" class="lightbox-redlines-toggle js-redline-sidebar-toggle" data-comp="Tooltip" data-props-tooltip='{"tip": "View Specs", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>flip</i>
+        </button>
+
+        <button type="button" name="button" class="lightbox__button js-share" data-comp="Tooltip" data-props-tooltip='{"tip": "Share", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
+        </button>
+
+        
+      </div>
+    </header>
+
+    <div class="lightbox__template js-zoom-wrapper">
+      <div class="lightbox__content js-lightbox-content">
+        
+        <img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />
+      </div>
+      <div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
+        <i class="material-icons">&#xE3F4;</i>
+        <span class="redline-sidebar__label-text">Image only</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
+        <i class="material-icons">format_shapes</i>
+        <span class="redline-sidebar__label-text">Measurements</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
+        <i class="material-icons">format_size</i>
+        <span class="redline-sidebar__label-text">Text</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
+        <i class="material-icons">palette</i>
+        <span class="redline-sidebar__label-text">Color</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
+        <i class="material-icons">rounded_corner</i>
+        <span class="redline-sidebar__label-text">Shape and Elevation</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
+        <i class="material-icons">category</i>
+        <span class="redline-sidebar__label-text">Components</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
+        <i class="material-icons">notes</i>
+        <span class="redline-sidebar__label-text">Notes</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__toggles js-redline-layer-toggles">
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+        <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="dimensions">Dimensions</label>
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+        <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="padding">Padding</label>
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+        <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="typography">Text baseline</label>
+    
+  </div>
+</div>
+      <nav class="carousel__nav">
+  <button
+      class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Previous", "direction": "right"}'>
+    <i class="material-icons">chevron_left</i>
+  </button>
+
+  <button
+      class="carousel__button carousel__button--next mdc-ripple-surface js-carousel-next"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Next", "direction": "left"}'>
+    <i class="material-icons">chevron_right</i>
+  </button>
+</nav>
+      <div class="zoom-buttons" data-comp="Zoom">
+  <div class="zoom-buttons__wrapper">
+
+    <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">remove</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-reset" data-comp="Tooltip" data-props-tooltip='{"tip": "Reset", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">search</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-in" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom in", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">add</i>
+    </button>
+
+    <div class="zoom-buttons__extras">
+      <button class="mdc-button-zoom js-colorpicker-toggle" data-comp="Tooltip Colorpicker" data-props-tooltip='{"tip": "Color picker", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">colorize</i>
+      </button>
+      <button class="mdc-button-zoom js-ruler-toggle" data-comp="Tooltip Ruler" data-props-tooltip='{"tip": "Ruler", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">straighten</i>
+      </button>
+    </div>
+
+  </div>
+</div>
+    </div>
+
+
+  <aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
+      <button type="button" class="mdc-dialog-share-close js-dialog-close">
+        <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+      </button>
+    </header>
+    <section id="mdc-dialog-description" class="mdc-dialog__body">
+      <input type="text" readonly class="mdc-dialog-share-url js-share-url" />
+      <button type="button" class="mdc-button mdc-ripple-surface mdc-dialog-copy js-dialog-copy">Copy</button>
+    </section>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside>
+</div>
+      <div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+  <div class="mdc-snackbar__text"></div>
+  <div class="mdc-snackbar__action-wrapper">
+    <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
+  </div>
+</div>
+    
+
+    
+    <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
+    <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  </body>
+</html>

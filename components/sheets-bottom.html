@@ -1,0 +1,4454 @@
+
+
+
+
+
+
+
+
+  
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Sheets: bottom - Material Design</title>
+
+    <meta itemprop="name"        property="og:title"       name="twitter:title"       content="Sheets: bottom" />
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Bottom sheets are surfaces containing supplementary content that are anchored to the bottom of the screen." />
+    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1MD8iABRRirQ_Wsm72nJAcYikKejk20iw/sheets-thumbnail-2x1.png" />
+    <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/components/sheets-bottom.html" />
+    <meta property="og:site_name" content="Material Design" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="https://material.io/favicon.ico">
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NHRPF8');</script>
+        <style>
+      .animatable {
+        opacity: 0;
+        position: relative;
+        top: 16px; 
+        transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+                    top 500ms cubic-bezier(.4,0,.2,1);
+      }
+    </style>
+
+    <link href="../static/m2/css/main.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+    <link rel="preload" href="../static/m2/js/main.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js" as="script">
+  </head>
+
+  <body class="header-show page--article left-rail"
+        data-comp="Global "
+        data-slug-id="sheetsBottom"
+        data-spec-alias="mio-design"
+         >
+
+    
+
+
+<header class="header js-header" data-comp="Header">
+  
+    <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+    </button>
+  
+
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  <nav class="header__nav" role="navigation">
+    <ul class="header__nav-list header__nav-list--selected">
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/"
+    }
+'>
+      Home
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+    <a href="https://material.io/design"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/design"
+    }
+'>
+      Design
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/develop"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/develop"
+    }
+'>
+      Develop
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/tools"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/tools"
+    }
+'>
+      Tools
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+    </ul>
+  </nav>
+
+  <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform='{"basePath": "/", "ajax": false, "showOnLoad": false}'>
+    <button class="search-form__back js-search-back js-analytics-click" type="button"
+            data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "search back",
+    "action": "click icon",
+    "label": "DEFAULT: ga_label"
+    }
+'>
+      <i class="material-icons">arrow_back</i>
+    </button>
+
+    <input id="search-query" class="search-form__input js-search-input" name="q" type="text" title="query" placeholder="Search" autocomplete="off">
+  </form>
+
+  <button class="header__search header__button js-toggle-search js-analytics-click"
+          data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "search",
+    "action": "click icon",
+    "label": "DEFAULT: ga_label"
+    }
+'>
+    <div class="icons-container mdc-ripple-surface" data-mdc-ripple-is-unbounded>
+      <i class="material-icons header__spyglass" aria-label="Search">search</i>
+      <i class="material-icons header__search-close" aria-label="Close">close</i>
+    </div>
+  </button>
+</header>
+
+    
+
+
+<nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs">
+  
+    <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons" title="Toggle Navigation">menu</i>
+    </button>
+  
+
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  <ol class="container container--large breadcrumbs__list">
+    
+      
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click "
+           href="../components.html"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../components"
+    }
+'>Components</a>
+      </li>
+    
+      
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
+           href="sheets-bottom.html"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../components/sheets-bottom.html"
+    }
+'>Sheets: bottom</a>
+      </li>
+    
+      
+      <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
+           href="sheets-bottom.html#usage"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "#usage"
+    }
+'>Usage</a>
+      </li>
+    
+  </ol>
+</nav>
+    
+  
+    
+
+
+
+<nav class="side-nav" data-comp="SideNav" role="navigation">
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  
+
+  
+    
+    
+
+    
+      
+      <span class="side-nav__section-title">Material System</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../introduction.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../introduction"
+    }
+'>
+            Introduction
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav1"
+                  aria-expanded="false">
+            Material studies
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav1">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/about-our-material-studies.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/about-our-material-studies.html"
+    }
+'>
+            About our Material studies
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/basil.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/basil.html"
+    }
+'>
+            Basil
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/crane.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/crane.html"
+    }
+'>
+            Crane
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/fortnightly.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/fortnightly.html"
+    }
+'>
+            Fortnightly
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/owl.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/owl.html"
+    }
+'>
+            Owl
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/rally.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/rally.html"
+    }
+'>
+            Rally
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/reply.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/reply.html"
+    }
+'>
+            Reply
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/shrine.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/shrine.html"
+    }
+'>
+            Shrine
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+      </ul>
+      <span class="side-nav__section-title">Material Foundation</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../foundation-overview.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../foundation-overview"
+    }
+'>
+            Foundation overview
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav3"
+                  aria-expanded="false">
+            Environment
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav3">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/surfaces.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/surfaces.html"
+    }
+'>
+            Surfaces
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/elevation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/elevation.html"
+    }
+'>
+            Elevation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/light-shadows.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/light-shadows.html"
+    }
+'>
+            Light and shadows
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav4"
+                  aria-expanded="false">
+            Layout
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav4">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/understanding-layout.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/understanding-layout.html"
+    }
+'>
+            Understanding layout
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/responsive-layout-grid.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/responsive-layout-grid.html"
+    }
+'>
+            Responsive layout grid
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/spacing-methods.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/spacing-methods.html"
+    }
+'>
+            Spacing methods
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/component-behavior.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/component-behavior.html"
+    }
+'>
+            Component behavior
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/density.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/density.html"
+    }
+'>
+            Density
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav5"
+                  aria-expanded="false">
+            Navigation
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav5">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/understanding-navigation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/understanding-navigation.html"
+    }
+'>
+            Understanding navigation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/navigation-transitions.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/navigation-transitions.html"
+    }
+'>
+            Navigation transitions
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/search.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/search.html"
+    }
+'>
+            Search
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav6"
+                  aria-expanded="false">
+            Color
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav6">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/the-color-system.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/the-color-system.html"
+    }
+'>
+            The color system
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/applying-color-to-ui.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/applying-color-to-ui.html"
+    }
+'>
+            Applying color to UI
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/color-usage.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/color-usage.html"
+    }
+'>
+            Color usage
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/text-legibility.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/text-legibility.html"
+    }
+'>
+            Text legibility
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav7"
+                  aria-expanded="false">
+            Typography
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav7">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/the-type-system.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/the-type-system.html"
+    }
+'>
+            The type system
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/understanding-typography.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/understanding-typography.html"
+    }
+'>
+            Understanding typography
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/language-support.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/language-support.html"
+    }
+'>
+            Language support
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav8"
+                  aria-expanded="false">
+            Iconography
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav8">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/product-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/product-icons.html"
+    }
+'>
+            Product icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/system-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/system-icons.html"
+    }
+'>
+            System icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/animated-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/animated-icons.html"
+    }
+'>
+            Animated icons
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav9"
+                  aria-expanded="false">
+            Shape
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav9">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/about-shape.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/about-shape.html"
+    }
+'>
+            About shape
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-hierarchy.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-hierarchy.html"
+    }
+'>
+            Shape and hierarchy
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-as-expression.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-as-expression.html"
+    }
+'>
+            Shape as expression
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-motion.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-motion.html"
+    }
+'>
+            Shape and motion
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav10"
+                  aria-expanded="false">
+            Motion
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav10">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/understanding-motion.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/understanding-motion.html"
+    }
+'>
+            Understanding motion
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/speed.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/speed.html"
+    }
+'>
+            Speed
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/choreography.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/choreography.html"
+    }
+'>
+            Choreography
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../motion/customization.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/customization.html"
+    }
+'>
+            Customization
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav11"
+                  aria-expanded="false">
+            Interaction
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav11">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/gestures.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/gestures.html"
+    }
+'>
+            Gestures
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/selection.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/selection.html"
+    }
+'>
+            Selection
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/states.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/states.html"
+    }
+'>
+            States
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav12"
+                  aria-expanded="false">
+            Communication
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav12">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/confirmation-acknowledgement.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/confirmation-acknowledgement.html"
+    }
+'>
+            Confirmation &amp; acknowledgement
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/data-formats.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/data-formats.html"
+    }
+'>
+            Data formats
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/empty-states.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/empty-states.html"
+    }
+'>
+            Empty states
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/gesture-education.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/gesture-education.html"
+    }
+'>
+            Gesture education
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/help-feedback.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/help-feedback.html"
+    }
+'>
+            Help &amp; feedback
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/imagery.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/imagery.html"
+    }
+'>
+            Imagery
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/launch-screen.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/launch-screen.html"
+    }
+'>
+            Launch screen
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/onboarding.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/onboarding.html"
+    }
+'>
+            Onboarding
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+      </ul>
+      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../guidelines-overview.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"
+    }
+'>
+            Guidelines overview
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav14"
+                  aria-expanded="false">
+            Material Theming
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav14">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-theming/overview.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/overview.html"
+    }
+'>
+            Overview
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-theming/implementing-your-theme.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/implementing-your-theme.html"
+    }
+'>
+            Implementing your theme
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
+                  aria-controls="_nav15"
+                  aria-expanded="true">
+            Components
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav15">
+    <ul class="side-nav__submenu" data-menu-state="open">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="app-bars-bottom.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-bottom.html"
+    }
+'>
+            App bars: bottom
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="app-bars-top.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-top.html"
+    }
+'>
+            App bars: top
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="backdrop.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/backdrop.html"
+    }
+'>
+            Backdrop
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="banners.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/banners.html"
+    }
+'>
+            Banners
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="bottom-navigation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/bottom-navigation.html"
+    }
+'>
+            Bottom navigation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="buttons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons.html"
+    }
+'>
+            Buttons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="buttons-floating-action-button.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons-floating-action-button.html"
+    }
+'>
+            Buttons: floating action button
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="cards.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/cards.html"
+    }
+'>
+            Cards
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="chips.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/chips.html"
+    }
+'>
+            Chips
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="data-tables.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/data-tables.html"
+    }
+'>
+            Data tables
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="dialogs.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dialogs.html"
+    }
+'>
+            Dialogs
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="dividers.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dividers.html"
+    }
+'>
+            Dividers
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="image-lists.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/image-lists.html"
+    }
+'>
+            Image lists
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="lists.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/lists.html"
+    }
+'>
+            Lists
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="menus.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/menus.html"
+    }
+'>
+            Menus
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="navigation-drawer.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/navigation-drawer.html"
+    }
+'>
+            Navigation drawer
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="progress-indicators.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/progress-indicators.html"
+    }
+'>
+            Progress indicators
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="selection-controls.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/selection-controls.html"
+    }
+'>
+            Selection controls
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              side-nav__link--active
+               js-header-show"
+              href="sheets-bottom.html" aria-current="page" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-bottom.html"
+    }
+'>
+            Sheets: bottom
+          </a>
+
+          
+          
+            <div class="side-nav__articles">
+              <i class="side-nav__progress-bar">
+                <i class="side-nav__scrub js-submenu-scrub"></i>
+              </i>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-usage js-analytics-click" href="sheets-bottom.html#usage" data-section-id="usage"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#usage"
+    }
+'>
+                    <span class="js-anchor-text">Usage</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-anatomy js-analytics-click" href="sheets-bottom.html#anatomy" data-section-id="anatomy"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#anatomy"
+    }
+'>
+                    <span class="js-anchor-text">Anatomy</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-behavior js-analytics-click" href="sheets-bottom.html#behavior" data-section-id="behavior"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#behavior"
+    }
+'>
+                    <span class="js-anchor-text">Behavior</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-standard-bottom-sheet js-analytics-click" href="sheets-bottom.html#standard-bottom-sheet" data-section-id="standard-bottom-sheet"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#standard-bottom-sheet"
+    }
+'>
+                    <span class="js-anchor-text">Standard bottom sheet</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-modal-bottom-sheet js-analytics-click" href="sheets-bottom.html#modal-bottom-sheet" data-section-id="modal-bottom-sheet"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#modal-bottom-sheet"
+    }
+'>
+                    <span class="js-anchor-text">Modal bottom sheet</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-theming js-analytics-click" href="sheets-bottom.html#theming" data-section-id="theming"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#theming"
+    }
+'>
+                    <span class="js-anchor-text">Theming</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-specs js-analytics-click" href="sheets-bottom.html#specs" data-section-id="specs"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#specs"
+    }
+'>
+                    <span class="js-anchor-text">Specs</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-implementation js-analytics-click" href="sheets-bottom.html#implementation" data-section-id="implementation"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#implementation"
+    }
+'>
+                    <span class="js-anchor-text">Implementation</span>
+                  </a>
+                </div>
+              
+            </div>
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="sheets-side.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-side.html"
+    }
+'>
+            Sheets: side
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="sliders.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sliders.html"
+    }
+'>
+            Sliders
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="snackbars.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/snackbars.html"
+    }
+'>
+            Snackbars
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="tabs.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tabs.html"
+    }
+'>
+            Tabs
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="text-fields.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/text-fields.html"
+    }
+'>
+            Text fields
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="tooltips.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tooltips.html"
+    }
+'>
+            Tooltips
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../usability/accessibility.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/accessibility.html"
+    }
+'>
+            Accessibility
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../usability/bidirectionality.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"
+    }
+'>
+            Bidirectionality
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav17"
+                  aria-expanded="false">
+            Platform guidance
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav17">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-bars.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-bars.html"
+    }
+'>
+            Android bars
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-fingerprint.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-fingerprint.html"
+    }
+'>
+            Android fingerprint
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-haptics.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-haptics.html"
+    }
+'>
+            Android haptics
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-icons.html"
+    }
+'>
+            Android icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-navigating-between-apps.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-navigating-between-apps.html"
+    }
+'>
+            Android navigating between apps
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-notifications.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-notifications.html"
+    }
+'>
+            Android notifications
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-permissions.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-permissions.html"
+    }
+'>
+            Android permissions
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-settings.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-settings.html"
+    }
+'>
+            Android settings
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-split-screen.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-split-screen.html"
+    }
+'>
+            Android split-screen
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-swipe-to-refresh.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-swipe-to-refresh.html"
+    }
+'>
+            Android swipe to refresh
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-text-selection-toolbar.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-text-selection-toolbar.html"
+    }
+'>
+            Android text selection toolbar
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-widget.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-widget.html"
+    }
+'>
+            Android widget
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/cross-platform-adaptation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/cross-platform-adaptation.html"
+    }
+'>
+            Cross-platform adaptation
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+
+  </ul>
+</nav>
+  
+
+
+    <main class="main" role="main">
+      
+      
+
+      
+<article class="article" data-comp="Waypoints">
+  <div class="article__intro container container--large js-waypoints-trigger-initial">
+    
+      
+      <nav class="article__nav animatable js-anim-trigger">
+        <span class="eyebrow">Contents</span>
+        <ul>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#usage" data-section-id="usage"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#usage"
+    }
+'>Usage</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#anatomy" data-section-id="anatomy"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#anatomy"
+    }
+'>Anatomy</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#behavior" data-section-id="behavior"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#behavior"
+    }
+'>Behavior</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#standard-bottom-sheet" data-section-id="standard-bottom-sheet"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#standard-bottom-sheet"
+    }
+'>Standard bottom sheet</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#modal-bottom-sheet" data-section-id="modal-bottom-sheet"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#modal-bottom-sheet"
+    }
+'>Modal bottom sheet</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#theming" data-section-id="theming"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#theming"
+    }
+'>Theming</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#specs" data-section-id="specs"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#specs"
+    }
+'>Specs</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="sheets-bottom.html#implementation" data-section-id="implementation"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#implementation"
+    }
+'>Implementation</a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+    <h1 class="article__title animatable js-anim-trigger">
+      
+
+      Sheets: bottom
+
+      
+        
+          <div class="article-controls">
+            
+          </div>
+        
+      
+    </h1>
+
+    
+
+    
+      
+      <div class="article__intro-text animatable js-anim-trigger">
+      <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<h2>Bottom sheets are surfaces containing supplementary content that are anchored to the bottom of the screen.</h2>
+<figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/15UG-wMUArpc8e1dJQMurk72FPJuoWsPX/bottom-sheet-intro.png" src="sheets-bottom.html">
+</img></div>
+</div>
+</figure></div>
+      </div>
+    
+  </div>
+
+  <hr />
+
+  
+  <div class="article__body animatable js-show-header js-anim-trigger">
+    
+      
+      <section id="usage" class="container container--large js-waypoints-trigger article__section" data-section-title="Usage" aria-label="Usage">
+        
+          <h2 class="article__chapter-title">
+            Usage
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<p>Bottom sheets are supplementary surfaces primarily used on mobile. </p><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/cards.html#cards"
+    }
+' href="cards.html#cards" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1hGIRbJ4hD8kcpyu7Oe2oZ0aGqjKkkVR9/card-thumbnail-1x1-circle.png" style="background-image: url('../assets/1hGIRbJ4hD8kcpyu7Oe2oZ0aGqjKkkVR9/card-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Cards</h2>
+<p class="object-card__body">Cards contain content and links about a single subject.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/menus.html#menus"
+    }
+' href="menus.html#menus" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Hd8IgHigFkdRRM9dDXXE23AxbIR4Qi3j/menus-thumbnail-1x1-circle.png" style="background-image: url('../assets/1Hd8IgHigFkdRRM9dDXXE23AxbIR4Qi3j/menus-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Menus</h2>
+<p class="object-card__body">Menus display a list of choices on temporary surfaces.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-side.html#sheets-side"
+    }
+' href="sheets-side.html#sheets-side" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1_tlP1E-w9t_kd14LU1YAcfpN9AlnObOC/sheets-side-thumbnail-1x1-circle.png" style="background-image: url('../assets/1_tlP1E-w9t_kd14LU1YAcfpN9AlnObOC/sheets-side-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Sheets: Side</h2>
+<p class="object-card__body">Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><p>They come in two types:</p><ul class="lst-kix_idz5b1qk41ia-0 start"><li><strong>Standard bottom sheets</strong> display content that complements the screen’s primary content. They remain visible while users interact with the primary content.</li><li><strong>Modal bottom sheets</strong> are an alternative to inline menus or simple dialogs on mobile, providing room for additional items, longer descriptions, and iconography. They must be dismissed in order to interact with the underlying content.</li></ul><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="usage-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1gyJUH0iRN55Zt4Kok16aCfilak4QWzi0/usage-standard.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="usage-figure-caption-0">
+<h3>Standard bottom sheet</h3><p>A user can interact with both the bottom sheet and the rest of the screen content.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="usage-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1l977rQR5188GXu1p8Ci1NKSC0nLDIS0v/usage-modal.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="usage-figure-caption-1">
+<h3>Modal bottom sheet</h3><p>A user must interact with or dismiss a modal bottom sheet.</p>
+</figcaption>
+</figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Principles</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Bottom sheets contain content that supplements the screen’s primary UI region. Bottom sheets can display a wide variety of content and layouts. Bottom sheets are...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module-module col-3"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="751px">
+<div class="frame media-placeholder" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/18YD31MhovXCmF4WesC4LN2CBpuU1wCYY/sheets-bottom-illos-01.png" src="sheets-bottom.html">
+</img></div>
+</div>
+</figure><h2>Supporting</h2><p>Bottom sheets contain content that supplements the screen’s primary UI region.</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="751px">
+<div class="frame media-placeholder" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/106-FIS-U_KCElYX0KMSRzxiB35xnvfZ-/sheets-bottom-illos-03.png" src="sheets-bottom.html">
+</img></div>
+</div>
+</figure><h2>Flexible</h2><p>Bottom sheets can display a wide variety of content and layouts.</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="751px">
+<div class="frame media-placeholder" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1EnHB0ouAdhd5pDJtrjzaFzJQ_id3pLpN/sheets-bottom-illos-02.png" src="sheets-bottom.html">
+</img></div>
+</div>
+</figure><h2>Ergonomic</h2><p>Bottom sheets are easy to reach on a mobile device.</p></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="anatomy" class="container container--large js-waypoints-trigger article__section" data-section-title="Anatomy" aria-label="Anatomy">
+        
+          <h2 class="article__chapter-title">
+            Anatomy
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/186Ay__j_pDHIIzB9ke4M5Ye1XJC1HQEM/anatomy.png" src="sheets-bottom.html">
+</img></div>
+</div>
+</figure><ol class="lst-kix_p8ztiae9gk6v-0 start" start="1"><li>Sheet</li><li>Contents</li><li>Scrim (Modal only)</li></ol></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Sheet</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Bottom sheets are anchored to the bottom edge of the screen and appear in front of other UI elements. They are full-width on mobile and...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Bottom sheets are anchored to the bottom edge of the screen and appear in front of other UI elements. They are full-width on mobile and can be inset or full-width on tablet or desktop.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="anatomy-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1ENyK4zHmr3lbLgbR22-7VjiyRyzVO7ZI/anatomy-sheet-placement-do.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="anatomy-figure-caption-0">
+<p class="s-tag-caption do">Do.</p>
+<p>A bottom sheet is anchored to the bottom edge of the screen.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="anatomy-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1uMWZzTku4ngb02PsrVtYfv8iibni2oiL/anatomy-sheet-placement-dont.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="anatomy-figure-caption-1">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Don’t inset all sides of a bottom sheet from screen edges. This can make it hard to see and allow it to be confused for other components, such as snackbars.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="anatomy-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1gen_wrwpwCmIlGJowLAKg64Qoki8taa2/anatomy-sheet-desktop.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="anatomy-figure-caption-2">
+<p>Standard bottom sheet inset on desktop</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Contents</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Bottom sheets can display a wide variety of content and layouts, ranging from menu items (in list and grid layouts), to supplemental content laid out...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Bottom sheets can display a wide variety of content and layouts, ranging from menu items (in list and grid layouts), to supplemental content laid out according to the layout grid. </p><p>Content from a bottom sheet that initially appears below the screen edge can become visible when the sheet is dragged into view.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="anatomy-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1uiZmXDew-Pm06Vln6Io2JTszlbGjOXEe/anatomy-contents-list.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="anatomy-figure-caption-3">
+<p>Menu of actions (in a list) inside a modal bottom sheet</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="anatomy-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1da87jIO5mur4d_CfoWe6PFFWiMgKJaoO/anatomy-contents-grid.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="anatomy-figure-caption-4">
+<p>Menu of apps (in a grid layout) inside a modal bottom sheet</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="anatomy-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/11OfhrcSIkQmfj8wHMN4___5jdIjQUIkY/anatomy-contents-partial.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="anatomy-figure-caption-5">
+<p>The location information in this standard bottom sheet initially extends below the screen edge. It can be dragged into view.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="anatomy-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1HGv_tpLnY9QGWXHytowWi0a9O0B68bOr/anatomy-contents-full.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="anatomy-figure-caption-6">
+<p>This music player has been made fully visible to reveal a track list beneath the player.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="behavior" class="container container--large js-waypoints-trigger article__section" data-section-title="Behavior" aria-label="Behavior">
+        
+          <h2 class="article__chapter-title">
+            Behavior
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Visibility</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When bottom sheets initially appear on screen, they may contain content that extends below the bottom of the screen. They can be swiped or dragged...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Initial appearance</h2><p>When bottom sheets initially appear on screen, they may contain content that extends below the bottom of the screen. They can be swiped or dragged up to become full-screen. Depending on the content, bottom sheets can also become full-screen by tapping on their surface or an expand icon.</p><h2>Full-screen</h2><p>When full-screen, bottom sheets can be internally scrolled to reveal additional content. They display a top app bar, which elevates upon scroll. </p><p>In the top app bar, full-screen standard bottom sheets contain a collapse icon that returns the sheet to its initial position. Full-screen modal bottom sheets contain a dismiss icon that dismisses the sheet entirely from view.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="behavior-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/10oN2rj2F4Ju3jJUg6wFCRqA_G5TsWQUm/behavior-visibility-standard.mp4" src="sheets-bottom.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="behavior-figure-caption-0">
+<p class="s-tag-caption do">Do.</p>
+<p>Partially visible bottom sheets can be dragged to full-screen view and scroll internally.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="behavior-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1mYYvVz_dCIx0bRyY_VV4hOs9709f1ESb/modal-behavior-dismissal-close.mp4" src="sheets-bottom.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="behavior-figure-caption-1">
+<p class="s-tag-caption do">Do.</p>
+<p>Include a close affordance in a full-height modal bottom sheet to dismiss the sheet.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="standard-bottom-sheet" class="container container--large js-waypoints-trigger article__section" data-section-title="Standard bottom sheet" aria-label="Standard bottom sheet">
+        
+          <h2 class="article__chapter-title">
+            Standard bottom sheet
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Standard bottom sheets co-exist with the screen’s main UI region and allow for simultaneously viewing and interacting with both regions. They are commonly used to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Standard bottom sheets co-exist with the screen’s main UI region and allow for simultaneously viewing and interacting with both regions. They are commonly used to keep a feature or secondary content visible on screen when content in main UI region is frequently scrolled or panned.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="standard-bottom-sheet-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1rHpxlkMgBKp_I9Eva6aC16tpaeolyy9n/standard-usage-content.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="standard-bottom-sheet-figure-caption-0">
+<p class="s-tag-caption do">Do.</p>
+<p>Standard bottom sheets can contain supplementary content that continues below the screen, such as location information over a map.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="standard-bottom-sheet-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/12XEzozvtJXJtfAl6p7XmNzWsqoHK4aO1/standard-usage-feature.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="standard-bottom-sheet-figure-caption-1">
+<p class="s-tag-caption do">Do.</p>
+<p>Use a standard bottom sheet to persist an important feature such as media controls in a music app.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Standard bottom sheets remain on-screen when a user interacts with the main UI region or the sheet itself. They have a default elevation of 8dp,...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Interaction</h2><p>Standard bottom sheets remain on-screen when a user interacts with the main UI region or the sheet itself. They have a default elevation of 8dp, which allows content in the main UI region behind to scroll or pan and for the sheet to temporarily cover the main UI region when made full-screen. At full-screen height, they should contain a collapse icon in an app bar to return to their initial position.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="standard-bottom-sheet-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1DrttY-lWiK_HxgNEH2niRpyUqHfvcjhY/standard-behavior-interaction-drag.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="standard-bottom-sheet-figure-caption-2">
+<p class="s-tag-caption do">Do.</p>
+<p>Standard bottom sheets are elevated above the main UI region so their visibility is not affected by panning or scrolling.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="standard-bottom-sheet-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/18IiOz7xuVCVouOPrOjIGItpCMwJ5z8H6/standard-behavior-interaction-scroll.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="standard-bottom-sheet-figure-caption-3">
+<p class="s-tag-caption do">Do.</p>
+<p>This music player in a standard bottom sheet remains on-screen as the user browses available music.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Placement</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The contents of standard bottom sheets on mobile can be moved into side sheets on larger screen sizes given the additional horizontal space. Side sheets...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>The contents of standard bottom sheets on mobile can be moved into side sheets on larger screen sizes given the additional horizontal space. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="standard-bottom-sheet-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/12fiIOKSBCqjFRePXnWZnQ88oGFWhfBXv/standard-placement-mobile.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="standard-bottom-sheet-figure-caption-4">
+<p>On mobile, the location information for this map is displayed in a standard bottom sheet due to limited screen width.</p>
+</figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-side.html#sheets-side"
+    }
+' href="sheets-side.html#sheets-side" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1_tlP1E-w9t_kd14LU1YAcfpN9AlnObOC/sheets-side-thumbnail-1x1-circle.png" style="background-image: url('../assets/1_tlP1E-w9t_kd14LU1YAcfpN9AlnObOC/sheets-side-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Sheets: Side</h2>
+<p class="object-card__body">Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="standard-bottom-sheet-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/16fve1jdc23WUaFbeNXPwaiWyfP_HTUFB/standard-placement-desktop.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="standard-bottom-sheet-figure-caption-5">
+<p>On desktop, the location information for this map is displayed in side sheet because screen widths are larger than screen heights.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="modal-bottom-sheet" class="container container--large js-waypoints-trigger article__section" data-section-title="Modal bottom sheet" aria-label="Modal bottom sheet">
+        
+          <h2 class="article__chapter-title">
+            Modal bottom sheet
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom, modal</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Modal bottom sheets present a set of choices while blocking interaction with the rest of the screen. They are an alternative to inline menus and...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Modal bottom sheets present a set of choices while blocking interaction with the rest of the screen. They are an alternative to inline menus and simple dialogs on mobile, providing additional room for content, iconography, and actions. </p><p>Modal bottom sheets are used in mobile apps only.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1XSxAfCWJqiC7_k4hoG19b4lVjJMJCjHo/modal-usage-overflow.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-0">
+<p class="s-tag-caption do">Do.</p>
+<p>Modal bottom sheets can be used instead of menus to present additional screen actions.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1UwO1hSg7L1rVggHB8BpxYZGka9L9b7qV/modal-usage-cross-app.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-1">
+<p class="s-tag-caption do">Do.</p>
+<p>Use a modal bottom sheet to provide deep links to another app.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Modal bottom sheets have a default elevation of 16dp. This elevation allows them to appear over most UI elements and allows them to be pulled...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Elevation and scrim</h2><p>Modal bottom sheets have a default elevation of 16dp. This elevation allows them to appear over most UI elements and allows them to be pulled up in front of the entire UI to display more options. </p><p>A modal bottom sheet causes all content and UI elements behind it to display a scrim, which indicates that they will not respond to user interaction. Tapping the scrim dismisses both the modal bottom sheet and scrim from view.</p></div></section><section class="figure-figure col-2"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1xY0fPveXIEcZrtyPbRtnDDEcn1IOJTch/modal-usage-overflow.mp4" src="sheets-bottom.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p class="s-tag-caption do">Do.</p>
+<p>Use a visible scrim with modal bottom sheets to inform users they cannot interact with the rest of the screen.</p>
+</figcaption></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1X3B201togJiodYmO7_1ZijVYH4L7VTsm/modal-usage-overflow-dont.mp4" src="sheets-bottom.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Don’t use an invisible scrim for modal bottom sheets. This can mislead users about their ability to interact with the rest of the screen.</p>
+</figcaption></div></section></div><div class="col-list"><section class="module col-1 h2-spacing"><div class="module"><h2>Visibility</h2><p>To provide initial access to its top actions, the initial vertical position of modal bottom sheets is capped at 50% of the screen height. </p><p>Modal bottom sheets whose contents exceed 50% of the screen height can then be pulled across the full screen, scrolling internally to access their remaining items.</p><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Sheet height</p></td><td colspan="1" rowspan="1"><p>Visibility and behavior</p></td></tr><tr><td colspan="1" rowspan="1"><p>Under 50% of screen height</p></td><td colspan="1" rowspan="1"><p>Visible at full height</p></td></tr><tr><td colspan="1" rowspan="1"><p>50 to 100% of screen height</p></td><td colspan="1" rowspan="1"><p>Partially visibility at 50% of screen height. <br>
+On scroll or surface tap, reveal full sheet.</br></p></td></tr><tr><td colspan="1" rowspan="1"><p>Greater than or equal to 100% of screen height</p></td><td colspan="1" rowspan="1"><p>Partially visible at 50% of screen height. <br>
+On scroll or container tap, move to top of screen and scroll contents internally. <br>
+Add internal action to close.</br></br></p></td></tr></tbody></table></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/11Ozux0Ar4ZlTr0oRg4csXXNfjKdwic1h/modal-behavior-visibility-under-half-do.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-2">
+<p class="s-tag-caption do">Do.</p>
+<p>Modal bottom sheets with few items are fully visible upon opening.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1xvqxV9p40rnXtVpkK7mPbi5XPqTIX5ko/modal-behavior-visibility-over-half-dont.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-3">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Don’t make tall bottom sheets full-screen upon opening. This places the top content immediately out of reach for users on mobile devices.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Control</h2><p>Modal bottom sheets appear when triggered by a user action, such as tapping a button or an overflow icon. They can be dismissed by: </p><ul class="lst-kix_3nk7rajms4l3-0 start"><li>Tapping a menu item or action within the bottom sheet </li><li>Tapping the scrim</li><li>Swiping the sheet down</li><li>Using a close affordance within the bottom sheet’s top app bar, if available</li></ul><hr class="spacer" role="separator"/></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1sbr84Gqfhcdz9ch3MxwGYeeegxXHnvTP/modal-behavior-dismissal-tap.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-4">
+<p class="s-tag-caption do">Do.</p>
+<p>Tapping the scrim dismisses a modal bottom sheet.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/18m3oFO85fgCjC7T9p4luBZhmbg6zZhew/modal-behavior-dismissal-swipe.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-5">
+<p class="s-tag-caption do">Do.</p>
+<p>A modal bottom sheet can be dismissed by swiping the sheet down.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/125yJb9HggawiDdNSRAtRtsydje0FHwsp/modal-behavior-dismissal-close.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-6">
+<p class="s-tag-caption do">Do.</p>
+<p>Display a close affordance in a full-screen modal bottom sheet.</p>
+</figcaption>
+</figure></div><div class="module"></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Placement</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Modal bottom sheets are most effective on small screens. Menus display a list of choices on temporary surfaces. Related Article arrow_downward Dialogs inform users about...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><p>Modal bottom sheets are most effective on small screens. </p><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/menus.html#menus"
+    }
+' href="menus.html#menus" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Hd8IgHigFkdRRM9dDXXE23AxbIR4Qi3j/menus-thumbnail-1x1-circle.png" style="background-image: url('../assets/1Hd8IgHigFkdRRM9dDXXE23AxbIR4Qi3j/menus-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Menus</h2>
+<p class="object-card__body">Menus display a list of choices on temporary surfaces.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/dialogs.html#dialogs"
+    }
+' href="dialogs.html#dialogs" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1-2AYDdSQVged4dML1aZOBp1S3vk-3ybg/dialogs-thumbnail-1x1-circle.png" style="background-image: url('../assets/1-2AYDdSQVged4dML1aZOBp1S3vk-3ybg/dialogs-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Dialogs</h2>
+<p class="object-card__body">Dialogs inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks. They remain until dismissed or a required action has been taken.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>On larger screens, use menus or dialogs to create clear visual connections to the triggering UI element. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="frame media-placeholder" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="modal-bottom-sheet-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1UPs5DGL5jxMx271nOeUoPU5ws25kxYMb/modal-placement.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="modal-bottom-sheet-figure-caption-7">
+<p>An overflow menu using a bottom sheet on mobile (1) and an inline menu on desktop (2).</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="theming" class="container container--large js-waypoints-trigger article__section" data-section-title="Theming" aria-label="Theming">
+        
+          <h2 class="article__chapter-title">
+            Theming
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Posivibes Material Theme</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>This social media app’s bottom sheets have been customized using Material Theming. Areas of customization include color and shape. Posivibe’s bottom sheets use custom color...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>This social media app’s bottom sheets have been customized using Material Theming. Areas of customization include color and shape.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" aria-describedby="theming-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1MiMyupT-NSiMxckjWfxK5e136Ywsff3g/sheets-posivibes-ahero.png" src="sheets-bottom.html">
+</img></div>
+</div>
+<figcaption id="theming-figure-caption-0">
+<p>Posivibe’s customized bottom sheets</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Color</h2><p>Posivibe’s bottom sheets use custom color on three elements: container, text, and icons.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1WE0K4VWDkOz5-cPSLXft28NDqEQcl0Pp/sheets-posivibes-color.png" src="sheets-bottom.html">
+</img></div>
+</div>
+</figure><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Element</p></td><td colspan="1" rowspan="1"><p>Category</p></td><td colspan="1" rowspan="1"><p>Attribute</p></td><td colspan="1" rowspan="1"><p>Value</p></td></tr><tr><td colspan="1" rowspan="1"><p>Container</p></td><td colspan="1" rowspan="1"><p>Surface</p></td><td colspan="1" rowspan="1"><p>Color</p><p>Opacity</p></td><td colspan="1" rowspan="1"><p>#FFFFFF</p><p>100%</p></td></tr><tr><td colspan="1" rowspan="1"><p>Text, icons</p></td><td colspan="1" rowspan="1"><p>On Surface </p></td><td colspan="1" rowspan="1"><p>Color</p><p>Opacity</p></td><td colspan="1" rowspan="1"><p>#000000</p><p>100%</p></td></tr></tbody></table></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../color/the-color-system.html#the-color-system"
+    }
+' href="../color/the-color-system.html#the-color-system" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Y8aHGqd-cCDfwb6OVpNg45cUfwaQXuy1/color-thumbnail-1x1-circle.png" style="background-image: url('../assets/1Y8aHGqd-cCDfwb6OVpNg45cUfwaQXuy1/color-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">The Color System</h2>
+<p class="object-card__body">The Material Design color system helps you choose colors for your user interface.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../color/applying-color-to-ui.html#applying-color-to-ui"
+    }
+' href="../color/applying-color-to-ui.html#applying-color-to-ui" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO/color-thumbnail-1x1-circle.png" style="background-image: url('../assets/1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO/color-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Applying color to UI</h2>
+<p class="object-card__body">In a UI, color has a variety of roles: from containing meaning, to expressing a look and feel.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../shape/about-shape.html#about-shape"
+    }
+' href="../shape/about-shape.html#about-shape" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1a6QBGzwGXpPSCfUAPAN2lxLyVjXiEk6i/shapes-thumbnail-1x1-circle.png" style="background-image: url('../assets/1a6QBGzwGXpPSCfUAPAN2lxLyVjXiEk6i/shapes-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">About Shape</h2>
+<p class="object-card__body">Material surfaces can be displayed in different shapes. Shapes direct attention, identify components, communicate state, and express brand.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Shape</h2><p>Posivibe’s bottom sheets use a custom container shape.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline">
+<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1WO4Oi2ShTsZt_6qAXs6RxkPolVX5Dxrw/sheets-posivibes-shape.png" src="sheets-bottom.html">
+</img></div>
+</div>
+</figure><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Element</p></td><td colspan="1" rowspan="1"><p>Attribute</p></td><td colspan="1" rowspan="1"><p>Value</p></td></tr><tr><td colspan="1" rowspan="1"><p>Container</p></td><td colspan="1" rowspan="1"><p>Top left corner</p><p>Top right corner</p><p>Bottom right corner</p><p>Bottom left corner</p></td><td colspan="1" rowspan="1"><p>Sharp 0dp</p><p>Sharp 0dp</p><p>Sharp 0dp</p><p>Sharp 0dp</p></td></tr></tbody></table></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="specs" class="container container--large js-waypoints-trigger article__section" data-section-title="Specs" aria-label="Specs">
+        
+          <h2 class="article__chapter-title">
+            Specs
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<div class="col-list"><section class="module col-1 h2-spacing"><div class="module"><h2>Modal bottom sheet for mobile</h2><div class="js-lightbox-el" data-template="redline">
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/16oM35pHAoBGq6R3oJi0fSw8eaCxN_asQ/specs-sheets-bottom-modal-50.png", "defaultView": "measurements"}'>
+<div class="redline-wrapper js-redline-wrapper">
+<ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
+<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:216px;width:420px;">
+</li>
+<li class="keyline keyline--horizontal measurement--typography js-measurement-typography" style="top:75px;width:760px;">
+</li>
+<li class="measurement measurement--vertical measurement--dimensions measurement--pos-left js-measurement-dimensions" style="top:40px;width:320px;left:182px;">
+<span class="measurement__value">
+        max-height 1/2 screen
+      </span>
+</li>
+<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-top js-measurement-dimensions" style="left:200px;width:360px;top:11px;">
+<span class="measurement__value">
+        360
+      </span>
+</li>
+<li class="measurement measurement--horizontal measurement--padding measurement--pos-bottom js-measurement-padding" style="left:200px;width:16px;top:366px;">
+<span class="measurement__value measurement__value--offset">
+        16
+      </span>
+</li>
+<li class="measurement measurement--vertical measurement--dimensions measurement--pos-right js-measurement-dimensions" style="top:40px;width:56px;left:588px;">
+<span class="measurement__value">
+        56
+      </span>
+</li>
+<li class="measurement measurement--vertical measurement--dimensions measurement--pos-right js-measurement-dimensions" style="top:152px;width:56px;left:586px;">
+<span class="measurement__value">
+        56
+      </span>
+</li>
+<li class="measurement measurement--vertical measurement--typography measurement--pos-right js-measurement-typography" style="top:40px;width:36px;left:618px;">
+<span class="measurement__value">
+        36
+      </span>
+</li>
+<li class="dimension measurement--centered measurement--dimensions js-measurement-dimensions" style="top:40px; left:200px; width:360px; height:56px">
+<span class="">
+</span>
+</li>
+<li class="dimension measurement--centered measurement--dimensions js-measurement-dimensions" style="top:152px; left:200px; width:360px; height:56px">
+<span class="">
+</span>
+</li>
+</ul>
+<ul class="redline js-redline-text js-redline-layer" data-redline-filter="text">
+<li class="annotation annotation--text" data-comp="Annotation">
+<span class="annotation__layer" style="width:328px; height:24px; left:216px; top:57px"></span>
+<span class="annotation__vector" style="left:239px; top:71px; width:381px; transform:rotate(177.145095deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:239px; top:71px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:-222px; top:48px;" style="left:-222px; top:48px;">
+<a class="annotation__text-family" href="https://fonts.google.com/specimen/Roboto" rel="noopener" target="_blank">
+          Roboto
+          <img alt="Google Fonts" class="annotation__icon" src="../static/m2/images/font-logo.svg"/>
+</a>
+<p class="annotation__value annotation__value--first">16dp</p>
+<p class="annotation__value annotation__value--second">#0000008a</p>
+</div>
+</li>
+<li class="annotation annotation--text" data-comp="Annotation">
+<span class="annotation__layer" style="width:272px; height:24px; left:272px; top:113px"></span>
+<span class="annotation__vector" style="left:293px; top:128px; width:438px; transform:rotate(176.211973deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:293px; top:128px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:-225px; top:115px;" style="left:-225px; top:115px;">
+<a class="annotation__text-family" href="https://fonts.google.com/specimen/Roboto" rel="noopener" target="_blank">
+          Roboto
+          <img alt="Google Fonts" class="annotation__icon" src="../static/m2/images/font-logo.svg"/>
+</a>
+<p class="annotation__value annotation__value--first">16dp</p>
+<p class="annotation__value annotation__value--second">#000000de</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
+</ul>
+<ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
+<li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:320px; left:200px; top:40px"></span>
+<span class="annotation__vector" style="left:545px; top:50px; width:356px; transform:rotate(-21.233847deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:545px; top:50px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:797px; top:-121px;" style="left:797px; top:-121px;">
+<a class="annotation__note-link" href="../environment/elevation.html#default-elevations" rel="noopener" target="_blank">
+<span class="annotation__note-type">Elevation</span>
+<i class="material-icons annotation__note-icon">open_in_new</i>
+</a>
+<p class="annotation__note-title">Elevation</p>
+<p class="annotation__value annotation__value--first">16dp</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
+<li class="annotation annotation--components annotation--note" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:56px; left:200px; top:96px"></span>
+<span class="annotation__vector" style="left:350px; top:100px; width:528px; transform:rotate(3.583103deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:350px; top:100px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:797px; top:91px;" style="left:797px; top:91px;">
+<a class="annotation__note-link" href="lists.html" rel="noopener" target="_blank">
+<span class="annotation__note-type">Components</span>
+<i class="material-icons annotation__note-icon">open_in_new</i>
+</a>
+<p class="annotation__note-title">List</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
+<li class="annotation annotation--notes annotation--note" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:359px; left:200px; top:0px"></span>
+<span class="annotation__vector" style="left:443px; top:17px; width:208px; transform:rotate(-86.149361deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:443px; top:17px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:377px; top:-233px;" style="left:377px; top:-233px;">
+<span class="annotation__note-type">General</span>
+<p class="annotation__note-title">Scrim</p>
+<p class="annotation__value annotation__value--first">#000000 Opacity:32%</p>
+</div>
+</li>
+</ul>
+<img alt="" class="redline-artboard lightbox__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/16oM35pHAoBGq6R3oJi0fSw8eaCxN_asQ/specs-sheets-bottom-modal-50.png" src="sheets-bottom.html" style="width: 760px; height: 420px;"/>
+<button class="ruler__trigger js-ruler-trigger"></button>
+<div class="ruler__cursor js-ruler-cursor">
+<span class="ruler__point ruler__point--left js-ruler-p1"></span>
+<span class="ruler__range js-ruler-range"></span>
+<span class="ruler__point ruler__point--right js-ruler-p2"></span>
+</div>
+</div>
+<div class="redline-icon" data-comp="Tooltip" data-props-tooltip='{"tip": "Specs",  "direction": "bottom"}'>
+<i class="material-icons">flip</i>
+</div>
+<div class="redline-smallres-message">
+<span class="redline-smallres-message__copy"><i class="redline-smallres-message__icon material-icons">flip</i>Specs only available at larger screen size</span>
+</div>
+</div>
+<p class="redline-unit-message">All measurements are displayed in <a class="redline-unit-message__link" href="../layout/understanding-layout.html#pixel-density" rel="noopener" target="_blank">device-independent pixels (dps)</a></p>
+<div class="colorpicker js-colorpicker">
+<div class="colorpicker__frame">
+<canvas class="colorpicker__magnifier js-colorpicker-magnifier"></canvas>
+<p class="colorpicker__color js-colorpicker-color"></p>
+<input class="colorpicker__val js-colorpicker-val" type="text"/>
+</div>
+</div>
+</div></div></section></div><div class="col-list"><section class="module col-1"><div class="module"><div class="js-lightbox-el" data-template="redline">
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1MYljOgtsZNS7wJ0BlFsL-xqILjXyev0V/specs-sheets-bottom-modal-lessthan50.png", "defaultView": "measurements"}'>
+<div class="redline-wrapper js-redline-wrapper">
+<ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
+<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:216px;width:420px;">
+</li>
+<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-top js-measurement-dimensions" style="left:200px;width:360px;top:106px;">
+<span class="measurement__value">
+        360
+      </span>
+</li>
+<li class="measurement measurement--vertical measurement--dimensions measurement--pos-left js-measurement-dimensions" style="top:136px;width:223px;left:182px;">
+<span class="measurement__value">
+        max-height 1/2 screen
+      </span>
+</li>
+<li class="measurement measurement--vertical measurement--dimensions measurement--pos-right js-measurement-dimensions" style="top:136px;width:56px;left:587px;">
+<span class="measurement__value">
+        56
+      </span>
+</li>
+<li class="measurement measurement--vertical measurement--dimensions measurement--pos-right js-measurement-dimensions" style="top:248px;width:56px;left:589px;">
+<span class="measurement__value">
+        56
+      </span>
+</li>
+<li class="measurement measurement--horizontal measurement--padding measurement--pos-bottom js-measurement-padding" style="left:200px;width:16px;top:359px;">
+<span class="measurement__value measurement__value--offset">
+        16
+      </span>
+</li>
+<li class="dimension measurement--centered measurement--dimensions js-measurement-dimensions" style="top:136px; left:200px; width:360px; height:56px">
+<span class="">
+</span>
+</li>
+<li class="dimension measurement--centered measurement--dimensions js-measurement-dimensions" style="top:248px; left:200px; width:360px; height:56px">
+<span class="">
+</span>
+</li>
+</ul>
+<ul class="redline js-redline-text js-redline-layer" data-redline-filter="text">
+<li class="annotation annotation--text" data-comp="Annotation">
+<span class="annotation__layer" style="width:328px; height:24px; left:216px; top:153px"></span>
+<span class="annotation__vector" style="left:260px; top:167px; width:409px; transform:rotate(178.599404deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:260px; top:167px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:-229px; top:135px;" style="left:-229px; top:135px;">
+<a class="annotation__text-family" href="https://fonts.google.com/specimen/Roboto" rel="noopener" target="_blank">
+          Roboto
+          <img alt="Google Fonts" class="annotation__icon" src="../static/m2/images/font-logo.svg"/>
+</a>
+<p class="annotation__value annotation__value--first">16dp</p>
+<p class="annotation__value annotation__value--second">#0000008a</p>
+</div>
+</li>
+<li class="annotation annotation--text" data-comp="Annotation">
+<span class="annotation__layer" style="width:272px; height:24px; left:272px; top:209px"></span>
+<span class="annotation__vector" style="left:291px; top:223px; width:443px; transform:rotate(174.957549deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:291px; top:223px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:-231px; top:220px;" style="left:-231px; top:220px;">
+<a class="annotation__text-family" href="https://fonts.google.com/specimen/Roboto" rel="noopener" target="_blank">
+          Roboto
+          <img alt="Google Fonts" class="annotation__icon" src="../static/m2/images/font-logo.svg"/>
+</a>
+<p class="annotation__value annotation__value--first">16dp</p>
+<p class="annotation__value annotation__value--second">#000000de</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
+<li class="annotation annotation--colors" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:224px; left:200px; top:136px"></span>
+<span class="annotation__vector" style="left:507px; top:142px; width:134px; transform:rotate(-90.427573deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:507px; top:142px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:426px; top:-34px;" style="left:426px; top:-34px;">
+<span class="annotation__swatch" style="background-color:#ffffff"></span>
+<p class="annotation__value annotation__value--first">#ffffff</p>
+<p class="annotation__value annotation__value--second">R255 G255 B255</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
+<li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:224px; left:200px; top:136px"></span>
+<span class="annotation__vector" style="left:513px; top:147px; width:367px; transform:rotate(-24.753380deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:513px; top:147px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:767px; top:-49px;" style="left:767px; top:-49px;">
+<a class="annotation__note-link" href="../environment/elevation.html#default-elevations" rel="noopener" target="_blank">
+<span class="annotation__note-type">Elevation</span>
+<i class="material-icons annotation__note-icon">open_in_new</i>
+</a>
+<p class="annotation__note-title">Elevation</p>
+<p class="annotation__value annotation__value--first">16dp</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
+<li class="annotation annotation--components annotation--note" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:56px; left:200px; top:192px"></span>
+<span class="annotation__vector" style="left:359px; top:200px; width:494px; transform:rotate(-0.463923deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:359px; top:200px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:773px; top:154px;" style="left:773px; top:154px;">
+<a class="annotation__note-link" href="lists.html" rel="noopener" target="_blank">
+<span class="annotation__note-type">Components</span>
+<i class="material-icons annotation__note-icon">open_in_new</i>
+</a>
+<p class="annotation__note-title">List</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
+<li class="annotation annotation--notes annotation--note" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:359px; left:200px; top:0px"></span>
+<span class="annotation__vector" style="left:400px; top:48px; width:212px; transform:rotate(-87.838921deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:400px; top:48px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:328px; top:-206px;" style="left:328px; top:-206px;">
+<span class="annotation__note-type">General</span>
+<p class="annotation__note-title">Scrim</p>
+<p class="annotation__value annotation__value--first">#000000 Opacity:32%</p>
+</div>
+</li>
+</ul>
+<img alt="" class="redline-artboard lightbox__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1MYljOgtsZNS7wJ0BlFsL-xqILjXyev0V/specs-sheets-bottom-modal-lessthan50.png" src="sheets-bottom.html" style="width: 760px; height: 420px;"/>
+<button class="ruler__trigger js-ruler-trigger"></button>
+<div class="ruler__cursor js-ruler-cursor">
+<span class="ruler__point ruler__point--left js-ruler-p1"></span>
+<span class="ruler__range js-ruler-range"></span>
+<span class="ruler__point ruler__point--right js-ruler-p2"></span>
+</div>
+</div>
+<div class="redline-icon" data-comp="Tooltip" data-props-tooltip='{"tip": "Specs",  "direction": "bottom"}'>
+<i class="material-icons">flip</i>
+</div>
+<div class="redline-smallres-message">
+<span class="redline-smallres-message__copy"><i class="redline-smallres-message__icon material-icons">flip</i>Specs only available at larger screen size</span>
+</div>
+</div>
+<p class="redline-unit-message">All measurements are displayed in <a class="redline-unit-message__link" href="../layout/understanding-layout.html#pixel-density" rel="noopener" target="_blank">device-independent pixels (dps)</a></p>
+<div class="colorpicker js-colorpicker">
+<div class="colorpicker__frame">
+<canvas class="colorpicker__magnifier js-colorpicker-magnifier"></canvas>
+<p class="colorpicker__color js-colorpicker-color"></p>
+<input class="colorpicker__val js-colorpicker-val" type="text"/>
+</div>
+</div>
+</div></div></section></div><div class="col-list"><section class="module col-1 h2-spacing"><div class="module"><h2>Standard bottom sheet for mobile</h2><div class="js-lightbox-el" data-template="redline">
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1CLhBDAZt0MZui6C5w1svaeBJ1c7n7QZm/specs-sheets-bottom-coplanar.png", "defaultView": "measurements"}'>
+<div class="redline-wrapper js-redline-wrapper">
+<ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
+<li class="measurement measurement--vertical measurement--dimensions measurement--pos-left js-measurement-dimensions" style="top:80px;width:240px;left:187px;">
+<span class="measurement__value">
+        min height: 56dp
+      </span>
+</li>
+<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-top js-measurement-dimensions" style="left:200px;width:360px;top:48px;">
+<span class="measurement__value">
+        360
+      </span>
+</li>
+</ul>
+<ul class="redline js-redline-text js-redline-layer" data-redline-filter="text">
+</ul>
+<ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
+</ul>
+<ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
+<li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
+<span class="annotation__layer" style="width:360px; height:240px; left:200px; top:80px"></span>
+<span class="annotation__vector" style="left:517px; top:86px; width:362px; transform:rotate(2.214755deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:517px; top:86px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:799px; top:58px;" style="left:799px; top:58px;">
+<a class="annotation__note-link" href="../environment/elevation.html#default-elevations" rel="noopener" target="_blank">
+<span class="annotation__note-type">Elevation</span>
+<i class="material-icons annotation__note-icon">open_in_new</i>
+</a>
+<p class="annotation__note-title">Elevation</p>
+<p class="annotation__value annotation__value--first">8dp</p>
+</div>
+</li>
+</ul>
+<ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
+</ul>
+<ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
+</ul>
+<img alt="" class="redline-artboard lightbox__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1CLhBDAZt0MZui6C5w1svaeBJ1c7n7QZm/specs-sheets-bottom-coplanar.png" src="sheets-bottom.html" style="width: 760px; height: 380px;"/>
+<button class="ruler__trigger js-ruler-trigger"></button>
+<div class="ruler__cursor js-ruler-cursor">
+<span class="ruler__point ruler__point--left js-ruler-p1"></span>
+<span class="ruler__range js-ruler-range"></span>
+<span class="ruler__point ruler__point--right js-ruler-p2"></span>
+</div>
+</div>
+<div class="redline-icon" data-comp="Tooltip" data-props-tooltip='{"tip": "Specs",  "direction": "bottom"}'>
+<i class="material-icons">flip</i>
+</div>
+<div class="redline-smallres-message">
+<span class="redline-smallres-message__copy"><i class="redline-smallres-message__icon material-icons">flip</i>Specs only available at larger screen size</span>
+</div>
+</div>
+<p class="redline-unit-message">All measurements are displayed in <a class="redline-unit-message__link" href="../layout/understanding-layout.html#pixel-density" rel="noopener" target="_blank">device-independent pixels (dps)</a></p>
+<div class="colorpicker js-colorpicker">
+<div class="colorpicker__frame">
+<canvas class="colorpicker__magnifier js-colorpicker-magnifier"></canvas>
+<p class="colorpicker__color js-colorpicker-color"></p>
+<input class="colorpicker__val js-colorpicker-val" type="text"/>
+</div>
+</div>
+</div></div></section></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="implementation" class="container container--large js-waypoints-trigger article__section" data-section-title="Implementation" aria-label="Implementation">
+        
+          <h2 class="article__chapter-title">
+            Implementation
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">sheets, bottom</div>
+<p>Bottom sheets implementation support for each platform is indicated below.</p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "inline",
+    "action": "link click",
+    "label": "../mio-material/go/android-sheets-bottom/"
+    }
+' href="https://material.io/design/go/android-sheets-bottom/">
+<img alt="Android Implementation-Bottom Sheets" class=" animatable js-lazy-image" data-src="../assets/1ONORDOOQGP4EUI91ePCYpl9sN9f0ooEl/implementation-android.png" src="sheets-bottom.html">
+</img></a>
+</div>
+</figure><h2>
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../mio-material/go/android-sheets-bottom/"
+    }
+' href="https://material.io/design/go/android-sheets-bottom/">
+    Android Material Component
+  </a>
+</h2><p><strong>Status:</strong> Under Development</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "inline",
+    "action": "link click",
+    "label": "../mio-material/go/ios-sheets-bottom/"
+    }
+' href="https://material.io/design/go/ios-sheets-bottom/">
+<img alt="IOS Implementation-Bottom Sheets" class=" animatable js-lazy-image" data-src="../assets/1XtTf2Eq4XTSLtW6ahhCLavlx8umUNLkD/implementation-ios.png" src="sheets-bottom.html">
+</img></a>
+</div>
+</figure><h2>
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../mio-material/go/ios-sheets-bottom/"
+    }
+' href="https://material.io/design/go/ios-sheets-bottom/">
+    IOS Material Component
+  </a>
+</h2><p><strong>Status:</strong> Under Development</p></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "inline",
+    "action": "link click",
+    "label": "../mio-material/go/flutter-sheets-bottom/"
+    }
+' href="https://material.io/design/go/flutter-sheets-bottom/">
+<img alt="Flutter Implementation-Bottom Sheets" class=" animatable js-lazy-image" data-src="../assets/1HrhBwhyi0NPuzo57PhCy0qEPWXx2Pf8l/implementation-flutter.png" src="sheets-bottom.html">
+</img></a>
+</div>
+</figure><h2>
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../mio-material/go/flutter-sheets-bottom/"
+    }
+' href="https://material.io/design/go/flutter-sheets-bottom/">
+    Flutter Material Component
+  </a>
+</h2><p><strong>Status:</strong> Code Available</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "inline",
+    "action": "link click",
+    "label": "../mio-material/go/web-sheets-bottom/"
+    }
+' href="https://material.io/design/go/web-sheets-bottom/">
+<img alt="Web Implementation-Bottom Sheets" class=" animatable js-lazy-image" data-src="../assets/1XSqkyS3_VxWvaURJpZbU7tQ8zAbbQ4ys/implementation-web.png" src="sheets-bottom.html">
+</img></a>
+</div>
+</figure><h2>
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../mio-material/go/web-sheets-bottom/"
+    }
+' href="https://material.io/design/go/web-sheets-bottom/">
+    Web Material Component
+  </a>
+</h2><p><strong>Status:</strong> Planned</p></div></section></div><p> </p></div>
+        </div>
+      </section>
+    
+
+    
+  </div>
+  
+
+  <div class="container container--large">
+    
+
+
+  <h2>Up next
+    
+      <div class="article-controls">
+        
+      </div>
+    
+  </h2>
+
+
+<div class="suggested-articles"><div><a aria-label="Sheets: side" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../components/sheets-side.html"
+    }
+' href="sheets-side.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1YoFEEE2bevDApHniqIAyZT7Tdcql7ymB/sheets-side-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Components</h3>
+<h4 class="suggested-articles__item-subtitle">Sheets: side</h4>
+</a><a aria-label="Responsive Layout Grid" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../layout/responsive-layout-grid.html"
+    }
+' href="../layout/responsive-layout-grid.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/16H5k1CtJhkZlkT-MdCjW3KeExUfyObJQ/layout-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Layout</h3>
+<h4 class="suggested-articles__item-subtitle">Responsive Layout Grid</h4>
+</a><br>
+<a aria-label="Elevation" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../environment/elevation.html"
+    }
+' href="../environment/elevation.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1fOdPazWBot482oimvKKkBDEDzSuDlVBs/environment-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Environment</h3>
+<h4 class="suggested-articles__item-subtitle">Elevation</h4>
+</a></div></div>
+  </div>
+</article>
+
+    </main>
+
+    
+      
+
+
+<footer class="footer">
+  <div class="container container--jumbo">
+    <div class="footer-block footer-block--about">
+      
+      <a class="footer-block__logo js-analytics-click" href="https://material.io/"
+         data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "/"
+    }
+'>
+        <img class="footer-block__material-logo animatable js-lazy-image" data-src="../static/m2/images/material_logo.svg" src="sheets-bottom.html" alt="Material Design"/>
+      </a>
+      <div class="footer-block__content">
+        <p class="footer-block__description">Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</p>
+        <ul class="footer-block__social-nav">
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.github.com/material-components"
+    }
+'>GitHub</a>
+</li>
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.twitter.com/materialdesign"
+    }
+'>Twitter</a>
+</li>
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.youtube.com/googledesign"
+    }
+'>YouTube</a>
+</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-block footer-block--legal">
+      <a class="footer-block__logo js-analytics-click" href="https://www.google.com"
+         data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.google.com"
+    }
+'>
+        <img class="footer-block__google-logo animatable js-lazy-image" data-src="../static/m2/images/google_logo.svg" src="sheets-bottom.html" alt="Google"/>
+      </a>
+      <div class="footer-block__content">
+        <ul class="footer-block__legal-nav">
+          <li class="footer-block__legal-nav-item">
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://policies.google.com/privacy"
+    }
+'>Privacy Policy</a>
+</li>
+          <li class="footer-block__legal-nav-item">
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://policies.google.com/terms"
+    }
+'>Terms of Service</a>
+</li><li class="footer-block__legal-nav-item"><a href="javascript:void(0)" class="footer-block__legal-nav-link" onclick="try{userfeedback.api.startFeedback({'productId': '1027542', 'bucket': 'material_spec', 'locale': 'en', 'allowNonLoggedInFeedback': true});return false;}catch(e){}">Feedback</a></li></ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+        <div class="ui-mask js-ui-mask"></div>
+
+    
+      <div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
+    <header class="lightbox__header">
+      <div class="lightbox__header-title">
+        <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+        </span>
+        <h2 class="lightbox__title js-lightbox-title"></h2>
+      </div>
+
+      <div class="lightbox__actions">
+        <button type="button" name="button" class="lightbox-redlines-toggle js-redline-sidebar-toggle" data-comp="Tooltip" data-props-tooltip='{"tip": "View Specs", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>flip</i>
+        </button>
+
+        <button type="button" name="button" class="lightbox__button js-share" data-comp="Tooltip" data-props-tooltip='{"tip": "Share", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
+        </button>
+
+        
+      </div>
+    </header>
+
+    <div class="lightbox__template js-zoom-wrapper">
+      <div class="lightbox__content js-lightbox-content">
+        
+        <img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />
+      </div>
+      <div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
+        <i class="material-icons">&#xE3F4;</i>
+        <span class="redline-sidebar__label-text">Image only</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
+        <i class="material-icons">format_shapes</i>
+        <span class="redline-sidebar__label-text">Measurements</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
+        <i class="material-icons">format_size</i>
+        <span class="redline-sidebar__label-text">Text</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
+        <i class="material-icons">palette</i>
+        <span class="redline-sidebar__label-text">Color</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
+        <i class="material-icons">rounded_corner</i>
+        <span class="redline-sidebar__label-text">Shape and Elevation</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
+        <i class="material-icons">category</i>
+        <span class="redline-sidebar__label-text">Components</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
+        <i class="material-icons">notes</i>
+        <span class="redline-sidebar__label-text">Notes</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__toggles js-redline-layer-toggles">
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+        <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="dimensions">Dimensions</label>
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+        <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="padding">Padding</label>
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+        <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="typography">Text baseline</label>
+    
+  </div>
+</div>
+      <nav class="carousel__nav">
+  <button
+      class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Previous", "direction": "right"}'>
+    <i class="material-icons">chevron_left</i>
+  </button>
+
+  <button
+      class="carousel__button carousel__button--next mdc-ripple-surface js-carousel-next"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Next", "direction": "left"}'>
+    <i class="material-icons">chevron_right</i>
+  </button>
+</nav>
+      <div class="zoom-buttons" data-comp="Zoom">
+  <div class="zoom-buttons__wrapper">
+
+    <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">remove</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-reset" data-comp="Tooltip" data-props-tooltip='{"tip": "Reset", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">search</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-in" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom in", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">add</i>
+    </button>
+
+    <div class="zoom-buttons__extras">
+      <button class="mdc-button-zoom js-colorpicker-toggle" data-comp="Tooltip Colorpicker" data-props-tooltip='{"tip": "Color picker", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">colorize</i>
+      </button>
+      <button class="mdc-button-zoom js-ruler-toggle" data-comp="Tooltip Ruler" data-props-tooltip='{"tip": "Ruler", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">straighten</i>
+      </button>
+    </div>
+
+  </div>
+</div>
+    </div>
+
+
+  <aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
+      <button type="button" class="mdc-dialog-share-close js-dialog-close">
+        <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+      </button>
+    </header>
+    <section id="mdc-dialog-description" class="mdc-dialog__body">
+      <input type="text" readonly class="mdc-dialog-share-url js-share-url" />
+      <button type="button" class="mdc-button mdc-ripple-surface mdc-dialog-copy js-dialog-copy">Copy</button>
+    </section>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside>
+</div>
+      <div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+  <div class="mdc-snackbar__text"></div>
+  <div class="mdc-snackbar__action-wrapper">
+    <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
+  </div>
+</div>
+    
+
+    
+    <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
+    <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  </body>
+</html>

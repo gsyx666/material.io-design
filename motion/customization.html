@@ -1,0 +1,4416 @@
+
+
+
+
+
+
+
+
+  
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Customization - Material Design</title>
+
+    <meta itemprop="name"        property="og:title"       name="twitter:title"       content="Customization" />
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Build beautiful, usable products faster. Material Design is an adaptable system—backed by open-source code—that helps teams build high quality digital experiences." />
+    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1pYvqae0vbwNFpZrfLoEwtF6wPvm14bGV/motion-thumbnail-2x1.png" />
+    <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/motion/customization.html" />
+    <meta property="og:site_name" content="Material Design" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="https://material.io/favicon.ico">
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NHRPF8');</script>
+        <style>
+      .animatable {
+        opacity: 0;
+        position: relative;
+        top: 16px; 
+        transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+                    top 500ms cubic-bezier(.4,0,.2,1);
+      }
+    </style>
+
+    <link href="../static/m2/css/main.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+    <link rel="preload" href="../static/m2/js/main.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js" as="script">
+  </head>
+
+  <body class="header-show page--article left-rail"
+        data-comp="Global "
+        data-slug-id="customization"
+        data-spec-alias="mio-design"
+         >
+
+    
+
+
+<header class="header js-header" data-comp="Header">
+  
+    <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+    </button>
+  
+
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  <nav class="header__nav" role="navigation">
+    <ul class="header__nav-list header__nav-list--selected">
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/"
+    }
+'>
+      Home
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+    <a href="https://material.io/design"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/design"
+    }
+'>
+      Design
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/develop"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/develop"
+    }
+'>
+      Develop
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+        
+  <li class="header__nav-item  js-header-item">
+    <a href="https://material.io/tools"
+        class="header__nav-link js-analytics-click"
+        data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "nav click",
+    "label": "/tools"
+    }
+'>
+      Tools
+      <span class="header__nav-indicator"></span>
+    </a>
+  </li>
+      
+    </ul>
+  </nav>
+
+  <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform='{"basePath": "/", "ajax": false, "showOnLoad": false}'>
+    <button class="search-form__back js-search-back js-analytics-click" type="button"
+            data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "search back",
+    "action": "click icon",
+    "label": "DEFAULT: ga_label"
+    }
+'>
+      <i class="material-icons">arrow_back</i>
+    </button>
+
+    <input id="search-query" class="search-form__input js-search-input" name="q" type="text" title="query" placeholder="Search" autocomplete="off">
+  </form>
+
+  <button class="header__search header__button js-toggle-search js-analytics-click"
+          data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "search",
+    "action": "click icon",
+    "label": "DEFAULT: ga_label"
+    }
+'>
+    <div class="icons-container mdc-ripple-surface" data-mdc-ripple-is-unbounded>
+      <i class="material-icons header__spyglass" aria-label="Search">search</i>
+      <i class="material-icons header__search-close" aria-label="Close">close</i>
+    </div>
+  </button>
+</header>
+
+    
+
+
+<nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs">
+  
+    <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons" title="Toggle Navigation">menu</i>
+    </button>
+  
+
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  <ol class="container container--large breadcrumbs__list">
+    
+      
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click "
+           href="../motion.html"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../motion"
+    }
+'>Motion</a>
+      </li>
+    
+      
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
+           href="customization.html"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../motion/customization.html"
+    }
+'>Customization</a>
+      </li>
+    
+      
+      <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
+           href="customization.html#customization options"
+           data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "#customization options"
+    }
+'>Customization options</a>
+      </li>
+    
+  </ol>
+</nav>
+    
+  
+    
+
+
+
+<nav class="side-nav" data-comp="SideNav" role="navigation">
+  
+    
+
+<a href="https://material.io/" class="brand-lockup js-analytics-click"
+   data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "global click",
+    "label": "logo"
+    }
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  
+
+  
+
+  
+    
+    
+
+    
+      
+      <span class="side-nav__section-title">Material System</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../introduction.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../introduction"
+    }
+'>
+            Introduction
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav1"
+                  aria-expanded="false">
+            Material studies
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav1">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/about-our-material-studies.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/about-our-material-studies.html"
+    }
+'>
+            About our Material studies
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/basil.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/basil.html"
+    }
+'>
+            Basil
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/crane.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/crane.html"
+    }
+'>
+            Crane
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/fortnightly.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/fortnightly.html"
+    }
+'>
+            Fortnightly
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/owl.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/owl.html"
+    }
+'>
+            Owl
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/rally.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/rally.html"
+    }
+'>
+            Rally
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/reply.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/reply.html"
+    }
+'>
+            Reply
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-studies/shrine.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/shrine.html"
+    }
+'>
+            Shrine
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+      </ul>
+      <span class="side-nav__section-title">Material Foundation</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../foundation-overview.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../foundation-overview"
+    }
+'>
+            Foundation overview
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav3"
+                  aria-expanded="false">
+            Environment
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav3">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/surfaces.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/surfaces.html"
+    }
+'>
+            Surfaces
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/elevation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/elevation.html"
+    }
+'>
+            Elevation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../environment/light-shadows.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/light-shadows.html"
+    }
+'>
+            Light and shadows
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav4"
+                  aria-expanded="false">
+            Layout
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav4">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/understanding-layout.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/understanding-layout.html"
+    }
+'>
+            Understanding layout
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/responsive-layout-grid.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/responsive-layout-grid.html"
+    }
+'>
+            Responsive layout grid
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/spacing-methods.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/spacing-methods.html"
+    }
+'>
+            Spacing methods
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/component-behavior.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/component-behavior.html"
+    }
+'>
+            Component behavior
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../layout/density.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/density.html"
+    }
+'>
+            Density
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav5"
+                  aria-expanded="false">
+            Navigation
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav5">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/understanding-navigation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/understanding-navigation.html"
+    }
+'>
+            Understanding navigation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/navigation-transitions.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/navigation-transitions.html"
+    }
+'>
+            Navigation transitions
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../navigation/search.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/search.html"
+    }
+'>
+            Search
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav6"
+                  aria-expanded="false">
+            Color
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav6">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/the-color-system.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/the-color-system.html"
+    }
+'>
+            The color system
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/applying-color-to-ui.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/applying-color-to-ui.html"
+    }
+'>
+            Applying color to UI
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/color-usage.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/color-usage.html"
+    }
+'>
+            Color usage
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../color/text-legibility.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/text-legibility.html"
+    }
+'>
+            Text legibility
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav7"
+                  aria-expanded="false">
+            Typography
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav7">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/the-type-system.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/the-type-system.html"
+    }
+'>
+            The type system
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/understanding-typography.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/understanding-typography.html"
+    }
+'>
+            Understanding typography
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../typography/language-support.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/language-support.html"
+    }
+'>
+            Language support
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav8"
+                  aria-expanded="false">
+            Iconography
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav8">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/product-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/product-icons.html"
+    }
+'>
+            Product icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/system-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/system-icons.html"
+    }
+'>
+            System icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../iconography/animated-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/animated-icons.html"
+    }
+'>
+            Animated icons
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav9"
+                  aria-expanded="false">
+            Shape
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav9">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/about-shape.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/about-shape.html"
+    }
+'>
+            About shape
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-hierarchy.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-hierarchy.html"
+    }
+'>
+            Shape and hierarchy
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-as-expression.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-as-expression.html"
+    }
+'>
+            Shape as expression
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../shape/shape-motion.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-motion.html"
+    }
+'>
+            Shape and motion
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
+                  aria-controls="_nav10"
+                  aria-expanded="true">
+            Motion
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav10">
+    <ul class="side-nav__submenu" data-menu-state="open">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="understanding-motion.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/understanding-motion.html"
+    }
+'>
+            Understanding motion
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="speed.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/speed.html"
+    }
+'>
+            Speed
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="choreography.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/choreography.html"
+    }
+'>
+            Choreography
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              side-nav__link--active
+               js-header-show"
+              href="customization.html" aria-current="page" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/customization.html"
+    }
+'>
+            Customization
+          </a>
+
+          
+          
+            <div class="side-nav__articles">
+              <i class="side-nav__progress-bar">
+                <i class="side-nav__scrub js-submenu-scrub"></i>
+              </i>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-customization-options js-analytics-click" href="customization.html#customization-options" data-section-id="customization-options"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#customization-options"
+    }
+'>
+                    <span class="js-anchor-text">Customization options</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-speed js-analytics-click" href="customization.html#speed" data-section-id="speed"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#speed"
+    }
+'>
+                    <span class="js-anchor-text">Speed</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-movement js-analytics-click" href="customization.html#movement" data-section-id="movement"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#movement"
+    }
+'>
+                    <span class="js-anchor-text">Movement</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-sequencing js-analytics-click" href="customization.html#sequencing" data-section-id="sequencing"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#sequencing"
+    }
+'>
+                    <span class="js-anchor-text">Sequencing</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-icons-illustrations js-analytics-click" href="customization.html#icons-illustrations" data-section-id="icons-illustrations"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#icons-illustrations"
+    }
+'>
+                    <span class="js-anchor-text">Icons &amp; illustrations</span>
+                  </a>
+                </div>
+              
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-condensing-transitions js-analytics-click" href="customization.html#condensing-transitions" data-section-id="condensing-transitions"
+                     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#condensing-transitions"
+    }
+'>
+                    <span class="js-anchor-text">Condensing transitions</span>
+                  </a>
+                </div>
+              
+            </div>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav11"
+                  aria-expanded="false">
+            Interaction
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav11">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/gestures.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/gestures.html"
+    }
+'>
+            Gestures
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/selection.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/selection.html"
+    }
+'>
+            Selection
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../interaction/states.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/states.html"
+    }
+'>
+            States
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav12"
+                  aria-expanded="false">
+            Communication
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav12">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/confirmation-acknowledgement.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/confirmation-acknowledgement.html"
+    }
+'>
+            Confirmation &amp; acknowledgement
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/data-formats.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/data-formats.html"
+    }
+'>
+            Data formats
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/empty-states.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/empty-states.html"
+    }
+'>
+            Empty states
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/gesture-education.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/gesture-education.html"
+    }
+'>
+            Gesture education
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/help-feedback.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/help-feedback.html"
+    }
+'>
+            Help &amp; feedback
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/imagery.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/imagery.html"
+    }
+'>
+            Imagery
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/launch-screen.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/launch-screen.html"
+    }
+'>
+            Launch screen
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../communication/onboarding.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/onboarding.html"
+    }
+'>
+            Onboarding
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+      </ul>
+      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../guidelines-overview.html"
+             data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"
+    }
+'>
+            Guidelines overview
+          </a>
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav14"
+                  aria-expanded="false">
+            Material Theming
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav14">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-theming/overview.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/overview.html"
+    }
+'>
+            Overview
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../material-theming/implementing-your-theme.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/implementing-your-theme.html"
+    }
+'>
+            Implementing your theme
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav15"
+                  aria-expanded="false">
+            Components
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav15">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/app-bars-bottom.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-bottom.html"
+    }
+'>
+            App bars: bottom
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/app-bars-top.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-top.html"
+    }
+'>
+            App bars: top
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/backdrop.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/backdrop.html"
+    }
+'>
+            Backdrop
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/banners.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/banners.html"
+    }
+'>
+            Banners
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/bottom-navigation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/bottom-navigation.html"
+    }
+'>
+            Bottom navigation
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/buttons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons.html"
+    }
+'>
+            Buttons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/buttons-floating-action-button.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons-floating-action-button.html"
+    }
+'>
+            Buttons: floating action button
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/cards.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/cards.html"
+    }
+'>
+            Cards
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/chips.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/chips.html"
+    }
+'>
+            Chips
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/data-tables.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/data-tables.html"
+    }
+'>
+            Data tables
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/dialogs.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dialogs.html"
+    }
+'>
+            Dialogs
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/dividers.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dividers.html"
+    }
+'>
+            Dividers
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/image-lists.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/image-lists.html"
+    }
+'>
+            Image lists
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/lists.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/lists.html"
+    }
+'>
+            Lists
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/menus.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/menus.html"
+    }
+'>
+            Menus
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/navigation-drawer.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/navigation-drawer.html"
+    }
+'>
+            Navigation drawer
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/progress-indicators.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/progress-indicators.html"
+    }
+'>
+            Progress indicators
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/selection-controls.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/selection-controls.html"
+    }
+'>
+            Selection controls
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/sheets-bottom.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-bottom.html"
+    }
+'>
+            Sheets: bottom
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/sheets-side.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-side.html"
+    }
+'>
+            Sheets: side
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/sliders.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sliders.html"
+    }
+'>
+            Sliders
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/snackbars.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/snackbars.html"
+    }
+'>
+            Snackbars
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/tabs.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tabs.html"
+    }
+'>
+            Tabs
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/text-fields.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/text-fields.html"
+    }
+'>
+            Text fields
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../components/tooltips.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tooltips.html"
+    }
+'>
+            Tooltips
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../usability/accessibility.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/accessibility.html"
+    }
+'>
+            Accessibility
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../usability/bidirectionality.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"
+    }
+'>
+            Bidirectionality
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+    
+    
+
+    
+
+      <li class="side-nav__menu-item">
+        
+        
+          
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav17"
+                  aria-expanded="false">
+            Platform guidance
+          </button>
+          
+  <div class="side-nav__wrapper" id="_nav17">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-bars.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-bars.html"
+    }
+'>
+            Android bars
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-fingerprint.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-fingerprint.html"
+    }
+'>
+            Android fingerprint
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-haptics.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-haptics.html"
+    }
+'>
+            Android haptics
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-icons.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-icons.html"
+    }
+'>
+            Android icons
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-navigating-between-apps.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-navigating-between-apps.html"
+    }
+'>
+            Android navigating between apps
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-notifications.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-notifications.html"
+    }
+'>
+            Android notifications
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-permissions.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-permissions.html"
+    }
+'>
+            Android permissions
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-settings.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-settings.html"
+    }
+'>
+            Android settings
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-split-screen.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-split-screen.html"
+    }
+'>
+            Android split-screen
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-swipe-to-refresh.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-swipe-to-refresh.html"
+    }
+'>
+            Android swipe to refresh
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-text-selection-toolbar.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-text-selection-toolbar.html"
+    }
+'>
+            Android text selection toolbar
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/android-widget.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-widget.html"
+    }
+'>
+            Android widget
+          </a>
+
+          
+          
+        </li>
+      
+        
+        
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+              
+              "
+              href="../platform-guidance/cross-platform-adaptation.html"data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/cross-platform-adaptation.html"
+    }
+'>
+            Cross-platform adaptation
+          </a>
+
+          
+          
+        </li>
+      
+    </ul>
+  </div>
+
+        
+      </li>
+  
+
+  </ul>
+</nav>
+  
+
+
+    <main class="main" role="main">
+      
+      
+
+      
+<article class="article" data-comp="Waypoints">
+  <div class="article__intro container container--large js-waypoints-trigger-initial">
+    
+      
+      <nav class="article__nav animatable js-anim-trigger">
+        <span class="eyebrow">Contents</span>
+        <ul>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="customization.html#customization-options" data-section-id="customization-options"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#customization-options"
+    }
+'>Customization options</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="customization.html#speed" data-section-id="speed"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#speed"
+    }
+'>Speed</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="customization.html#movement" data-section-id="movement"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#movement"
+    }
+'>Movement</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="customization.html#sequencing" data-section-id="sequencing"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#sequencing"
+    }
+'>Sequencing</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="customization.html#icons-illustrations" data-section-id="icons-illustrations"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#icons-illustrations"
+    }
+'>Icons &amp; illustrations</a>
+            </li>
+          
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="customization.html#condensing-transitions" data-section-id="condensing-transitions"
+                 data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#condensing-transitions"
+    }
+'>Condensing transitions</a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+    <h1 class="article__title animatable js-anim-trigger">
+      
+
+      Customization
+
+      
+        
+          <div class="article-controls">
+            
+          </div>
+        
+      
+    </h1>
+
+    
+
+    
+      
+      <div class="article__intro-text animatable js-anim-trigger">
+      <div>
+<div aria-hidden="true" class="keywords hidden">motion, customization</div>
+<h2>Motion can be customized to express a distinct style and personality.</h2></div>
+      </div>
+    
+  </div>
+
+  <hr />
+
+  
+  <div class="article__body animatable js-show-header js-anim-trigger">
+    
+      
+      <section id="customization-options" class="container container--large js-waypoints-trigger article__section" data-section-title="Customization options" aria-label="Customization options">
+        
+          <h2 class="article__chapter-title">
+            Customization options
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">motion, customization</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Personality</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Motion can be customized through speed , movement , sequencing , icons &amp; illustrations , and condensing transitions . Customizations should match the desired tone...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Motion can be customized through 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../motion/customization.html#speed"
+    }
+' href="customization.html#speed">
+    speed
+  </a>
+, 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../motion/customization.html#movement"
+    }
+' href="customization.html#movement">
+    movement
+  </a>
+, 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../motion/customization.html#sequencing"
+    }
+' href="customization.html#sequencing">
+    sequencing
+  </a>
+, 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../motion/customization.html#icons-illustrations"
+    }
+' href="customization.html#icons-illustrations">
+    icons &amp; illustrations
+  </a>
+, and 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../motion/customization.html#condensing-transitions"
+    }
+' href="customization.html#condensing-transitions">
+    condensing transitions
+  </a>
+.</p><p>Customizations should match the desired tone and style. For example, a playful app can use oscillation and stretch to create an interface that’s fun and engaging.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="customization-options-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1UY1cyOsyWkHwDRh13t7pH3u-PLTXoodk/01-consistency-do-v2.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="customization-options-figure-caption-0">
+<p class="s-tag-caption do">Do.</p>
+<p>Use animation that matches the style of your app. This animated logo and oscillation occur during a user action with chips. </p><p>1. Animated illustration </p><p>2. Oscillation</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="customization-options-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1W0rZt19ihURVAvcH9gA_tXyygdHpekH-/01-consistency-reply-dont.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="customization-options-figure-caption-1">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Avoid techniques that conflict with the desired style. Stagger conflicts with this app’s emphasis on efficiency. The elastic animated floating action button and oscillation are too playful for a productivity app.</p><p>1. Emphasized stagger </p><p>2. Animated icon </p><p>3. Oscillation</p>
+</figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../motion/customization.html#sequencing"
+    }
+' href="customization.html#sequencing" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Sequencing</h2>
+<p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Consistency</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Animation customization techniques should be applied uniformly, with refinements made to suit the context in which they appear. For example, elements can enter the screen...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Animation customization techniques should be applied uniformly, with refinements made to suit the context in which they appear.</p><p>For example, elements can enter the screen in a staggered sequence using a <strong>stagger effect</strong>. Stagger effects should be applied consistently to similar situations.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="customization-options-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1jWqDyCva5_JoUc6vRijjAc-evwot009K/02-rally-stagger-do-v05.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="customization-options-figure-caption-2">
+<p class="s-tag-caption do">Do.</p>
+<p>Apply the same techniques everywhere a particular context appears. This UI uses the same stagger effect on list items across all tabs.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="customization-options-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1CDqJTdZzcfhxxG8AJHUtcxg9bZSdOxiK/02-rally-stagger-dont-v06.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="customization-options-figure-caption-3">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Avoid obvious inconsistencies in the treatment of related screens. The list in Bills uses stagger, while the list in Budgets moves as a single element.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Timing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Customizations create connection at key points in a user journey. Subtle details add character to frequent interactions without creating distraction.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Key touchpoints</h2><p>Customizations create connection at key points in a user journey.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="customization-options-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1mdmnJKyr_b0RfLwi2ozfmgiCn5AhMCEF/03-reply-inboxzero.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="customization-options-figure-caption-4">
+<p>An animation displayed to reward the user for a task can create delight.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Frequent interactions</h2><p>Subtle details add character to frequent interactions without creating distraction.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 35.5263157895%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="customization-options-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1Qax6GqXbCzxYrEBhKAgzW8xZHs_Bsm6v/01-owl-frequent-interactions.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="customization-options-figure-caption-5">
+<p>Animated icons add subtle polish to bottom navigation.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="speed" class="container container--large js-waypoints-trigger article__section" data-section-title="Speed" aria-label="Speed">
+        
+          <h2 class="article__chapter-title">
+            Speed
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">motion, customization</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Standard easing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Standard easing is suitable for most transitions. It’s recommended for transitions that help users complete a task, such as basic navigation.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Standard easing is suitable for most transitions. It’s recommended for transitions that help users complete a task, such as basic navigation.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/15nM90toA-iUL-fgVDO3AgFf1XBlF9VDN/02-baseline-v2.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>Standard easing gives this transition a functional style.</p>
+</figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Emphasized easing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Emphasized easing places emphasis at the end of an animation. It’s recommended for expressing a relaxed or intense style which can’t be achieved with Standard...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Emphasized easing places emphasis at the end of an animation. It’s recommended for expressing a relaxed or intense style which can’t be achieved with Standard easing.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="speed-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1RidlEM6TXF3dLV0M1NsBUok2exl-nf1S/02-emphasized-posivibe.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="speed-figure-caption-0">
+<p>Emphasized easing can be used to achieve an intense tone.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="speed-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1RnztSK1ziPXBVgxC6FNTFnOaFe5HgJA-/02-emphasized-shrine.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="speed-figure-caption-1">
+<p>Emphasized easing can be used to achieve a relaxed and graceful tone.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFudHZsRmhqRHpQOEU/01-baselineemphasized.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>Emphasized easing accelerates more quickly than standard easing, so it can move more slowly as it comes to a stop.</p>
+</figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Duration</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Shortening the duration of an animation can make it feel bolder. Lengthening an animation’s duration can express a more relaxed tone. Standard easing may perform...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Shortening the 
+<a class="js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../motion/speed.html#duration"
+    }
+' href="speed.html#duration">
+    duration
+  </a>
+ of an animation can make it feel bolder. Lengthening an animation’s duration can express a more relaxed tone.</p><p>Standard easing may perform poorly for durations over 400ms, in those cases consider using Emphasized easing.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="speed-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1hgo_MJvjJI1sscRdEgS7XNXkdklhibtR/01-duration-do.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="speed-figure-caption-2">
+<p class="s-tag-caption do">Do.</p>
+<p>Make small adjustments to the default duration to express a particular tone. Increasing the default from 300ms to 350ms expresses a more relaxed effect, while shortening it to 250ms makes it more bold.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="speed-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuOExQa2U0YzZvZWc/01-duration-dont.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="speed-figure-caption-3">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Avoid large adjustments to the default durations. Slowing this transition to 550ms could be too slow, and speeding it up to 115ms could be jarring.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="movement" class="container container--large js-waypoints-trigger article__section" data-section-title="Movement" aria-label="Movement">
+        
+          <h2 class="article__chapter-title">
+            Movement
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">motion, customization</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Motion path</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>As an element transforms, it moves in a line called a motion path. Motion paths are linear by default. If an element changes size or...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>As an element transforms, it moves in  a line called a motion path.</p><p>Motion paths are linear by default. If an element changes size or moves diagonally, the motion path can be linear or along an arc. </p><h2>Linear motion</h2><p>Linear motion produces a simple movement, suited for most transitions. This motion is minimally distracting.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1_z4ojOWY7mDd_yoeqTC1TYvfON7UEVDT/01-pathofmotionlinear.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-0">
+<p class="s-tag-caption do">Do.</p>
+<p>This card transforms between collapsed and expanded states in a straightforward way.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1HQJeNyoNcC4SA-PwO0TpvT4yjcyFplTF/01-handles-linear.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-1">
+<p class="s-tag-caption caution">Caution.</p>
+<p>The transformation creates a large diagonal movement that is incongruous with the predominantly up-and-down or side-to-side movement of other elements.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Arc motion</h2><p>Arcs mimic natural movement. They are suited to transitions that require a large adjustment to the aspect ratio of a surface.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1JLs4KnMsty5jzCOR05u3FtQ9unLSTAAZ/01-handles-arc.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-2">
+<p class="s-tag-caption do">Do.</p>
+<p>This bottom sheet transforms fluidly into a list along an arc motion path.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1-W9C-KyE-K617K81iZQXzxrJX19zYAr2/01-pathofmotionarc.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-3">
+<p class="s-tag-caption caution">Caution.</p>
+<p>This arc path travels past  its resting position on the y-axis.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>An arc path has two possible orientations, referred to as vertical out and horizontal out. <strong>Vertical out</strong> means elements following that arc will finish with a vertical motion, while <strong>horizontal out</strong> means elements finish in a horizontal direction. </p><p>Determine the orientation to use by considering the motion of an expanding surface. The arc should match the primary scrolling axis of the UI. For example, a card in a vertically scrolling UI will expand using a vertical out arc. When the card collapses, the motion reverses, first moving vertically and then horizontally.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/122EfVn-iHZh8nDfk3pWVJt9VDBxwunVr/01-pathofmotionarcshape-do.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-4">
+<p class="s-tag-caption do">Do.</p>
+<p>Expand the surface in the direction of scrolling, and collapse the surface in the reverse direction along the same path.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1rRsWFXHoRu_SloMc3rqUxhS22JWQCrDI/01-pathofmotionarcshape-dont.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-5">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Don’t allow arc motion and scroll direction to clash with one another.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Overshoot</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Overshoot refers to animating an element past its resting position, as though propelled by a great force. Overshoot is used to:</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Overshoot refers to animating an element past its resting position, as though propelled by a great force. Overshoot is used to:</p><ul class="lst-kix_5w8imbj3pg8n-0 start"><li>Emphasize important or time-sensitive information</li><li>Communicate playfulness and energy to small components, like switches</li></ul><hr class="spacer" role="separator"/></div></section><section class="figure-figure col-2"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuM0FMUVVucmlNTFU/02-trax-switch.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>Apply overshoot to small components to add playfulness.</p>
+</figcaption></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/13FowmvZUBkfN2ARTWFLnnY2QXi6mKNp8/02-shrinedialog.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>This dialog uses overshoot to emphasize its entrance.</p>
+</figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Oscillation</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Oscillation occurs when an animation uses more than one overshoot. Each additional back and forth movement is smaller than the previous one, until the motion...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Oscillation occurs when an animation uses more than one overshoot. Each additional back and forth movement is smaller than the previous one, until the motion stops. Oscillation may be used for:</p><ul class="lst-kix_cjtf2gy2rgyz-0 start"><li>Fling and overscroll gestures</li><li>Applying a cartoon style </li></ul><hr class="spacer" role="separator"/></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1OxMb9QgGwzrJy1ZsRNsK8DBVy31I6A03/03-springinessowl-v1.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-6">
+<p class="s-tag-caption do">Do.</p>
+<p>Use oscillation with gestures to create a quirky style.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-7" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFudU1qd2lJM1RDb28/03-springiness-reply-dont.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-7">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Don’t use oscillation in apps that require functional, efficient interactions.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Stretch</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Stretch refers to increasing an element’s size along a single axis. Simple components, such as switches and sliders, can suggest high speed by stretching in...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Stretch refers to increasing an element’s size along a single axis. Simple components, such as switches and sliders, can suggest high speed by stretching in the direction they’re moving. Stretch can be used when moving horizontally, vertically, or in a circle. </p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-8" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1-3y3zLHPlV3wg-v2CmlB44qg9nLmldet/04-elasticity-spectrum.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-8">
+<p>Customize stretch by varying the trailing edge’s delay. The longer the delay, the longer the trail. </p><p>Upper dot delay: 150ms<br>
+Lower dot delay: 350ms</br></p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-9" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1KL_-_R_BNLknpF2PtR-z7999Yl1d3Zwk/04-elasticity.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-9">
+<p>Horizontal or vertical movements can use stretch. For diagonal movement, use a fade transition instead of stretch.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1PONTdRB2Ywa5Meme5pqbV35bRKFrqHLO/04-elasticity-basil.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>Stretch adds character to the stepper selection indicator.</p>
+</figcaption></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-10" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1TJMeJR9gk3jkaMVzt95vFacAM8mAORlJ/04-elasticity-datepicker.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-10">
+<p class="s-tag-caption do">Do.</p>
+<p>This time indicator moves in an arc as it swings to a new position on the clock.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-11" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1IMuLcf1QZStHWU-FyLz9IYFFfy02M5Co/04-elasticity-dont.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-11">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Avoid stretching elements other than simple shapes (circles, rectangles, and rounded rectangles), diagonal paths, or curves other than a perfect circle.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-12" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1MtHlBnOyWyAzmkCSJEGGLam11zHEcRbF/04-squashandstretch-reply.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-12">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Don’t use character animation on UI components. The cartoon style of this floating action button is distracting in a task-based app.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Elevation</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Elevation refers to an element’s location on the z-axis. During a transition, elevation can be animated to increase depth and emphasize layering. Parallax refers to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Elevation refers to an element’s location on the z-axis. During a transition, elevation can be animated to increase depth and emphasize layering.</p><h2>Parallax</h2><p>Parallax refers to when elements close to the viewer move faster than those further away. Parallax can be used to indicate that elements occupy different elevations and emphasize depth. </p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-13" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuaE9BVU5tWWs0Q2c/05-parallax-owl.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-13">
+<p>Parallax adds a sense of depth while scrolling.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="movement-figure-caption-14" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1SAjnoh86f1go3bowzykjuNNtPUqMEn_T/05-parallax-basil.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="movement-figure-caption-14">
+<p>Parallax indicates which elements are in front of others.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="figure col-1 h2-spacing"><div class="figure"><h2>Scale</h2><p>Elements that shrink in size appear to recede. Elements that grow larger appear to raise in elevation.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1S78FZgzy2yhKlgxp41UZLJDOMrVAcBbm/05-scale.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>The background content shrinks to emphasize its move into the distance.</p>
+</figcaption></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="sequencing" class="container container--large js-waypoints-trigger article__section" data-section-title="Sequencing" aria-label="Sequencing">
+        
+          <h2 class="article__chapter-title">
+            Sequencing
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">motion, customization</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Temporal offset</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>To emphasize an element, offset it’s timing relative to other elements. For example, a floating action button can stand out by finishing its entrance after...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>To emphasize an element, offset it’s timing relative to other elements. For example, a floating action button can stand out by finishing its entrance after all other animations have stopped. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 55.2631578947%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1XjKfreejJEBJZlPAouob3l1c6XFcvGSE/01-complexsequencing.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-0">
+<p>The floating action button animation is 100ms longer than the app bar’s animation. This helps the FAB to stand out.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Stagger</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Stagger refers to applying temporal offsets to a group of elements in sequence, like a list. Stagger creates a cascade effect that focuses attention briefly...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p><strong>Stagger </strong>refers to applying temporal offsets to a group of elements in sequence, like a list. Stagger creates a cascade effect that focuses attention briefly on each item. It can reveal significant content or highlight affordances within a group.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuT1BKM21pS3pYRUU/02-staggering-crane.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-1">
+<p>Use stagger to add polish to important transitions. This transition is embellished with a stagger when users return to the app.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1285MClU0wW8Pw6HWEGZtiamlLTsc9_lX/02-staggering-owl.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-2">
+<p>Stagger hints that member of a group may act as a separate affordance. This staggered movement encourages interaction with individual cards.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 63.1578947368%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1iVkgFUgrP5lQMdGb6uFiJW3xV4_dFtD6/03-staggering-caution.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-3">
+<p class="s-tag-caption caution">Caution.</p>
+</figcaption>
+</figure><figcaption>
+<p>Avoid stagger for frequent interactions. Repetition can dull the impact and create distraction when the same effect is seen many times in succession.</p>
+</figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>To provide a point of focus, elements should stagger using short delays, moving in the direction of the primary scrolling axis. To make the effect more subtle, stagger by rows or columns instead of by individual elements.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1Bc9xpqVSj0cRTtbXLGhDdtWi_OUHIQ11/04-staggering-vertical.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-4">
+<p>Items stagger top to bottom to complement vertical scrolling.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1BdO0P0R-qxoQroeURjNSr6Vv8ptJcfbI/04-staggering-horizontal.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-5">
+<p>Items stagger left to right to complement horizontal scrolling.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1BXXTy-I7ddWOa5d3pFPXnyedQb44EFOX/05-staggering-random-dont.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-6">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Don’t stagger in a random order, which can divide user focus.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="sequencing-figure-caption-7" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1BaBd2nKScAREgL_7Lb43rOSNnmQqFbSi/05-staggering-dont.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="sequencing-figure-caption-7">
+<p class="s-tag-caption dont">Don’t.</p>
+<p>Avoid prolonged delays between elements.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="icons-illustrations" class="container container--large js-waypoints-trigger article__section" data-section-title="Icons &amp; illustrations" aria-label="Icons &amp; illustrations">
+        
+          <h2 class="article__chapter-title">
+            Icons &amp; illustrations
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">motion, customization</div>
+<p>Subtle animation in icons, illustrations, and product logos can add polish and playfulness to the user experience. </p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">System icons</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Animated system icons are subtle motion refinements added to the default system icons. They contribute to a polished experience. An alert is a persistent, in-app...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Animated system icons are subtle motion refinements added to the default system icons. They contribute to a polished experience.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="icons-illustrations-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFualV1UHF0alRtYms/01-icons-polish.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="icons-illustrations-figure-caption-0">
+<p>These icon animations add playful attention to detail.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="icons-illustrations-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuTEFyelNEMmxFcnc/01-icons-owl.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="icons-illustrations-figure-caption-1">
+<p>The icon animations in Owl, a colorful educational app, were designed to reflect its brand.</p>
+</figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../iconography/animated-icons.html#animated-icons"
+    }
+' href="../iconography/animated-icons.html#animated-icons" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1pJD92XuGHswKeMHtnPdqc1itliLqvn08/icons-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pJD92XuGHswKeMHtnPdqc1itliLqvn08/icons-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Animated Icons</h2>
+<p class="object-card__body">An alert is a persistent, in-app message that informs users of a particular change state, they are important but not optional.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Product icons</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Animated product icons welcome users and add polish to your UI.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Animated product icons welcome users and add polish to your UI. </p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="icons-illustrations-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuLUlhMnJKVEkyYkU/02-logo-shrine.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="icons-illustrations-figure-caption-2">
+<p>The 3D rotation of this diamond logo adds an imaginative touch.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="icons-illustrations-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuWFdXcW1WUFhncEE/02-logo-reply.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="icons-illustrations-figure-caption-3">
+<p>Logo animations often take cues from the shapes, lines, and patterns of a product’s design. This logo traces a path inspired by a curling piece of paper.</p>
+</figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="icons-illustrations-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuREp1clNPZDRJQkk/02-logo-crane.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="icons-illustrations-figure-caption-4">
+<p>Logo animations can reference the behavior associated with some shapes. This logo steps into view, reflecting the movements of the bird it represents.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="icons-illustrations-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFubHItTDlNdWR5Unc/02-logo-owl.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="icons-illustrations-figure-caption-5">
+<p>Logos can use pronounced character animation to set a tone.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Illustrations</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Animated illustrations create moments of user delight.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Animated illustrations create moments of user delight.</p></div></section><section class="figure-module col-2"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1V4cpZgspFh5KbWWEeElx-MECUnEOJrLj/03-juggler.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure><figcaption>
+<p>Character animation can demonstrate empathy for an unexpected error.</p>
+</figcaption></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="icons-illustrations-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1Aba832w6iG-Aaa6ephruHIBUivWWaFY4/shrine-illo-cart-v04.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="icons-illustrations-figure-caption-6">
+<p>Illustrations can guide a user through selecting notification settings.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+      <hr />
+      <section id="condensing-transitions" class="container container--large js-waypoints-trigger article__section" data-section-title="Condensing transitions" aria-label="Condensing transitions">
+        
+          <h2 class="article__chapter-title">
+            Condensing transitions
+            <span class="article-controls">
+              
+              
+  
+  
+            </span>
+          </h2>
+        
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">motion, customization</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Transitions can be condensed, or simplified, by using shorter shared motion. For example, a list item can travel a shorter distance when it uses a...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Transitions can be condensed, or simplified, by using shorter shared motion. For example, a list item can travel a shorter distance when it uses a fade transition, instead of tweening the size and position of its container.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="condensing-transitions-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1u8LHdUn4SpzOvpMZ2nKR_x6jheE34TDK/01-fortnightly-condensed.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="condensing-transitions-figure-caption-0">
+<p>The list item transitions using a small vertical shift, instead of a larger transformation.</p>
+</figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="condensing-transitions-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/1uzaISCztatHniYdlH7JnxS4D_3_BK4mI/01-fortnightly-direct.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="condensing-transitions-figure-caption-1">
+<p>The list item and focal element transition by tweening size and position. Elements travel greater distances, drawing more attention to the transition.</p>
+</figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Large screens</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Condensed transitions reduce disorientation caused by movement on a large screen, such as a desktop display.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Condensed transitions reduce disorientation caused by movement on a large screen, such as a desktop display.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 64.4736842105%;">
+<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
+<video aria-describedby="condensing-transitions-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuMFh4VWtjS2RpdVE/02-photos-condensed.mp4" src="customization.html" type="video/mp4">
+</source></video>
+<div class="video-player__controls">
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="condensing-transitions-figure-caption-2">
+<p>Condensed transitions move between photos on web.</p>
+</figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+    
+
+    
+  </div>
+  
+
+  <div class="container container--large">
+    
+
+
+  <h2>Up next
+    
+      <div class="article-controls">
+        
+      </div>
+    
+  </h2>
+
+
+<div class="suggested-articles"><div><a aria-label="Gestures" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../interaction/gestures.html"
+    }
+' href="../interaction/gestures.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1iK7_-Y3kWR3F55a87Z6-UzjxLNrwo-sG/interaction-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Interaction</h3>
+<h4 class="suggested-articles__item-subtitle">Gestures</h4>
+</a><a aria-label="Animated Icons" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../iconography/animated-icons.html"
+    }
+' href="../iconography/animated-icons.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1QX-eyPpUPN_TZHSZIe9SbRDEHfqQ52RR/icons-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Iconography</h3>
+<h4 class="suggested-articles__item-subtitle">Animated Icons</h4>
+</a><a aria-label="About" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../material-studies/about-our-material-studies.html"
+    }
+' href="../material-studies/about-our-material-studies.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1lcjc6Wxg0VIZekCCAhoGRD5sp_0fT8A-/customization-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Material studies</h3>
+<h4 class="suggested-articles__item-subtitle">About</h4>
+</a></div></div>
+  </div>
+</article>
+
+    </main>
+
+    
+      
+
+
+<footer class="footer">
+  <div class="container container--jumbo">
+    <div class="footer-block footer-block--about">
+      
+      <a class="footer-block__logo js-analytics-click" href="https://material.io/"
+         data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "/"
+    }
+'>
+        <img class="footer-block__material-logo animatable js-lazy-image" data-src="../static/m2/images/material_logo.svg" src="customization.html" alt="Material Design"/>
+      </a>
+      <div class="footer-block__content">
+        <p class="footer-block__description">Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</p>
+        <ul class="footer-block__social-nav">
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.github.com/material-components"
+    }
+'>GitHub</a>
+</li>
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.twitter.com/materialdesign"
+    }
+'>Twitter</a>
+</li>
+          <li class="footer-block__social-nav-item">
+  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.youtube.com/googledesign"
+    }
+'>YouTube</a>
+</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-block footer-block--legal">
+      <a class="footer-block__logo js-analytics-click" href="https://www.google.com"
+         data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://www.google.com"
+    }
+'>
+        <img class="footer-block__google-logo animatable js-lazy-image" data-src="../static/m2/images/google_logo.svg" src="customization.html" alt="Google"/>
+      </a>
+      <div class="footer-block__content">
+        <ul class="footer-block__legal-nav">
+          <li class="footer-block__legal-nav-item">
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://policies.google.com/privacy"
+    }
+'>Privacy Policy</a>
+</li>
+          <li class="footer-block__legal-nav-item">
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='
+  {
+    "event": "trackEvent",
+    "category": "navigation",
+    "action": "footer click",
+    "label": "https://policies.google.com/terms"
+    }
+'>Terms of Service</a>
+</li><li class="footer-block__legal-nav-item"><a href="javascript:void(0)" class="footer-block__legal-nav-link" onclick="try{userfeedback.api.startFeedback({'productId': '1027542', 'bucket': 'material_spec', 'locale': 'en', 'allowNonLoggedInFeedback': true});return false;}catch(e){}">Feedback</a></li></ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+
+        <div class="ui-mask js-ui-mask"></div>
+
+    
+      <div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
+    <header class="lightbox__header">
+      <div class="lightbox__header-title">
+        <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+        </span>
+        <h2 class="lightbox__title js-lightbox-title"></h2>
+      </div>
+
+      <div class="lightbox__actions">
+        <button type="button" name="button" class="lightbox-redlines-toggle js-redline-sidebar-toggle" data-comp="Tooltip" data-props-tooltip='{"tip": "View Specs", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>flip</i>
+        </button>
+
+        <button type="button" name="button" class="lightbox__button js-share" data-comp="Tooltip" data-props-tooltip='{"tip": "Share", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
+        </button>
+
+        
+      </div>
+    </header>
+
+    <div class="lightbox__template js-zoom-wrapper">
+      <div class="lightbox__content js-lightbox-content">
+        
+        <img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />
+      </div>
+      <div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
+        <i class="material-icons">&#xE3F4;</i>
+        <span class="redline-sidebar__label-text">Image only</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
+        <i class="material-icons">format_shapes</i>
+        <span class="redline-sidebar__label-text">Measurements</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
+        <i class="material-icons">format_size</i>
+        <span class="redline-sidebar__label-text">Text</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
+        <i class="material-icons">palette</i>
+        <span class="redline-sidebar__label-text">Color</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
+        <i class="material-icons">rounded_corner</i>
+        <span class="redline-sidebar__label-text">Shape and Elevation</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
+        <i class="material-icons">category</i>
+        <span class="redline-sidebar__label-text">Components</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
+        <i class="material-icons">notes</i>
+        <span class="redline-sidebar__label-text">Notes</span>
+      </button>
+    </div>
+  <div class="redline-sidebar__toggles js-redline-layer-toggles">
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+        <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="dimensions">Dimensions</label>
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+        <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="padding">Padding</label>
+    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+        <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="typography">Text baseline</label>
+    
+  </div>
+</div>
+      <nav class="carousel__nav">
+  <button
+      class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Previous", "direction": "right"}'>
+    <i class="material-icons">chevron_left</i>
+  </button>
+
+  <button
+      class="carousel__button carousel__button--next mdc-ripple-surface js-carousel-next"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Next", "direction": "left"}'>
+    <i class="material-icons">chevron_right</i>
+  </button>
+</nav>
+      <div class="zoom-buttons" data-comp="Zoom">
+  <div class="zoom-buttons__wrapper">
+
+    <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">remove</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-reset" data-comp="Tooltip" data-props-tooltip='{"tip": "Reset", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">search</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-in" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom in", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">add</i>
+    </button>
+
+    <div class="zoom-buttons__extras">
+      <button class="mdc-button-zoom js-colorpicker-toggle" data-comp="Tooltip Colorpicker" data-props-tooltip='{"tip": "Color picker", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">colorize</i>
+      </button>
+      <button class="mdc-button-zoom js-ruler-toggle" data-comp="Tooltip Ruler" data-props-tooltip='{"tip": "Ruler", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">straighten</i>
+      </button>
+    </div>
+
+  </div>
+</div>
+    </div>
+
+
+  <aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
+      <button type="button" class="mdc-dialog-share-close js-dialog-close">
+        <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+      </button>
+    </header>
+    <section id="mdc-dialog-description" class="mdc-dialog__body">
+      <input type="text" readonly class="mdc-dialog-share-url js-share-url" />
+      <button type="button" class="mdc-button mdc-ripple-surface mdc-dialog-copy js-dialog-copy">Copy</button>
+    </section>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside>
+</div>
+      <div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+  <div class="mdc-snackbar__text"></div>
+  <div class="mdc-snackbar__action-wrapper">
+    <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
+  </div>
+</div>
+    
+
+    
+    <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
+    <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  </body>
+</html>
