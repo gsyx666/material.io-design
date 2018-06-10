@@ -1,20 +1,11 @@
-
-
-
-
-
-
-
-
-  
-  <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="preload">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <title>Android fingerprint - Material Design</title>
 
-    <meta itemprop="name"        property="og:title"       name="twitter:title"       content="Android fingerprint" />
+<meta itemprop="name"        property="og:title"       name="twitter:title"       content="Android fingerprint" />
     <meta itemprop="description" property="og:description" name="twitter:description" content="Fingerprint detection may be used to unlock a device, sign in to apps, and authenticate in-app purchases." />
     <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1UUihOWcKAozrXfKnzDOUb2A2-cYIrCEq/platform-guidance-thumbnail-2x1.png" />
     <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/platform-guidance/android-fingerprint.html" />
@@ -22,24 +13,19 @@
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" href="https://material.io/favicon.ico">
-
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <meta name="format-detection" content="telephone=no">    <link rel="shortcut icon" href="https://material.io/favicon.ico">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NHRPF8');</script>
-        <style>
-      .animatable {
+})(window,document,'script','dataLayer','GTM-NHRPF8');</script>    <style>
+.animatable {
         opacity: 0;
         position: relative;
-        top: 16px; 
-        transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+        top: 16px;         transition: opacity 235ms cubic-bezier(.4,0,.2,1),
                     top 500ms cubic-bezier(.4,0,.2,1);
       }
     </style>
-
     <link href="../static/m2/css/main.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
     <link rel="preload" href="../static/m2/js/main.min.js" as="script">
@@ -50,119 +36,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="androidFingerprint"
-        data-spec-alias="mio-design"
-         >
+        data-spec-alias="mio-design-staging"
+ >
 
-    
 
 
 <header class="header js-header" data-comp="Header">
-  
     <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
       <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
     </button>
-  
 
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
-
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--selected">
-      
-        
-  <li class="header__nav-item  js-header-item">
+    <ul class="header__nav-list header__nav-list--cleared">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/"
-    }
+    "label": "/"}
 '>
       Home
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/design"
-    }
+    "label": "/design"}
 '>
       Design
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/develop"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/develop"
-    }
+    "label": "/develop"}
 '>
       Develop
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/tools"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/tools"
-    }
+    "label": "/tools"}
 '>
       Tools
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
     </ul>
   </nav>
 
   <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform='{"basePath": "/", "ajax": false, "showOnLoad": false}'>
     <button class="search-form__back js-search-back js-analytics-click" type="button"
-            data-analytics='
-  {
+            data-analytics='  {
     "event": "trackEvent",
     "category": "search back",
     "action": "click icon",
-    "label": "DEFAULT: ga_label"
-    }
+    "label": "DEFAULT: ga_label"}
 '>
       <i class="material-icons">arrow_back</i>
     </button>
@@ -171,13 +129,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </form>
 
   <button class="header__search header__button js-toggle-search js-analytics-click"
-          data-analytics='
-  {
+          data-analytics='  {
     "event": "trackEvent",
     "category": "search",
     "action": "click icon",
-    "label": "DEFAULT: ga_label"
-    }
+    "label": "DEFAULT: ga_label"}
 '>
     <div class="icons-container mdc-ripple-surface" data-mdc-ripple-is-unbounded>
       <i class="material-icons header__spyglass" aria-label="Search">search</i>
@@ -186,2820 +142,1789 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </button>
 </header>
 
-    
-
-
 <nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs">
-  
     <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
       <i class="material-icons" title="Toggle Navigation">menu</i>
     </button>
-  
 
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
-
   <ol class="container container--large breadcrumbs__list">
-    
-      
       <li class="breadcrumbs__crumb">
         <a class="breadcrumbs__link js-analytics-click "
            href="../platform-guidance.html"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "../platform-guidance"
-    }
+    "label": "../platform-guidance"}
 '>Platform guidance</a>
       </li>
-    
-      
       <li class="breadcrumbs__crumb">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
            href="android-fingerprint.html"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-fingerprint.html"
-    }
+    "label": "../platform-guidance/android-fingerprint.html"}
 '>Android fingerprint</a>
       </li>
-    
-      
       <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
            href="android-fingerprint.html#standard fingerprint"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "#standard fingerprint"
-    }
+    "label": "#standard fingerprint"}
 '>Standard fingerprint</a>
       </li>
-    
   </ol>
 </nav>
-    
-  
-    
-
-
 
 <nav class="side-nav" data-comp="SideNav" role="navigation">
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
 
-  
 
-  
-    
-    
-
-    
-      
-      <span class="side-nav__section-title">Material System</span>
+            <span class="side-nav__section-title">Material System</span>
 
       <ul class="side-nav__menu side-nav__menu--sections">
-    
 
       <li class="side-nav__menu-item">
-        
-        
           <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
              href="../introduction.html"
-             data-analytics='
-  {
+             data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../introduction"
-    }
+    "label": "../introduction"}
 '>
             Introduction
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav1"
                   aria-expanded="false">
             Material studies
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav1">
+            <div class="side-nav__wrapper" id="_nav1">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/about-our-material-studies.html"data-analytics='
-  {
+"
+              href="../material-studies/about-our-material-studies.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/about-our-material-studies.html"
-    }
+    "label": "../material-studies/about-our-material-studies.html"}
 '>
             About our Material studies
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/basil.html"data-analytics='
-  {
+"
+              href="../material-studies/basil.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/basil.html"
-    }
+    "label": "../material-studies/basil.html"}
 '>
             Basil
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/crane.html"data-analytics='
-  {
+"
+              href="../material-studies/crane.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/crane.html"
-    }
+    "label": "../material-studies/crane.html"}
 '>
             Crane
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/fortnightly.html"data-analytics='
-  {
+"
+              href="../material-studies/fortnightly.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/fortnightly.html"
-    }
+    "label": "../material-studies/fortnightly.html"}
 '>
             Fortnightly
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/owl.html"data-analytics='
-  {
+"
+              href="../material-studies/owl.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/owl.html"
-    }
+    "label": "../material-studies/owl.html"}
 '>
             Owl
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/rally.html"data-analytics='
-  {
+"
+              href="../material-studies/rally.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/rally.html"
-    }
+    "label": "../material-studies/rally.html"}
 '>
             Rally
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/reply.html"data-analytics='
-  {
+"
+              href="../material-studies/reply.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/reply.html"
-    }
+    "label": "../material-studies/reply.html"}
 '>
             Reply
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/shrine.html"data-analytics='
-  {
+"
+              href="../material-studies/shrine.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/shrine.html"
-    }
+    "label": "../material-studies/shrine.html"}
 '>
             Shrine
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
-      </ul>
-      <span class="side-nav__section-title">Material Foundation</span>
+      </ul>      <span class="side-nav__section-title">Material Foundation</span>
 
       <ul class="side-nav__menu side-nav__menu--sections">
-    
 
       <li class="side-nav__menu-item">
-        
-        
           <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
              href="../foundation-overview.html"
-             data-analytics='
-  {
+             data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../foundation-overview"
-    }
+    "label": "../foundation-overview"}
 '>
             Foundation overview
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav3"
                   aria-expanded="false">
             Environment
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav3">
+            <div class="side-nav__wrapper" id="_nav3">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../environment/surfaces.html"data-analytics='
-  {
+"
+              href="../environment/surfaces.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/surfaces.html"
-    }
+    "label": "../environment/surfaces.html"}
 '>
             Surfaces
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../environment/elevation.html"data-analytics='
-  {
+"
+              href="../environment/elevation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/elevation.html"
-    }
+    "label": "../environment/elevation.html"}
 '>
             Elevation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../environment/light-shadows.html"data-analytics='
-  {
+"
+              href="../environment/light-shadows.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/light-shadows.html"
-    }
+    "label": "../environment/light-shadows.html"}
 '>
             Light and shadows
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav4"
                   aria-expanded="false">
             Layout
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav4">
+            <div class="side-nav__wrapper" id="_nav4">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/understanding-layout.html"data-analytics='
-  {
+"
+              href="../layout/understanding-layout.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/understanding-layout.html"
-    }
+    "label": "../layout/understanding-layout.html"}
 '>
             Understanding layout
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/responsive-layout-grid.html"data-analytics='
-  {
+"
+              href="../layout/responsive-layout-grid.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/responsive-layout-grid.html"
-    }
+    "label": "../layout/responsive-layout-grid.html"}
 '>
             Responsive layout grid
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/spacing-methods.html"data-analytics='
-  {
+"
+              href="../layout/spacing-methods.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/spacing-methods.html"
-    }
+    "label": "../layout/spacing-methods.html"}
 '>
             Spacing methods
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/component-behavior.html"data-analytics='
-  {
+"
+              href="../layout/component-behavior.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/component-behavior.html"
-    }
+    "label": "../layout/component-behavior.html"}
 '>
             Component behavior
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/density.html"data-analytics='
-  {
+"
+              href="../layout/density.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/density.html"
-    }
+    "label": "../layout/density.html"}
 '>
             Density
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav5"
                   aria-expanded="false">
             Navigation
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav5">
+            <div class="side-nav__wrapper" id="_nav5">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../navigation/understanding-navigation.html"data-analytics='
-  {
+"
+              href="../navigation/understanding-navigation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/understanding-navigation.html"
-    }
+    "label": "../navigation/understanding-navigation.html"}
 '>
             Understanding navigation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../navigation/navigation-transitions.html"data-analytics='
-  {
+"
+              href="../navigation/navigation-transitions.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/navigation-transitions.html"
-    }
+    "label": "../navigation/navigation-transitions.html"}
 '>
             Navigation transitions
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../navigation/search.html"data-analytics='
-  {
+"
+              href="../navigation/search.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/search.html"
-    }
+    "label": "../navigation/search.html"}
 '>
             Search
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav6"
                   aria-expanded="false">
             Color
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav6">
+            <div class="side-nav__wrapper" id="_nav6">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/the-color-system.html"data-analytics='
-  {
+"
+              href="../color/the-color-system.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/the-color-system.html"
-    }
+    "label": "../color/the-color-system.html"}
 '>
             The color system
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/applying-color-to-ui.html"data-analytics='
-  {
+"
+              href="../color/applying-color-to-ui.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/applying-color-to-ui.html"
-    }
+    "label": "../color/applying-color-to-ui.html"}
 '>
             Applying color to UI
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/color-usage.html"data-analytics='
-  {
+"
+              href="../color/color-usage.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/color-usage.html"
-    }
+    "label": "../color/color-usage.html"}
 '>
             Color usage
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/text-legibility.html"data-analytics='
-  {
+"
+              href="../color/text-legibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/text-legibility.html"
-    }
+    "label": "../color/text-legibility.html"}
 '>
             Text legibility
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav7"
                   aria-expanded="false">
             Typography
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav7">
+            <div class="side-nav__wrapper" id="_nav7">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../typography/the-type-system.html"data-analytics='
-  {
+"
+              href="../typography/the-type-system.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/the-type-system.html"
-    }
+    "label": "../typography/the-type-system.html"}
 '>
             The type system
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../typography/understanding-typography.html"data-analytics='
-  {
+"
+              href="../typography/understanding-typography.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/understanding-typography.html"
-    }
+    "label": "../typography/understanding-typography.html"}
 '>
             Understanding typography
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../typography/language-support.html"data-analytics='
-  {
+"
+              href="../typography/language-support.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/language-support.html"
-    }
+    "label": "../typography/language-support.html"}
 '>
             Language support
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav8"
                   aria-expanded="false">
             Iconography
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav8">
+            <div class="side-nav__wrapper" id="_nav8">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../iconography/product-icons.html"data-analytics='
-  {
+"
+              href="../iconography/product-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/product-icons.html"
-    }
+    "label": "../iconography/product-icons.html"}
 '>
             Product icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../iconography/system-icons.html"data-analytics='
-  {
+"
+              href="../iconography/system-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/system-icons.html"
-    }
+    "label": "../iconography/system-icons.html"}
 '>
             System icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../iconography/animated-icons.html"data-analytics='
-  {
+"
+              href="../iconography/animated-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/animated-icons.html"
-    }
+    "label": "../iconography/animated-icons.html"}
 '>
             Animated icons
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav9"
                   aria-expanded="false">
             Shape
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav9">
+            <div class="side-nav__wrapper" id="_nav9">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/about-shape.html"data-analytics='
-  {
+"
+              href="../shape/about-shape.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/about-shape.html"
-    }
+    "label": "../shape/about-shape.html"}
 '>
             About shape
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/shape-hierarchy.html"data-analytics='
-  {
+"
+              href="../shape/shape-hierarchy.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-hierarchy.html"
-    }
+    "label": "../shape/shape-hierarchy.html"}
 '>
             Shape and hierarchy
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/shape-as-expression.html"data-analytics='
-  {
+"
+              href="../shape/shape-as-expression.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-as-expression.html"
-    }
+    "label": "../shape/shape-as-expression.html"}
 '>
             Shape as expression
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/shape-motion.html"data-analytics='
-  {
+"
+              href="../shape/shape-motion.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-motion.html"
-    }
+    "label": "../shape/shape-motion.html"}
 '>
             Shape and motion
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav10"
                   aria-expanded="false">
             Motion
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav10">
+            <div class="side-nav__wrapper" id="_nav10">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/understanding-motion.html"data-analytics='
-  {
+"
+              href="../motion/understanding-motion.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/understanding-motion.html"
-    }
+    "label": "../motion/understanding-motion.html"}
 '>
             Understanding motion
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/speed.html"data-analytics='
-  {
+"
+              href="../motion/speed.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/speed.html"
-    }
+    "label": "../motion/speed.html"}
 '>
             Speed
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/choreography.html"data-analytics='
-  {
+"
+              href="../motion/choreography.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/choreography.html"
-    }
+    "label": "../motion/choreography.html"}
 '>
             Choreography
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/customization.html"data-analytics='
-  {
+"
+              href="../motion/customization.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/customization.html"
-    }
+    "label": "../motion/customization.html"}
 '>
             Customization
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav11"
                   aria-expanded="false">
             Interaction
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav11">
+            <div class="side-nav__wrapper" id="_nav11">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../interaction/gestures.html"data-analytics='
-  {
+"
+              href="../interaction/gestures.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/gestures.html"
-    }
+    "label": "../interaction/gestures.html"}
 '>
             Gestures
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../interaction/selection.html"data-analytics='
-  {
+"
+              href="../interaction/selection.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/selection.html"
-    }
+    "label": "../interaction/selection.html"}
 '>
             Selection
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../interaction/states.html"data-analytics='
-  {
+"
+              href="../interaction/states.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/states.html"
-    }
+    "label": "../interaction/states.html"}
 '>
             States
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav12"
                   aria-expanded="false">
             Communication
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav12">
+            <div class="side-nav__wrapper" id="_nav12">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/confirmation-acknowledgement.html"data-analytics='
-  {
+"
+              href="../communication/confirmation-acknowledgement.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/confirmation-acknowledgement.html"
-    }
+    "label": "../communication/confirmation-acknowledgement.html"}
 '>
             Confirmation &amp; acknowledgement
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/data-formats.html"data-analytics='
-  {
+"
+              href="../communication/data-formats.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/data-formats.html"
-    }
+    "label": "../communication/data-formats.html"}
 '>
             Data formats
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/empty-states.html"data-analytics='
-  {
+"
+              href="../communication/empty-states.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/empty-states.html"
-    }
+    "label": "../communication/empty-states.html"}
 '>
             Empty states
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/gesture-education.html"data-analytics='
-  {
+"
+              href="../communication/gesture-education.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/gesture-education.html"
-    }
+    "label": "../communication/gesture-education.html"}
 '>
             Gesture education
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/help-feedback.html"data-analytics='
-  {
+"
+              href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/help-feedback.html"
-    }
+    "label": "../communication/help-feedback.html"}
 '>
             Help &amp; feedback
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/imagery.html"data-analytics='
-  {
+"
+              href="../communication/imagery.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/imagery.html"
-    }
+    "label": "../communication/imagery.html"}
 '>
             Imagery
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/launch-screen.html"data-analytics='
-  {
+"
+              href="../communication/launch-screen.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/launch-screen.html"
-    }
+    "label": "../communication/launch-screen.html"}
 '>
             Launch screen
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/onboarding.html"data-analytics='
-  {
+"
+              href="../communication/onboarding.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/onboarding.html"
-    }
+    "label": "../communication/onboarding.html"}
 '>
             Onboarding
           </a>
 
-          
-          
         </li>
-      
-    </ul>
-  </div>
 
-        
-      </li>
-  
-    
-    
-
-    
-      </ul>
-      <span class="side-nav__section-title">Material Guidelines</span>
-
-      <ul class="side-nav__menu side-nav__menu--sections">
-    
-
-      <li class="side-nav__menu-item">
-        
-        
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../guidelines-overview.html"
-             data-analytics='
-  {
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/writing.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../guidelines-overview"
-    }
+    "label": "../communication/writing.html"}
+'>
+            Writing
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../guidelines-overview.html"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"}
 '>
             Guidelines overview
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav14"
                   aria-expanded="false">
             Material Theming
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav14">
+            <div class="side-nav__wrapper" id="_nav14">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-theming/overview.html"data-analytics='
-  {
+"
+              href="../material-theming/overview.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-theming/overview.html"
-    }
+    "label": "../material-theming/overview.html"}
 '>
             Overview
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-theming/implementing-your-theme.html"data-analytics='
-  {
+"
+              href="../material-theming/implementing-your-theme.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-theming/implementing-your-theme.html"
-    }
+    "label": "../material-theming/implementing-your-theme.html"}
 '>
             Implementing your theme
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav15"
                   aria-expanded="false">
             Components
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav15">
+            <div class="side-nav__wrapper" id="_nav15">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/app-bars-bottom.html"data-analytics='
-  {
+"
+              href="../components/app-bars-bottom.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/app-bars-bottom.html"
-    }
+    "label": "../components/app-bars-bottom.html"}
 '>
             App bars: bottom
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/app-bars-top.html"data-analytics='
-  {
+"
+              href="../components/app-bars-top.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/app-bars-top.html"
-    }
+    "label": "../components/app-bars-top.html"}
 '>
             App bars: top
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/backdrop.html"data-analytics='
-  {
+"
+              href="../components/backdrop.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/backdrop.html"
-    }
+    "label": "../components/backdrop.html"}
 '>
             Backdrop
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/banners.html"data-analytics='
-  {
+"
+              href="../components/banners.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/banners.html"
-    }
+    "label": "../components/banners.html"}
 '>
             Banners
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/bottom-navigation.html"data-analytics='
-  {
+"
+              href="../components/bottom-navigation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/bottom-navigation.html"
-    }
+    "label": "../components/bottom-navigation.html"}
 '>
             Bottom navigation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/buttons.html"data-analytics='
-  {
+"
+              href="../components/buttons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/buttons.html"
-    }
+    "label": "../components/buttons.html"}
 '>
             Buttons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/buttons-floating-action-button.html"data-analytics='
-  {
+"
+              href="../components/buttons-floating-action-button.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/buttons-floating-action-button.html"
-    }
+    "label": "../components/buttons-floating-action-button.html"}
 '>
             Buttons: floating action button
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/cards.html"data-analytics='
-  {
+"
+              href="../components/cards.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/cards.html"
-    }
+    "label": "../components/cards.html"}
 '>
             Cards
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/chips.html"data-analytics='
-  {
+"
+              href="../components/chips.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/chips.html"
-    }
+    "label": "../components/chips.html"}
 '>
             Chips
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/data-tables.html"data-analytics='
-  {
+"
+              href="../components/data-tables.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/data-tables.html"
-    }
+    "label": "../components/data-tables.html"}
 '>
             Data tables
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/dialogs.html"data-analytics='
-  {
+"
+              href="../components/dialogs.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/dialogs.html"
-    }
+    "label": "../components/dialogs.html"}
 '>
             Dialogs
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/dividers.html"data-analytics='
-  {
+"
+              href="../components/dividers.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/dividers.html"
-    }
+    "label": "../components/dividers.html"}
 '>
             Dividers
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/image-lists.html"data-analytics='
-  {
+"
+              href="../components/image-lists.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/image-lists.html"
-    }
+    "label": "../components/image-lists.html"}
 '>
             Image lists
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/lists.html"data-analytics='
-  {
+"
+              href="../components/lists.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/lists.html"
-    }
+    "label": "../components/lists.html"}
 '>
             Lists
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/menus.html"data-analytics='
-  {
+"
+              href="../components/menus.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/menus.html"
-    }
+    "label": "../components/menus.html"}
 '>
             Menus
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/navigation-drawer.html"data-analytics='
-  {
+"
+              href="../components/navigation-drawer.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/navigation-drawer.html"
-    }
+    "label": "../components/navigation-drawer.html"}
 '>
             Navigation drawer
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/progress-indicators.html"data-analytics='
-  {
+"
+              href="../components/progress-indicators.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/progress-indicators.html"
-    }
+    "label": "../components/progress-indicators.html"}
 '>
             Progress indicators
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/selection-controls.html"data-analytics='
-  {
+"
+              href="../components/selection-controls.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/selection-controls.html"
-    }
+    "label": "../components/selection-controls.html"}
 '>
             Selection controls
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/sheets-bottom.html"data-analytics='
-  {
+"
+              href="../components/sheets-bottom.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sheets-bottom.html"
-    }
+    "label": "../components/sheets-bottom.html"}
 '>
             Sheets: bottom
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/sheets-side.html"data-analytics='
-  {
+"
+              href="../components/sheets-side.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sheets-side.html"
-    }
+    "label": "../components/sheets-side.html"}
 '>
             Sheets: side
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/sliders.html"data-analytics='
-  {
+"
+              href="../components/sliders.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sliders.html"
-    }
+    "label": "../components/sliders.html"}
 '>
             Sliders
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/snackbars.html"data-analytics='
-  {
+"
+              href="../components/snackbars.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/snackbars.html"
-    }
+    "label": "../components/snackbars.html"}
 '>
             Snackbars
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/tabs.html"data-analytics='
-  {
+"
+              href="../components/tabs.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/tabs.html"
-    }
+    "label": "../components/tabs.html"}
 '>
             Tabs
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/text-fields.html"data-analytics='
-  {
+"
+              href="../components/text-fields.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/text-fields.html"
-    }
+    "label": "../components/text-fields.html"}
 '>
             Text fields
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../components/tooltips.html"data-analytics='
-  {
+"
+              href="../components/tooltips.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/tooltips.html"
-    }
+    "label": "../components/tooltips.html"}
 '>
             Tooltips
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
-          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
-                  aria-controls="_nav16"
-                  aria-expanded="false">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../usability.html"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability"}
+'>
             Usability
-          </button>
-          
-  <div class="side-nav__wrapper" id="_nav16">
-    <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../usability/accessibility.html"data-analytics='
-  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../usability/accessibility.html"
-    }
-'>
-            Accessibility
           </a>
-
-          
-          
-        </li>
-      
-        
-        
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../usability/bidirectionality.html"data-analytics='
-  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../usability/bidirectionality.html"
-    }
-'>
-            Bidirectionality
-          </a>
-
-          
-          
-        </li>
-      
-    </ul>
-  </div>
-
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
                   aria-controls="_nav17"
                   aria-expanded="true">
             Platform guidance
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav17">
+            <div class="side-nav__wrapper" id="_nav17">
     <ul class="side-nav__submenu" data-menu-state="open">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-bars.html"data-analytics='
-  {
+"
+              href="android-bars.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-bars.html"
-    }
+    "label": "../platform-guidance/android-bars.html"}
 '>
             Android bars
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              side-nav__link--active
-               js-header-show"
-              href="android-fingerprint.html" aria-current="page" data-analytics='
-  {
+side-nav__link--active js-header-show"
+              href="android-fingerprint.html" aria-current="page" data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-fingerprint.html"
-    }
+    "label": "../platform-guidance/android-fingerprint.html"}
 '>
             Android fingerprint
           </a>
 
-          
-          
             <div class="side-nav__articles">
               <i class="side-nav__progress-bar">
                 <i class="side-nav__scrub js-submenu-scrub"></i>
               </i>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-standard-fingerprint js-analytics-click" href="android-fingerprint.html#standard-fingerprint" data-section-id="standard-fingerprint"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#standard-fingerprint"
-    }
+    "label": "#standard-fingerprint"}
 '>
                     <span class="js-anchor-text">Standard fingerprint</span>
                   </a>
                 </div>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-enrollment js-analytics-click" href="android-fingerprint.html#enrollment" data-section-id="enrollment"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#enrollment"
-    }
+    "label": "#enrollment"}
 '>
                     <span class="js-anchor-text">Enrollment</span>
                   </a>
                 </div>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-authentication js-analytics-click" href="android-fingerprint.html#authentication" data-section-id="authentication"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#authentication"
-    }
+    "label": "#authentication"}
 '>
                     <span class="js-anchor-text">Authentication</span>
                   </a>
                 </div>
-              
             </div>
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-haptics.html"data-analytics='
-  {
+"
+              href="android-haptics.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-haptics.html"
-    }
+    "label": "../platform-guidance/android-haptics.html"}
 '>
             Android haptics
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-icons.html"data-analytics='
-  {
+"
+              href="android-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-icons.html"
-    }
+    "label": "../platform-guidance/android-icons.html"}
 '>
             Android icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-navigating-between-apps.html"data-analytics='
-  {
+"
+              href="android-navigating-between-apps.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-navigating-between-apps.html"
-    }
+    "label": "../platform-guidance/android-navigating-between-apps.html"}
 '>
             Android navigating between apps
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-notifications.html"data-analytics='
-  {
+"
+              href="android-notifications.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-notifications.html"
-    }
+    "label": "../platform-guidance/android-notifications.html"}
 '>
             Android notifications
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-permissions.html"data-analytics='
-  {
+"
+              href="android-permissions.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-permissions.html"
-    }
+    "label": "../platform-guidance/android-permissions.html"}
 '>
             Android permissions
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-settings.html"data-analytics='
-  {
+"
+              href="android-settings.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-settings.html"
-    }
+    "label": "../platform-guidance/android-settings.html"}
 '>
             Android settings
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-split-screen.html"data-analytics='
-  {
+"
+              href="android-split-screen.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-split-screen.html"
-    }
+    "label": "../platform-guidance/android-split-screen.html"}
 '>
             Android split-screen
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-swipe-to-refresh.html"data-analytics='
-  {
+"
+              href="android-swipe-to-refresh.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-swipe-to-refresh.html"
-    }
+    "label": "../platform-guidance/android-swipe-to-refresh.html"}
 '>
             Android swipe to refresh
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-text-selection-toolbar.html"data-analytics='
-  {
+"
+              href="android-text-selection-toolbar.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-text-selection-toolbar.html"
-    }
+    "label": "../platform-guidance/android-text-selection-toolbar.html"}
 '>
             Android text selection toolbar
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="android-widget.html"data-analytics='
-  {
+"
+              href="android-widget.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-widget.html"
-    }
+    "label": "../platform-guidance/android-widget.html"}
 '>
             Android widget
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="cross-platform-adaptation.html"data-analytics='
-  {
+"
+              href="cross-platform-adaptation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/cross-platform-adaptation.html"
-    }
+    "label": "../platform-guidance/cross-platform-adaptation.html"}
 '>
             Cross-platform adaptation
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
 
   </ul>
 </nav>
-  
-
-
     <main class="main" role="main">
-      
-      
 
-      
 <article class="article" data-comp="Waypoints">
   <div class="article__intro container container--large js-waypoints-trigger-initial">
-    
-      
       <nav class="article__nav animatable js-anim-trigger">
         <span class="eyebrow">Contents</span>
         <ul>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="android-fingerprint.html#standard-fingerprint" data-section-id="standard-fingerprint"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#standard-fingerprint"
-    }
+    "label": "#standard-fingerprint"}
 '>Standard fingerprint</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="android-fingerprint.html#enrollment" data-section-id="enrollment"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#enrollment"
-    }
+    "label": "#enrollment"}
 '>Enrollment</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="android-fingerprint.html#authentication" data-section-id="authentication"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#authentication"
-    }
+    "label": "#authentication"}
 '>Authentication</a>
             </li>
-          
         </ul>
       </nav>
-    
     <h1 class="article__title animatable js-anim-trigger">
-      
 
       Android fingerprint
 
-      
-        
           <div class="article-controls">
             
           </div>
-        
-      
     </h1>
 
-    
 
-    
-      
       <div class="article__intro-text animatable js-anim-trigger">
       <div>
 <div aria-hidden="true" class="keywords hidden">Android only, fingerprint</div>
 <h2>Fingerprint detection may be used to unlock a device, sign in to apps, and authenticate in-app purchases. </h2></div>
       </div>
-    
   </div>
 
   <hr />
 
-  
-  <div class="article__body animatable js-show-header js-anim-trigger">
-    
-      
+  <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger">
       <section id="standard-fingerprint" class="container container--large js-waypoints-trigger article__section" data-section-title="Standard fingerprint" aria-label="Standard fingerprint">
-        
           <h2 class="article__chapter-title">
             Standard fingerprint
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">Android only, fingerprint</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Anatomy</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The Fingerprint title describes the action being performed, such as “Sign in.” It shouldn’t be used to introduce Fingerprint. The secondary text uses the phase...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1N3dhMnLJpesbm8F_wbAHAcOX35f5gLYR/as-fingerprinticon-anatomy-informationarchitecture.png" src="android-fingerprint.html">
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Anatomy" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Anatomy</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The Fingerprint title describes the action being performed, such as “Sign in.” It shouldn’t be used to introduce Fingerprint. The secondary text uses the phase...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="../assets/1N3dhMnLJpesbm8F_wbAHAcOX35f5gLYR/as-fingerprinticon-anatomy-informationarchitecture.png" src="android-fingerprint.html">
 </img></div>
 </div>
 </figure><ol class="lst-kix_m49m1tek8aj-0 start" start="1"><li><h3>Title</h3></li></ol><p>The Fingerprint title describes the action being performed, such as “Sign in.” It shouldn’t be used to introduce Fingerprint.</p><ol class="lst-kix_m49m1tek8aj-0" start="2"><li><h3>User identity</h3></li><li><h3>Secondary text</h3></li></ol><p>The secondary text uses the phase “Confirm fingerprint.” This wording maintains consistency with Android Settings.<br>
-You can combine this text with the associated user action, such as “Confirm fingerprint to complete purchase.”</br></p><ol class="lst-kix_m49m1tek8aj-0" start="4"><li><h3>Fingerprint icon</h3></li><li><h3>Fingerprint instruction text</h3></li><li><h3>Actions</h3></li></ol></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Hardware sensor</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When the user sees the Fingerprint icon without a circular background, it indicates they can touch the hardware sensor to have their fingerprint detected. The...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When the user sees the Fingerprint icon without a circular background, it indicates they can touch the hardware sensor to have their fingerprint detected.</p><h2>Size</h2><p>The Fingerprint icon should be displayed at the standard system icon size, 64dp.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1XeOolSY4gZfctiofd82DxNhZZiLGIJQ3/as-fingerprinticon-anatomy-hardwaresensorfingerprinticonsize.png" src="android-fingerprint.html">
+You can combine this text with the associated user action, such as “Confirm fingerprint to complete purchase.”</br></p><ol class="lst-kix_m49m1tek8aj-0" start="4"><li><h3>Fingerprint icon</h3></li><li><h3>Fingerprint instruction text</h3></li><li><h3>Actions</h3></li></ol></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Hardware sensor" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Hardware sensor</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When the user sees the Fingerprint icon without a circular background, it indicates they can touch the hardware sensor to have their fingerprint detected. The...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When the user sees the Fingerprint icon without a circular background, it indicates they can touch the hardware sensor to have their fingerprint detected.</p><h2>Size</h2><p>The Fingerprint icon should be displayed at the standard system icon size, 64dp.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/1XeOolSY4gZfctiofd82DxNhZZiLGIJQ3/as-fingerprinticon-anatomy-hardwaresensorfingerprinticonsize.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-0">
-<p>64dp system icon</p>
-</figcaption>
+<p>64dp system icon</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Layout</h2><p>To communicate that the hardware fingerprint sensor needs to be touched, use a fingerprint icon without a circular background.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/15ODWC6pYrf_EMR492QSbdkRHroKy6pDk/as-fingerprinticon-anatomy-hardwaresensorfingerprinticon2.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="../assets/15ODWC6pYrf_EMR492QSbdkRHroKy6pDk/as-fingerprinticon-anatomy-hardwaresensorfingerprinticon2.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-1">
-<p>Icon with no circular background</p>
-</figcaption>
+<p>Icon with no circular background</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1wi2ggxlhGy67kcQPKT8UgFaXO-r_cmG8/as-fingerprinticon-anatomy-hardwaresensorfingerprinticon3.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1wi2ggxlhGy67kcQPKT8UgFaXO-r_cmG8/as-fingerprinticon-anatomy-hardwaresensorfingerprinticon3.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-2">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>Don’t tilt or distort the fingerprint icon.<br>
-</br></p>
-</figcaption>
+<p class="s-tag-caption dont">Don’t.</p><p>Don’t tilt or distort the fingerprint icon.<br>
+</br></p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1RIS1iC5WuYkRWPzAoM3trjYfoClNS2qh/as-fingerprinticon-anatomy-hardwaresensorfingerprinticon4.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1RIS1iC5WuYkRWPzAoM3trjYfoClNS2qh/as-fingerprinticon-anatomy-hardwaresensorfingerprinticon4.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-3">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>Don’t add a circle behind the fingerprint icon.<br>
-</br></p>
-</figcaption>
-</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Icon</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When displayed on screen, the Fingerprint icon indicates that users can touch the screen itself (in the location indicated) to have their fingerprint detected. The...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When displayed on screen, the Fingerprint icon indicates that users can touch the screen itself (in the location indicated) to have their fingerprint detected. </p><h2>Size</h2><p>The Fingerprint icon should be displayed at the standard system icon size (36dp) within a 64dp circle.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1WA5ojZelE3T6SQIABkcTdSQZvrPC5bb3/as-fingerprinticon-anatomy-indisplayfingerprinticonsize.png" src="android-fingerprint.html">
+<p class="s-tag-caption dont">Don’t.</p><p>Don’t add a circle behind the fingerprint icon.<br>
+</br></p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Icon" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Icon</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When displayed on screen, the Fingerprint icon indicates that users can touch the screen itself (in the location indicated) to have their fingerprint detected. The...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When displayed on screen, the Fingerprint icon indicates that users can touch the screen itself (in the location indicated) to have their fingerprint detected. </p><h2>Size</h2><p>The Fingerprint icon should be displayed at the standard system icon size (36dp) within a 64dp circle.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/1WA5ojZelE3T6SQIABkcTdSQZvrPC5bb3/as-fingerprinticon-anatomy-indisplayfingerprinticonsize.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-4">
-<p>The 36dp system icon with a 64dp circular background.</p>
-</figcaption>
+<p>The 36dp system icon with a 64dp circular background.</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1mufB-igBxvzibgWKppIt7C9zxl6dkewD/as-fingerprinticon-anatomy-indisplayfingerprinticon2.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="../assets/1mufB-igBxvzibgWKppIt7C9zxl6dkewD/as-fingerprinticon-anatomy-indisplayfingerprinticon2.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-5">
-<p>Bottom sheet dialog and fingerprint icon</p>
-</figcaption>
+<p>Bottom sheet dialog and fingerprint icon</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/19l55mzZAZTT387mVPRSFa8DNHngo8Tis/as-fingerprinticon-anatomy-indisplayfingerprinticon3.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/19l55mzZAZTT387mVPRSFa8DNHngo8Tis/as-fingerprinticon-anatomy-indisplayfingerprinticon3.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-6">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>Don’t change the size proportion between the system icon and the circular background.</p><br>
+<p class="s-tag-caption dont">Don’t.</p><p>Don’t change the size proportion between the system icon and the circular background.</p><br>
 </br></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1xXy1fl4TZ6fFfsrpLS18XC6dcWNa0jOh/as-fingerprinticon-anatomy-indisplayfingerprinticon4.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1xXy1fl4TZ6fFfsrpLS18XC6dcWNa0jOh/as-fingerprinticon-anatomy-indisplayfingerprinticon4.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-7">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>Don’t compromise legibility by using low contrast (and low opacity) on the fingerprint icon.</p><br>
+<p class="s-tag-caption dont">Don’t.</p><p>Don’t compromise legibility by using low contrast (and low opacity) on the fingerprint icon.</p><br>
 </br></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Tinted icon</h2><p>The circle surrounding the icon can be customized with a color, as long it it provides sufficient contrast against the fingerprint icon.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-8" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B4tcF52UnWX4XzNIdnBVTGp5OTg/components-fp-13-state1.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-8" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/0B4tcF52UnWX4XzNIdnBVTGp5OTg/components-fp-13-state1.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-8">
-<p>Contrast and tinted icons.</p>
-</figcaption>
+<p>Contrast and tinted icons.</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-9" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B4tcF52UnWX4WlFXLU1xTUNZcnc/components-fp-15-state1.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-9" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/0B4tcF52UnWX4WlFXLU1xTUNZcnc/components-fp-15-state1.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-9">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>Don’t use a multicolored Fingerprint icon.</p>
-</figcaption>
+<p class="s-tag-caption dont">Don’t.</p><p>Don’t use a multicolored Fingerprint icon.</p></figcaption>
 </figure></div><div class="module"></div></section></div><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>UIs with light backgrounds</h2><p>On light backgrounds, use the Fingerprint icon with a dark circle background. </p><p>Specifications:</p><ul class="lst-kix_list_2-0 start"><li>Color: #FFFFFF</li><li>Opacity: 100%</li></ul><hr class="spacer" role="separator"/></div><div class="module"><h2>UIs with dark backgrounds</h2><p>On dark backgrounds, use the Fingerprint icon with a light circle background.</p><p>Specifications:</p><ul class="lst-kix_list_1-0 start"><li>Color: #000000</li><li>Opacity: 54%</li></ul></div></section><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-10" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B4tcF52UnWX4XzNIdnBVTGp5OTg/components-fp-13-state1.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-10" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/0B4tcF52UnWX4XzNIdnBVTGp5OTg/components-fp-13-state1.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-10">
-<p>A dark circle contains the Fingerprint icon on a light background.</p>
-</figcaption>
-</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">States</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The UI should ask the user to touch the sensor. Upon failure, provide a clear indication that the user’s fingerprint was not recognized and that...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Default state</h2><p>The UI should ask the user to touch the sensor.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-11" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/15p2uTZnR6YysK3c7UVim1PrptcIOYrcB/as-fingerprinticon-states-defaultstate.png" src="android-fingerprint.html">
+<p>A dark circle contains the Fingerprint icon on a light background.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle States" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">States</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The UI should ask the user to touch the sensor. Upon failure, provide a clear indication that the user’s fingerprint was not recognized and that...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Default state</h2><p>The UI should ask the user to touch the sensor.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-11" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="../assets/15p2uTZnR6YysK3c7UVim1PrptcIOYrcB/as-fingerprinticon-states-defaultstate.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-11">
-<p>The default state, instructing the user to put their finger on the sensor.</p>
-</figcaption>
+<p>The default state, instructing the user to put their finger on the sensor.</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Failure state</h2><p>Upon failure, provide a clear indication that the user’s fingerprint was not recognized and that they should try again, using the error icon – either with or without a status message.</p><p>Specification:</p><ul class="lst-kix_rfhc3fycqfxt-0 start"><li>Use your app’s color for failure states, or Deep Orange 600 (#F4511E)</li></ul><p>Failure states should avoid:</p><ul class="lst-kix_oa3c7lkzaz82-0 start"><li>Elaborate transitions between the default and failure states</li></ul><hr class="spacer" role="separator"/><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="standard-fingerprint-figure-caption-12" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1uLek9pFC4r8E3SkwFAbhUZKcl385Osu1/as-fingerprinticon-states-failurestate.png" src="android-fingerprint.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="standard-fingerprint-figure-caption-12" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="../assets/1uLek9pFC4r8E3SkwFAbhUZKcl385Osu1/as-fingerprinticon-states-failurestate.png" src="android-fingerprint.html">
 </img></div>
 </div>
 <figcaption id="standard-fingerprint-figure-caption-12">
-<p>Error message stating the fingerprint was not recognized.</p>
-</figcaption>
-</figure></div></section></div><div class="col-list"><section class="module col-1 h2-spacing"><div class="module"><h2>Exiting</h2><p>Provide alternative ways to exit the dialog. At minimum, provide an affordance to close the Fingerprint dialog, such as a “Cancel” button or tapping outside of the Fingerprint dialog.</p></div></section></div><div class="col-list"><section class="module col-1 h2-spacing"><div class="module"><h2>Authentication alternatives</h2><p>Fingerprint should not be the only way to authenticate. Provide alternative authentication methods, such as:</p><ul class="lst-kix_yk17lq314ieh-0 start"><li>User’s account password</li><li>App PIN</li><li><a href="https://developer.android.com/preview/api-overview.html#confirm-credential" rel="noopener" target="_blank">Device credentials</a></li></ul></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Specs</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Dialog left and right padding: 24dp Dialog top padding: 24dp Title bottom margin: 8dp Identity bottom margin: 8dp Secondary text bottom margin: 48dp Fingerprint icon...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 73.6842105263%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1r-Y0P3V3QpUHoQQzdYCVZx8FLvP-fpZ8/as-fingerprinticon-specs.png" src="android-fingerprint.html">
+<p>Error message stating the fingerprint was not recognized.</p></figcaption>
+</figure></div></section></div><div class="col-list"><section class="module col-1 h2-spacing"><div class="module"><h2>Exiting</h2><p>Provide alternative ways to exit the dialog. At minimum, provide an affordance to close the Fingerprint dialog, such as a “Cancel” button or tapping outside of the Fingerprint dialog.</p></div></section></div><div class="col-list"><section class="module col-1 h2-spacing"><div class="module"><h2>Authentication alternatives</h2><p>Fingerprint should not be the only way to authenticate. Provide alternative authentication methods, such as:</p><ul class="lst-kix_yk17lq314ieh-0 start"><li>User’s account password</li><li>App PIN</li><li><a href="https://developer.android.com/preview/api-overview.html#confirm-credential" rel="noopener" target="_blank">Device credentials</a></li></ul></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Specs" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Specs</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Dialog left and right padding: 24dp Dialog top padding: 24dp Title bottom margin: 8dp Identity bottom margin: 8dp Secondary text bottom margin: 48dp Fingerprint icon...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="../assets/1r-Y0P3V3QpUHoQQzdYCVZx8FLvP-fpZ8/as-fingerprinticon-specs.png" src="android-fingerprint.html">
 </img></div>
 </div>
 </figure><h3>Specifications for fingerprint bottom sheet </h3><p>Dialog left and right padding: 24dp<br>
@@ -3012,20 +1937,14 @@ Instruction text bottom margin: 24dp<br>
 Button container height: 72dp</br></br></br></br></br></br></br></p></div></section></div></div></div></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="enrollment" class="container container--large js-waypoints-trigger article__section" data-section-title="Enrollment" aria-label="Enrollment">
-        
+<hr />      <section id="enrollment" class="container container--large js-waypoints-trigger article__section" data-section-title="Enrollment" aria-label="Enrollment">
           <h2 class="article__chapter-title">
             Enrollment
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
@@ -3033,9 +1952,8 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 <div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Before using fingerprint for authentication, the app must get the user's consent. </p></div></section><section class="module-module col-2 h2-spacing"><div class="module"><h2>App settings</h2><p>App settings provide a way to turn fingerprint authentication on or off.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video aria-describedby="enrollment-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
-<source data-src="../assets/1e3fPNyr0EHZy8z2_rkQWH-0OJGNZInTe/fp-enrollment.mp4" src="android-fingerprint.html" type="video/mp4">
-</source></video>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="enrollment-figure-caption-0" preload="metadata">
+<source data-src="../assets/1e3fPNyr0EHZy8z2_rkQWH-0OJGNZInTe/fp-enrollment.mp4" src="android-fingerprint.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
 <i class="material-icons video-player__icon">volume_up</i>
@@ -3049,20 +1967,14 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 </figure></div></section></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="authentication" class="container container--large js-waypoints-trigger article__section" data-section-title="Authentication" aria-label="Authentication">
-        
+<hr />      <section id="authentication" class="container container--large js-waypoints-trigger article__section" data-section-title="Authentication" aria-label="Authentication">
           <h2 class="article__chapter-title">
             Authentication
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
@@ -3070,9 +1982,8 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 <div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Your app’s users can set up the option to sign in or authenticate purchases using fingerprint.</p><p>When a user action needs to be authenticated, display the Fingerprint authentication dialog in place of your sign-in screen or during a purchase interaction. </p></div></section><section class="module-module col-2 h2-spacing"><div class="module"><h2>After enrollment</h2><p>After enrollment, present the fingerprint dialog whenever you need authentication from the user.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video aria-describedby="authentication-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
-<source data-src="../assets/11zwa7nsrWecOHa84KNsfAkL5ecLJxjC-/fp-after-enrollment.mp4" src="android-fingerprint.html" type="video/mp4">
-</source></video>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="authentication-figure-caption-0" preload="metadata">
+<source data-src="../assets/11zwa7nsrWecOHa84KNsfAkL5ecLJxjC-/fp-after-enrollment.mp4" src="android-fingerprint.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
 <i class="material-icons video-player__icon">volume_up</i>
@@ -3086,9 +1997,8 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>During your app’s purchase flow</h2><p>The user has the option to enroll their fingerprint right after making a purchase, using an existing account.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video aria-describedby="authentication-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
-<source data-src="../assets/16Bb8y3Vfx4oq8DqDUyk7p4jS5bFo6bPB/fp-purchase-flow.mp4" src="android-fingerprint.html" type="video/mp4">
-</source></video>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="authentication-figure-caption-1" preload="metadata">
+<source data-src="../assets/16Bb8y3Vfx4oq8DqDUyk7p4jS5bFo6bPB/fp-purchase-flow.mp4" src="android-fingerprint.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
 <i class="material-icons video-player__icon">volume_up</i>
@@ -3102,121 +2012,90 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 </figure></div></section></div></div>
         </div>
       </section>
-    
 
-    
   </div>
-  
 
   <div class="container container--large">
-    
-
 
   <h2>Up next
-    
       <div class="article-controls">
         
       </div>
-    
   </h2>
 
-
-<div class="suggested-articles"><div><a aria-label="Android haptics" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+<div class="suggested-articles"><div><a aria-label="Android haptics" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../platform-guidance/android-haptics.html"
-    }
+    "label": "../platform-guidance/android-haptics.html"}
 ' href="android-haptics.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1ZqTgC5XWDI9Cr4xOb31-kSUzTF250Ufp/platform-guidance-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Platform guidance</h3>
 <h4 class="suggested-articles__item-subtitle">Android haptics</h4>
-</a><a aria-label="Gestures" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+</a><a aria-label="Gestures" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../interaction/gestures.html"
-    }
+    "label": "../interaction/gestures.html"}
 ' href="../interaction/gestures.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1iK7_-Y3kWR3F55a87Z6-UzjxLNrwo-sG/interaction-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Interaction</h3>
 <h4 class="suggested-articles__item-subtitle">Gestures</h4>
 </a><br>
-<a aria-label="Gesture education" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+<a aria-label="Gesture education" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../communication/gesture-education.html"
-    }
+    "label": "../communication/gesture-education.html"}
 ' href="../communication/gesture-education.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1bMYkOR3ZuA3_4CmOlCl4IgUJx5TTl15x/communication-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Communication</h3>
 <h4 class="suggested-articles__item-subtitle">Gesture education</h4>
-</a></div></div>
-  </div>
+</a></div></div>  </div>
 </article>
-
     </main>
-
-    
-      
 
 
 <footer class="footer">
   <div class="container container--jumbo">
     <div class="footer-block footer-block--about">
-      
       <a class="footer-block__logo js-analytics-click" href="https://material.io/"
-         data-analytics='
-  {
+         data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "/"
-    }
+    "label": "/"}
 '>
-        <img class="footer-block__material-logo animatable js-lazy-image" data-src="../static/m2/images/material_logo.svg" src="android-fingerprint.html" alt="Material Design"/>
+        <img class="footer-block__material-logo" src="../static/m2/images/material_logo.svg" alt="Material Design"/>
       </a>
       <div class="footer-block__content">
         <p class="footer-block__description">Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</p>
         <ul class="footer-block__social-nav">
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.github.com/material-components"
-    }
+    "label": "https://www.github.com/material-components"}
 '>GitHub</a>
 </li>
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.twitter.com/materialdesign"
-    }
+    "label": "https://www.twitter.com/materialdesign"}
 '>Twitter</a>
 </li>
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.youtube.com/googledesign"
-    }
+    "label": "https://www.youtube.com/googledesign"}
 '>YouTube</a>
 </li>
         </ul>
@@ -3225,50 +2104,38 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 
     <div class="footer-block footer-block--legal">
       <a class="footer-block__logo js-analytics-click" href="https://www.google.com"
-         data-analytics='
-  {
+         data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.google.com"
-    }
+    "label": "https://www.google.com"}
 '>
-        <img class="footer-block__google-logo animatable js-lazy-image" data-src="../static/m2/images/google_logo.svg" src="android-fingerprint.html" alt="Google"/>
+        <img class="footer-block__google-logo" src="../static/m2/images/google_logo.svg" alt="Google"/>
       </a>
       <div class="footer-block__content">
         <ul class="footer-block__legal-nav">
-          <li class="footer-block__legal-nav-item">
-  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__legal-nav-item">  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://policies.google.com/privacy"
-    }
+    "label": "https://policies.google.com/privacy"}
 '>Privacy Policy</a>
 </li>
-          <li class="footer-block__legal-nav-item">
-  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__legal-nav-item">  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://policies.google.com/terms"
-    }
+    "label": "https://policies.google.com/terms"}
 '>Terms of Service</a>
 </li><li class="footer-block__legal-nav-item"><a href="javascript:void(0)" class="footer-block__legal-nav-link" onclick="try{userfeedback.api.startFeedback({'productId': '1027542', 'bucket': 'material_spec', 'locale': 'en', 'allowNonLoggedInFeedback': true});return false;}catch(e){}">Feedback</a></li></ul>
       </div>
     </div>
   </div>
 </footer>
-    
-
-        <div class="ui-mask js-ui-mask"></div>
-
-    
-      <div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
+    <div class="ui-mask js-ui-mask"></div>
+<div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
     <header class="lightbox__header">
       <div class="lightbox__header-title">
         <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
@@ -3286,60 +2153,57 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
           <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
         </button>
 
-        
       </div>
     </header>
 
     <div class="lightbox__template js-zoom-wrapper">
       <div class="lightbox__content js-lightbox-content">
-        
-        <img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />
-      </div>
-      <div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+<img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />      </div>
+<div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
         <i class="material-icons">&#xE3F4;</i>
         <span class="redline-sidebar__label-text">Image only</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
         <i class="material-icons">format_shapes</i>
         <span class="redline-sidebar__label-text">Measurements</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
         <i class="material-icons">format_size</i>
         <span class="redline-sidebar__label-text">Text</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
         <i class="material-icons">palette</i>
         <span class="redline-sidebar__label-text">Color</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
         <i class="material-icons">rounded_corner</i>
         <span class="redline-sidebar__label-text">Shape and Elevation</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
         <i class="material-icons">category</i>
         <span class="redline-sidebar__label-text">Components</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
         <i class="material-icons">notes</i>
         <span class="redline-sidebar__label-text">Notes</span>
       </button>
     </div>
-  <div class="redline-sidebar__toggles js-redline-layer-toggles">
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+<div class="redline-sidebar__toggles js-redline-layer-toggles">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
         <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3349,7 +2213,7 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
         </div>
       </div>
       <label for="dimensions">Dimensions</label>
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
         <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3359,7 +2223,7 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
         </div>
       </div>
       <label for="padding">Padding</label>
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
         <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3369,10 +2233,8 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
         </div>
       </div>
       <label for="typography">Text baseline</label>
-    
   </div>
-</div>
-      <nav class="carousel__nav">
+</div><nav class="carousel__nav">
   <button
       class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
       data-comp="Tooltip"
@@ -3386,8 +2248,7 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
       data-props-tooltip='{"tip": "Next", "direction": "left"}'>
     <i class="material-icons">chevron_right</i>
   </button>
-</nav>
-      <div class="zoom-buttons" data-comp="Zoom">
+</nav><div class="zoom-buttons" data-comp="Zoom">
   <div class="zoom-buttons__wrapper">
 
     <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
@@ -3410,11 +2271,10 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
     </div>
 
   </div>
-</div>
-    </div>
+</div>    </div>
 
 
-  <aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+<aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
   <div class="mdc-dialog__surface">
     <header class="mdc-dialog__header">
       <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
@@ -3428,22 +2288,14 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
     </section>
   </div>
   <div class="mdc-dialog__backdrop"></div>
-</aside>
-</div>
-      <div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+</aside></div><div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
   <div class="mdc-snackbar__text"></div>
   <div class="mdc-snackbar__action-wrapper">
     <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
   </div>
 </div>
-    
-
-    
     <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
     <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
-    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-  </body>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </body>
 </html>

@@ -1,20 +1,11 @@
-
-
-
-
-
-
-
-
-  
-  <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="preload">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <title>Tooltips - Material Design</title>
 
-    <meta itemprop="name"        property="og:title"       name="twitter:title"       content="Tooltips" />
+<meta itemprop="name"        property="og:title"       name="twitter:title"       content="Tooltips" />
     <meta itemprop="description" property="og:description" name="twitter:description" content="Tooltips are text labels that appear when the user hovers over, focuses on, or touches an element." />
     <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1dvgfIljOovNY9Vmz7e_p_mIMB0-bb-3m/tool-tip-thumbnail-2x1.png" />
     <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/components/tooltips.html" />
@@ -22,24 +13,19 @@
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" href="https://material.io/favicon.ico">
-
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <meta name="format-detection" content="telephone=no">    <link rel="shortcut icon" href="https://material.io/favicon.ico">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NHRPF8');</script>
-        <style>
-      .animatable {
+})(window,document,'script','dataLayer','GTM-NHRPF8');</script>    <style>
+.animatable {
         opacity: 0;
         position: relative;
-        top: 16px; 
-        transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+        top: 16px;         transition: opacity 235ms cubic-bezier(.4,0,.2,1),
                     top 500ms cubic-bezier(.4,0,.2,1);
       }
     </style>
-
     <link href="../static/m2/css/main.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
     <link rel="preload" href="../static/m2/js/main.min.js" as="script">
@@ -50,119 +36,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="tooltips"
-        data-spec-alias="mio-design"
-         >
+        data-spec-alias="mio-design-staging"
+ >
 
-    
 
 
 <header class="header js-header" data-comp="Header">
-  
     <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
       <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
     </button>
-  
 
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
-
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--selected">
-      
-        
-  <li class="header__nav-item  js-header-item">
+    <ul class="header__nav-list header__nav-list--cleared">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/"
-    }
+    "label": "/"}
 '>
       Home
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/design"
-    }
+    "label": "/design"}
 '>
       Design
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/develop"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/develop"
-    }
+    "label": "/develop"}
 '>
       Develop
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/tools"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/tools"
-    }
+    "label": "/tools"}
 '>
       Tools
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
     </ul>
   </nav>
 
   <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform='{"basePath": "/", "ajax": false, "showOnLoad": false}'>
     <button class="search-form__back js-search-back js-analytics-click" type="button"
-            data-analytics='
-  {
+            data-analytics='  {
     "event": "trackEvent",
     "category": "search back",
     "action": "click icon",
-    "label": "DEFAULT: ga_label"
-    }
+    "label": "DEFAULT: ga_label"}
 '>
       <i class="material-icons">arrow_back</i>
     </button>
@@ -171,13 +129,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </form>
 
   <button class="header__search header__button js-toggle-search js-analytics-click"
-          data-analytics='
-  {
+          data-analytics='  {
     "event": "trackEvent",
     "category": "search",
     "action": "click icon",
-    "label": "DEFAULT: ga_label"
-    }
+    "label": "DEFAULT: ga_label"}
 '>
     <div class="icons-container mdc-ripple-surface" data-mdc-ripple-is-unbounded>
       <i class="material-icons header__spyglass" aria-label="Search">search</i>
@@ -186,2883 +142,1835 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </button>
 </header>
 
-    
-
-
 <nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs">
-  
     <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
       <i class="material-icons" title="Toggle Navigation">menu</i>
     </button>
-  
 
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
-
   <ol class="container container--large breadcrumbs__list">
-    
-      
       <li class="breadcrumbs__crumb">
         <a class="breadcrumbs__link js-analytics-click "
            href="../components.html"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "../components"
-    }
+    "label": "../components"}
 '>Components</a>
       </li>
-    
-      
       <li class="breadcrumbs__crumb">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
            href="tooltips.html"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "../components/tooltips.html"
-    }
+    "label": "../components/tooltips.html"}
 '>Tooltips</a>
       </li>
-    
-      
       <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
            href="tooltips.html#usage"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "#usage"
-    }
+    "label": "#usage"}
 '>Usage</a>
       </li>
-    
   </ol>
 </nav>
-    
-  
-    
-
-
 
 <nav class="side-nav" data-comp="SideNav" role="navigation">
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
 
-  
 
-  
-    
-    
-
-    
-      
-      <span class="side-nav__section-title">Material System</span>
+            <span class="side-nav__section-title">Material System</span>
 
       <ul class="side-nav__menu side-nav__menu--sections">
-    
 
       <li class="side-nav__menu-item">
-        
-        
           <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
              href="../introduction.html"
-             data-analytics='
-  {
+             data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../introduction"
-    }
+    "label": "../introduction"}
 '>
             Introduction
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav1"
                   aria-expanded="false">
             Material studies
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav1">
+            <div class="side-nav__wrapper" id="_nav1">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/about-our-material-studies.html"data-analytics='
-  {
+"
+              href="../material-studies/about-our-material-studies.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/about-our-material-studies.html"
-    }
+    "label": "../material-studies/about-our-material-studies.html"}
 '>
             About our Material studies
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/basil.html"data-analytics='
-  {
+"
+              href="../material-studies/basil.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/basil.html"
-    }
+    "label": "../material-studies/basil.html"}
 '>
             Basil
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/crane.html"data-analytics='
-  {
+"
+              href="../material-studies/crane.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/crane.html"
-    }
+    "label": "../material-studies/crane.html"}
 '>
             Crane
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/fortnightly.html"data-analytics='
-  {
+"
+              href="../material-studies/fortnightly.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/fortnightly.html"
-    }
+    "label": "../material-studies/fortnightly.html"}
 '>
             Fortnightly
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/owl.html"data-analytics='
-  {
+"
+              href="../material-studies/owl.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/owl.html"
-    }
+    "label": "../material-studies/owl.html"}
 '>
             Owl
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/rally.html"data-analytics='
-  {
+"
+              href="../material-studies/rally.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/rally.html"
-    }
+    "label": "../material-studies/rally.html"}
 '>
             Rally
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/reply.html"data-analytics='
-  {
+"
+              href="../material-studies/reply.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/reply.html"
-    }
+    "label": "../material-studies/reply.html"}
 '>
             Reply
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-studies/shrine.html"data-analytics='
-  {
+"
+              href="../material-studies/shrine.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/shrine.html"
-    }
+    "label": "../material-studies/shrine.html"}
 '>
             Shrine
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
-      </ul>
-      <span class="side-nav__section-title">Material Foundation</span>
+      </ul>      <span class="side-nav__section-title">Material Foundation</span>
 
       <ul class="side-nav__menu side-nav__menu--sections">
-    
 
       <li class="side-nav__menu-item">
-        
-        
           <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
              href="../foundation-overview.html"
-             data-analytics='
-  {
+             data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../foundation-overview"
-    }
+    "label": "../foundation-overview"}
 '>
             Foundation overview
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav3"
                   aria-expanded="false">
             Environment
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav3">
+            <div class="side-nav__wrapper" id="_nav3">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../environment/surfaces.html"data-analytics='
-  {
+"
+              href="../environment/surfaces.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/surfaces.html"
-    }
+    "label": "../environment/surfaces.html"}
 '>
             Surfaces
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../environment/elevation.html"data-analytics='
-  {
+"
+              href="../environment/elevation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/elevation.html"
-    }
+    "label": "../environment/elevation.html"}
 '>
             Elevation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../environment/light-shadows.html"data-analytics='
-  {
+"
+              href="../environment/light-shadows.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/light-shadows.html"
-    }
+    "label": "../environment/light-shadows.html"}
 '>
             Light and shadows
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav4"
                   aria-expanded="false">
             Layout
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav4">
+            <div class="side-nav__wrapper" id="_nav4">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/understanding-layout.html"data-analytics='
-  {
+"
+              href="../layout/understanding-layout.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/understanding-layout.html"
-    }
+    "label": "../layout/understanding-layout.html"}
 '>
             Understanding layout
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/responsive-layout-grid.html"data-analytics='
-  {
+"
+              href="../layout/responsive-layout-grid.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/responsive-layout-grid.html"
-    }
+    "label": "../layout/responsive-layout-grid.html"}
 '>
             Responsive layout grid
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/spacing-methods.html"data-analytics='
-  {
+"
+              href="../layout/spacing-methods.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/spacing-methods.html"
-    }
+    "label": "../layout/spacing-methods.html"}
 '>
             Spacing methods
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/component-behavior.html"data-analytics='
-  {
+"
+              href="../layout/component-behavior.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/component-behavior.html"
-    }
+    "label": "../layout/component-behavior.html"}
 '>
             Component behavior
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../layout/density.html"data-analytics='
-  {
+"
+              href="../layout/density.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/density.html"
-    }
+    "label": "../layout/density.html"}
 '>
             Density
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav5"
                   aria-expanded="false">
             Navigation
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav5">
+            <div class="side-nav__wrapper" id="_nav5">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../navigation/understanding-navigation.html"data-analytics='
-  {
+"
+              href="../navigation/understanding-navigation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/understanding-navigation.html"
-    }
+    "label": "../navigation/understanding-navigation.html"}
 '>
             Understanding navigation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../navigation/navigation-transitions.html"data-analytics='
-  {
+"
+              href="../navigation/navigation-transitions.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/navigation-transitions.html"
-    }
+    "label": "../navigation/navigation-transitions.html"}
 '>
             Navigation transitions
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../navigation/search.html"data-analytics='
-  {
+"
+              href="../navigation/search.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/search.html"
-    }
+    "label": "../navigation/search.html"}
 '>
             Search
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav6"
                   aria-expanded="false">
             Color
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav6">
+            <div class="side-nav__wrapper" id="_nav6">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/the-color-system.html"data-analytics='
-  {
+"
+              href="../color/the-color-system.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/the-color-system.html"
-    }
+    "label": "../color/the-color-system.html"}
 '>
             The color system
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/applying-color-to-ui.html"data-analytics='
-  {
+"
+              href="../color/applying-color-to-ui.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/applying-color-to-ui.html"
-    }
+    "label": "../color/applying-color-to-ui.html"}
 '>
             Applying color to UI
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/color-usage.html"data-analytics='
-  {
+"
+              href="../color/color-usage.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/color-usage.html"
-    }
+    "label": "../color/color-usage.html"}
 '>
             Color usage
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../color/text-legibility.html"data-analytics='
-  {
+"
+              href="../color/text-legibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/text-legibility.html"
-    }
+    "label": "../color/text-legibility.html"}
 '>
             Text legibility
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav7"
                   aria-expanded="false">
             Typography
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav7">
+            <div class="side-nav__wrapper" id="_nav7">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../typography/the-type-system.html"data-analytics='
-  {
+"
+              href="../typography/the-type-system.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/the-type-system.html"
-    }
+    "label": "../typography/the-type-system.html"}
 '>
             The type system
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../typography/understanding-typography.html"data-analytics='
-  {
+"
+              href="../typography/understanding-typography.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/understanding-typography.html"
-    }
+    "label": "../typography/understanding-typography.html"}
 '>
             Understanding typography
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../typography/language-support.html"data-analytics='
-  {
+"
+              href="../typography/language-support.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/language-support.html"
-    }
+    "label": "../typography/language-support.html"}
 '>
             Language support
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav8"
                   aria-expanded="false">
             Iconography
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav8">
+            <div class="side-nav__wrapper" id="_nav8">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../iconography/product-icons.html"data-analytics='
-  {
+"
+              href="../iconography/product-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/product-icons.html"
-    }
+    "label": "../iconography/product-icons.html"}
 '>
             Product icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../iconography/system-icons.html"data-analytics='
-  {
+"
+              href="../iconography/system-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/system-icons.html"
-    }
+    "label": "../iconography/system-icons.html"}
 '>
             System icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../iconography/animated-icons.html"data-analytics='
-  {
+"
+              href="../iconography/animated-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/animated-icons.html"
-    }
+    "label": "../iconography/animated-icons.html"}
 '>
             Animated icons
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav9"
                   aria-expanded="false">
             Shape
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav9">
+            <div class="side-nav__wrapper" id="_nav9">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/about-shape.html"data-analytics='
-  {
+"
+              href="../shape/about-shape.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/about-shape.html"
-    }
+    "label": "../shape/about-shape.html"}
 '>
             About shape
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/shape-hierarchy.html"data-analytics='
-  {
+"
+              href="../shape/shape-hierarchy.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-hierarchy.html"
-    }
+    "label": "../shape/shape-hierarchy.html"}
 '>
             Shape and hierarchy
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/shape-as-expression.html"data-analytics='
-  {
+"
+              href="../shape/shape-as-expression.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-as-expression.html"
-    }
+    "label": "../shape/shape-as-expression.html"}
 '>
             Shape as expression
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../shape/shape-motion.html"data-analytics='
-  {
+"
+              href="../shape/shape-motion.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-motion.html"
-    }
+    "label": "../shape/shape-motion.html"}
 '>
             Shape and motion
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav10"
                   aria-expanded="false">
             Motion
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav10">
+            <div class="side-nav__wrapper" id="_nav10">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/understanding-motion.html"data-analytics='
-  {
+"
+              href="../motion/understanding-motion.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/understanding-motion.html"
-    }
+    "label": "../motion/understanding-motion.html"}
 '>
             Understanding motion
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/speed.html"data-analytics='
-  {
+"
+              href="../motion/speed.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/speed.html"
-    }
+    "label": "../motion/speed.html"}
 '>
             Speed
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/choreography.html"data-analytics='
-  {
+"
+              href="../motion/choreography.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/choreography.html"
-    }
+    "label": "../motion/choreography.html"}
 '>
             Choreography
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../motion/customization.html"data-analytics='
-  {
+"
+              href="../motion/customization.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/customization.html"
-    }
+    "label": "../motion/customization.html"}
 '>
             Customization
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav11"
                   aria-expanded="false">
             Interaction
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav11">
+            <div class="side-nav__wrapper" id="_nav11">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../interaction/gestures.html"data-analytics='
-  {
+"
+              href="../interaction/gestures.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/gestures.html"
-    }
+    "label": "../interaction/gestures.html"}
 '>
             Gestures
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../interaction/selection.html"data-analytics='
-  {
+"
+              href="../interaction/selection.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/selection.html"
-    }
+    "label": "../interaction/selection.html"}
 '>
             Selection
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../interaction/states.html"data-analytics='
-  {
+"
+              href="../interaction/states.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/states.html"
-    }
+    "label": "../interaction/states.html"}
 '>
             States
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav12"
                   aria-expanded="false">
             Communication
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav12">
+            <div class="side-nav__wrapper" id="_nav12">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/confirmation-acknowledgement.html"data-analytics='
-  {
+"
+              href="../communication/confirmation-acknowledgement.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/confirmation-acknowledgement.html"
-    }
+    "label": "../communication/confirmation-acknowledgement.html"}
 '>
             Confirmation &amp; acknowledgement
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/data-formats.html"data-analytics='
-  {
+"
+              href="../communication/data-formats.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/data-formats.html"
-    }
+    "label": "../communication/data-formats.html"}
 '>
             Data formats
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/empty-states.html"data-analytics='
-  {
+"
+              href="../communication/empty-states.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/empty-states.html"
-    }
+    "label": "../communication/empty-states.html"}
 '>
             Empty states
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/gesture-education.html"data-analytics='
-  {
+"
+              href="../communication/gesture-education.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/gesture-education.html"
-    }
+    "label": "../communication/gesture-education.html"}
 '>
             Gesture education
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/help-feedback.html"data-analytics='
-  {
+"
+              href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/help-feedback.html"
-    }
+    "label": "../communication/help-feedback.html"}
 '>
             Help &amp; feedback
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/imagery.html"data-analytics='
-  {
+"
+              href="../communication/imagery.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/imagery.html"
-    }
+    "label": "../communication/imagery.html"}
 '>
             Imagery
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/launch-screen.html"data-analytics='
-  {
+"
+              href="../communication/launch-screen.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/launch-screen.html"
-    }
+    "label": "../communication/launch-screen.html"}
 '>
             Launch screen
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../communication/onboarding.html"data-analytics='
-  {
+"
+              href="../communication/onboarding.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/onboarding.html"
-    }
+    "label": "../communication/onboarding.html"}
 '>
             Onboarding
           </a>
 
-          
-          
         </li>
-      
-    </ul>
-  </div>
 
-        
-      </li>
-  
-    
-    
-
-    
-      </ul>
-      <span class="side-nav__section-title">Material Guidelines</span>
-
-      <ul class="side-nav__menu side-nav__menu--sections">
-    
-
-      <li class="side-nav__menu-item">
-        
-        
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../guidelines-overview.html"
-             data-analytics='
-  {
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/writing.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../guidelines-overview"
-    }
+    "label": "../communication/writing.html"}
+'>
+            Writing
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../guidelines-overview.html"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"}
 '>
             Guidelines overview
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav14"
                   aria-expanded="false">
             Material Theming
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav14">
+            <div class="side-nav__wrapper" id="_nav14">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-theming/overview.html"data-analytics='
-  {
+"
+              href="../material-theming/overview.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-theming/overview.html"
-    }
+    "label": "../material-theming/overview.html"}
 '>
             Overview
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../material-theming/implementing-your-theme.html"data-analytics='
-  {
+"
+              href="../material-theming/implementing-your-theme.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-theming/implementing-your-theme.html"
-    }
+    "label": "../material-theming/implementing-your-theme.html"}
 '>
             Implementing your theme
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
                   aria-controls="_nav15"
                   aria-expanded="true">
             Components
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav15">
+            <div class="side-nav__wrapper" id="_nav15">
     <ul class="side-nav__submenu" data-menu-state="open">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="app-bars-bottom.html"data-analytics='
-  {
+"
+              href="app-bars-bottom.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/app-bars-bottom.html"
-    }
+    "label": "../components/app-bars-bottom.html"}
 '>
             App bars: bottom
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="app-bars-top.html"data-analytics='
-  {
+"
+              href="app-bars-top.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/app-bars-top.html"
-    }
+    "label": "../components/app-bars-top.html"}
 '>
             App bars: top
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="backdrop.html"data-analytics='
-  {
+"
+              href="backdrop.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/backdrop.html"
-    }
+    "label": "../components/backdrop.html"}
 '>
             Backdrop
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="banners.html"data-analytics='
-  {
+"
+              href="banners.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/banners.html"
-    }
+    "label": "../components/banners.html"}
 '>
             Banners
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="bottom-navigation.html"data-analytics='
-  {
+"
+              href="bottom-navigation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/bottom-navigation.html"
-    }
+    "label": "../components/bottom-navigation.html"}
 '>
             Bottom navigation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="buttons.html"data-analytics='
-  {
+"
+              href="buttons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/buttons.html"
-    }
+    "label": "../components/buttons.html"}
 '>
             Buttons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="buttons-floating-action-button.html"data-analytics='
-  {
+"
+              href="buttons-floating-action-button.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/buttons-floating-action-button.html"
-    }
+    "label": "../components/buttons-floating-action-button.html"}
 '>
             Buttons: floating action button
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="cards.html"data-analytics='
-  {
+"
+              href="cards.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/cards.html"
-    }
+    "label": "../components/cards.html"}
 '>
             Cards
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="chips.html"data-analytics='
-  {
+"
+              href="chips.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/chips.html"
-    }
+    "label": "../components/chips.html"}
 '>
             Chips
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="data-tables.html"data-analytics='
-  {
+"
+              href="data-tables.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/data-tables.html"
-    }
+    "label": "../components/data-tables.html"}
 '>
             Data tables
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="dialogs.html"data-analytics='
-  {
+"
+              href="dialogs.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/dialogs.html"
-    }
+    "label": "../components/dialogs.html"}
 '>
             Dialogs
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="dividers.html"data-analytics='
-  {
+"
+              href="dividers.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/dividers.html"
-    }
+    "label": "../components/dividers.html"}
 '>
             Dividers
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="image-lists.html"data-analytics='
-  {
+"
+              href="image-lists.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/image-lists.html"
-    }
+    "label": "../components/image-lists.html"}
 '>
             Image lists
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="lists.html"data-analytics='
-  {
+"
+              href="lists.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/lists.html"
-    }
+    "label": "../components/lists.html"}
 '>
             Lists
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="menus.html"data-analytics='
-  {
+"
+              href="menus.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/menus.html"
-    }
+    "label": "../components/menus.html"}
 '>
             Menus
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="navigation-drawer.html"data-analytics='
-  {
+"
+              href="navigation-drawer.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/navigation-drawer.html"
-    }
+    "label": "../components/navigation-drawer.html"}
 '>
             Navigation drawer
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="progress-indicators.html"data-analytics='
-  {
+"
+              href="progress-indicators.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/progress-indicators.html"
-    }
+    "label": "../components/progress-indicators.html"}
 '>
             Progress indicators
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="selection-controls.html"data-analytics='
-  {
+"
+              href="selection-controls.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/selection-controls.html"
-    }
+    "label": "../components/selection-controls.html"}
 '>
             Selection controls
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="sheets-bottom.html"data-analytics='
-  {
+"
+              href="sheets-bottom.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sheets-bottom.html"
-    }
+    "label": "../components/sheets-bottom.html"}
 '>
             Sheets: bottom
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="sheets-side.html"data-analytics='
-  {
+"
+              href="sheets-side.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sheets-side.html"
-    }
+    "label": "../components/sheets-side.html"}
 '>
             Sheets: side
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="sliders.html"data-analytics='
-  {
+"
+              href="sliders.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sliders.html"
-    }
+    "label": "../components/sliders.html"}
 '>
             Sliders
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="snackbars.html"data-analytics='
-  {
+"
+              href="snackbars.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/snackbars.html"
-    }
+    "label": "../components/snackbars.html"}
 '>
             Snackbars
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="tabs.html"data-analytics='
-  {
+"
+              href="tabs.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/tabs.html"
-    }
+    "label": "../components/tabs.html"}
 '>
             Tabs
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="text-fields.html"data-analytics='
-  {
+"
+              href="text-fields.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/text-fields.html"
-    }
+    "label": "../components/text-fields.html"}
 '>
             Text fields
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              side-nav__link--active
-               js-header-show"
-              href="tooltips.html" aria-current="page" data-analytics='
-  {
+side-nav__link--active js-header-show"
+              href="tooltips.html" aria-current="page" data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/tooltips.html"
-    }
+    "label": "../components/tooltips.html"}
 '>
             Tooltips
           </a>
 
-          
-          
             <div class="side-nav__articles">
               <i class="side-nav__progress-bar">
                 <i class="side-nav__scrub js-submenu-scrub"></i>
               </i>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-usage js-analytics-click" href="tooltips.html#usage" data-section-id="usage"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#usage"
-    }
+    "label": "#usage"}
 '>
                     <span class="js-anchor-text">Usage</span>
                   </a>
                 </div>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-placement js-analytics-click" href="tooltips.html#placement" data-section-id="placement"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#placement"
-    }
+    "label": "#placement"}
 '>
                     <span class="js-anchor-text">Placement</span>
                   </a>
                 </div>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-behavior js-analytics-click" href="tooltips.html#behavior" data-section-id="behavior"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#behavior"
-    }
+    "label": "#behavior"}
 '>
                     <span class="js-anchor-text">Behavior</span>
                   </a>
                 </div>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-theming js-analytics-click" href="tooltips.html#theming" data-section-id="theming"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#theming"
-    }
+    "label": "#theming"}
 '>
                     <span class="js-anchor-text">Theming</span>
                   </a>
                 </div>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-spec js-analytics-click" href="tooltips.html#spec" data-section-id="spec"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#spec"
-    }
+    "label": "#spec"}
 '>
                     <span class="js-anchor-text">Spec</span>
                   </a>
                 </div>
-              
                 <div>
                   <a class="side-nav__article js-anchor-link js-anchor-link-implementation js-analytics-click" href="tooltips.html#implementation" data-section-id="implementation"
-                     data-analytics='
-  {
+                     data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "#implementation"
-    }
+    "label": "#implementation"}
 '>
                     <span class="js-anchor-text">Implementation</span>
                   </a>
                 </div>
-              
             </div>
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
-          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
-                  aria-controls="_nav16"
-                  aria-expanded="false">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../usability.html"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability"}
+'>
             Usability
-          </button>
-          
-  <div class="side-nav__wrapper" id="_nav16">
-    <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../usability/accessibility.html"data-analytics='
-  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../usability/accessibility.html"
-    }
-'>
-            Accessibility
           </a>
-
-          
-          
-        </li>
-      
-        
-        
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../usability/bidirectionality.html"data-analytics='
-  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../usability/bidirectionality.html"
-    }
-'>
-            Bidirectionality
-          </a>
-
-          
-          
-        </li>
-      
-    </ul>
-  </div>
-
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav17"
                   aria-expanded="false">
             Platform guidance
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav17">
+            <div class="side-nav__wrapper" id="_nav17">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-bars.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-bars.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-bars.html"
-    }
+    "label": "../platform-guidance/android-bars.html"}
 '>
             Android bars
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-fingerprint.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-fingerprint.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-fingerprint.html"
-    }
+    "label": "../platform-guidance/android-fingerprint.html"}
 '>
             Android fingerprint
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-haptics.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-haptics.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-haptics.html"
-    }
+    "label": "../platform-guidance/android-haptics.html"}
 '>
             Android haptics
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-icons.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-icons.html"
-    }
+    "label": "../platform-guidance/android-icons.html"}
 '>
             Android icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-navigating-between-apps.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-navigating-between-apps.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-navigating-between-apps.html"
-    }
+    "label": "../platform-guidance/android-navigating-between-apps.html"}
 '>
             Android navigating between apps
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-notifications.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-notifications.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-notifications.html"
-    }
+    "label": "../platform-guidance/android-notifications.html"}
 '>
             Android notifications
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-permissions.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-permissions.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-permissions.html"
-    }
+    "label": "../platform-guidance/android-permissions.html"}
 '>
             Android permissions
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-settings.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-settings.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-settings.html"
-    }
+    "label": "../platform-guidance/android-settings.html"}
 '>
             Android settings
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-split-screen.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-split-screen.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-split-screen.html"
-    }
+    "label": "../platform-guidance/android-split-screen.html"}
 '>
             Android split-screen
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-swipe-to-refresh.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-swipe-to-refresh.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-swipe-to-refresh.html"
-    }
+    "label": "../platform-guidance/android-swipe-to-refresh.html"}
 '>
             Android swipe to refresh
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-text-selection-toolbar.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-text-selection-toolbar.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-text-selection-toolbar.html"
-    }
+    "label": "../platform-guidance/android-text-selection-toolbar.html"}
 '>
             Android text selection toolbar
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/android-widget.html"data-analytics='
-  {
+"
+              href="../platform-guidance/android-widget.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-widget.html"
-    }
+    "label": "../platform-guidance/android-widget.html"}
 '>
             Android widget
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="../platform-guidance/cross-platform-adaptation.html"data-analytics='
-  {
+"
+              href="../platform-guidance/cross-platform-adaptation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/cross-platform-adaptation.html"
-    }
+    "label": "../platform-guidance/cross-platform-adaptation.html"}
 '>
             Cross-platform adaptation
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
 
   </ul>
 </nav>
-  
-
-
     <main class="main" role="main">
-      
-      
 
-      
 <article class="article" data-comp="Waypoints">
   <div class="article__intro container container--large js-waypoints-trigger-initial">
-    
-      
       <nav class="article__nav animatable js-anim-trigger">
         <span class="eyebrow">Contents</span>
         <ul>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="tooltips.html#usage" data-section-id="usage"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#usage"
-    }
+    "label": "#usage"}
 '>Usage</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="tooltips.html#placement" data-section-id="placement"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#placement"
-    }
+    "label": "#placement"}
 '>Placement</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="tooltips.html#behavior" data-section-id="behavior"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#behavior"
-    }
+    "label": "#behavior"}
 '>Behavior</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="tooltips.html#theming" data-section-id="theming"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#theming"
-    }
+    "label": "#theming"}
 '>Theming</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="tooltips.html#spec" data-section-id="spec"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#spec"
-    }
+    "label": "#spec"}
 '>Spec</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="tooltips.html#implementation" data-section-id="implementation"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#implementation"
-    }
+    "label": "#implementation"}
 '>Implementation</a>
             </li>
-          
         </ul>
       </nav>
-    
     <h1 class="article__title animatable js-anim-trigger">
-      
 
       Tooltips
 
-      
-        
           <div class="article-controls">
             
           </div>
-        
-      
     </h1>
 
-    
 
-    
-      
       <div class="article__intro-text animatable js-anim-trigger">
       <div>
 <div aria-hidden="true" class="keywords hidden">Tooltips</div>
 <h2>Tooltips display informative text when users hover over, focus on, or tap an element.</h2>
 <figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 66.5789473684%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-WU50SUpxSnZ1dHM/tooltips-intro.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 66.5789473684%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="66.5789473684%" data-src="../assets/0B54x0KDcs5U-WU50SUpxSnZ1dHM/tooltips-intro.png" src="tooltips.html">
 </img></div>
 </div>
 </figure></div>
       </div>
-    
   </div>
 
   <hr />
 
-  
-  <div class="article__body animatable js-show-header js-anim-trigger">
-    
-      
+  <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger">
       <section id="usage" class="container container--large js-waypoints-trigger article__section" data-section-title="Usage" aria-label="Usage">
-        
           <h2 class="article__chapter-title">
             Usage
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">Tooltips</div>
-<p>When activated, tooltips display a text label identifying an element, such as a description of its function. </p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Principles  </h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Tooltips are transient, paired, and succinct.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module-module col-3"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="751px">
-<div class="frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1NKDoBIXQJlK7CvtDakeW4JKwJGIODXbJ/tooltips-illo-1.png" src="tooltips.html">
+<p>When activated, tooltips display a text label identifying an element, such as a description of its function. </p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Principles  " class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Principles  </h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Tooltips are transient, paired, and succinct.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module-module col-3"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="751px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1NKDoBIXQJlK7CvtDakeW4JKwJGIODXbJ/tooltips-illo-1.png" src="tooltips.html">
 </img></div>
 </div>
 </figure><h2>Transient</h2><p>Tooltips appear on hover, focus, or touch, and disappear after a short duration.</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="361px">
-<div class="frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1JHsq1C_aCXNiEiZsKZfRucSlcMIDEIiR/tooltips-illo-3.png" src="tooltips.html">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1JHsq1C_aCXNiEiZsKZfRucSlcMIDEIiR/tooltips-illo-3.png" src="tooltips.html">
 </img></div>
 </div>
 </figure><h2>Paired</h2><p>Tooltips are always paired nearby the element with which they are associated.</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="361px">
-<div class="frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/19eyHwiGBVeSa6mcRpYXKh2VSQAG-mk4E/tooltips-illo-2.png" src="tooltips.html">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/19eyHwiGBVeSa6mcRpYXKh2VSQAG-mk4E/tooltips-illo-2.png" src="tooltips.html">
 </img></div>
 </div>
 </figure><h2>Succinct</h2><p>Tooltips only include short, descriptive text. </p></div></section></div></div></div></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="placement" class="container container--large js-waypoints-trigger article__section" data-section-title="Placement" aria-label="Placement">
-        
+<hr />      <section id="placement" class="container container--large js-waypoints-trigger article__section" data-section-title="Placement" aria-label="Placement">
           <h2 class="article__chapter-title">
             Placement
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">Tooltips</div>
 <div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="placement-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-OHl1djU3UGlVTDg/tooltip-usage.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/0B54x0KDcs5U-OHl1djU3UGlVTDg/tooltip-usage.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-0">
-<p class="s-tag-caption do">Do.</p>
-<p>Use tooltips for interactive imagery.</p><p>200% zoom</p><ol class="lst-kix_1sebn89dhsg-0 start" start="1"><li>On hover</li><li>On focus</li></ol>
-</figcaption>
+<p class="s-tag-caption do">Do.</p><p>Use tooltips for interactive imagery.</p><p>200% zoom</p><ol class="lst-kix_1sebn89dhsg-0 start" start="1"><li>On hover</li><li>On focus</li></ol></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="placement-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-bkwya0lJUGdQemM/tooltip-usage-dont.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/0B54x0KDcs5U-bkwya0lJUGdQemM/tooltip-usage-dont.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-1">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>Don’t use tooltips to restate visible UI text.</p><p>200% zoom</p><ol class="lst-kix_ps27fl7tubzd-0 start" start="1"><li>On hover</li><li>On focus</li></ol>
-</figcaption>
+<p class="s-tag-caption dont">Don’t.</p><p>Don’t use tooltips to restate visible UI text.</p><p>200% zoom</p><ol class="lst-kix_ps27fl7tubzd-0 start" start="1"><li>On hover</li><li>On focus</li></ol></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="placement-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-a0Vrdnlib1R5TFk/tooltip-usage-do.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/0B54x0KDcs5U-a0Vrdnlib1R5TFk/tooltip-usage-do.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-2">
-<p>200% zoom</p><ol class="lst-kix_9ky9h4o011ld-0 start" start="1"><li>Tooltips describe differences between similar elements</li><li>Tooltips distinguish actions with related iconography</li></ol>
-</figcaption>
+<p>200% zoom</p><ol class="lst-kix_9ky9h4o011ld-0 start" start="1"><li>Tooltips describe differences between similar elements</li><li>Tooltips distinguish actions with related iconography</li></ol></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 47.3684210526%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="placement-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-akZBRno3UmRkeVU/tooltip-usage-dont-2.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 47.3684210526%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="47.3684210526%" data-src="../assets/0B54x0KDcs5U-akZBRno3UmRkeVU/tooltip-usage-dont-2.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-3">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>200% zoom</p><ol class="lst-kix_gr74ok9xgkuo-0 start" start="1"><li>Don’t display shadows on tooltips</li><li>Don’t display rich information and imagery on tooltips</li></ol>
-</figcaption>
+<p class="s-tag-caption dont">Don’t.</p><p>200% zoom</p><ol class="lst-kix_gr74ok9xgkuo-0 start" start="1"><li>Don’t display shadows on tooltips</li><li>Don’t display rich information and imagery on tooltips</li></ol></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="placement-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-TXJwMkFpZU9abWc/tooltip-position-do.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/0B54x0KDcs5U-TXJwMkFpZU9abWc/tooltip-position-do.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-4">
-<p class="s-tag-caption do">Do.</p>
-<p>Keep the position of the tooltip visible.</p>
-</figcaption>
+<p class="s-tag-caption do">Do.</p><p>Keep the position of the tooltip visible.</p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 100.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="placement-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-OG9NelYyTm9GUHc/tooltip-position-dont.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/0B54x0KDcs5U-OG9NelYyTm9GUHc/tooltip-position-dont.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-5">
-<p class="s-tag-caption dont">Don’t.</p>
-<p>Don’t crop tooltips.</p>
-</figcaption>
-</figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Desktop</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 66.5789473684%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="placement-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B54x0KDcs5U-Z1dSQVRTbTF2QlE/tooltip-desktop.png" src="tooltips.html">
+<p class="s-tag-caption dont">Don’t.</p><p>Don’t crop tooltips.</p></figcaption>
+</figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Desktop" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Desktop</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 66.5789473684%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="66.5789473684%" data-src="../assets/0B54x0KDcs5U-Z1dSQVRTbTF2QlE/tooltip-desktop.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-6">
-<p>Desktop tooltip on hover</p>
-</figcaption>
-</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Mobile</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<p>Desktop tooltip on hover</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Mobile" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Mobile</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video aria-describedby="placement-figure-caption-7" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
-<source data-src="../assets/0B8wSqcLwbhFuZVFJeXRLd3hlM0E/baseline-video-list.mp4" src="tooltips.html" type="video/mp4">
-</source></video>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="placement-figure-caption-7" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuZVFJeXRLd3hlM0E/baseline-video-list.mp4" src="tooltips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
 <i class="material-icons video-player__icon">volume_up</i>
@@ -3073,14 +1981,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <figcaption id="placement-figure-caption-7">
-<p>Tooltip displayed through long press</p>
-</figcaption>
+<p>Tooltip displayed through long press</p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video aria-describedby="placement-figure-caption-8" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
-<source data-src="../assets/0B8wSqcLwbhFuRzZGQVd4MFVfMlU/baseline-video-list-focus.mp4" src="tooltips.html" type="video/mp4">
-</source></video>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="placement-figure-caption-8" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuRzZGQVd4MFVfMlU/baseline-video-list-focus.mp4" src="tooltips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
 <i class="material-icons video-player__icon">volume_up</i>
@@ -3091,25 +1997,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <figcaption id="placement-figure-caption-8">
-<p>Tooltip summoned through focus (Android only)</p>
-</figcaption>
+<p>Tooltip summoned through focus (Android only)</p></figcaption>
 </figure></div></section></div></div></div></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="behavior" class="container container--large js-waypoints-trigger article__section" data-section-title="Behavior" aria-label="Behavior">
-        
+<hr />      <section id="behavior" class="container container--large js-waypoints-trigger article__section" data-section-title="Behavior" aria-label="Behavior">
           <h2 class="article__chapter-title">
             Behavior
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
@@ -3117,9 +2016,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>A tooltip is displayed upon tapping and holding a screen element or component (on mobile) or hovering over it (desktop). Continuously display the tooltip as long as the user long-presses or hovers over the element.</p><h2>Timing  </h2><p>Display the tooltip for 1.5 seconds. If the user takes another action before that time ends, the tooltip will disappear.</p><h2>Motion</h2><p>Over 150ms, tooltips fade in and scale up using the deceleration curve. They fade out over 75ms.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 47.3684210526%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
-<source data-src="../assets/0B8wSqcLwbhFuYlpHNGcxdXRfZkE/01-tooltip-interaction.mp4" src="tooltips.html" type="video/mp4">
-</source></video>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuYlpHNGcxdXRfZkE/01-tooltip-interaction.mp4" src="tooltips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
 <i class="material-icons video-player__icon">volume_up</i>
@@ -3128,15 +2026,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <i class="material-icons video-player__icon">volume_off</i>
 </button>
 </div>
-</div>
-</figure><figcaption>
-<ol class="lst-kix_n9ac5id30549-0 start" start="1"><li>200%</li><li>100%</li></ol>
-</figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>On desktop, tooltips appear in the center of click targets and stay in place while cursor moves within the target.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+</div></figure><figcaption>
+<ol class="lst-kix_n9ac5id30549-0 start" start="1"><li>200%</li><li>100%</li></ol></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>On desktop, tooltips appear in the center of click targets and stay in place while cursor moves within the target.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
-<source data-src="../assets/0B8wSqcLwbhFuVHlsVnNvV1MwdWM/02-tooltip-interaction.mp4" src="tooltips.html" type="video/mp4">
-</source></video>
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<source data-src="../assets/0B8wSqcLwbhFuVHlsVnNvV1MwdWM/02-tooltip-interaction.mp4" src="tooltips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
 <i class="material-icons video-player__icon">volume_up</i>
@@ -3145,47 +2040,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <i class="material-icons video-player__icon">volume_off</i>
 </button>
 </div>
-</div>
-</figure><figcaption>
-<ol class="lst-kix_4plxa2apdfu4-0 start" start="1"><li>Tooltip disappears when cursor moves out of the touch target </li><li>Tooltip remains while cursor moves within the touch target</li></ol>
-</figcaption></div></section></div></div>
+</div></figure><figcaption>
+<ol class="lst-kix_4plxa2apdfu4-0 start" start="1"><li>Tooltip disappears when cursor moves out of the touch target </li><li>Tooltip remains while cursor moves within the touch target</li></ol></figcaption></div></section></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="theming" class="container container--large js-waypoints-trigger article__section" data-section-title="Theming" aria-label="Theming">
-        
+<hr />      <section id="theming" class="container container--large js-waypoints-trigger article__section" data-section-title="Theming" aria-label="Theming">
           <h2 class="article__chapter-title">
             Theming
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">Tooltips</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Reply Material Theme</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>This email app’s tooltips have been customized using Material Theming. Areas of customization include color, typography, and shape. Reply is an email app that uses...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>This email app’s tooltips have been customized using Material Theming. Areas of customization include color, typography, and shape.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="theming-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1jBuOa1gYxM7CkfmpfCr0peI95VNaDxGi/tooltips-reply-ahero.png" src="tooltips.html">
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Reply Material Theme" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Reply Material Theme</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>This email app’s tooltips have been customized using Material Theming. Areas of customization include color, typography, and shape. Reply is an email app that uses...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>This email app’s tooltips have been customized using Material Theming. Areas of customization include color, typography, and shape.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="theming-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1jBuOa1gYxM7CkfmpfCr0peI95VNaDxGi/tooltips-reply-ahero.png" src="tooltips.html">
 </img></div>
 </div>
 <figcaption id="theming-figure-caption-0">
-<p>Reply’s customized tooltip.</p>
-</figcaption>
+<p>Reply’s customized tooltip.</p></figcaption>
 </figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../material-studies/reply.html#reply"
-    }
+    "label": "../material-studies/reply.html#reply"}
 ' href="../material-studies/reply.html#reply" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1deH-Siw2ULG0fuTG2SsGoXTTwhuFXuu1/reply-thumbnail-1x1-circle.png" style="background-image: url('../assets/1deH-Siw2ULG0fuTG2SsGoXTTwhuFXuu1/reply-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -3198,13 +2081,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../color/the-color-system.html#the-color-system"
-    }
+    "label": "../color/the-color-system.html#the-color-system"}
 ' href="../color/the-color-system.html#the-color-system" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1Y8aHGqd-cCDfwb6OVpNg45cUfwaQXuy1/color-thumbnail-1x1-circle.png" style="background-image: url('../assets/1Y8aHGqd-cCDfwb6OVpNg45cUfwaQXuy1/color-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -3217,13 +2098,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../color/applying-color-to-ui.html#applying-color-to-ui"
-    }
+    "label": "../color/applying-color-to-ui.html#applying-color-to-ui"}
 ' href="../color/applying-color-to-ui.html#applying-color-to-ui" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO/color-thumbnail-1x1-circle.png" style="background-image: url('../assets/1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO/color-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -3236,25 +2115,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><p></p><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Color</h2><p>Reply’s tooltips use custom color on two elements: the container, and text string.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1lITX0ez9iXredCQ7Ro5JNLWc0qpV87qv/tooltips-reply-color.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1lITX0ez9iXredCQ7Ro5JNLWc0qpV87qv/tooltips-reply-color.png" src="tooltips.html">
 </img></div>
 </div>
 </figure><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Element</p></td><td colspan="1" rowspan="1"><p>Category</p></td><td colspan="1" rowspan="1"><p>Attribute</p></td><td colspan="1" rowspan="1"><p>Value</p></td></tr><tr><td colspan="1" rowspan="1"><p>Container </p></td><td colspan="1" rowspan="1"><p>On Surface</p></td><td colspan="1" rowspan="1"><p>Color</p><p>Opacity</p></td><td colspan="1" rowspan="1"><p>#232F34</p><p>100%</p></td></tr><tr><td colspan="1" rowspan="1"><p>Text string</p></td><td colspan="1" rowspan="1"><p>Surface</p></td><td colspan="1" rowspan="1"><p>Color</p><p>Opacity</p></td><td colspan="1" rowspan="1"><p>#FFFFFF</p><p>100%</p></td></tr></tbody></table></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Typography</h2><p>Reply’s tooltips use custom typography for the text string.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/13pxVm1l71moyZBL7habGx5XWiFuqzUx2/tooltips-reply-type.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/13pxVm1l71moyZBL7habGx5XWiFuqzUx2/tooltips-reply-type.png" src="tooltips.html">
 </img></div>
 </div>
 </figure><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Element</p></td><td colspan="1" rowspan="1"><p>Category</p></td><td colspan="1" rowspan="1"><p>Attribute</p></td><td colspan="1" rowspan="1"><p>Value</p></td></tr><tr><td colspan="1" rowspan="1"><p>Text string</p></td><td colspan="1" rowspan="1"><p>Caption</p></td><td colspan="1" rowspan="1"><p>Typeface</p><p>Font</p><p>Size</p><p>Case</p></td><td colspan="1" rowspan="1"><p>Work Sans</p><p>Regular</p><p>12</p><p>Sentence case</p></td></tr></tbody></table></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../typography/understanding-typography.html#understanding-typography"
-    }
+    "label": "../typography/understanding-typography.html#understanding-typography"}
 ' href="../typography/understanding-typography.html#understanding-typography" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png" style="background-image: url('../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -3267,13 +2142,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../shape/about-shape.html#about-shape"
-    }
+    "label": "../shape/about-shape.html#about-shape"}
 ' href="../shape/about-shape.html#about-shape" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1a6QBGzwGXpPSCfUAPAN2lxLyVjXiEk6i/shapes-thumbnail-1x1-circle.png" style="background-image: url('../assets/1a6QBGzwGXpPSCfUAPAN2lxLyVjXiEk6i/shapes-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -3286,33 +2159,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><p></p><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Shape</h2><p>Reply’s tooltips use a custom container shape.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1kB3RWqBhknyMB0dRFj3ULnf7stLRsjdg/tooltips-reply-shape.png" src="tooltips.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1kB3RWqBhknyMB0dRFj3ULnf7stLRsjdg/tooltips-reply-shape.png" src="tooltips.html">
 </img></div>
 </div>
 </figure><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Element</p></td><td colspan="1" rowspan="1"><p>Attribute</p></td><td colspan="1" rowspan="1"><p>Value</p></td></tr><tr><td colspan="1" rowspan="1"><p>Container</p></td><td colspan="1" rowspan="1"><p>Top left corner</p><p>Top right corner</p><p>Bottom right corner</p><p>Bottom left corner</p></td><td colspan="1" rowspan="1"><p>Sharp 0dp </p><p>Sharp 0dp </p><p>Sharp 0dp </p><p>Sharp 0dp </p></td></tr></tbody></table></div></section></div></div></div></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="spec" class="container container--large js-waypoints-trigger article__section" data-section-title="Spec" aria-label="Spec">
-        
+<hr />      <section id="spec" class="container container--large js-waypoints-trigger article__section" data-section-title="Spec" aria-label="Spec">
           <h2 class="article__chapter-title">
             Spec
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">Tooltips</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Desktop</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>10dp #ffffff #616161e6 R97 G97 B97 A0.90 All corners Rounded: 4dp All measurements are displayed in device-independent pixels (dps)</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><div class="js-lightbox-el" data-template="redline">
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Desktop" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Desktop</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>10dp #ffffff #616161e6 R97 G97 B97 A0.90 All corners Rounded: 4dp All measurements are displayed in device-independent pixels (dps)</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><div class="js-lightbox-el" data-template="redline">
 <div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1RItmCm57AusCfnl63txwIH2BnOVYr4R4/tooltip-spec-desktop.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
@@ -3320,23 +2186,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li class="measurement measurement--vertical measurement--typography measurement--pos-right js-measurement-typography" style="top:132px;width:0px;left:456px;">
 <span class="measurement__value measurement__value--offset">
-        C
-      </span>
+C      </span>
 </li>
 <li class="measurement measurement--horizontal measurement--padding measurement--pos-bottom js-measurement-padding" style="left:347px;width:8px;top:155px;">
 <span class="measurement__value measurement__value--offset">
-        8
-      </span>
+8      </span>
 </li>
 <li class="measurement measurement--horizontal measurement--padding measurement--pos-bottom js-measurement-padding" style="left:406px;width:8px;top:156px;">
 <span class="measurement__value measurement__value--offset">
-        8
-      </span>
+8      </span>
 </li>
 <li class="measurement measurement--vertical measurement--dimensions measurement--pos-left js-measurement-dimensions" style="top:116px;width:24px;left:331px;">
 <span class="measurement__value">
-        24
-      </span>
+24      </span>
 </li>
 </ul>
 <ul class="redline js-redline-text js-redline-layer" data-redline-filter="text">
@@ -3349,24 +2211,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           Roboto
           <img alt="Google Fonts" class="annotation__icon" src="../static/m2/images/font-logo.svg"/>
 </a>
-<p class="annotation__value annotation__value--first">10dp</p>
-<p class="annotation__value annotation__value--second">#ffffff</p>
-</div>
+<p class="annotation__value annotation__value--first">10dp</p><p class="annotation__value annotation__value--second">#ffffff</p> </div>
 </li>
-</ul>
-<ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
+</ul><ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
 <li class="annotation annotation--colors" data-comp="Annotation">
 <span class="annotation__layer" style="width:67px; height:24px; left:347px; top:116px"></span>
 <span class="annotation__vector" style="left:414px; top:122px; width:440px; transform:rotate(2.212600deg)"></span>
 <span class="annotation__anchor js-annotation-anchor" style="left:414px; top:122px;"></span>
 <div class="annotation__card js-annotation-card" data-coords="left:774px; top:97px;" style="left:774px; top:97px;">
 <span class="annotation__swatch" style="background-color:#616161e6"></span>
-<p class="annotation__value annotation__value--first">#616161e6</p>
-<p class="annotation__value annotation__value--second">R97 G97 B97 A0.90</p>
-</div>
+<p class="annotation__value annotation__value--first">#616161e6</p><p class="annotation__value annotation__value--second">R97 G97 B97 A0.90</p> </div>
 </li>
-</ul>
-<ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
+</ul><ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
 <li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
 <span class="annotation__layer" style="width:67px; height:24px; left:347px; top:116px"></span>
 <span class="annotation__vector" style="left:414px; top:140px; width:205px; transform:rotate(64.308673deg)"></span>
@@ -3374,22 +2230,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="annotation__card js-annotation-card" data-coords="left:423px; top:283px;" style="left:423px; top:283px;">
 <span class="annotation__note-type">Shape</span>
 <p class="annotation__note-title">All corners</p>
-<p class="annotation__value annotation__value--first">Rounded: 4dp</p>
-</div>
+<p class="annotation__value annotation__value--first">Rounded: 4dp</p> </div>
 </li>
+</ul><ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
+</ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
-<ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
-</ul>
-<ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
-</ul>
-<img alt="" class="redline-artboard lightbox__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1RItmCm57AusCfnl63txwIH2BnOVYr4R4/tooltip-spec-desktop.png" src="tooltips.html" style="width: 760px; height: 256px;"/>
+<div class="lazy-wrapper" style="width: 760px; height: 256px;">
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1RItmCm57AusCfnl63txwIH2BnOVYr4R4/tooltip-spec-desktop.png" src="tooltips.html" style="width: 760px; height: 256px;"/>
+</div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">
 <span class="ruler__point ruler__point--left js-ruler-p1"></span>
 <span class="ruler__range js-ruler-range"></span>
 <span class="ruler__point ruler__point--right js-ruler-p2"></span>
-</div>
-</div>
+</div> </div>
 <div class="redline-icon" data-comp="Tooltip" data-props-tooltip='{"tip": "Specs",  "direction": "bottom"}'>
 <i class="material-icons">flip</i>
 </div>
@@ -3404,8 +2258,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="colorpicker__color js-colorpicker-color"></p>
 <input class="colorpicker__val js-colorpicker-val" type="text"/>
 </div>
-</div>
-</div></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Mobile</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>14dp #ffffff #616161e6 R97 G97 B97 A0.90 All corners Rounded: 4dp All measurements are displayed in device-independent pixels (dps)</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><div class="js-lightbox-el" data-template="redline">
+</div> </div></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Mobile" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Mobile</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>14dp #ffffff #616161e6 R97 G97 B97 A0.90 All corners Rounded: 4dp All measurements are displayed in device-independent pixels (dps)</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><div class="js-lightbox-el" data-template="redline">
 <div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1BBiWJYV8wnwY6ke2l0J7EkJP3WNON8iH/tooltip-spec-mobile.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
@@ -3413,23 +2266,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li class="measurement measurement--vertical measurement--dimensions measurement--pos-left js-measurement-dimensions" style="top:112px;width:32px;left:323px;">
 <span class="measurement__value">
-        32
-      </span>
+32      </span>
 </li>
 <li class="measurement measurement--horizontal measurement--padding measurement--pos-bottom js-measurement-padding" style="left:342px;width:16px;top:162px;">
 <span class="measurement__value measurement__value--offset">
-        16
-      </span>
+16      </span>
 </li>
 <li class="measurement measurement--horizontal measurement--padding measurement--pos-bottom js-measurement-padding" style="left:402px;width:16px;top:162px;">
 <span class="measurement__value measurement__value--offset">
-        16
-      </span>
+16      </span>
 </li>
 <li class="measurement measurement--vertical measurement--typography measurement--pos-right js-measurement-typography" style="top:133px;width:0px;left:448px;">
 <span class="measurement__value measurement__value--offset">
-        C
-      </span>
+C      </span>
 </li>
 </ul>
 <ul class="redline js-redline-text js-redline-layer" data-redline-filter="text">
@@ -3442,24 +2291,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           Roboto
           <img alt="Google Fonts" class="annotation__icon" src="../static/m2/images/font-logo.svg"/>
 </a>
-<p class="annotation__value annotation__value--first">14dp</p>
-<p class="annotation__value annotation__value--second">#ffffff</p>
-</div>
+<p class="annotation__value annotation__value--first">14dp</p><p class="annotation__value annotation__value--second">#ffffff</p> </div>
 </li>
-</ul>
-<ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
+</ul><ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
 <li class="annotation annotation--colors" data-comp="Annotation">
 <span class="annotation__layer" style="width:76px; height:32px; left:342px; top:112px"></span>
 <span class="annotation__vector" style="left:419px; top:125px; width:438px; transform:rotate(2.222693deg)"></span>
 <span class="annotation__anchor js-annotation-anchor" style="left:419px; top:125px;"></span>
 <div class="annotation__card js-annotation-card" data-coords="left:777px; top:100px;" style="left:777px; top:100px;">
 <span class="annotation__swatch" style="background-color:#616161e6"></span>
-<p class="annotation__value annotation__value--first">#616161e6</p>
-<p class="annotation__value annotation__value--second">R97 G97 B97 A0.90</p>
-</div>
+<p class="annotation__value annotation__value--first">#616161e6</p><p class="annotation__value annotation__value--second">R97 G97 B97 A0.90</p> </div>
 </li>
-</ul>
-<ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
+</ul><ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
 <li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
 <span class="annotation__layer" style="width:76px; height:32px; left:342px; top:112px"></span>
 <span class="annotation__vector" style="left:419px; top:138px; width:202px; transform:rotate(74.794617deg)"></span>
@@ -3467,22 +2310,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="annotation__card js-annotation-card" data-coords="left:392px; top:291px;" style="left:392px; top:291px;">
 <span class="annotation__note-type">Shape</span>
 <p class="annotation__note-title">All corners</p>
-<p class="annotation__value annotation__value--first">Rounded: 4dp</p>
-</div>
+<p class="annotation__value annotation__value--first">Rounded: 4dp</p> </div>
 </li>
+</ul><ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
+</ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
-<ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
-</ul>
-<ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
-</ul>
-<img alt="" class="redline-artboard lightbox__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1BBiWJYV8wnwY6ke2l0J7EkJP3WNON8iH/tooltip-spec-mobile.png" src="tooltips.html" style="width: 760px; height: 256px;"/>
+<div class="lazy-wrapper" style="width: 760px; height: 256px;">
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1BBiWJYV8wnwY6ke2l0J7EkJP3WNON8iH/tooltip-spec-mobile.png" src="tooltips.html" style="width: 760px; height: 256px;"/>
+</div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">
 <span class="ruler__point ruler__point--left js-ruler-p1"></span>
 <span class="ruler__range js-ruler-range"></span>
 <span class="ruler__point ruler__point--right js-ruler-p2"></span>
-</div>
-</div>
+</div> </div>
 <div class="redline-icon" data-comp="Tooltip" data-props-tooltip='{"tip": "Specs",  "direction": "bottom"}'>
 <i class="material-icons">flip</i>
 </div>
@@ -3497,242 +2338,172 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="colorpicker__color js-colorpicker-color"></p>
 <input class="colorpicker__val js-colorpicker-val" type="text"/>
 </div>
-</div>
-</div></div></section></div></div></div></div></div>
+</div> </div></div></section></div></div></div></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="implementation" class="container container--large js-waypoints-trigger article__section" data-section-title="Implementation" aria-label="Implementation">
-        
+<hr />      <section id="implementation" class="container container--large js-waypoints-trigger article__section" data-section-title="Implementation" aria-label="Implementation">
           <h2 class="article__chapter-title">
             Implementation
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">Tooltips</div>
 <p>Tooltips implementation support for each platform is indicated below.</p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="frame media-placeholder" style="padding-top: 50.0%;">
-<a class="inline-media__link js-analytics-click" data-analytics='
-  {
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "inline",
     "action": "link click",
-    "label": "../mio-material/go/android-tooltips/"
-    }
-' href="https://material.io/design/go/android-tooltips/">
-<img alt="Android Implementation-Tooltips" class=" animatable js-lazy-image" data-src="../assets/1gTImGw3He19QxO0aNiXHRwmGOUOfA68m/implementation-android.png" src="tooltips.html">
+    "label": "../mio-material/go/android-tooltips/"}
+' href="https://material.io/go/android-tooltips/"> <img alt="Android Implementation-Tooltips" class=" inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1gTImGw3He19QxO0aNiXHRwmGOUOfA68m/implementation-android.png" src="tooltips.html">
 </img></a>
 </div>
-</figure><h2>
-<a class="js-analytics-click" data-analytics='
-  {
+</figure><h2><a class="js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "crosslink",
     "action": "link click",
-    "label": "../mio-material/go/android-tooltips/"
-    }
-' href="https://material.io/design/go/android-tooltips/">
-    Android Material Component
-  </a>
-</h2><p><strong>Status:</strong> Planned</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="frame media-placeholder" style="padding-top: 50.0%;">
-<a class="inline-media__link js-analytics-click" data-analytics='
-  {
+    "label": "../mio-material/go/android-tooltips/"}
+' href="https://material.io/go/android-tooltips/">
+  Android Material Component</a></h2><p><strong>Status:</strong> Planned</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "inline",
     "action": "link click",
-    "label": "../mio-material/go/ios-tooltips/"
-    }
-' href="https://material.io/design/go/ios-tooltips/">
-<img alt="IOS Implementation-Tooltips" class=" animatable js-lazy-image" data-src="../assets/1GuVVVZ9DJv0OXQ-3qhET6MI44AnVozZP/implementation-ios.png" src="tooltips.html">
+    "label": "../mio-material/go/ios-tooltips/"}
+' href="https://material.io/go/ios-tooltips/"> <img alt="IOS Implementation-Tooltips" class=" inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1GuVVVZ9DJv0OXQ-3qhET6MI44AnVozZP/implementation-ios.png" src="tooltips.html">
 </img></a>
 </div>
-</figure><h2>
-<a class="js-analytics-click" data-analytics='
-  {
+</figure><h2><a class="js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "crosslink",
     "action": "link click",
-    "label": "../mio-material/go/ios-tooltips/"
-    }
-' href="https://material.io/design/go/ios-tooltips/">
-    IOS Material Component
-  </a>
-</h2><p><strong>Status:</strong> Planned</p></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="frame media-placeholder" style="padding-top: 50.0%;">
-<a class="inline-media__link js-analytics-click" data-analytics='
-  {
+    "label": "../mio-material/go/ios-tooltips/"}
+' href="https://material.io/go/ios-tooltips/">
+  IOS Material Component</a></h2><p><strong>Status:</strong> Planned</p></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "inline",
     "action": "link click",
-    "label": "../mio-material/go/flutter-tooltips/"
-    }
-' href="https://material.io/design/go/flutter-tooltips/">
-<img alt="Flutter Implementation-Tooltips" class=" animatable js-lazy-image" data-src="../assets/1fRRR_fQ3hY6nhiR5cCRaeNMIOt-K9zEm/implementation-flutter.png" src="tooltips.html">
+    "label": "../mio-material/go/flutter-tooltips/"}
+' href="https://material.io/go/flutter-tooltips/"> <img alt="Flutter Implementation-Tooltips" class=" inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1fRRR_fQ3hY6nhiR5cCRaeNMIOt-K9zEm/implementation-flutter.png" src="tooltips.html">
 </img></a>
 </div>
-</figure><h2>
-<a class="js-analytics-click" data-analytics='
-  {
+</figure><h2><a class="js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "crosslink",
     "action": "link click",
-    "label": "../mio-material/go/flutter-tooltips/"
-    }
-' href="https://material.io/design/go/flutter-tooltips/">
-    Flutter Material Component
-  </a>
-</h2><p><strong>Status:</strong> Code Available</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="frame media-placeholder" style="padding-top: 50.0%;">
-<a class="inline-media__link js-analytics-click" data-analytics='
-  {
+    "label": "../mio-material/go/flutter-tooltips/"}
+' href="https://material.io/go/flutter-tooltips/">
+  Flutter Material Component</a></h2><p><strong>Status:</strong> Code Available</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<a class="inline-media__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "inline",
     "action": "link click",
-    "label": "../mio-material/go/web-tooltips/"
-    }
-' href="https://material.io/design/go/web-tooltips/">
-<img alt="Web Implementation-Tooltips" class=" animatable js-lazy-image" data-src="../assets/1wzRJUmtMUblsFN92IEHy9cl38OCUZ16h/implementation-web.png" src="tooltips.html">
+    "label": "../mio-material/go/web-tooltips/"}
+' href="https://material.io/go/web-tooltips/"> <img alt="Web Implementation-Tooltips" class=" inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1wzRJUmtMUblsFN92IEHy9cl38OCUZ16h/implementation-web.png" src="tooltips.html">
 </img></a>
 </div>
-</figure><h2>
-<a class="js-analytics-click" data-analytics='
-  {
+</figure><h2><a class="js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "crosslink",
     "action": "link click",
-    "label": "../mio-material/go/web-tooltips/"
-    }
-' href="https://material.io/design/go/web-tooltips/">
-    Web Material Component
-  </a>
-</h2><p><strong>Status:</strong> Planned</p></div></section></div><p> </p></div>
+    "label": "../mio-material/go/web-tooltips/"}
+' href="https://material.io/go/web-tooltips/">
+  Web Material Component</a></h2><p><strong>Status:</strong> Planned</p></div></section></div><p> </p></div>
         </div>
       </section>
-    
 
-    
   </div>
-  
 
   <div class="container container--large">
-    
-
 
   <h2>Up next
-    
       <div class="article-controls">
         
       </div>
-    
   </h2>
 
-
-<div class="suggested-articles"><div><a aria-label="Accessibility" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+<div class="suggested-articles"><div><a aria-label="Bidirectionality" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../usability/accessibility.html"
-    }
-' href="../usability/accessibility.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1yOCBr49xdljPYwgKe29TVRvMRtLIgo9u/usability-thumbnail-2x1.png');">
+    "label": "../usability/bidirectionality.html"}
+' href="../usability/bidirectionality.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1rEDl9RYDyPY5Mo8bKB1mr95drbUVIP0i/usability-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Usability</h3>
-<h4 class="suggested-articles__item-subtitle">Accessibility</h4>
-</a><a aria-label="Help feedback" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+<h4 class="suggested-articles__item-subtitle">Bidirectionality</h4>
+</a><a aria-label="Help feedback" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../communication/help-feedback.html"
-    }
+    "label": "../communication/help-feedback.html"}
 ' href="../communication/help-feedback.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1EScQiv863cvd-Fh4TDmJpm1QmVKyu-mK/communication-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Communication</h3>
 <h4 class="suggested-articles__item-subtitle">Help feedback</h4>
 </a><br>
-<a aria-label="Data tables" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+<a aria-label="Data tables" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../components/data-tables.html"
-    }
+    "label": "../components/data-tables.html"}
 ' href="data-tables.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1ORQAC1s5aflMXns-P5n_Vu4ybChGyDYr/data-tables-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Components</h3>
 <h4 class="suggested-articles__item-subtitle">Data tables</h4>
-</a></div></div>
-  </div>
+</a></div></div>  </div>
 </article>
-
     </main>
-
-    
-      
 
 
 <footer class="footer">
   <div class="container container--jumbo">
     <div class="footer-block footer-block--about">
-      
       <a class="footer-block__logo js-analytics-click" href="https://material.io/"
-         data-analytics='
-  {
+         data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "/"
-    }
+    "label": "/"}
 '>
-        <img class="footer-block__material-logo animatable js-lazy-image" data-src="../static/m2/images/material_logo.svg" src="tooltips.html" alt="Material Design"/>
+        <img class="footer-block__material-logo" src="../static/m2/images/material_logo.svg" alt="Material Design"/>
       </a>
       <div class="footer-block__content">
         <p class="footer-block__description">Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</p>
         <ul class="footer-block__social-nav">
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.github.com/material-components"
-    }
+    "label": "https://www.github.com/material-components"}
 '>GitHub</a>
 </li>
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.twitter.com/materialdesign"
-    }
+    "label": "https://www.twitter.com/materialdesign"}
 '>Twitter</a>
 </li>
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.youtube.com/googledesign"
-    }
+    "label": "https://www.youtube.com/googledesign"}
 '>YouTube</a>
 </li>
         </ul>
@@ -3741,50 +2512,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div class="footer-block footer-block--legal">
       <a class="footer-block__logo js-analytics-click" href="https://www.google.com"
-         data-analytics='
-  {
+         data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.google.com"
-    }
+    "label": "https://www.google.com"}
 '>
-        <img class="footer-block__google-logo animatable js-lazy-image" data-src="../static/m2/images/google_logo.svg" src="tooltips.html" alt="Google"/>
+        <img class="footer-block__google-logo" src="../static/m2/images/google_logo.svg" alt="Google"/>
       </a>
       <div class="footer-block__content">
         <ul class="footer-block__legal-nav">
-          <li class="footer-block__legal-nav-item">
-  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__legal-nav-item">  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://policies.google.com/privacy"
-    }
+    "label": "https://policies.google.com/privacy"}
 '>Privacy Policy</a>
 </li>
-          <li class="footer-block__legal-nav-item">
-  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__legal-nav-item">  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://policies.google.com/terms"
-    }
+    "label": "https://policies.google.com/terms"}
 '>Terms of Service</a>
 </li><li class="footer-block__legal-nav-item"><a href="javascript:void(0)" class="footer-block__legal-nav-link" onclick="try{userfeedback.api.startFeedback({'productId': '1027542', 'bucket': 'material_spec', 'locale': 'en', 'allowNonLoggedInFeedback': true});return false;}catch(e){}">Feedback</a></li></ul>
       </div>
     </div>
   </div>
 </footer>
-    
-
-        <div class="ui-mask js-ui-mask"></div>
-
-    
-      <div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
+    <div class="ui-mask js-ui-mask"></div>
+<div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
     <header class="lightbox__header">
       <div class="lightbox__header-title">
         <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
@@ -3802,60 +2561,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
         </button>
 
-        
       </div>
     </header>
 
     <div class="lightbox__template js-zoom-wrapper">
       <div class="lightbox__content js-lightbox-content">
-        
-        <img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />
-      </div>
-      <div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+<img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />      </div>
+<div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
         <i class="material-icons">&#xE3F4;</i>
         <span class="redline-sidebar__label-text">Image only</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
         <i class="material-icons">format_shapes</i>
         <span class="redline-sidebar__label-text">Measurements</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
         <i class="material-icons">format_size</i>
         <span class="redline-sidebar__label-text">Text</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
         <i class="material-icons">palette</i>
         <span class="redline-sidebar__label-text">Color</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
         <i class="material-icons">rounded_corner</i>
         <span class="redline-sidebar__label-text">Shape and Elevation</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
         <i class="material-icons">category</i>
         <span class="redline-sidebar__label-text">Components</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
         <i class="material-icons">notes</i>
         <span class="redline-sidebar__label-text">Notes</span>
       </button>
     </div>
-  <div class="redline-sidebar__toggles js-redline-layer-toggles">
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+<div class="redline-sidebar__toggles js-redline-layer-toggles">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
         <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3865,7 +2621,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <label for="dimensions">Dimensions</label>
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
         <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3875,7 +2631,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <label for="padding">Padding</label>
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
         <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3885,10 +2641,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <label for="typography">Text baseline</label>
-    
   </div>
-</div>
-      <nav class="carousel__nav">
+</div><nav class="carousel__nav">
   <button
       class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
       data-comp="Tooltip"
@@ -3902,8 +2656,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       data-props-tooltip='{"tip": "Next", "direction": "left"}'>
     <i class="material-icons">chevron_right</i>
   </button>
-</nav>
-      <div class="zoom-buttons" data-comp="Zoom">
+</nav><div class="zoom-buttons" data-comp="Zoom">
   <div class="zoom-buttons__wrapper">
 
     <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
@@ -3926,11 +2679,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
   </div>
-</div>
-    </div>
+</div>    </div>
 
 
-  <aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+<aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
   <div class="mdc-dialog__surface">
     <header class="mdc-dialog__header">
       <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
@@ -3944,22 +2696,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </section>
   </div>
   <div class="mdc-dialog__backdrop"></div>
-</aside>
-</div>
-      <div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+</aside></div><div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
   <div class="mdc-snackbar__text"></div>
   <div class="mdc-snackbar__action-wrapper">
     <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
   </div>
 </div>
-    
-
-    
     <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
     <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
-    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-  </body>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </body>
 </html>

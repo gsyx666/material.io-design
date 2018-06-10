@@ -1,20 +1,11 @@
-
-
-
-
-
-
-
-
-  
-  <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="preload">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <title>Confirmation &amp; acknowledgement - Material Design</title>
 
-    <meta itemprop="name"        property="og:title"       name="twitter:title"       content="Confirmation &amp; acknowledgement" />
+<meta itemprop="name"        property="og:title"       name="twitter:title"       content="Confirmation &amp; acknowledgement" />
     <meta itemprop="description" property="og:description" name="twitter:description" content="Confirmation and acknowledgement communications ask for confirmation before taking an action and acknowledge successful actions." />
     <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1TRwz1KRLUri3-OVLW_sR-GjpjpvBeHYH/communication-thumbnail-2x1.png" />
     <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/communication/index.html" />
@@ -22,24 +13,19 @@
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" href="https://material.io/favicon.ico">
-
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <meta name="format-detection" content="telephone=no">    <link rel="shortcut icon" href="https://material.io/favicon.ico">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NHRPF8');</script>
-        <style>
-      .animatable {
+})(window,document,'script','dataLayer','GTM-NHRPF8');</script>    <style>
+.animatable {
         opacity: 0;
         position: relative;
-        top: 16px; 
-        transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+        top: 16px;         transition: opacity 235ms cubic-bezier(.4,0,.2,1),
                     top 500ms cubic-bezier(.4,0,.2,1);
       }
     </style>
-
     <link href="static/m2/css/main.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
     <link rel="preload" href="static/m2/js/main.min.js" as="script">
@@ -50,119 +36,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="confirmationAcknowledgement"
-        data-spec-alias="mio-design"
-         >
+        data-spec-alias="mio-design-staging"
+ >
 
-    
 
 
 <header class="header js-header" data-comp="Header">
-  
     <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
       <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
     </button>
-  
 
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
-
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--selected">
-      
-        
-  <li class="header__nav-item  js-header-item">
+    <ul class="header__nav-list header__nav-list--cleared">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/"
-    }
+    "label": "/"}
 '>
       Home
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/design"
-    }
+    "label": "/design"}
 '>
       Design
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/develop"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/develop"
-    }
+    "label": "/develop"}
 '>
       Develop
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
-        
-  <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  js-header-item">
     <a href="https://material.io/tools"
         class="header__nav-link js-analytics-click"
-        data-analytics='
-  {
+        data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "nav click",
-    "label": "/tools"
-    }
+    "label": "/tools"}
 '>
       Tools
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-      
     </ul>
   </nav>
 
   <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform='{"basePath": "/", "ajax": false, "showOnLoad": false}'>
     <button class="search-form__back js-search-back js-analytics-click" type="button"
-            data-analytics='
-  {
+            data-analytics='  {
     "event": "trackEvent",
     "category": "search back",
     "action": "click icon",
-    "label": "DEFAULT: ga_label"
-    }
+    "label": "DEFAULT: ga_label"}
 '>
       <i class="material-icons">arrow_back</i>
     </button>
@@ -171,13 +129,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </form>
 
   <button class="header__search header__button js-toggle-search js-analytics-click"
-          data-analytics='
-  {
+          data-analytics='  {
     "event": "trackEvent",
     "category": "search",
     "action": "click icon",
-    "label": "DEFAULT: ga_label"
-    }
+    "label": "DEFAULT: ga_label"}
 '>
     <div class="icons-container mdc-ripple-surface" data-mdc-ripple-is-unbounded>
       <i class="material-icons header__spyglass" aria-label="Search">search</i>
@@ -186,2632 +142,1643 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </button>
 </header>
 
-    
-
-
 <nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs">
-  
     <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
       <i class="material-icons" title="Toggle Navigation">menu</i>
     </button>
-  
 
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
-
   <ol class="container container--large breadcrumbs__list">
-    
-      
       <li class="breadcrumbs__crumb">
         <a class="breadcrumbs__link js-analytics-click "
            href="communication.html"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "../communication"
-    }
+    "label": "../communication"}
 '>Communication</a>
       </li>
-    
-      
       <li class="breadcrumbs__crumb">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
            href="communication/confirmation-acknowledgement.html"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "../communication/confirmation-acknowledgement.html"
-    }
+    "label": "../communication/confirmation-acknowledgement.html"}
 '>Confirmation &amp; acknowledgement</a>
       </li>
-    
-      
       <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
            href="communication.html#usage"
-           data-analytics='
-  {
+           data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "#usage"
-    }
+    "label": "#usage"}
 '>Usage</a>
       </li>
-    
   </ol>
 </nav>
-    
-  
-    
-
-
 
 <nav class="side-nav" data-comp="SideNav" role="navigation">
-  
-    
 
 <a href="https://material.io/" class="brand-lockup js-analytics-click"
-   data-analytics='
-  {
+   data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "global click",
-    "label": "logo"
-    }
+    "label": "logo"}
 '>
   <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
-  
 
-  
 
-  
-    
-    
-
-    
-      
-      <span class="side-nav__section-title">Material System</span>
+            <span class="side-nav__section-title">Material System</span>
 
       <ul class="side-nav__menu side-nav__menu--sections">
-    
 
       <li class="side-nav__menu-item">
-        
-        
           <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
              href="introduction.html"
-             data-analytics='
-  {
+             data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../introduction"
-    }
+    "label": "../introduction"}
 '>
             Introduction
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav1"
                   aria-expanded="false">
             Material studies
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav1">
+            <div class="side-nav__wrapper" id="_nav1">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/about-our-material-studies.html"data-analytics='
-  {
+"
+              href="material-studies/about-our-material-studies.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/about-our-material-studies.html"
-    }
+    "label": "../material-studies/about-our-material-studies.html"}
 '>
             About our Material studies
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/basil.html"data-analytics='
-  {
+"
+              href="material-studies/basil.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/basil.html"
-    }
+    "label": "../material-studies/basil.html"}
 '>
             Basil
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/crane.html"data-analytics='
-  {
+"
+              href="material-studies/crane.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/crane.html"
-    }
+    "label": "../material-studies/crane.html"}
 '>
             Crane
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/fortnightly.html"data-analytics='
-  {
+"
+              href="material-studies/fortnightly.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/fortnightly.html"
-    }
+    "label": "../material-studies/fortnightly.html"}
 '>
             Fortnightly
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/owl.html"data-analytics='
-  {
+"
+              href="material-studies/owl.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/owl.html"
-    }
+    "label": "../material-studies/owl.html"}
 '>
             Owl
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/rally.html"data-analytics='
-  {
+"
+              href="material-studies/rally.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/rally.html"
-    }
+    "label": "../material-studies/rally.html"}
 '>
             Rally
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/reply.html"data-analytics='
-  {
+"
+              href="material-studies/reply.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/reply.html"
-    }
+    "label": "../material-studies/reply.html"}
 '>
             Reply
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-studies/shrine.html"data-analytics='
-  {
+"
+              href="material-studies/shrine.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-studies/shrine.html"
-    }
+    "label": "../material-studies/shrine.html"}
 '>
             Shrine
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
-      </ul>
-      <span class="side-nav__section-title">Material Foundation</span>
+      </ul>      <span class="side-nav__section-title">Material Foundation</span>
 
       <ul class="side-nav__menu side-nav__menu--sections">
-    
 
       <li class="side-nav__menu-item">
-        
-        
           <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
              href="foundation-overview.html"
-             data-analytics='
-  {
+             data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../foundation-overview"
-    }
+    "label": "../foundation-overview"}
 '>
             Foundation overview
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav3"
                   aria-expanded="false">
             Environment
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav3">
+            <div class="side-nav__wrapper" id="_nav3">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="environment/surfaces.html"data-analytics='
-  {
+"
+              href="environment/surfaces.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/surfaces.html"
-    }
+    "label": "../environment/surfaces.html"}
 '>
             Surfaces
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="environment/elevation.html"data-analytics='
-  {
+"
+              href="environment/elevation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/elevation.html"
-    }
+    "label": "../environment/elevation.html"}
 '>
             Elevation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="environment/light-shadows.html"data-analytics='
-  {
+"
+              href="environment/light-shadows.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../environment/light-shadows.html"
-    }
+    "label": "../environment/light-shadows.html"}
 '>
             Light and shadows
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav4"
                   aria-expanded="false">
             Layout
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav4">
+            <div class="side-nav__wrapper" id="_nav4">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="layout/understanding-layout.html"data-analytics='
-  {
+"
+              href="layout/understanding-layout.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/understanding-layout.html"
-    }
+    "label": "../layout/understanding-layout.html"}
 '>
             Understanding layout
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="layout/responsive-layout-grid.html"data-analytics='
-  {
+"
+              href="layout/responsive-layout-grid.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/responsive-layout-grid.html"
-    }
+    "label": "../layout/responsive-layout-grid.html"}
 '>
             Responsive layout grid
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="layout/spacing-methods.html"data-analytics='
-  {
+"
+              href="layout/spacing-methods.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/spacing-methods.html"
-    }
+    "label": "../layout/spacing-methods.html"}
 '>
             Spacing methods
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="layout/component-behavior.html"data-analytics='
-  {
+"
+              href="layout/component-behavior.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/component-behavior.html"
-    }
+    "label": "../layout/component-behavior.html"}
 '>
             Component behavior
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="layout/density.html"data-analytics='
-  {
+"
+              href="layout/density.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../layout/density.html"
-    }
+    "label": "../layout/density.html"}
 '>
             Density
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav5"
                   aria-expanded="false">
             Navigation
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav5">
+            <div class="side-nav__wrapper" id="_nav5">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="navigation/understanding-navigation.html"data-analytics='
-  {
+"
+              href="navigation/understanding-navigation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/understanding-navigation.html"
-    }
+    "label": "../navigation/understanding-navigation.html"}
 '>
             Understanding navigation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="navigation/navigation-transitions.html"data-analytics='
-  {
+"
+              href="navigation/navigation-transitions.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/navigation-transitions.html"
-    }
+    "label": "../navigation/navigation-transitions.html"}
 '>
             Navigation transitions
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="navigation/search.html"data-analytics='
-  {
+"
+              href="navigation/search.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../navigation/search.html"
-    }
+    "label": "../navigation/search.html"}
 '>
             Search
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav6"
                   aria-expanded="false">
             Color
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav6">
+            <div class="side-nav__wrapper" id="_nav6">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="color/the-color-system.html"data-analytics='
-  {
+"
+              href="color/the-color-system.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/the-color-system.html"
-    }
+    "label": "../color/the-color-system.html"}
 '>
             The color system
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="color/applying-color-to-ui.html"data-analytics='
-  {
+"
+              href="color/applying-color-to-ui.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/applying-color-to-ui.html"
-    }
+    "label": "../color/applying-color-to-ui.html"}
 '>
             Applying color to UI
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="color/color-usage.html"data-analytics='
-  {
+"
+              href="color/color-usage.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/color-usage.html"
-    }
+    "label": "../color/color-usage.html"}
 '>
             Color usage
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="color/text-legibility.html"data-analytics='
-  {
+"
+              href="color/text-legibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../color/text-legibility.html"
-    }
+    "label": "../color/text-legibility.html"}
 '>
             Text legibility
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav7"
                   aria-expanded="false">
             Typography
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav7">
+            <div class="side-nav__wrapper" id="_nav7">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="typography/the-type-system.html"data-analytics='
-  {
+"
+              href="typography/the-type-system.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/the-type-system.html"
-    }
+    "label": "../typography/the-type-system.html"}
 '>
             The type system
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="typography/understanding-typography.html"data-analytics='
-  {
+"
+              href="typography/understanding-typography.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/understanding-typography.html"
-    }
+    "label": "../typography/understanding-typography.html"}
 '>
             Understanding typography
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="typography/language-support.html"data-analytics='
-  {
+"
+              href="typography/language-support.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../typography/language-support.html"
-    }
+    "label": "../typography/language-support.html"}
 '>
             Language support
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav8"
                   aria-expanded="false">
             Iconography
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav8">
+            <div class="side-nav__wrapper" id="_nav8">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="iconography/product-icons.html"data-analytics='
-  {
+"
+              href="iconography/product-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/product-icons.html"
-    }
+    "label": "../iconography/product-icons.html"}
 '>
             Product icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="iconography/system-icons.html"data-analytics='
-  {
+"
+              href="iconography/system-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/system-icons.html"
-    }
+    "label": "../iconography/system-icons.html"}
 '>
             System icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="iconography/animated-icons.html"data-analytics='
-  {
+"
+              href="iconography/animated-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../iconography/animated-icons.html"
-    }
+    "label": "../iconography/animated-icons.html"}
 '>
             Animated icons
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav9"
                   aria-expanded="false">
             Shape
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav9">
+            <div class="side-nav__wrapper" id="_nav9">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="shape/about-shape.html"data-analytics='
-  {
+"
+              href="shape/about-shape.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/about-shape.html"
-    }
+    "label": "../shape/about-shape.html"}
 '>
             About shape
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="shape/shape-hierarchy.html"data-analytics='
-  {
+"
+              href="shape/shape-hierarchy.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-hierarchy.html"
-    }
+    "label": "../shape/shape-hierarchy.html"}
 '>
             Shape and hierarchy
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="shape/shape-as-expression.html"data-analytics='
-  {
+"
+              href="shape/shape-as-expression.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-as-expression.html"
-    }
+    "label": "../shape/shape-as-expression.html"}
 '>
             Shape as expression
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="shape/shape-motion.html"data-analytics='
-  {
+"
+              href="shape/shape-motion.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../shape/shape-motion.html"
-    }
+    "label": "../shape/shape-motion.html"}
 '>
             Shape and motion
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav10"
                   aria-expanded="false">
             Motion
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav10">
+            <div class="side-nav__wrapper" id="_nav10">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="motion/understanding-motion.html"data-analytics='
-  {
+"
+              href="motion/understanding-motion.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/understanding-motion.html"
-    }
+    "label": "../motion/understanding-motion.html"}
 '>
             Understanding motion
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="motion/speed.html"data-analytics='
-  {
+"
+              href="motion/speed.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/speed.html"
-    }
+    "label": "../motion/speed.html"}
 '>
             Speed
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="motion/choreography.html"data-analytics='
-  {
+"
+              href="motion/choreography.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/choreography.html"
-    }
+    "label": "../motion/choreography.html"}
 '>
             Choreography
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="motion/customization.html"data-analytics='
-  {
+"
+              href="motion/customization.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../motion/customization.html"
-    }
+    "label": "../motion/customization.html"}
 '>
             Customization
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav11"
                   aria-expanded="false">
             Interaction
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav11">
+            <div class="side-nav__wrapper" id="_nav11">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="interaction/gestures.html"data-analytics='
-  {
+"
+              href="interaction/gestures.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/gestures.html"
-    }
+    "label": "../interaction/gestures.html"}
 '>
             Gestures
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="interaction/selection.html"data-analytics='
-  {
+"
+              href="interaction/selection.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/selection.html"
-    }
+    "label": "../interaction/selection.html"}
 '>
             Selection
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="interaction/states.html"data-analytics='
-  {
+"
+              href="interaction/states.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../interaction/states.html"
-    }
+    "label": "../interaction/states.html"}
 '>
             States
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
                   aria-controls="_nav12"
                   aria-expanded="true">
             Communication
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav12">
+            <div class="side-nav__wrapper" id="_nav12">
     <ul class="side-nav__submenu" data-menu-state="open">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/confirmation-acknowledgement.html"data-analytics='
-  {
+"
+              href="communication/confirmation-acknowledgement.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/confirmation-acknowledgement.html"
-    }
+    "label": "../communication/confirmation-acknowledgement.html"}
 '>
             Confirmation &amp; acknowledgement
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/data-formats.html"data-analytics='
-  {
+"
+              href="communication/data-formats.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/data-formats.html"
-    }
+    "label": "../communication/data-formats.html"}
 '>
             Data formats
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/empty-states.html"data-analytics='
-  {
+"
+              href="communication/empty-states.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/empty-states.html"
-    }
+    "label": "../communication/empty-states.html"}
 '>
             Empty states
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/gesture-education.html"data-analytics='
-  {
+"
+              href="communication/gesture-education.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/gesture-education.html"
-    }
+    "label": "../communication/gesture-education.html"}
 '>
             Gesture education
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/help-feedback.html"data-analytics='
-  {
+"
+              href="communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/help-feedback.html"
-    }
+    "label": "../communication/help-feedback.html"}
 '>
             Help &amp; feedback
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/imagery.html"data-analytics='
-  {
+"
+              href="communication/imagery.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/imagery.html"
-    }
+    "label": "../communication/imagery.html"}
 '>
             Imagery
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/launch-screen.html"data-analytics='
-  {
+"
+              href="communication/launch-screen.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/launch-screen.html"
-    }
+    "label": "../communication/launch-screen.html"}
 '>
             Launch screen
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="communication/onboarding.html"data-analytics='
-  {
+"
+              href="communication/onboarding.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../communication/onboarding.html"
-    }
+    "label": "../communication/onboarding.html"}
 '>
             Onboarding
           </a>
 
-          
-          
         </li>
-      
-    </ul>
-  </div>
 
-        
-      </li>
-  
-    
-    
-
-    
-      </ul>
-      <span class="side-nav__section-title">Material Guidelines</span>
-
-      <ul class="side-nav__menu side-nav__menu--sections">
-    
-
-      <li class="side-nav__menu-item">
-        
-        
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="guidelines-overview.html"
-             data-analytics='
-  {
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="communication/writing.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../guidelines-overview"
-    }
+    "label": "../communication/writing.html"}
+'>
+            Writing
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="guidelines-overview.html"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"}
 '>
             Guidelines overview
           </a>
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav14"
                   aria-expanded="false">
             Material Theming
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav14">
+            <div class="side-nav__wrapper" id="_nav14">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-theming/overview.html"data-analytics='
-  {
+"
+              href="material-theming/overview.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-theming/overview.html"
-    }
+    "label": "../material-theming/overview.html"}
 '>
             Overview
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="material-theming/implementing-your-theme.html"data-analytics='
-  {
+"
+              href="material-theming/implementing-your-theme.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../material-theming/implementing-your-theme.html"
-    }
+    "label": "../material-theming/implementing-your-theme.html"}
 '>
             Implementing your theme
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav15"
                   aria-expanded="false">
             Components
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav15">
+            <div class="side-nav__wrapper" id="_nav15">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/app-bars-bottom.html"data-analytics='
-  {
+"
+              href="components/app-bars-bottom.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/app-bars-bottom.html"
-    }
+    "label": "../components/app-bars-bottom.html"}
 '>
             App bars: bottom
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/app-bars-top.html"data-analytics='
-  {
+"
+              href="components/app-bars-top.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/app-bars-top.html"
-    }
+    "label": "../components/app-bars-top.html"}
 '>
             App bars: top
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/backdrop.html"data-analytics='
-  {
+"
+              href="components/backdrop.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/backdrop.html"
-    }
+    "label": "../components/backdrop.html"}
 '>
             Backdrop
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/banners.html"data-analytics='
-  {
+"
+              href="components/banners.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/banners.html"
-    }
+    "label": "../components/banners.html"}
 '>
             Banners
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/bottom-navigation.html"data-analytics='
-  {
+"
+              href="components/bottom-navigation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/bottom-navigation.html"
-    }
+    "label": "../components/bottom-navigation.html"}
 '>
             Bottom navigation
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/buttons.html"data-analytics='
-  {
+"
+              href="components/buttons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/buttons.html"
-    }
+    "label": "../components/buttons.html"}
 '>
             Buttons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/buttons-floating-action-button.html"data-analytics='
-  {
+"
+              href="components/buttons-floating-action-button.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/buttons-floating-action-button.html"
-    }
+    "label": "../components/buttons-floating-action-button.html"}
 '>
             Buttons: floating action button
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/cards.html"data-analytics='
-  {
+"
+              href="components/cards.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/cards.html"
-    }
+    "label": "../components/cards.html"}
 '>
             Cards
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/chips.html"data-analytics='
-  {
+"
+              href="components/chips.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/chips.html"
-    }
+    "label": "../components/chips.html"}
 '>
             Chips
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/data-tables.html"data-analytics='
-  {
+"
+              href="components/data-tables.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/data-tables.html"
-    }
+    "label": "../components/data-tables.html"}
 '>
             Data tables
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/dialogs.html"data-analytics='
-  {
+"
+              href="components/dialogs.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/dialogs.html"
-    }
+    "label": "../components/dialogs.html"}
 '>
             Dialogs
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/dividers.html"data-analytics='
-  {
+"
+              href="components/dividers.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/dividers.html"
-    }
+    "label": "../components/dividers.html"}
 '>
             Dividers
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/image-lists.html"data-analytics='
-  {
+"
+              href="components/image-lists.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/image-lists.html"
-    }
+    "label": "../components/image-lists.html"}
 '>
             Image lists
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/lists.html"data-analytics='
-  {
+"
+              href="components/lists.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/lists.html"
-    }
+    "label": "../components/lists.html"}
 '>
             Lists
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/menus.html"data-analytics='
-  {
+"
+              href="components/menus.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/menus.html"
-    }
+    "label": "../components/menus.html"}
 '>
             Menus
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/navigation-drawer.html"data-analytics='
-  {
+"
+              href="components/navigation-drawer.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/navigation-drawer.html"
-    }
+    "label": "../components/navigation-drawer.html"}
 '>
             Navigation drawer
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/progress-indicators.html"data-analytics='
-  {
+"
+              href="components/progress-indicators.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/progress-indicators.html"
-    }
+    "label": "../components/progress-indicators.html"}
 '>
             Progress indicators
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/selection-controls.html"data-analytics='
-  {
+"
+              href="components/selection-controls.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/selection-controls.html"
-    }
+    "label": "../components/selection-controls.html"}
 '>
             Selection controls
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/sheets-bottom.html"data-analytics='
-  {
+"
+              href="components/sheets-bottom.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sheets-bottom.html"
-    }
+    "label": "../components/sheets-bottom.html"}
 '>
             Sheets: bottom
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/sheets-side.html"data-analytics='
-  {
+"
+              href="components/sheets-side.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sheets-side.html"
-    }
+    "label": "../components/sheets-side.html"}
 '>
             Sheets: side
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/sliders.html"data-analytics='
-  {
+"
+              href="components/sliders.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/sliders.html"
-    }
+    "label": "../components/sliders.html"}
 '>
             Sliders
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/snackbars.html"data-analytics='
-  {
+"
+              href="components/snackbars.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/snackbars.html"
-    }
+    "label": "../components/snackbars.html"}
 '>
             Snackbars
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/tabs.html"data-analytics='
-  {
+"
+              href="components/tabs.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/tabs.html"
-    }
+    "label": "../components/tabs.html"}
 '>
             Tabs
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/text-fields.html"data-analytics='
-  {
+"
+              href="components/text-fields.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/text-fields.html"
-    }
+    "label": "../components/text-fields.html"}
 '>
             Text fields
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="components/tooltips.html"data-analytics='
-  {
+"
+              href="components/tooltips.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../components/tooltips.html"
-    }
+    "label": "../components/tooltips.html"}
 '>
             Tooltips
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
-          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
-                  aria-controls="_nav16"
-                  aria-expanded="false">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="usability.html"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability"}
+'>
             Usability
-          </button>
-          
-  <div class="side-nav__wrapper" id="_nav16">
-    <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="usability/accessibility.html"data-analytics='
-  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../usability/accessibility.html"
-    }
-'>
-            Accessibility
           </a>
-
-          
-          
-        </li>
-      
-        
-        
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="usability/bidirectionality.html"data-analytics='
-  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../usability/bidirectionality.html"
-    }
-'>
-            Bidirectionality
-          </a>
-
-          
-          
-        </li>
-      
-    </ul>
-  </div>
-
-        
       </li>
-  
-    
-    
 
-    
 
       <li class="side-nav__menu-item">
-        
-        
-          
           <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
                   aria-controls="_nav17"
                   aria-expanded="false">
             Platform guidance
           </button>
-          
-  <div class="side-nav__wrapper" id="_nav17">
+            <div class="side-nav__wrapper" id="_nav17">
     <ul class="side-nav__submenu" data-menu-state="closed">
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-bars.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-bars.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-bars.html"
-    }
+    "label": "../platform-guidance/android-bars.html"}
 '>
             Android bars
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-fingerprint.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-fingerprint.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-fingerprint.html"
-    }
+    "label": "../platform-guidance/android-fingerprint.html"}
 '>
             Android fingerprint
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-haptics.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-haptics.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-haptics.html"
-    }
+    "label": "../platform-guidance/android-haptics.html"}
 '>
             Android haptics
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-icons.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-icons.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-icons.html"
-    }
+    "label": "../platform-guidance/android-icons.html"}
 '>
             Android icons
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-navigating-between-apps.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-navigating-between-apps.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-navigating-between-apps.html"
-    }
+    "label": "../platform-guidance/android-navigating-between-apps.html"}
 '>
             Android navigating between apps
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-notifications.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-notifications.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-notifications.html"
-    }
+    "label": "../platform-guidance/android-notifications.html"}
 '>
             Android notifications
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-permissions.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-permissions.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-permissions.html"
-    }
+    "label": "../platform-guidance/android-permissions.html"}
 '>
             Android permissions
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-settings.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-settings.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-settings.html"
-    }
+    "label": "../platform-guidance/android-settings.html"}
 '>
             Android settings
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-split-screen.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-split-screen.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-split-screen.html"
-    }
+    "label": "../platform-guidance/android-split-screen.html"}
 '>
             Android split-screen
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-swipe-to-refresh.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-swipe-to-refresh.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-swipe-to-refresh.html"
-    }
+    "label": "../platform-guidance/android-swipe-to-refresh.html"}
 '>
             Android swipe to refresh
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-text-selection-toolbar.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-text-selection-toolbar.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-text-selection-toolbar.html"
-    }
+    "label": "../platform-guidance/android-text-selection-toolbar.html"}
 '>
             Android text selection toolbar
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/android-widget.html"data-analytics='
-  {
+"
+              href="platform-guidance/android-widget.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/android-widget.html"
-    }
+    "label": "../platform-guidance/android-widget.html"}
 '>
             Android widget
           </a>
 
-          
-          
         </li>
-      
-        
-        
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-              
-              "
-              href="platform-guidance/cross-platform-adaptation.html"data-analytics='
-  {
+"
+              href="platform-guidance/cross-platform-adaptation.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../platform-guidance/cross-platform-adaptation.html"
-    }
+    "label": "../platform-guidance/cross-platform-adaptation.html"}
 '>
             Cross-platform adaptation
           </a>
 
-          
-          
         </li>
-      
     </ul>
   </div>
 
-        
       </li>
-  
 
   </ul>
 </nav>
-  
-
-
     <main class="main" role="main">
-      
-      
 
-      
 <article class="article" data-comp="Waypoints">
   <div class="article__intro container container--large js-waypoints-trigger-initial">
-    
-      
       <nav class="article__nav animatable js-anim-trigger">
         <span class="eyebrow">Contents</span>
         <ul>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="communication.html#usage" data-section-id="usage"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#usage"
-    }
+    "label": "#usage"}
 '>Usage</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="communication.html#confirmation" data-section-id="confirmation"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#confirmation"
-    }
+    "label": "#confirmation"}
 '>Confirmation</a>
             </li>
-          
             <li class="article__nav-item">
               <a class="article__nav-link js-anchor-link js-analytics-click" href="communication.html#acknowledgement" data-section-id="acknowledgement"
-                 data-analytics='
-  {
+                 data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#acknowledgement"
-    }
+    "label": "#acknowledgement"}
 '>Acknowledgement</a>
             </li>
-          
         </ul>
       </nav>
-    
     <h1 class="article__title animatable js-anim-trigger">
-      
 
       Confirmation &amp; acknowledgement
 
-      
-        
           <div class="article-controls">
             
           </div>
-        
-      
     </h1>
 
-    
 
-    
-      
       <div class="article__intro-text animatable js-anim-trigger">
       <div>
 <div aria-hidden="true" class="keywords hidden">communication, confirmation, acknowledgement</div>
 <h2>Confirmation and acknowledgement communications ask for confirmation before taking an action and acknowledge successful actions.</h2></div>
       </div>
-    
   </div>
 
   <hr />
 
-  
-  <div class="article__body animatable js-show-header js-anim-trigger">
-    
-      
+  <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger">
       <section id="usage" class="container container--large js-waypoints-trigger article__section" data-section-title="Usage" aria-label="Usage">
-        
           <h2 class="article__chapter-title">
             Usage
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
@@ -2819,32 +1786,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Confirming and acknowledging user actions can reduce uncertainty about an action that a user has taken, or is about to take. They also prevent users from making mistakes.</p><h2>Types of actions</h2><ul class="lst-kix_koh2ux92d6gi-0 start"><li><strong>Confirming actions </strong>ask the user to verify that they want to proceed with an action.</li><li><strong>Acknowledging actions</strong> provide text to let the user know whether an action they chose has been completed.</li></ul><p>Not all actions warrant a confirmation or an acknowledgment.</p><hr class="spacer" role="separator"/></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="confirmation" class="container container--large js-waypoints-trigger article__section" data-section-title="Confirmation" aria-label="Confirmation">
-        
+<hr />      <section id="confirmation" class="container container--large js-waypoints-trigger article__section" data-section-title="Confirmation" aria-label="Confirmation">
           <h2 class="article__chapter-title">
             Confirmation
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">communication, confirmation, acknowledgement</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When a UI requests confirmation from a user, it asks if they want to proceed with the action they just took. It may be paired...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>When a UI requests confirmation from a user, it asks if they want to proceed with the action they just took. It may be paired with a warning or critical information related to that action.</p><p>Confirmation isn’t necessary when the consequences of an action are reversible or negligible. For example, if a check mark shows an image has been selected, further confirmation is unnecessary.</p></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Usage" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When a UI requests confirmation from a user, it asks if they want to proceed with the action they just took. It may be paired...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>When a UI requests confirmation from a user, it asks if they want to proceed with the action they just took. It may be paired with a warning or critical information related to that action.</p><p>Confirmation isn’t necessary when the consequences of an action are reversible or negligible. For example, if a check mark shows an image has been selected, further confirmation is unnecessary.</p></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../components/dialogs.html#alert-dialog"
-    }
+    "label": "../components/dialogs.html#alert-dialog"}
 ' href="components/dialogs.html#alert-dialog" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1-2AYDdSQVged4dML1aZOBp1S3vk-3ybg/dialogs-thumbnail-1x1-circle.png" style="background-image: url('assets/1-2AYDdSQVged4dML1aZOBp1S3vk-3ybg/dialogs-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -2856,68 +1815,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
 </p>
 </a>
-</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Alert dialog</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Confirmation is best delivered using an alert dialog.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Confirmation is best delivered using an alert dialog.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B3wFuHgbfPkzRE9DNlBkZzJSbzA/communication-confirmation1.png" src="communication.html">
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Alert dialog" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Alert dialog</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Confirmation is best delivered using an alert dialog.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Confirmation is best delivered using an alert dialog.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B3wFuHgbfPkzRE9DNlBkZzJSbzA/communication-confirmation1.png" src="communication.html">
 </img></div>
 </div>
 </figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="confirmation-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/15xpoCSgcskWZg69oK6PVIOPwXpoRAV9I/communication-confirmation2.png" src="communication.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="confirmation-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/15xpoCSgcskWZg69oK6PVIOPwXpoRAV9I/communication-confirmation2.png" src="communication.html">
 </img></div>
 </div>
 <figcaption id="confirmation-figure-caption-0">
-<p>An alert dialog confirms the user action and informs the user of what will happen as a result.</p>
-</figcaption>
+<p>An alert dialog confirms the user action and informs the user of what will happen as a result.</p></figcaption>
 </figure></div></section></div></div></div></div></div>
         </div>
       </section>
-    
-      <hr />
-      <section id="acknowledgement" class="container container--large js-waypoints-trigger article__section" data-section-title="Acknowledgement" aria-label="Acknowledgement">
-        
+<hr />      <section id="acknowledgement" class="container container--large js-waypoints-trigger article__section" data-section-title="Acknowledgement" aria-label="Acknowledgement">
           <h2 class="article__chapter-title">
             Acknowledgement
             <span class="article-controls">
               
               
-  
-  
             </span>
           </h2>
-        
 
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">communication, confirmation, acknowledgement</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>An acknowledgement notifies the user about system actions occurring in the background. It appears for a short amount of time and may include an option...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>An acknowledgement notifies the user about system actions occurring in the background. It appears for a short amount of time and may include an option to undo the action.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="acknowledgement-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B3wFuHgbfPkzbVBvTmQwamxHRGM/communication-acknowledgement1.png" src="communication.html">
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Usage" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>An acknowledgement notifies the user about system actions occurring in the background. It appears for a short amount of time and may include an option...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>An acknowledgement notifies the user about system actions occurring in the background. It appears for a short amount of time and may include an option to undo the action.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="acknowledgement-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B3wFuHgbfPkzbVBvTmQwamxHRGM/communication-acknowledgement1.png" src="communication.html">
 </img></div>
 </div>
 <figcaption id="acknowledgement-figure-caption-0">
-<p>An acknowledgment in the form of a snackbar appears, then fades after a few seconds. </p>
-</figcaption>
+<p>An acknowledgment in the form of a snackbar appears, then fades after a few seconds. </p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="acknowledgement-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/0B3wFuHgbfPkzWmRqZDVsT2tUZnM/communication-acknowledgement2.png" src="communication.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="acknowledgement-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B3wFuHgbfPkzWmRqZDVsT2tUZnM/communication-acknowledgement2.png" src="communication.html">
 </img></div>
 </div>
 <figcaption id="acknowledgement-figure-caption-1">
-<p>An acknowledgment appears with an undo option. It remains until the user takes an unrelated action, such as scrolling through a list.</p>
-</figcaption>
-</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Expand Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow"></button><h1 class="collapsible__heading">Acknowledgement components</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Acknowledgements can be delivered by a variety of components. Criteria for choosing the right acknowledgement component includes: Acknowledgements that are transient mean the component will...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Acknowledgements can be delivered by a variety of components. Criteria for choosing the right acknowledgement component includes: </p><ul class="lst-kix_ynniklycwu9t-0 start"><li>Urgency level</li><li>Inclusion of an action to correct a problem</li><li>Duration on screen (transient, dismissable, or both)</li></ul><p>Acknowledgements that are transient mean the component will exit on its own within a few seconds of appearing. Dismissable acknowledgements can be dismissed by selecting an action to dismiss the component.</p><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Component</p></td><td colspan="1" rowspan="1"><p>Urgency</p></td><td colspan="1" rowspan="1"><p>Content</p></td><td colspan="1" rowspan="1"><p>Behavior</p></td><td colspan="1" rowspan="1"><p>Number of actions to dismiss </p></td></tr><tr><td colspan="1" rowspan="1"><p>Snackbar</p></td><td colspan="1" rowspan="1"><p>Low </p></td><td colspan="1" rowspan="1"><p>Informational</p></td><td colspan="1" rowspan="1"><p>Transient &amp; dismissable</p></td><td colspan="1" rowspan="1"><p>0-1</p></td></tr><tr><td colspan="1" rowspan="1"><p>Alert</p></td><td colspan="1" rowspan="1"><p>Medium</p></td><td colspan="1" rowspan="1"><p>Correct a problem; Awareness of state</p></td><td colspan="1" rowspan="1"><p>Persistent, non-blocking, and dismissable</p></td><td colspan="1" rowspan="1"><p>1-2</p></td></tr><tr><td colspan="1" rowspan="1"><p>Dialog</p></td><td colspan="1" rowspan="1"><p>High</p></td><td colspan="1" rowspan="1"><p>Require a choice; Acknowledge </p></td><td colspan="1" rowspan="1"><p>Persistent,  blocking (interruptive)</p></td><td colspan="1" rowspan="1"><p>1-2</p></td></tr><tr><td colspan="1" rowspan="1"><p>Empty State</p></td><td colspan="1" rowspan="1"><p>Medium</p></td><td colspan="1" rowspan="1"><p>Informational</p></td><td colspan="1" rowspan="1"><p>Persistent, blocking </p></td><td colspan="1" rowspan="1"><p>0-2</p></td></tr></tbody></table><p> </p></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<p>An acknowledgment appears with an undo option. It remains until the user takes an unrelated action, such as scrolling through a list.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Acknowledgement components" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Acknowledgement components</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Acknowledgements can be delivered by a variety of components. Criteria for choosing the right acknowledgement component includes: Acknowledgements that are transient mean the component will...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Acknowledgements can be delivered by a variety of components. Criteria for choosing the right acknowledgement component includes: </p><ul class="lst-kix_ynniklycwu9t-0 start"><li>Urgency level</li><li>Inclusion of an action to correct a problem</li><li>Duration on screen (transient, dismissable, or both)</li></ul><p>Acknowledgements that are transient mean the component will exit on its own within a few seconds of appearing. Dismissable acknowledgements can be dismissed by selecting an action to dismiss the component.</p><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Component</p></td><td colspan="1" rowspan="1"><p>Urgency</p></td><td colspan="1" rowspan="1"><p>Content</p></td><td colspan="1" rowspan="1"><p>Behavior</p></td><td colspan="1" rowspan="1"><p>Number of actions to dismiss </p></td></tr><tr><td colspan="1" rowspan="1"><p>Snackbar</p></td><td colspan="1" rowspan="1"><p>Low </p></td><td colspan="1" rowspan="1"><p>Informational</p></td><td colspan="1" rowspan="1"><p>Transient &amp; dismissable</p></td><td colspan="1" rowspan="1"><p>0-1</p></td></tr><tr><td colspan="1" rowspan="1"><p>Alert</p></td><td colspan="1" rowspan="1"><p>Medium</p></td><td colspan="1" rowspan="1"><p>Correct a problem; Awareness of state</p></td><td colspan="1" rowspan="1"><p>Persistent, non-blocking, and dismissable</p></td><td colspan="1" rowspan="1"><p>1-2</p></td></tr><tr><td colspan="1" rowspan="1"><p>Dialog</p></td><td colspan="1" rowspan="1"><p>High</p></td><td colspan="1" rowspan="1"><p>Require a choice; Acknowledge </p></td><td colspan="1" rowspan="1"><p>Persistent,  blocking (interruptive)</p></td><td colspan="1" rowspan="1"><p>1-2</p></td></tr><tr><td colspan="1" rowspan="1"><p>Empty State</p></td><td colspan="1" rowspan="1"><p>Medium</p></td><td colspan="1" rowspan="1"><p>Informational</p></td><td colspan="1" rowspan="1"><p>Persistent, blocking </p></td><td colspan="1" rowspan="1"><p>0-2</p></td></tr></tbody></table><p> </p></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../components/banners.html#banner"
-    }
+    "label": "../components/banners.html#banner"}
 ' href="components/banners.html#banner" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/15WfNtJamwaJGCq5Whhol6Qfq2J0qXutm/banner-thumbnail-1x1-circle.png" style="background-image: url('assets/15WfNtJamwaJGCq5Whhol6Qfq2J0qXutm/banner-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -2930,22 +1874,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><p></p><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Alert </h2><p>Use alerts to deliver a persistent, in-app message that informs users of a particular change state.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="frame media-placeholder" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="acknowledgement-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1BoI4paN_Nf2sQliH6982aJIUAEaroM_c/understanding-alerts-usage.png" src="communication.html">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="acknowledgement-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1BoI4paN_Nf2sQliH6982aJIUAEaroM_c/understanding-alerts-usage.png" src="communication.html">
 </img></div>
 </div>
 <figcaption id="acknowledgement-figure-caption-2">
-<p>An alert</p>
-</figcaption>
+<p>An alert</p></figcaption>
 </figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../components/snackbars.html#snackbar"
-    }
+    "label": "../components/snackbars.html#snackbar"}
 ' href="components/snackbars.html#snackbar" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1OXubybIxNowFGAjrZ0XKat9MKqB7fPty/snackbar-thumbnail-1x1-circle.png" style="background-image: url('assets/1OXubybIxNowFGAjrZ0XKat9MKqB7fPty/snackbar-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -2958,22 +1898,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><p></p><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Snackbar </h2><p>Use a snackbar to provide brief feedback about an operation. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="frame media-placeholder" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="acknowledgement-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/1fbi_cOsfFucIfa_k843vYhrp7iEcNcc_/snackbars-container-do.png" src="communication.html">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="acknowledgement-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1fbi_cOsfFucIfa_k843vYhrp7iEcNcc_/snackbars-container-do.png" src="communication.html">
 </img></div>
 </div>
 <figcaption id="acknowledgement-figure-caption-3">
-<p>A snackbar</p>
-</figcaption>
+<p>A snackbar</p></figcaption>
 </figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
-<a class="object-card__link js-analytics-click" data-analytics='
-  {
+<a class="object-card__link js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "object card",
     "action": "link click",
-    "label": "../communication/empty-states.html#empty-state"
-    }
+    "label": "../communication/empty-states.html#empty-state"}
 ' href="communication/empty-states.html#empty-state" rel="noopener" target="_blank">
 <div class="object-card__image" data-image-path="../assets/1KlYXTzixxD0VrFPcE8K63Gh70IjH5835/communication-thumbnail-1x1-circle.png" style="background-image: url('assets/1KlYXTzixxD0VrFPcE8K63Gh70IjH5835/communication-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
@@ -2986,132 +1922,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </p>
 </a>
 </aside><p></p><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Empty state </h2><p>When a UI is only available online and content has failed to load or sync, use an empty state. The user should be able to interact with as much of the rest of the app as possible. A link to reload can be presented to help a user accomplish their task. </p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
-<div class="bordered frame media-placeholder" style="padding-top: 177.777777778%;">
-<div class="js-lightbox-el" data-template="inline">
-<img alt="" aria-describedby="acknowledgement-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image animatable js-lazy-image" data-src="../assets/16LJJM9xvEAH5ItRQ428q1xoXq4INQa9f/empty-state-do.png" src="communication.html">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="acknowledgement-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/16LJJM9xvEAH5ItRQ428q1xoXq4INQa9f/empty-state-do.png" src="communication.html">
 </img></div>
 </div>
 <figcaption id="acknowledgement-figure-caption-4">
-<p>An empty state</p>
-</figcaption>
+<p>An empty state</p></figcaption>
 </figure></div></section></div></div></div></div></div>
         </div>
       </section>
-    
 
-    
   </div>
-  
 
   <div class="container container--large">
-    
-
 
   <h2>Up next
-    
       <div class="article-controls">
         
       </div>
-    
   </h2>
 
-
-<div class="suggested-articles"><div><a aria-label="Data formats" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+<div class="suggested-articles"><div><a aria-label="Data formats" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../communication/data-formats.html"
-    }
+    "label": "../communication/data-formats.html"}
 ' href="communication/data-formats.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('assets/1TAceVkmmNpijQzzgPg6dbyv-AXhI44tj/communication-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Communication</h3>
 <h4 class="suggested-articles__item-subtitle">Data formats</h4>
-</a><a aria-label="Dialogs" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+</a><a aria-label="Dialogs" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../components/dialogs.html"
-    }
+    "label": "../components/dialogs.html"}
 ' href="components/dialogs.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('assets/1fSgDg-bbCDmyvSr0X4pC_xHqnU34xP9a/dialogs-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Components</h3>
 <h4 class="suggested-articles__item-subtitle">Dialogs</h4>
 </a><br>
-<a aria-label="Snackbar" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='
-  {
+<a aria-label="Snackbar" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../components/snackbars.html"
-    }
+    "label": "../components/snackbars.html"}
 ' href="components/snackbars.html">
 <div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('assets/1I7z2-6j6vJB5IuuO7MscUrazLZyKOZ46/snackbar-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Components</h3>
 <h4 class="suggested-articles__item-subtitle">Snackbar</h4>
-</a></div></div>
-  </div>
+</a></div></div>  </div>
 </article>
-
     </main>
-
-    
-      
 
 
 <footer class="footer">
   <div class="container container--jumbo">
     <div class="footer-block footer-block--about">
-      
       <a class="footer-block__logo js-analytics-click" href="https://material.io/"
-         data-analytics='
-  {
+         data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "/"
-    }
+    "label": "/"}
 '>
-        <img class="footer-block__material-logo animatable js-lazy-image" data-src="../static/m2/images/material_logo.svg" src="communication.html" alt="Material Design"/>
+        <img class="footer-block__material-logo" src="static/m2/images/material_logo.svg" alt="Material Design"/>
       </a>
       <div class="footer-block__content">
         <p class="footer-block__description">Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</p>
         <ul class="footer-block__social-nav">
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.github.com/material-components" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.github.com/material-components"
-    }
+    "label": "https://www.github.com/material-components"}
 '>GitHub</a>
 </li>
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.twitter.com/materialdesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.twitter.com/materialdesign"
-    }
+    "label": "https://www.twitter.com/materialdesign"}
 '>Twitter</a>
 </li>
-          <li class="footer-block__social-nav-item">
-  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__social-nav-item">  <a href="https://www.youtube.com/googledesign" target="_blank" rel="noopener" class="footer-block__social-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.youtube.com/googledesign"
-    }
+    "label": "https://www.youtube.com/googledesign"}
 '>YouTube</a>
 </li>
         </ul>
@@ -3120,50 +2023,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div class="footer-block footer-block--legal">
       <a class="footer-block__logo js-analytics-click" href="https://www.google.com"
-         data-analytics='
-  {
+         data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://www.google.com"
-    }
+    "label": "https://www.google.com"}
 '>
-        <img class="footer-block__google-logo animatable js-lazy-image" data-src="../static/m2/images/google_logo.svg" src="communication.html" alt="Google"/>
+        <img class="footer-block__google-logo" src="static/m2/images/google_logo.svg" alt="Google"/>
       </a>
       <div class="footer-block__content">
         <ul class="footer-block__legal-nav">
-          <li class="footer-block__legal-nav-item">
-  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__legal-nav-item">  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://policies.google.com/privacy"
-    }
+    "label": "https://policies.google.com/privacy"}
 '>Privacy Policy</a>
 </li>
-          <li class="footer-block__legal-nav-item">
-  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
-     data-analytics='
-  {
+          <li class="footer-block__legal-nav-item">  <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="footer-block__legal-nav-link js-analytics-click"
+     data-analytics='  {
     "event": "trackEvent",
     "category": "navigation",
     "action": "footer click",
-    "label": "https://policies.google.com/terms"
-    }
+    "label": "https://policies.google.com/terms"}
 '>Terms of Service</a>
 </li><li class="footer-block__legal-nav-item"><a href="javascript:void(0)" class="footer-block__legal-nav-link" onclick="try{userfeedback.api.startFeedback({'productId': '1027542', 'bucket': 'material_spec', 'locale': 'en', 'allowNonLoggedInFeedback': true});return false;}catch(e){}">Feedback</a></li></ul>
       </div>
     </div>
   </div>
 </footer>
-    
-
-        <div class="ui-mask js-ui-mask"></div>
-
-    
-      <div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
+    <div class="ui-mask js-ui-mask"></div>
+<div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
     <header class="lightbox__header">
       <div class="lightbox__header-title">
         <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
@@ -3181,60 +2072,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
         </button>
 
-        
       </div>
     </header>
 
     <div class="lightbox__template js-zoom-wrapper">
       <div class="lightbox__content js-lightbox-content">
-        
-        <img class="ui-loader" src="static/m2/images/loader.svg" alt="loader" aria-hidden="true" />
-      </div>
-      <div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+<img class="ui-loader" src="static/m2/images/loader.svg" alt="loader" aria-hidden="true" />      </div>
+<div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
         <i class="material-icons">&#xE3F4;</i>
         <span class="redline-sidebar__label-text">Image only</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
         <i class="material-icons">format_shapes</i>
         <span class="redline-sidebar__label-text">Measurements</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
         <i class="material-icons">format_size</i>
         <span class="redline-sidebar__label-text">Text</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
         <i class="material-icons">palette</i>
         <span class="redline-sidebar__label-text">Color</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
         <i class="material-icons">rounded_corner</i>
         <span class="redline-sidebar__label-text">Shape and Elevation</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
         <i class="material-icons">category</i>
         <span class="redline-sidebar__label-text">Components</span>
       </button>
     </div>
-  <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
       <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
         <i class="material-icons">notes</i>
         <span class="redline-sidebar__label-text">Notes</span>
       </button>
     </div>
-  <div class="redline-sidebar__toggles js-redline-layer-toggles">
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+<div class="redline-sidebar__toggles js-redline-layer-toggles">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
         <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3244,7 +2132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <label for="dimensions">Dimensions</label>
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
         <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3254,7 +2142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <label for="padding">Padding</label>
-    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
         <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
         <div class="mdc-checkbox__background">
           <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -3264,10 +2152,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <label for="typography">Text baseline</label>
-    
   </div>
-</div>
-      <nav class="carousel__nav">
+</div><nav class="carousel__nav">
   <button
       class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
       data-comp="Tooltip"
@@ -3281,8 +2167,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       data-props-tooltip='{"tip": "Next", "direction": "left"}'>
     <i class="material-icons">chevron_right</i>
   </button>
-</nav>
-      <div class="zoom-buttons" data-comp="Zoom">
+</nav><div class="zoom-buttons" data-comp="Zoom">
   <div class="zoom-buttons__wrapper">
 
     <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
@@ -3305,11 +2190,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
   </div>
-</div>
-    </div>
+</div>    </div>
 
 
-  <aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+<aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
   <div class="mdc-dialog__surface">
     <header class="mdc-dialog__header">
       <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
@@ -3323,22 +2207,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </section>
   </div>
   <div class="mdc-dialog__backdrop"></div>
-</aside>
-</div>
-      <div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+</aside></div><div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
   <div class="mdc-snackbar__text"></div>
   <div class="mdc-snackbar__action-wrapper">
     <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
   </div>
 </div>
-    
-
-    
     <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
     <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
-    <script src="static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-  </body>
+    <script src="static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </body>
 </html>
