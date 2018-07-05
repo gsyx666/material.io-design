@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="animatedIcons"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1044,20 +1044,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1121,6 +1107,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1554,16 +1554,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1844,7 +1872,7 @@ side-nav__link--active js-header-show"
 <div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Animation reflects the action an icon performs in a way that adds polish and delight.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 47.3684210526%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuRWFKV0MxWU93RVE/01-meaning.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1873,7 +1901,7 @@ side-nav__link--active js-header-show"
 <div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Transitions connect animated icons between two visual states. Transitioning between two icons signifies that they are linked, and that pressing one icon makes the other icon available.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-0" preload="metadata">
+<video aria-describedby="transitions-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuc1ZnaWN0ajItaWM/02-statechange.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1889,7 +1917,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-1" preload="metadata">
+<video aria-describedby="transitions-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuV3Z4ejVIRnJoa2s/02-statechange-disable.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1905,7 +1933,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Emphasis" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Emphasis</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Animated icon transitions can use either simple or emphasized animation.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Animated icon transitions can use either simple or emphasized animation.</p><ul class="lst-kix_ebdhbkx1z3k1-0 start"><li>Icons that aren’t prominent use a simple shared motion</li><li>Icons that are an important part of an app use detailed tweening</li></ul><hr class="spacer" role="separator"/></div></section><section class="module-module col-2 h2-spacing"><div class="module"><h2>Simple</h2><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-2" preload="metadata">
+<video aria-describedby="transitions-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuME92LWNhZG9lM0E/03-simple.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1921,7 +1949,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><h2>Emphasized</h2><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-3" preload="metadata">
+<video aria-describedby="transitions-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFud0F1NEctQWdwcHM/03-complex.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1937,7 +1965,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 55.5555555556%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-4" preload="metadata">
+<video aria-describedby="transitions-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuN3ZoS0VYU052Vkk/04-simple.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1953,7 +1981,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 55.5555555556%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-5" preload="metadata">
+<video aria-describedby="transitions-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuLVFrWlk1Ymc2TXM/04-complex-hype.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1969,7 +1997,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Duration" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Duration</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The more complex an icon animation is, the longer duration it needs to have to avoid feeling rushed. To keep consistency across an app, use...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>The more complex an icon animation is, the longer duration it needs to have to avoid feeling rushed. To keep consistency across an app, use the same duration for icons that have similar levels of complexity. Most icons will fit into these three groups of recommended durations:</p><ul class="lst-kix_2fzzvdvbtm3t-0 start"><li>Simple icon animations: 100ms </li><li>Average icon animations: 200ms </li><li>Complex icon animations: 500ms</li></ul><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 53.9473684211%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-6" preload="metadata">
+<video aria-describedby="transitions-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1JURoEV03erE6RM2XaIB7ghoXOeToZqyK/04-duration-v1.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1989,7 +2017,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#sequencing"}
 ' href="../motion/customization.html#sequencing" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Sequencing</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2002,7 +2030,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Stagger" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Stagger</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Sets of icons can use staggered timing to perform entrances fluidly. They animate from left to right to give a sense of progression.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Sets of icons can use staggered timing to perform entrances fluidly. They animate from left to right to give a sense of progression. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 27.6315789474%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transitions-figure-caption-7" preload="metadata">
+<video aria-describedby="transitions-figure-caption-7" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuZXc3TmlRbkU0aWM/05-stagger.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2033,7 +2061,7 @@ side-nav__link--active js-header-show"
 <div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Icon animations can be used to reinforce a change in state.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 27.6315789474%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuTnFNZDN5Zkhnclk/06-states.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2062,7 +2090,7 @@ side-nav__link--active js-header-show"
 <div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Animations should reflect a brand’s style. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 53.9473684211%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="theming-figure-caption-0" preload="metadata">
+<video aria-describedby="theming-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuQkMyMTA5RUlkMDA/07-style-owl.mp4" src="animated-icons.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2105,7 +2133,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/speed.html"}
 ' href="../motion/speed.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1-L-DkkafiBcalmMPK-iIs_NQv59mbibG%2Fmotion-thumbnail-2x1.png');">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1-L-DkkafiBcalmMPK-iIs_NQv59mbibG/motion-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Motion</h3>
 <h4 class="suggested-articles__item-subtitle">Speed</h4>

@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="androidFingerprint"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1505,16 +1505,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1952,7 +1980,7 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 <div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Before using fingerprint for authentication, the app must get the user's consent. </p></div></section><section class="module-module col-2 h2-spacing"><div class="module"><h2>App settings</h2><p>App settings provide a way to turn fingerprint authentication on or off.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="enrollment-figure-caption-0" preload="metadata">
+<video aria-describedby="enrollment-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1e3fPNyr0EHZy8z2_rkQWH-0OJGNZInTe/fp-enrollment.mp4" src="android-fingerprint.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1982,7 +2010,7 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 <div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Your app’s users can set up the option to sign in or authenticate purchases using fingerprint.</p><p>When a user action needs to be authenticated, display the Fingerprint authentication dialog in place of your sign-in screen or during a purchase interaction. </p></div></section><section class="module-module col-2 h2-spacing"><div class="module"><h2>After enrollment</h2><p>After enrollment, present the fingerprint dialog whenever you need authentication from the user.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="authentication-figure-caption-0" preload="metadata">
+<video aria-describedby="authentication-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/11zwa7nsrWecOHa84KNsfAkL5ecLJxjC-/fp-after-enrollment.mp4" src="android-fingerprint.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1997,7 +2025,7 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>During your app’s purchase flow</h2><p>The user has the option to enroll their fingerprint right after making a purchase, using an existing account.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="authentication-figure-caption-1" preload="metadata">
+<video aria-describedby="authentication-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/16Bb8y3Vfx4oq8DqDUyk7p4jS5bFo6bPB/fp-purchase-flow.mp4" src="android-fingerprint.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2048,11 +2076,11 @@ Button container height: 72dp</br></br></br></br></br></br></br></p></div></sect
     "event": "trackEvent",
     "category": "suggested articles",
     "action": "link click",
-    "label": "../communication/gesture-education.html"}
-' href="../communication/gesture-education.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1bMYkOR3ZuA3_4CmOlCl4IgUJx5TTl15x/communication-thumbnail-2x1.png');">
+    "label": "../interaction/gestures.html"}
+' href="../interaction/gestures.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://material.io/design/assets/1bMYkOR3ZuA3_4CmOlCl4IgUJx5TTl15x/communication-thumbnail-2x1.png');">
 </div>
-<h3 class="suggested-articles__item-title eyebrow">Communication</h3>
+<h3 class="suggested-articles__item-title eyebrow">Interaction</h3>
 <h4 class="suggested-articles__item-subtitle">Gesture education</h4>
 </a></div></div>  </div>
 </article>

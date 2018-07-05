@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="surfaces"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1505,16 +1505,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1856,7 +1884,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Shadows" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Shadows</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material surfaces at different elevations cast shadows.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material surfaces at different elevations cast shadows.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-2" preload="metadata">
+<video aria-describedby="properties-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1NulZoBoZiguk5YAo74aNIR-mRGPmxjSV/materialshadow-do.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1872,7 +1900,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-3" preload="metadata">
+<video aria-describedby="properties-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Dqr30VMTMcpEx8sUd4FARlw3gR5NRmqx/materialshadow-dont.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1888,7 +1916,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Resolution" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Resolution</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material has infinite resolution.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material has infinite resolution.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-4" preload="metadata">
+<video aria-describedby="properties-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1yMoECU42SGRq8xav2IqcPAmfpm2qYZvA/materialsurfaceproperties-do-infiniteresolution-1a.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1903,7 +1931,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Content" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Content</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Content is displayed in any shape and color on Material. Content does not add thickness to Material. Content is expressed without being a separate layer.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Content is displayed in any shape and color on Material. Content does not add thickness to Material. Content is expressed without being a separate layer.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1xQcc7grFo-KO3yr2ba9XAmKmKasBNwa6/materialcontent-shapecolor.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1917,7 +1945,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="s-tag-caption do">Do.</p><p>Material can display any shape and color. Content can behave independent of Material, but is limited within the bounds of Material.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-5" preload="metadata">
+<video aria-describedby="properties-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/13W28szpZTf5kSFCGhdt9tZkbpnfbHKS9/materialcontent-behavior.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1933,7 +1961,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-6" preload="metadata">
+<video aria-describedby="properties-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1u7RhQke_8cJNOA392JGJH37FSwzFhD0N/materialcontent-dependent-behavior.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1977,7 +2005,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material cannot pass through other Material. For example, one Material surface cannot pass through another Material surface when changing elevation.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1ZFe2hECnZAtL0ZdtClzphYkGVT09jLO-/materialproperties-clipping.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1991,7 +2019,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="s-tag-caption dont">Don’t.</p><p>Material cannot pass through other Material.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material does not behave like a gas.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-11" preload="metadata">
+<video aria-describedby="properties-figure-caption-11" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1V529DS-aIYyk4bahjNKxT0CqmJLdkMUz/materialsurfaceproperties-dont-gas-1b.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2007,7 +2035,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-12" preload="metadata">
+<video aria-describedby="properties-figure-caption-12" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1dpAn1QrcASliVgmYVdfm3HMpNXW4AYDM/materialsurfaceproperties-do-enterexitseq-1a.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2023,7 +2051,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material is not fluid like a liquid or gel, though it may display content with these properties.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-13" preload="metadata">
+<video aria-describedby="properties-figure-caption-13" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1WCcYH2Afmk_tZ18_s5HjZSv61B3MnQNb/materialsurfaceproperties-dont-dripping.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2039,7 +2067,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="properties-figure-caption-14" preload="metadata">
+<video aria-describedby="properties-figure-caption-14" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1hafXq2mG3HHr1MUK1g6fg7QR9IQTC9dV/materialsurfaceproperties-dont-flow-1a.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2055,7 +2083,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Transforming Material" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Transforming Material</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material can change shape. Material can change opacity. Material grows and shrinks only along its plane. Material bends or folds within the depth of the...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material can change shape.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/15bSEWCZEjq6MddA362QGci7Q4AOkOQs-/materialsurfaceproperties-changeshape-1b.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2076,7 +2104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material grows and shrinks only along its plane.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/13eGrsIXeBzDU7l_RFcHotsN8rpWd7kYQ/materialsurfaceproperties-plane.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2090,7 +2118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="s-tag-caption do">Do.</p><p>Material grows and shrinks only along its plane.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material bends or folds within the depth of the UI.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/14aWvPjmL-sdwhT2gelqx3j5hQE7eR5KJ/materialsurfaceproperties-plane-dont.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2104,7 +2132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="s-tag-caption dont">Don’t.</p><p>Material never bends or folds in ways that exceed the depth of the UI.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material surfaces can join together to become a single Material surface.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/19__QV-l261owIymJUFARLcV_uyBgwPDj/materialproperties-join.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2118,7 +2146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Multiple Material surfaces can join together to become a single surface.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>When split, Material can rejoin. For example, if you remove a portion of Material from a surface, the surface will become whole again. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1SGXfwV9XdAXFaR49X7ZpNbj2tsH55ZrK/materialproperties-slicejoin.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2132,7 +2160,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Material can split and become whole again.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Movement " class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Movement </h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material can be spontaneously generated or dismissed anywhere in the environment. Material can move along any axis. Material surfaces can coordinate their motion. Material motion...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material can be spontaneously generated or dismissed anywhere in the environment.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1EUy2L0M-LyeNIu24-9GUUP5xvpzj2rjv/materialmovement-appear.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2146,7 +2174,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Material can be spontaneously generated or dismissed. </p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material can move along any axis.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/192Oe3mMnPtaY3S4AlkQWMRoqtIN6zz4w/materialmovement-anyaxis.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2160,7 +2188,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Material can move along various axes.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material surfaces can coordinate their motion.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1HRNO73Jkgoz48OuYa2JgTQdOma1jggjQ/materialmovement-coordinate.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2174,7 +2202,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Material surfaces can coordinate their motion.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material motion along the z-axis is typically a result of user interaction.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/11Gpm653O4qC39MSQAyv9sWn16Bm6f4h6/materialmovement-z-interaction.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2210,7 +2238,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-1" preload="metadata">
+<video aria-describedby="attributes-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/19e8l8UXWqC4n_7eMT0d8_YD6CvAwDX-M/materialattributes-stretch-1.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2226,7 +2254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-2" preload="metadata">
+<video aria-describedby="attributes-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1JCxHxRkVWHO_OqZSLar9bIaah5p4yJAk/materialattributes-pan.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2242,7 +2270,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Composite surfaces</h2><p>Surfaces can be divided into areas which display different types of behavior.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-3" preload="metadata">
+<video aria-describedby="attributes-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/12LJku-D8qyXCzzx9tH2PVjx73E145zRo/materialattributes-constructingsurfaces-1.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2258,7 +2286,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-4" preload="metadata">
+<video aria-describedby="attributes-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1lA44inCPDrT5UShoK5fQYynz-KISRSs6/materialattributes-constructingsurfaces-2.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2274,7 +2302,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Stretchable surfaces" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Stretchable surfaces</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>A stretchable surface can be stretched before reaching a limit, at which point the entire surface becomes rigid. Surfaces can stretch vertically, horizontally, or in...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>A stretchable surface can be stretched before reaching a limit, at which point the entire surface becomes rigid. Surfaces can stretch vertically, horizontally, or in both directions.</p><p>Typically, user interaction with a surface will stretch it in one direction. For example, tapping “more details” can cause a card to grow vertically and display additional content.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1SdOX6Lmt-WHkMKkQ0ySDQmucI7X1oK8X/surfaces-stretchvert.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2288,7 +2316,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Material stretch direction can be exclusively vertical.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/16aoHYwbnA-hU5bjAUYFWHscqArnDczz9/surfaces-stretchhoriz.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2302,7 +2330,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Material stretch direction can be exclusively horizontal.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1TMUunFfJc9gZHZGevKpY7l6P142KIC-7/surfaces-stretchverthoriz.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2316,7 +2344,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Material stretch direction can be along both horizontal and vertical axes, either independently or simultaneously.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Surface positioning and movement (x/y)" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Surface positioning and movement (x/y)</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Surfaces can remain in a fixed position on the x- and y-axes, or can be moveable in any direction. Surface movement can be confined to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Surfaces can remain in a fixed position on the x- and y-axes, or can be moveable in any direction.</p><p>Surface movement can be confined to a single axis, allow movement along a single axis at a time, or allow movement along both axes simultaneously.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-5" preload="metadata">
+<video aria-describedby="attributes-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1NXMLcGNl9IkAxArhrBJ2Fmt25y-xONWG/surfaces-movement-vert.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2332,7 +2360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-6" preload="metadata">
+<video aria-describedby="attributes-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1aGew2FIQkfzmPmUNO1kDcmuan4nPPuG4/surfaces-movement-horizvert.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2348,7 +2376,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-7" preload="metadata">
+<video aria-describedby="attributes-figure-caption-7" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/17P0eYiNCieKok31ccVmFk8fMVN57wSwo/surfaces-movement-cards.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2364,7 +2392,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Surfaces can move independently of each other, or their movement can affect or be dependent upon the movement of other surfaces.</p><p>A dependency can be based on a variety of mechanics, such as nearby surfaces moving when another surface expands, or the proportion of movement between surfaces moving in parallax.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-8" preload="metadata">
+<video aria-describedby="attributes-figure-caption-8" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1vsdOr2TZXmYXwVpbNhMlU6Mu9SiWCuTt/surfaces-movement-independent.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2380,7 +2408,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-9" preload="metadata">
+<video aria-describedby="attributes-figure-caption-9" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1g8_mzj8_gE8xHyFkFAmwrH-AAkbtlShs/surfaces-movement-dependent.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2396,7 +2424,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Surface opacity" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Surface opacity</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material surfaces can be transparent, semi-transparent, or opaque.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material surfaces can be transparent, semi-transparent, or opaque.</p><p>Text on transparent and semi-transparent surfaces may require background treatment to preserve legibility.</p><p>Transparent surfaces lack clear edges, making it difficult to determine where surfaces begin and end, and which surface content belongs to.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-10" preload="metadata">
+<video aria-describedby="attributes-figure-caption-10" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1dL9hqIWVh7qKrT9MaZOJDArm6mRNtHFS/materialattributes-surfaceopacity-do.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2429,7 +2457,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 71.0526315789%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="attributes-figure-caption-11" preload="metadata">
+<video aria-describedby="attributes-figure-caption-11" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/17k7OapqM62VIbYXPfjpQBJZlVZj2_Lii/materialattributes-surfaceopacity-dont.mp4" src="environment.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>

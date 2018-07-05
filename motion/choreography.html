@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="choreography"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1033,20 +1033,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1110,6 +1096,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1543,16 +1543,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1824,7 +1852,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Animation sequences" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Animation sequences</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>An animation sequence refers to the order in which different parts of an animation appear, start moving, and stop moving. A good sequence makes it...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>An animation sequence refers to the order in which different parts of an animation appear, start moving, and stop moving. </p><p>A good sequence makes it easy to understand what has changed about a screen, if any elements were added or removed, and what’s important to know about the next interaction.</p></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Simple sequences" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Simple sequences</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Simple sequences animate all elements in unison, such as the expansion of a bottom sheet.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Simple sequences animate all elements in unison, such as the expansion of a bottom sheet.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/17t9KO7HB9c0G8gu4NRoPufFG1wlrDm-A/01-simple-sequencing.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1838,7 +1866,7 @@ side-nav__link--active js-header-show"
 <p>This bottom sheet slides up using standard easing to expose additional options. All animation details, including color and position, start and stop in sync.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Complex sequences" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Complex sequences</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Complex transitions, like viewing details from a contact list, require more elaborate sequences. This can be done by dividing the transition into two parts, at...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Complex transitions, like viewing details from a contact list, require more elaborate sequences. This can be done by dividing the transition into two parts, at the point when elements move the fastest. Classify each of the elements into four categories: incoming, outgoing, persistent or static. </p><ul class="lst-kix_8tsni1qtofjl-0 start"><li>First part of transition: Outgoing elements disappear</li><li>Second part of transition: Incoming elements appear</li><li>Entire transition: Persistent elements transform</li></ul><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="sequencing-figure-caption-0" preload="metadata">
+<video aria-describedby="sequencing-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1uEgbsw1vO-syIDe-QpL_5wtCj1Wbo3wU/02-sequencing.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1869,7 +1897,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Simple transformations" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Simple transformations</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Simple transitions involve tweening all properties that change from one state to the next.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Simple transitions involve tweening all properties that change from one state to the next. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 42.1052631579%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/12ktnLiitvIAZd56kjO7lvdLL-v33roiv/00-simpletransformations.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1883,7 +1911,7 @@ side-nav__link--active js-header-show"
 <p>This simple transformation shows the switch component tweening its position and color by moving from left to right and fading from white to purple.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Complex transformations" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Complex transformations</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Complex layout changes use shared transformation to create smooth transitions from one layout to the next. Elements are grouped together and transform as a single...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Complex layout changes use <strong>shared transformation</strong> to create smooth transitions from one layout to the next. Elements are grouped together and transform as a single unit, rather than animating independently, avoiding multiple transformations that overlap and compete for attention. </p><p>Grouped elements are changed with a fade through transition. Grouped elements disappear and then reappear with their final appearance.</p><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 138.888888889%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/147RhimmePZk6VwWuzKd62lC22hhCMur-/01-pointoffocus-do.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1897,7 +1925,7 @@ side-nav__link--active js-header-show"
 <p class="s-tag-caption do">Do.</p><p>Minimize the number of elements that move independently. Transformation of the group directs attention to provide continuity, while individual elements fade in or out.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 138.888888889%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transformation-figure-caption-0" preload="metadata">
+<video aria-describedby="transformation-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/18W_-XPLH8EGPRkGZN1phvYd4SNCjf-fd/01-pointoffocus-dont.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1913,7 +1941,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 138.888888889%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transformation-figure-caption-1" preload="metadata">
+<video aria-describedby="transformation-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1I7htJZNBRC-2N3vvvJHttWNYS0P056Tp/01-pointoffocus-jumpcut-dont.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1929,7 +1957,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Transitions with animated containers" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Transitions with animated containers</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When a group of elements is contained by clearly defined borders during a transition, such as a card or set of dividers, the container transforms....</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>When a group of elements is contained by clearly defined borders during a transition, such as a card or set of dividers, the container transforms. The group of elements within maintains its aspect ratio, scaling to fit the container’s width. The group can be clipped by the container’s bottom edge.     </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/199PBrDIJP8gazFcLW61aQl5WGaBTORLy/02-focus-nofocalelement.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1943,7 +1971,7 @@ side-nav__link--active js-header-show"
 <p>Continuity is created by animating the group in unison with its container. The group scales to match the container’s width. When expanded, elements aren’t clipped, except at the bottom edge.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Transitions without animated containers" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Transitions without animated containers</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When a group of elements is not contained by clearly defined borders, or its container doesn’t animate, a shared transformation can create a smooth transition....</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When a group of elements is not contained by clearly defined borders, or its container doesn’t animate, a shared transformation can create a smooth transition. For example, a pair of icons within a floating action button can rotate in unison to create continuity. </p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transformation-figure-caption-2" preload="metadata">
+<video aria-describedby="transformation-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1LBt3UXraffWW5vOrB2I5ZsIvl1t1_i5u/04-symbolicmotion-fab.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1959,7 +1987,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="transformation-figure-caption-3" preload="metadata">
+<video aria-describedby="transformation-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/13oNTBhTKMGpifVbtU4T4Znf7fHc8I9_P/04-symbolicmotion-stepper.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1990,7 +2018,7 @@ side-nav__link--active js-header-show"
 <p>A transition may include a <strong>focal element</strong>, which is a persistent element significant to the hierarchy that can be tweened. Like animated containers, focal elements enhance continuity by seamlessly transforming their appearance.</p><figure class="inline-media inline-media--video rich-media" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1XBM_V1u6zFtSirZltC3vseXkXdFrIwHe/01-focalelement-large.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2004,7 +2032,7 @@ side-nav__link--active js-header-show"
 <p>The header image is a focal element, remaining visible from start to finish as it transforms between collapsed and expanded layouts.</p></figcaption><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Focal element conflicts" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Focal element conflicts</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Some transitions place a focal element in the path of other elements. In these cases, avoid using a focal element and apply the default transition,...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Some transitions place a focal element in the path of other elements. In these cases, avoid using a focal element and apply the default transition, allowing elements to disappear and then reappear. </p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="using-a-focal-element-figure-caption-0" preload="metadata">
+<video aria-describedby="using-a-focal-element-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/15XEXsn7mp0UbPGsGQCO69wdJ3WJ1yfTe/02-focus-focalelement-dont.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2020,7 +2048,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="using-a-focal-element-figure-caption-1" preload="metadata">
+<video aria-describedby="using-a-focal-element-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/15N3n1xwTt0briEbfIvFUG01pMv2d_xaT/02-focus-focalelement-do.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2036,7 +2064,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Grouping focal elements" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Grouping focal elements</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When a transitions have both a focal element and an animated container which can’t move in unison, divide the transition elements into groups. For example,...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When a transitions have both a focal element and an animated container which can’t move in unison, divide the transition elements into groups. </p><p>For example, a card transition can group together the motion of:</p><ul class="lst-kix_evnz3kj279mn-0 start"><li>A collapsed layout with a focal element </li><li>An expanded layout with a container (such as a card)</li></ul><hr class="spacer" role="separator"/></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="using-a-focal-element-figure-caption-2" preload="metadata">
+<video aria-describedby="using-a-focal-element-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/127onzjDQZZr-26BKXU-GnnCdo45BrGKG/03-focus-thumbnail-do.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2052,7 +2080,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="using-a-focal-element-figure-caption-3" preload="metadata">
+<video aria-describedby="using-a-focal-element-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/12AGnjN-9HFnn95jPLTkLrOWDmV9GbdPn/03-focus-thumbnail-dont.mp4" src="choreography.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2085,7 +2113,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html"}
 ' href="customization.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pYvqae0vbwNFpZrfLoEwtF6wPvm14bGV%2Fmotion-thumbnail-2x1.png');">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1pYvqae0vbwNFpZrfLoEwtF6wPvm14bGV/motion-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Motion</h3>
 <h4 class="suggested-articles__item-subtitle">Customization</h4>

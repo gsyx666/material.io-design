@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="sliders"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1587,16 +1587,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1962,12 +1990,29 @@ side-nav__link--active js-header-show"
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">sliders</div>
-<div class="col-list rich-media"><section class="module-module col-2 h3-spacing"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../usability/bidirectionality.html#mirroring-elements"}
+' href="../usability/bidirectionality.html#mirroring-elements" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1Bd_lRNrPaiDuuw4QOTkf0WZRytmvmrac/usability-thumbnail-1x1-circle.png" style="background-image: url('../assets/1Bd_lRNrPaiDuuw4QOTkf0WZRytmvmrac/usability-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Mirroring elements</h2>
+<p class="object-card__body">UIs for languages that are read from right-to-left (RTL), such as Arabic and Hebrew, should be mirrored to ensure content is easy to understand.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module-module col-2 h3-spacing"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1R7E69M9c12aTaQcXnpT8FveOtq3a_GOf/sliders-layout-elements.png" src="sliders.html">
 </img></div>
 </div>
-</figure></div><div class="module"><h3>A slider can contain the following elements:</h3><h3>1. Track</h3><p>The track shows the range available for user selection. The smallest value of a range is on the far left, and the largest value on the far right.</p><h3>2. Thumb</h3><p>The thumb slides along the track, displaying the selected value through its position.</p><h3>3. Value label (optional)</h3><p>A value label displays the currently selected, specific numerical value.</p><h3>4. Tick mark (optional)</h3><p>Tick marks represent predetermined values to which the user can move the slider.</p></div></section></div></div>
+</figure></div><div class="module"><h3>A slider can contain the following elements:</h3><h3>1. Track</h3><p>The track shows the range available for user selection. For left-to-right (LTR) languages, the smallest value appears on the far left, and the largest value on the far right. For right-to-left (RTL) languages this orientation is reversed, with the smallest value on the far right and the largest value on the far left.</p><h3>2. Thumb</h3><p>The thumb slides along the track, displaying the selected value through its position.</p><h3>3. Value label (optional)</h3><p>A value label displays the currently selected, specific numerical value.</p><h3>4. Tick mark (optional)</h3><p>Tick marks represent predetermined values to which the user can move the slider.</p></div></section></div></div>
         </div>
       </section>
 <hr />      <section id="continuous-slider" class="container container--large js-waypoints-trigger article__section" data-section-title="Continuous slider" aria-label="Continuous slider">
@@ -1985,7 +2030,7 @@ side-nav__link--active js-header-show"
 <p>Use continuous sliders allow users to make meaningful selections that don’t require a specific value.</p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Behavior" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>This continuous slider is controlled by clicking the thumb and dragging it. This continuous slider is controlled by clicking the track. This continuous slider is...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/12Y2vfKQag8lXsqcOftkisF8DhpDzjEMc/06-sliders-focus-cursor-drag-v02.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1999,7 +2044,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Click and drag</h2><p>This continuous slider is controlled by clicking the thumb and dragging it.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1GE9eYyWwXctMJKwZYXAPNtKGEIR4VyUU/08-sliders-cursor-jump.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2013,7 +2058,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Click jump</h2><p>This continuous slider is controlled by clicking the track.</p></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1RoXQ5wVrmt5FRRLtqGCP99BPHKRjVCL2/04-sliders-focus-cursor-tab.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2027,7 +2072,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Click and arrow</h2><p>This continuous slider is controlled by clicking the thumb, then using arrow keys to move it.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1albYYTt8omHw7lmsssbTzKOwFmGRnXw3/01-sliders-tab-arrow-focus.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2064,7 +2109,7 @@ side-nav__link--active js-header-show"
 <p>Discrete sliders display a numeric value label upon pressing the thumb, which allows a user to input an exact value. </p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Behavior" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>This discrete slider is controlled by clicking the thumb and dragging it. This discrete slider is controlled by clicking the track. This discrete slider is...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1zB4si613d1Do69sPModYqFT9GkrxdYSP/07-sliders-focus-discreet-cursor-drag-v03.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2078,7 +2123,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Click and drag</h2><p>This discrete slider is controlled by clicking the thumb and dragging it.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Ux-vIX5IVjjvNpSvpTyTJ0YMY7_wk_ep/09-sliders-discreet-cursor-jump.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2092,7 +2137,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Click jump</h2><p>This discrete slider is controlled by clicking the track.</p></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1mDmJ-yHky_d7h8MFt5KIky-r0-YigPar/05-sliders-focus-discreet-cursor-tab-v03.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2106,7 +2151,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Click and arrow</h2><p>This discrete slider is controlled by clicking the thumb, then using arrow keys to move it.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1E9lgEuZYc50pthOQ8GOZD5sOlD_XhmQN/03-sliders-arrow-focus-discreet.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2120,7 +2165,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Tab and arrow</h2><p>This discrete slider is controlled by using the tab key to select the thumb of the desired slider, then arrow keys to move it.</p></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1TdcwVIlDr59VrYkUzO2izxZ7BcZuHmBi/sliders-tick-marks-v02.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2134,7 +2179,7 @@ side-nav__link--active js-header-show"
 </figure><h2>Tick marks (Optional)</h2><p>Discrete sliders can use evenly spaced tick marks along the slider track, and the thumb will snap to them. Each tick mark should change the setting in increments that are discernible to the user. </p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/12CeqlOc7Jq30i39Ifjopf4dnCdqMi7np/sliders-value-entry-v01.mp4" src="sliders.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2377,85 +2422,6 @@ side-nav__link--active js-header-show"
 </ul>
 <div class="lazy-wrapper" style="width: 760px; height: 256px;">
 <img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1a-nzcctzW1hJkfo1dGtxEbo0EzideqLP/sliders-spec-discrete.png" src="sliders.html" style="width: 760px; height: 256px;"/>
-</div>
-<button class="ruler__trigger js-ruler-trigger"></button>
-<div class="ruler__cursor js-ruler-cursor">
-<span class="ruler__point ruler__point--left js-ruler-p1"></span>
-<span class="ruler__range js-ruler-range"></span>
-<span class="ruler__point ruler__point--right js-ruler-p2"></span>
-</div> </div>
-<div class="redline-icon" data-comp="Tooltip" data-props-tooltip='{"tip": "Specs",  "direction": "bottom"}'>
-<i class="material-icons">flip</i>
-</div>
-<div class="redline-smallres-message">
-<span class="redline-smallres-message__copy"><i class="redline-smallres-message__icon material-icons">flip</i>Specs only available at larger screen size</span>
-</div>
-</div>
-<p class="redline-unit-message">All measurements are displayed in <a class="redline-unit-message__link" href="../layout/understanding-layout.html#pixel-density" rel="noopener" target="_blank">device-independent pixels (dps)</a></p>
-<div class="colorpicker js-colorpicker">
-<div class="colorpicker__frame">
-<canvas class="colorpicker__magnifier js-colorpicker-magnifier"></canvas>
-<p class="colorpicker__color js-colorpicker-color"></p>
-<input class="colorpicker__val js-colorpicker-val" type="text"/>
-</div>
-</div> </div></div></section></div><div class="col-list"><section class="module col-1"><div class="module"><div class="js-lightbox-el" data-template="redline">
-<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/10jWM9HrDzPYk8tVVERXuodNy1I6obMf_/sliders-spec-discrete-range.png", "defaultView": "measurements"}'>
-<div class="redline-wrapper js-redline-wrapper">
-<ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
-<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-bottom js-measurement-dimensions" style="left:308px;width:12px;top:151px;">
-<span class="measurement__value measurement__value--offset">
-12      </span>
-</li>
-<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-bottom js-measurement-dimensions" style="left:388px;width:12px;top:152px;">
-<span class="measurement__value measurement__value--offset">
-12      </span>
-</li>
-<li class="measurement measurement--vertical measurement--dimensions measurement--pos-right js-measurement-dimensions" style="top:127px;width:2px;left:472px;">
-<span class="measurement__value measurement__value--offset">
-2      </span>
-</li>
-<li class="dimension measurement--outside measurement--equal measurement--dimensions js-measurement-dimensions" style="top:122px; left:308px; width:12px; height:12px">
-<span class="">
-</span>
-</li>
-<li class="dimension measurement--outside measurement--equal measurement--dimensions js-measurement-dimensions" style="top:122px; left:388px; width:12px; height:12px">
-<span class="">
-</span>
-</li>
-</ul>
-<ul class="redline js-redline-text js-redline-layer" data-redline-filter="text">
-</ul><ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
-<li class="annotation annotation--colors" data-comp="Annotation">
-<span class="annotation__layer" style="width:12px; height:12px; left:388px; top:122px"></span>
-<span class="annotation__vector" style="left:399px; top:125px; width:161px; transform:rotate(-92.489553deg)"></span>
-<span class="annotation__anchor js-annotation-anchor" style="left:399px; top:125px;"></span>
-<div class="annotation__card js-annotation-card" data-coords="left:312px; top:-78px;" style="left:312px; top:-78px;">
-<span class="annotation__swatch" style="background-color:#6022ee"></span>
-<p class="annotation__value annotation__value--first">#6022ee</p><p class="annotation__value annotation__value--second">R96 G34 B238</p> </div>
-</li>
-<li class="annotation annotation--colors" data-comp="Annotation">
-<span class="annotation__layer" style="width:144px; height:2px; left:308px; top:127px"></span>
-<span class="annotation__vector" style="left:439px; top:124px; width:203px; transform:rotate(89.435528deg)"></span>
-<span class="annotation__anchor js-annotation-anchor" style="left:439px; top:124px;"></span>
-<div class="annotation__card js-annotation-card" data-coords="left:361px; top:285px;" style="left:361px; top:285px;">
-<span class="annotation__swatch" style="background-color:#6022ee3d"></span>
-<p class="annotation__value annotation__value--first">#6022ee3d</p><p class="annotation__value annotation__value--second">R96 G34 B238 A0.24</p> </div>
-</li>
-</ul><ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
-<li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
-<span class="annotation__layer" style="width:144px; height:2px; left:308px; top:127px"></span>
-<span class="annotation__vector" style="left:448px; top:127px; width:412px; transform:rotate(2.501623deg)"></span>
-<span class="annotation__anchor js-annotation-anchor" style="left:448px; top:127px;"></span>
-<div class="annotation__card js-annotation-card" data-coords="left:780px; top:103px;" style="left:780px; top:103px;">
-<span class="annotation__note-type">Shape</span>
-<p class="annotation__note-title">All corners</p>
-<p class="annotation__value annotation__value--first">Rounded: 2dp</p> </div>
-</li>
-</ul><ul class="redline js-redline-components js-redline-layer" data-redline-filter="components">
-</ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
-</ul>
-<div class="lazy-wrapper" style="width: 760px; height: 256px;">
-<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/10jWM9HrDzPYk8tVVERXuodNy1I6obMf_/sliders-spec-discrete-range.png" src="sliders.html" style="width: 760px; height: 256px;"/>
 </div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">

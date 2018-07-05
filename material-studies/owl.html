@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="owl"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1088,20 +1088,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1165,6 +1151,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1598,16 +1598,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -2129,7 +2157,7 @@ side-nav__link--active js-header-show"
 </a>
 </aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>On smaller desktop views and tablets in portrait orientation, videos are hidden by default, but they can be revealed by accessing a side sheet.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="product-architecture-figure-caption-10" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F16xmZqPJhxQTdgW_b0Bt9PBdQugMDoLtN%2Fcasestudies-owl-section3-5.png" src="owl.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="product-architecture-figure-caption-10" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/16xmZqPJhxQTdgW_b0Bt9PBdQugMDoLtN/casestudies-owl-section3-5.png" src="owl.html">
 </img></div>
 </div>
 <figcaption id="product-architecture-figure-caption-10">
@@ -2152,7 +2180,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Grid system" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Grid system</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Owl uses a responsive grid system, which has flexible columns and padding that can resize depending on the screen width (such as mobile, tablet, or...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Owl uses a responsive grid system, which has flexible columns and padding that can resize depending on the screen width (such as mobile, tablet, or desktop). </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1GmnrRzPqeGhfdgfvJPXR4pxG00gRzUXP/casestudies-owl-grid-1a.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2489,7 +2517,7 @@ side-nav__link--active js-header-show"
 <p>Owl’s customized card collection, scaled down to 50%</p></figcaption>
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Sheets" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Sheets</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Owl uses sheets to present course tutorial videos. On desktop and tablet, these videos can be found in a side sheet customized with the Learn...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Owl uses sheets to present course tutorial videos. On desktop and tablet, these videos can be found in a side sheet customized with the Learn section’s primary color: pink.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="components-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F16xmZqPJhxQTdgW_b0Bt9PBdQugMDoLtN%2Fcasestudies-owl-section3-5.png" src="owl.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="components-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/16xmZqPJhxQTdgW_b0Bt9PBdQugMDoLtN/casestudies-owl-section3-5.png" src="owl.html">
 </img></div>
 </div>
 <figcaption id="components-figure-caption-7">
@@ -2497,7 +2525,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>On mobile, Owl uses a sheet to present course tutorial videos. Tapping the minimized sheet on the bottom right causes the sheet to expand to full-screen. </p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="components-figure-caption-8" preload="metadata">
+<video aria-describedby="components-figure-caption-8" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1ffyFOKYuke8yO-G9u_tODtMh36A2afiX/03-handletransition.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2584,7 +2612,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Launch screen" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Launch screen</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Owl’s launch screen displays a character animation (an animation that brings animated characters to life) to give the app a playful quality. Motion can be...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Owl’s launch screen displays a character animation (an animation that brings animated characters to life) to give the app a playful quality.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-0" preload="metadata">
+<video aria-describedby="motion-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1kC6H35u-ok-Gp3XBzE1vGV5Sx-m9kTKj/01-launch-v2.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2603,7 +2631,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#icons-illustrations"}
 ' href="../motion/customization.html#icons-illustrations" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Icons &amp; illustrations</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2650,7 +2678,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Animated icons" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Animated icons</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Owl’s icon animations are inspired by both its logo and loading state animations. Motion can be customized to express a distinct style and personality. Related...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Owl’s icon animations are inspired by both its logo and loading state animations.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 53.9473684211%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-1" preload="metadata">
+<video aria-describedby="motion-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1HcTiqNmmbOf81hudToN_5g2BR0BICetQ/02-owl-icons.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2670,7 +2698,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#speed"}
 ' href="../motion/customization.html#speed" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Speed</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2687,7 +2715,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#sequencing"}
 ' href="../motion/customization.html#sequencing" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Sequencing</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2717,7 +2745,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Navigation transitions" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Navigation transitions</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Navigational transitions are movements between states in an app, such as from a high-level view to a detailed view. Related Article arrow_downward Transition choreography is...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Top-level transitions</h2><hr class="spacer" role="separator"/><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-2" preload="metadata">
+<video aria-describedby="motion-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/10YjuVm8cgoIEmmQzB5IZ99Rvb89o4bgs/03-owl-topleveltransition-v2.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2733,7 +2761,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Parent-child transitions</h2><hr class="spacer" role="separator"/><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-3" preload="metadata">
+<video aria-describedby="motion-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/16x-PwELtnvYBadeT4jY3a49-kSixh_G3/03-parentchildtransition-v2.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2749,7 +2777,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><h2>Sheets transitions</h2><hr class="spacer" role="separator"/><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-4" preload="metadata">
+<video aria-describedby="motion-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Zuvu4h0Q0Mwb6oxUqKHyRN3FAYEuzdPm/03-handletransition.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2803,7 +2831,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#movement"}
 ' href="../motion/customization.html#movement" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Movement</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2816,7 +2844,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Oscillation" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Oscillation</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Selecting and scrolling chips display an oscillation effect, creating a quirky and playful vibe.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Selecting and scrolling chips display an oscillation effect, creating a quirky and playful vibe.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 63.1578947368%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-5" preload="metadata">
+<video aria-describedby="motion-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/11HAcJaqMP5gay0awMz80piGNQ8ZiXM-E/04-owl-oscillation-v2.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2831,7 +2859,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Loading" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Loading</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Loading is expressed using a pattern image treatment that is animated. The dotted pattern reflects the shape of the circular brand elements, such as the...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Loading is expressed using a pattern image treatment that is animated. The dotted pattern reflects the shape of the circular brand elements, such as the logo and icons.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-6" preload="metadata">
+<video aria-describedby="motion-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1pY_CTgVMDaRfwW_P1V1GgGTMCjCX77bv/05-loading-v2.mp4" src="owl.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>

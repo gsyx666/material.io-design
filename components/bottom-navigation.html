@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="bottomNavigation"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1598,16 +1598,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1903,9 +1931,9 @@ side-nav__link--active js-header-show"
       <div>
 <div aria-hidden="true" class="keywords hidden">bottom navigation</div>
 <h2>Bottom navigation bars allow movement between primary destinations in an app.</h2>
-<figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
-<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 33.6842105263%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="33.6842105263%" data-src="../assets/0B6xUSjjSulxcZ0F3X0FCQ1NPTHc/bottomnav-usage-1.png" src="bottom-navigation.html">
+<figure class="inline-media inline-media--image rich-media" data-maxwidth="1524px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 33.5958005249%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="33.5958005249%" data-src="../assets/1h5m0BGM_LfXii-6hO4JisEM0bcWvG0Gl/bottomnav-usage-1.png" src="bottom-navigation.html">
 </img></div>
 </div>
 </figure> </div>
@@ -2095,7 +2123,7 @@ side-nav__link--active js-header-show"
 </aside><p></p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-0" preload="metadata">
+<video aria-describedby="behavior-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1-Y09wDWkBCQtc96nxBzY-e0c34Aok4Dl/bottomnav-icons-1a.mp4" src="bottom-navigation.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2111,7 +2139,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-1" preload="metadata">
+<video aria-describedby="behavior-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/10oRw3R7ravU4WRNIhoP0Jal_GmJetnzg/bottomnav-icons-2a.mp4" src="bottom-navigation.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2134,7 +2162,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Scrolling" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Scrolling</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Upon scroll, the bottom navigation bar can appear or disappear:</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Upon scroll, the bottom navigation bar can appear or disappear:</p><ul class="lst-kix_uq5luy11bbfs-0 start"><li>Scrolling downward hides the bar</li><li>Scrolling upward reveals it</li></ul><hr class="spacer" role="separator"/></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-3" preload="metadata">
+<video aria-describedby="behavior-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1i9Bgvs2vzCMkB3xtehQ37j8ktbCIZbI6/bottomnav-scrolling-1b.mp4" src="bottom-navigation.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2150,7 +2178,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-4" preload="metadata">
+<video aria-describedby="behavior-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1-Y09wDWkBCQtc96nxBzY-e0c34Aok4Dl/bottomnav-icons-1a.mp4" src="bottom-navigation.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2166,7 +2194,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Transitions" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Transitions</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Swipe gestures do not navigate between bottom navigation views. Motion helps make a UI expressive and easy to use. Related Article arrow_downward When they appear,...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Swipe gestures do not navigate between bottom navigation views.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-5" preload="metadata">
+<video aria-describedby="behavior-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1ubytUIxpk5Cqf-sXElJulE0yQhJZMBpn/bottomnav-scrolling-do-1a.mp4" src="bottom-navigation.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2182,7 +2210,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-6" preload="metadata">
+<video aria-describedby="behavior-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1rpkhX9w__rj6aGtBxhaaB5Z-UVRdsx3K/bottomnav-scrolling-dont-1a.mp4" src="bottom-navigation.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2215,7 +2243,7 @@ side-nav__link--active js-header-show"
 </aside><p></p><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>When they appear, these items are displayed in front of the bottom navigation bar: </p><ul class="lst-kix_gmunby4y4hv7-0 start"><li>Bottom sheets</li><li>Navigation drawers</li><li>Keyboards </li></ul><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1n95-I3p0mwuaNhiHQfea4MUwjIzUmn1L/bottomnav-keyboard-1b.mp4" src="bottom-navigation.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2289,7 +2317,7 @@ side-nav__link--active js-header-show"
 <div aria-hidden="true" class="keywords hidden">bottom navigation</div>
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Fixed navigation bar" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Fixed navigation bar</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Bottom navigation bar destinations have fixed positions. They don’t scroll or move horizontally.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Bottom navigation bar destinations have fixed positions. They don’t scroll or move horizontally.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 33.6842105263%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="33.6842105263%" data-src="../assets/0B6xUSjjSulxcZXhJdlFoaU5UT3M/bottomnav-whentouse-dont-2.png" src="bottom-navigation.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="33.6842105263%" data-src="../assets/1A74f-oXeQJA8zPw5V8mJj4AihdZEwBOT/bottomnav-whentouse-dont-2.png" src="bottom-navigation.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-0">
@@ -2303,7 +2331,7 @@ side-nav__link--active js-header-show"
 <p class="s-tag-caption do">Do.</p><p>On mobile (in landscape mode) or tablet, bottom navigation destinations can retain the same spacing used in portrait mode, rather than being equally distributed across the bottom app bar. </p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 63.1578947368%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="63.1578947368%" data-src="../assets/0B6xUSjjSulxcLU91YlhMLWJEazA/bottomnav-whentouse-do-5.png" src="bottom-navigation.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="63.1578947368%" data-src="../assets/1L_WLQ5Ew8X_wefAnzOBl6-OWvidIQ0VK/bottomnav-whentouse-do-5.png" src="bottom-navigation.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-2">
@@ -2439,6 +2467,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../typography/understanding-typography.html#understanding-typography"}
 ' href="../typography/understanding-typography.html#understanding-typography" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png" style="background-image: url('../assets/1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M/typography-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Understanding typography</h2>
 <p class="object-card__body">Typography is critical in establishing hierarchy and expressing brand presence that support an effective digital experience.</p>

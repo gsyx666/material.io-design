@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="buttonsFloatingActionButton"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1609,16 +1609,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -2120,7 +2148,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Motion" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Motion</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When a FAB animates on screen, it expands outward from a central point. The icon within it may be animated as well. While FABs should...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Appearing on screen</h2><p>When a FAB animates on screen, it expands outward from a central point. The icon within it may be animated as well. </p><p>While FABs should be relevant to screen content, they aren’t attached to the surface on which content appears. FABs move separately from other UI elements because of their relative importance.</p><h2>Screen transitions</h2><p>FABs can morph to launch related actions. When a screen changes its layout, the FAB should disappear and reappear during the transition. </p><h2>Reappearance</h2><p>The FAB should only reappear if it’s relevant to the new screen. It should reappear in the same position, if possible.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-2" preload="metadata">
+<video aria-describedby="behavior-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1JEaZVuuYXGEHDNHY1gT0K0dYFeoSG6mm/fab-behavior-transition-v01.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2170,7 +2198,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Tabbed screens" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Tabbed screens</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When tabs are present, the FAB should briefly disappear, then reappear when the new content moves into place. This expresses that the FAB is not...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When tabs are present, the FAB should briefly disappear, then reappear when the new content moves into place. This expresses that the FAB is not connected to any particular tab.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-3" preload="metadata">
+<video aria-describedby="behavior-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1CFlxacAgTNwbHddEylfR0iqC6LBtLbej/fab-layout-transition-do-v01.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2186,7 +2214,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-4" preload="metadata">
+<video aria-describedby="behavior-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1B5uWW91oEZtlqp2bKP9uzNT_41MgGPkz/fab-layout-transition-dont-v01.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2217,7 +2245,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Speed dial " class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Speed dial </h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When pressed, a FAB can display three to six related actions in the form of a speed dial. This transition can occur in one of...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>When pressed, a FAB can display three to six related actions in the form of a <strong>speed dial</strong>. This transition can occur in one of the following ways:</p><ul class="lst-kix_phioofmrjkor-0 start"><li>Upon press, the FAB can emit related actions</li><li>Upon press, the FAB can transform into a menu containing related actions (Android only)</li></ul><hr class="spacer" role="separator"/><p>If more than six actions are needed, something other than a FAB should be used to present them.</p><h2>Emit related actions </h2><p>Upon press, the FAB remains visible and emits a stack of related actions. If the FAB is tapped is pressed in this state, it should either initiate its default action or close the speed dial actions.</p><figure class="inline-media inline-media--video" data-maxwidth="760px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1CMssxsx--CjFfG_JIw35cPRhxJldwRWM/fab-toolbar-speeddial-v03.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2290,7 +2318,7 @@ side-nav__link--active js-header-show"
 </aside><p></p><div class="col-list rich-media"><section class="figure col-1 h2-spacing"><div class="figure"><h2>Transform into a menu with the related actions</h2><p>Upon press on Android, the FAB can transform into a menu containing related actions. A scrim indicates that functionality outside of the action menu is temporarily disabled. The menu remains on-screen until an action, or the scrim, is tapped. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1pdXG8K2i6IR9i5V5raflvDwuADXdUACM/fab-transitions-menu-1.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2318,7 +2346,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Morph" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Morph</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The FAB can transform into another surface in an app. Morphing should be reversible and transform the new surface back into the FAB.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-figure col-2"><div class="module"><p>The FAB can transform into another surface in an app. Morphing should be reversible and transform the new surface back into the FAB.</p></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1DKiMU5LEKus0Beh3Vmmad3eQTgN8hohD/fab-morph-v1.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2332,7 +2360,7 @@ side-nav__link--active js-header-show"
 <p>A FAB can morph into a surface that is part of the app structure.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Full screen" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Full screen</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The FAB can transform into a new surface that spans the entire screen. This type of transformation is typically for creating new content.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-figure col-2"><div class="module"><p>The FAB can transform into a new surface that spans the entire screen. This type of transformation is typically for creating new content.</p></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Lilaq13K-G32kkTgZgS5iJ5lnAYHwexE/fab-toolbar-fullscreen-v06.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2465,7 +2493,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Behavior" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Extended FABs have speed dial options, and can transform into standard FABs if space is limited</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1 h2-spacing"><div class="figure"><h2>Speed dial</h2><p>The extended FAB can also display a speed dial of 3-6 related actions when tapped. On hover, these related actions expand to display labels. </p><p>During the speed dial transition, the extended FAB becomes a standard FAB.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Jmstk1Jw6xAnO4IY1dbE9morbTzcNzSY/extended-fab-behavior-speeddial.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2479,7 +2507,7 @@ side-nav__link--active js-header-show"
 <p>Extended FAB speed dial</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1 h2-spacing"><div class="figure"><h2>Transformation to a standard FAB</h2><p>If space becomes limited, the extended FAB can transform into a standard FAB. For example, if  an app viewport is resized below 840dp, or a navigation drawer opens up.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1FYbQlSuX3CjZ3S36OKsUVGdPDUG5cViL/extendedfab-desktop-transition.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2493,7 +2521,7 @@ side-nav__link--active js-header-show"
 <p>Extended FAB transforming into a standard FAB</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module-figure col-2"><div class="module"><p>An extended FAB can transform into a standard FAB when a screen is scrolled. </p><p>The FAB should not return to an extended FAB until the user scrolls back to the top of the page. </p></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1OTb9HPdZYx_7NVc3cizpA0T4ItMRb9Xi/efab-scroll.mp4" src="buttons-floating-action-button.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -3132,15 +3160,15 @@ C      </span>
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
 <li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:317px;width:380px;">
 </li>
-<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:333px;width:380px;">
+<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:329px;width:380px;">
 </li>
-<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:357px;width:380px;">
+<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:353px;width:380px;">
 </li>
 <li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:365px;width:380px;">
 </li>
-<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:423px;width:380px;">
+<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:424px;width:380px;">
 </li>
-<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:443px;width:380px;">
+<li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:444px;width:380px;">
 </li>
 <li class="keyline keyline--horizontal measurement--typography js-measurement-typography" style="top:190px;width:760px;">
 </li>
@@ -3148,15 +3176,15 @@ C      </span>
 <span class="measurement__value">
 48      </span>
 </li>
-<li class="measurement measurement--horizontal measurement--padding measurement--pos-top js-measurement-padding" style="left:317px;width:16px;top:150px;">
+<li class="measurement measurement--horizontal measurement--padding measurement--pos-top js-measurement-padding" style="left:317px;width:12px;top:150px;">
 <span class="measurement__value measurement__value--offset">
-16      </span>
+12      </span>
 </li>
-<li class="measurement measurement--horizontal measurement--padding measurement--pos-top js-measurement-padding" style="left:357px;width:8px;top:150px;">
+<li class="measurement measurement--horizontal measurement--padding measurement--pos-top js-measurement-padding" style="left:353px;width:12px;top:150px;">
 <span class="measurement__value measurement__value--offset">
-8      </span>
+12      </span>
 </li>
-<li class="measurement measurement--horizontal measurement--padding measurement--pos-top js-measurement-padding" style="left:423px;width:20px;top:149px;">
+<li class="measurement measurement--horizontal measurement--padding measurement--pos-top js-measurement-padding" style="left:424px;width:20px;top:149px;">
 <span class="measurement__value measurement__value--offset">
 20      </span>
 </li>
@@ -3164,21 +3192,21 @@ C      </span>
 <span class="measurement__value measurement__value--offset">
 C      </span>
 </li>
-<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-bottom js-measurement-dimensions" style="left:333px;width:24px;top:230px;">
+<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-bottom js-measurement-dimensions" style="left:329px;width:24px;top:230px;">
 <span class="measurement__value measurement__value--offset">
 24      </span>
 </li>
-<li class="dimension measurement--centered measurement--equal measurement--dimensions js-measurement-dimensions" style="top:178px; left:333px; width:24px; height:24px">
+<li class="dimension measurement--centered measurement--equal measurement--dimensions js-measurement-dimensions" style="top:178px; left:329px; width:24px; height:24px">
 <span class="">
 </span>
 </li>
 </ul>
 <ul class="redline js-redline-text js-redline-layer" data-redline-filter="text">
 <li class="annotation annotation--text" data-comp="Annotation">
-<span class="annotation__layer" style="width:58px; height:16px; left:365px; top:182px"></span>
-<span class="annotation__vector" style="left:391px; top:188px; width:241px; transform:rotate(-97.359954deg)"></span>
-<span class="annotation__anchor js-annotation-anchor" style="left:391px; top:188px;"></span>
-<div class="annotation__card js-annotation-card" data-coords="left:280px; top:-94px;" style="left:280px; top:-94px;">
+<span class="annotation__layer" style="width:59px; height:19px; left:365px; top:180px"></span>
+<span class="annotation__vector" style="left:391px; top:186px; width:241px; transform:rotate(-97.359954deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:391px; top:186px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:280px; top:-96px;" style="left:280px; top:-96px;">
 <a class="annotation__text-family" href="https://fonts.google.com/specimen/Roboto" rel="noopener" target="_blank">
           Roboto
           <img alt="Google Fonts" class="annotation__icon" src="../static/m2/images/font-logo.svg"/>
@@ -3187,7 +3215,7 @@ C      </span>
 </li>
 </ul><ul class="redline js-redline-colors js-redline-layer" data-redline-filter="colors">
 <li class="annotation annotation--colors" data-comp="Annotation">
-<span class="annotation__layer" style="width:126px; height:48px; left:317px; top:166px"></span>
+<span class="annotation__layer" style="width:127px; height:48px; left:317px; top:166px"></span>
 <span class="annotation__vector" style="left:378px; top:205px; width:257px; transform:rotate(91.114563deg)"></span>
 <span class="annotation__anchor js-annotation-anchor" style="left:378px; top:205px;"></span>
 <div class="annotation__card js-annotation-card" data-coords="left:293px; top:420px;" style="left:293px; top:420px;">
@@ -3196,20 +3224,20 @@ C      </span>
 </li>
 </ul><ul class="redline js-redline-shapes js-redline-layer" data-redline-filter="shapes">
 <li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
-<span class="annotation__layer" style="width:126px; height:48px; left:317px; top:166px"></span>
-<span class="annotation__vector" style="left:434px; top:187px; width:440px; transform:rotate(-8.884677deg)"></span>
-<span class="annotation__anchor js-annotation-anchor" style="left:434px; top:187px;"></span>
-<div class="annotation__card js-annotation-card" data-coords="left:789px; top:77px;" style="left:789px; top:77px;">
+<span class="annotation__layer" style="width:127px; height:48px; left:317px; top:166px"></span>
+<span class="annotation__vector" style="left:435px; top:187px; width:440px; transform:rotate(-8.884677deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:435px; top:187px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:790px; top:77px;" style="left:790px; top:77px;">
 <a class="annotation__note-link" href="../environment/elevation.html#default-elevations" rel="noopener" target="_blank"> <span class="annotation__note-type">Elevation</span>
 <i class="material-icons annotation__note-icon">open_in_new</i></a>
 <p class="annotation__note-title">Elevation</p>
 <p class="annotation__value annotation__value--first">6dp</p> </div>
 </li>
 <li class="annotation annotation--shapes annotation--note" data-comp="Annotation">
-<span class="annotation__layer" style="width:126px; height:48px; left:317px; top:166px"></span>
-<span class="annotation__vector" style="left:431px; top:212px; width:482px; transform:rotate(25.396995deg)"></span>
-<span class="annotation__anchor js-annotation-anchor" style="left:431px; top:212px;"></span>
-<div class="annotation__card js-annotation-card" data-coords="left:787px; top:377px;" style="left:787px; top:377px;">
+<span class="annotation__layer" style="width:127px; height:48px; left:317px; top:166px"></span>
+<span class="annotation__vector" style="left:432px; top:212px; width:482px; transform:rotate(25.396995deg)"></span>
+<span class="annotation__anchor js-annotation-anchor" style="left:432px; top:212px;"></span>
+<div class="annotation__card js-annotation-card" data-coords="left:788px; top:377px;" style="left:788px; top:377px;">
 <span class="annotation__note-type">Shape</span>
 <p class="annotation__note-title">All corners</p>
 <p class="annotation__value annotation__value--first">Rounded: 32dp</p> </div>

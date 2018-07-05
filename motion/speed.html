@@ -7,7 +7,7 @@
 
 <meta itemprop="name"        property="og:title"       name="twitter:title"       content="Speed" />
     <meta itemprop="description" property="og:description" name="twitter:description" content="Speed adjustments make transitions responsive and smooth." />
-    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1-L-DkkafiBcalmMPK-iIs_NQv59mbibG%2Fmotion-thumbnail-2x1.png" />
+    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1-L-DkkafiBcalmMPK-iIs_NQv59mbibG/motion-thumbnail-2x1.png" />
     <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/motion/speed.html" />
     <meta property="og:site_name" content="Material Design" />
     <meta property="og:type" content="article" />
@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="speed"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1033,20 +1033,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1110,6 +1096,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1543,16 +1543,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1824,7 +1852,7 @@ side-nav__link--active js-header-show"
 <p>Transition speed is the observable speed at which a UI changes states. It’s primarily controlled by adjusting <strong>duration</strong> (how long a transition lasts), but also by <strong>easing</strong> (acceleration over time) and the distance that elements move.</p><p>Apply the right easing type before adjusting duration, as easing adjustments may affect duration.</p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Usage" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Appropriate transition speed helps users to follow UI changes, without complicating tasks. The shortest duration possible should be used that isn’t abrupt or jarring.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Appropriate transition speed helps users to follow UI changes, without complicating tasks. The shortest duration possible should be used that isn’t abrupt or jarring.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="controlling-speed-figure-caption-0" preload="metadata">
+<video aria-describedby="controlling-speed-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1LF2pGhJOfOnGGqblGJjdQLVathWxZRtn/posivibe-speed-do-v03.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1840,7 +1868,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="controlling-speed-figure-caption-1" preload="metadata">
+<video aria-describedby="controlling-speed-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1EEn4kTxRczgdoWL_AjW33ALdppgRzRXA/posivibe-speed-dont-v02.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1871,7 +1899,7 @@ side-nav__link--active js-header-show"
 <p>Regardless of an animation’s style, transitions shouldn’t be jarringly fast or so slow that they keep the user waiting. The right combination of duration and easing produces fluid and clear transitions. The factors below detail how duration should be adjusted to suit each animation.</p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Complexity level" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Complexity level</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Simple animations require less time to complete than complex animations.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Simple animations require less time to complete than complex animations.</p><h2>Simple animations</h2></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-0" preload="metadata">
+<video aria-describedby="duration-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1JuV3ujUJaAZoPn8Y7KGemr8Zi846cMmY/01-iconssimple.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1887,7 +1915,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-1" preload="metadata">
+<video aria-describedby="duration-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1C-tYUDSRl3SdBYAdSgebXG0ykPqWW2Gd/01-dialogsenterexit.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1904,7 +1932,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Complex animations</h2></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-2" preload="metadata">
+<video aria-describedby="duration-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1nBDzV1vaDxxZxH_7uQIyzRU-jx4uk5Pk/01-iconsmedium.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1920,7 +1948,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-3" preload="metadata">
+<video aria-describedby="duration-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/11blQMsxyud2-41e7tH_Ivg3aZ7wbB7mr/01-iconscomplex.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1936,7 +1964,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Exits and closing" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Exits and closing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Transitions that close, dismiss, or collapse an element use shorter durations, as they require less user attention than the user’s next task.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Transitions that close, dismiss, or collapse an element use shorter durations, as they require less user attention than the user’s next task.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-4" preload="metadata">
+<video aria-describedby="duration-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1-u7zPNV1Gi7X0eab2W7L15T3yBlAA3Ay/02-baseline-enterexit.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1952,7 +1980,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-5" preload="metadata">
+<video aria-describedby="duration-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1DjpqQm75RdU_LQR-W_JXsnGqHUhI7YNe/02-baseline-expand-collapse-v05.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1968,7 +1996,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Area" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Area</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Transitions that traverse a small area of the screen have shorter durations than those that traverse larger areas. Animated elements that traverse a small portion...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Transitions that traverse a small area of the screen have shorter durations than those that traverse larger areas.</p><h2>Small</h2><p>Animated elements that traverse a small portion of the screen have short durations, like icons and selection controls.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 42.1052631579%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1C7wBTAB-C59_Zcc6jx-hhbGq6W__o5Ch/01-smallswitch.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1982,7 +2010,7 @@ Fade out duration: 75ms</br></p></figcaption>
 <p>A switch animation has a duration of 100ms.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Medium</h2><p>Animated elements that traverse a larger part of the screen have slightly longer durations, like bottom sheets and expanding chips.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-6" preload="metadata">
+<video aria-describedby="duration-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1dC2Lox3ka8k5btiQUqnoDB-XW5knn4iz/02-bottomsheet-partial.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -1998,7 +2026,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-7" preload="metadata">
+<video aria-describedby="duration-figure-caption-7" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1p9oXowcJm_aThP-6Gp9vB-P43ZBR0hTD/02-chips-partial.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2014,7 +2042,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Large</h2><p>Animated elements that traverse a large portion of the screen have the longest durations.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-8" preload="metadata">
+<video aria-describedby="duration-figure-caption-8" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/12lJYN0ExkuVEZafpKnpPghBlN4sdtns4/03-card-full.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2030,7 +2058,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="duration-figure-caption-9" preload="metadata">
+<video aria-describedby="duration-figure-caption-9" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1JQ3CGta4TuyiYdJQ4m6VAMi3w3gUNjkh/03-dps-full.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2061,7 +2089,7 @@ Fade out duration: 75ms</br></p></figcaption>
 <div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Easing is a way to adjust an animation’s rate of change. Easing allows transitioning elements to speed up and slow down, rather than moving at a constant rate.</p><p>In the real world, things don’t start or stop moving instantaneously. They take time to speed up and slow down. Easing makes elements move as though influenced by natural forces like friction.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuM3JQc1ZLendUYUE/01-curvenocurve-v1.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2075,7 +2103,7 @@ Fade out duration: 75ms</br></p></figcaption>
 <p>Transitions without easing look stiff and mechanical.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="easing-figure-caption-0" preload="metadata">
+<video aria-describedby="easing-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1uI7As-Smv3nV-0BR-692RRFwDGVOs1hf/01-easing-do.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2091,7 +2119,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="easing-figure-caption-1" preload="metadata">
+<video aria-describedby="easing-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/16QLjb_7y58PHdiLUIhJ7b7ECELTwAouq/01-easing-dont.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2107,7 +2135,7 @@ Fade out duration: 75ms</br></p></figcaption>
 </figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Easing types" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Easing types</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Easing types may be named differently across platforms. These guidelines refer to them as standard, accelerate, and decelerate.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Easing types may be named differently across platforms. These guidelines refer to them as standard, accelerate, and decelerate.</p></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Standard easing" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Standard easing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Standard easing puts subtle attention at the end of an animation, by giving more time to deceleration than acceleration. It is the most common form...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p><strong>Standard easing</strong> puts subtle attention at the end of an animation, by giving more time to deceleration than acceleration. It is the most common form of easing. </p><p>Elements that begin and end at rest use standard easing. They speed up quickly and slow down gradually, in order to emphasize the end of the transition. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 46.0526315789%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuekt5cXlGRjc2Sk0/02-standardcurve-v1.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2121,7 +2149,7 @@ Fade out duration: 75ms</br></p></figcaption>
 <p>This graph shows the easing of an element that remains visible throughout a transition. The y-axis shows the position and the x-axis shows the time.</p></figcaption><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Platform</p></td><td colspan="1" rowspan="1"><p>Protocol</p></td></tr><tr><td colspan="1" rowspan="1"><p>Android</p></td><td colspan="1" rowspan="1"><p>FastOutSlowInInterpolator</p></td></tr><tr><td colspan="1" rowspan="1"><p>iOS</p></td><td colspan="1" rowspan="1"><p>[[CAMediaTimingFunction alloc] initWithControlPoints:0.4f:0.0f:0.2f:1.0f]</p></td></tr><tr><td colspan="1" rowspan="1"><p>CSS</p></td><td colspan="1" rowspan="1"><p>cubic-bezier(0.4, 0.0, 0.2, 1);</p></td></tr><tr><td colspan="1" rowspan="1"><p>After Effects</p></td><td colspan="1" rowspan="1"><p>Outgoing Easing: 40%, Incoming Easing: 80%</p></td></tr></tbody></table></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Decelerate easing" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Decelerate easing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Incoming elements are animated using deceleration easing, which starts a transition at peak velocity (the fastest point of an element’s movement) and ends at rest....</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Incoming elements are animated using deceleration easing, which starts a transition at peak velocity (the fastest point of an element’s movement) and ends at rest. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 46.0526315789%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuNE9qYVNuYXA2RjA/03-deceleratecurve.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2135,7 +2163,7 @@ Fade out duration: 75ms</br></p></figcaption>
 <p>This graph shows the easing of an element that is visible only at the end of a transition. The y-axis shows the position and the x-axis shows the time.</p></figcaption><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Platform</p></td><td colspan="1" rowspan="1"><p>Protocol</p></td></tr><tr><td colspan="1" rowspan="1"><p>Android</p></td><td colspan="1" rowspan="1"><p>LinearOutSlowInInterpolator</p></td></tr><tr><td colspan="1" rowspan="1"><p>iOS</p></td><td colspan="1" rowspan="1"><p> [[CAMediaTimingFunction alloc] initWithControlPoints:0.0f:0.0f:0.2f:1.0f]</p></td></tr><tr><td colspan="1" rowspan="1"><p>CSS</p></td><td colspan="1" rowspan="1"><p>cubic-bezier(0.0, 0.0, 0.2, 1);</p></td></tr><tr><td colspan="1" rowspan="1"><p>After Effects</p></td><td colspan="1" rowspan="1"><p>Outgoing Easing: 0%, Incoming Easing: 80%</p></td></tr></tbody></table></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Accelerate easing" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Accelerate easing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Elements exiting a screen use acceleration easing, where they start at rest and end at peak velocity. Platform Protocol Android FastOutLinearInInterpolator iOS [CAMediaTimingFunction alloc] initWithControlPoints:0.4f:0.0f:1.0f:1.0f]...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Elements exiting a screen use acceleration easing, where they start at rest and end at peak velocity. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 46.0526315789%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/0B8wSqcLwbhFuZHk2T2RDNGZ2X1k/04-acceleratecurve.mp4" src="speed.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2176,7 +2204,7 @@ Fade out duration: 75ms</br></p></figcaption>
     "action": "link click",
     "label": "../motion/customization.html"}
 ' href="customization.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pYvqae0vbwNFpZrfLoEwtF6wPvm14bGV%2Fmotion-thumbnail-2x1.png');">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1pYvqae0vbwNFpZrfLoEwtF6wPvm14bGV/motion-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Motion</h3>
 <h4 class="suggested-articles__item-subtitle">Customization</h4>

@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="chips"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1609,16 +1609,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -2038,7 +2066,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Behavior" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Input chips are predictive, editable, movable, expandable, and appear in groups.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Transformative</h2><p>Input chips transform text based on user input.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 33.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="input-chips-figure-caption-3" preload="metadata">
+<video aria-describedby="input-chips-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1svbT-33UphMekKNnFvXlvgHmQzhCDCTh/entry-chip-behavior-predictive.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2054,7 +2082,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="figure col-1 h2-spacing"><div class="figure"><h2>Editable</h2><p>An input chip’s text is editable until the user takes an action with the chip, such as sending an email. To edit an input chip’s text, tap the chip.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 33.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/12UiMVkjIJrWLKyDljDbbSgJQSuTs5vZR/entry-chip-behavior-editable.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2075,7 +2103,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Multiple</h2><p>A single field can contain multiple entry chips.</p><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="input-chips-figure-caption-5" preload="metadata">
+<video aria-describedby="input-chips-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1PYJY66N9gF0NQQUa84KXYkHj1F_aYyVf/entry-chip-behavior-multiple.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2091,7 +2119,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><h2>Movable</h2><p>Entry chips can be reordered or moved into other fields. </p><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="input-chips-figure-caption-6" preload="metadata">
+<video aria-describedby="input-chips-figure-caption-6" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1yP4gEV5gaomMWK30xoTCO3mSPFwvi7Wv/entry-chip-behavior-draggable.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2107,7 +2135,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="figure col-1 h2-spacing"><div class="figure"><h2>Expandable</h2><p>Input chips can expand to show more information or options.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 33.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1UpLaNgayWmHV8gIGOybjBMGXfsm2KrU2/entry-chip-behavior-expandable.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2128,7 +2156,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 33.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1fa62nXcCK1CgMTZ28nE0KfE-vkH1aHsm/entry-chip-placement-scrolling.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2249,7 +2277,7 @@ side-nav__link--active js-header-show"
 </aside><p> </p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Behavior" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Selecting a single choice chip automatically deselects all other chips in the set.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Selecting a single choice chip automatically deselects all other chips in the set. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 33.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1kmAs_G2pTnVZIlsv3uCAvVZ9-IQCW_2V/choice-chip-behavior-selecting.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2381,7 +2409,7 @@ side-nav__link--active js-header-show"
 </aside><p> </p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Behavior" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Tap a chip to select it. Multiple chips can be selected or unselected.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Tap a chip to select it. Multiple chips can be selected or unselected.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1WEA2B1bfqKZpHXPbUJFhfYsRwa7pCoRw/filter-chip-behavior-selecting.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2395,7 +2423,7 @@ side-nav__link--active js-header-show"
 <p>An icon can be added to indicate when a filter chip is selected.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1HPWjVZ3wbRi7t0M68N8xcPQpAEtGr_EM/filter-chip-behavior-selecting-dynamic.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2534,7 +2562,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Behavior" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Action chips can trigger an action or show progress and confirmation.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Action chips can trigger an action or show progress and confirmation.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 33.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1kltjugAHoq0shPs4Fe4t0tH3Ucwnu20r/action-chip-behavior-tapping.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2548,7 +2576,7 @@ side-nav__link--active js-header-show"
 <p>Tapping an action chip triggers a contextual action.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 33.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="action-chips-figure-caption-2" preload="metadata">
+<video aria-describedby="action-chips-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1OpzE0nXqZJBm66WRVbaGvTbZEIaRAWfD/action-chip-behavior-confirmation.mp4" src="chips.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2980,7 +3008,7 @@ side-nav__link--active js-header-show"
           <div>
 <div aria-hidden="true" class="keywords hidden">chips spec</div>
 <div class="col-list"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Action chip</h2><div class="js-lightbox-el" data-template="redline">
-<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1wT5tTIVacbicVoJeQ52O6EdcpHOtpfVB%2Fspecs-chips-action.png", "defaultView": "measurements"}'>
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1wT5tTIVacbicVoJeQ52O6EdcpHOtpfVB/specs-chips-action.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
 <li class="keyline keyline--horizontal measurement--typography js-measurement-typography" style="top:181px;width:360px;">
@@ -3055,7 +3083,7 @@ C      </span>
 </ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
 <div class="lazy-wrapper" style="width: 360px; height: 360px;">
-<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1wT5tTIVacbicVoJeQ52O6EdcpHOtpfVB%2Fspecs-chips-action.png" src="chips.html" style="width: 360px; height: 360px;"/>
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1wT5tTIVacbicVoJeQ52O6EdcpHOtpfVB/specs-chips-action.png" src="chips.html" style="width: 360px; height: 360px;"/>
 </div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">
@@ -3078,7 +3106,7 @@ C      </span>
 <input class="colorpicker__val js-colorpicker-val" type="text"/>
 </div>
 </div> </div></div><div class="module"><h2>Outlined action chip</h2><div class="js-lightbox-el" data-template="redline">
-<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1ViXjQ0VVbUTCWxYszJUt4t3xajmIgBR-%2Fspecs-outlined-chips-action.png", "defaultView": "measurements"}'>
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1ViXjQ0VVbUTCWxYszJUt4t3xajmIgBR-/specs-outlined-chips-action.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
 <li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:112px;width:360px;">
@@ -3150,7 +3178,7 @@ C      </span>
 </ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
 <div class="lazy-wrapper" style="width: 360px; height: 360px;">
-<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1ViXjQ0VVbUTCWxYszJUt4t3xajmIgBR-%2Fspecs-outlined-chips-action.png" src="chips.html" style="width: 360px; height: 360px;"/>
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1ViXjQ0VVbUTCWxYszJUt4t3xajmIgBR-/specs-outlined-chips-action.png" src="chips.html" style="width: 360px; height: 360px;"/>
 </div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">
@@ -3173,7 +3201,7 @@ C      </span>
 <input class="colorpicker__val js-colorpicker-val" type="text"/>
 </div>
 </div> </div></div></section></div><div class="col-list"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Choice chip</h2><div class="js-lightbox-el" data-template="redline">
-<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1LgVZMCD2CAQW9l6qr5ZEuCTGZr6KCS1x%2Fspecs-chips-choice.png", "defaultView": "measurements"}'>
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1LgVZMCD2CAQW9l6qr5ZEuCTGZr6KCS1x/specs-chips-choice.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
 <li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:215px;width:360px;">
@@ -3248,7 +3276,7 @@ C      </span>
 </ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
 <div class="lazy-wrapper" style="width: 360px; height: 360px;">
-<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1LgVZMCD2CAQW9l6qr5ZEuCTGZr6KCS1x%2Fspecs-chips-choice.png" src="chips.html" style="width: 360px; height: 360px;"/>
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1LgVZMCD2CAQW9l6qr5ZEuCTGZr6KCS1x/specs-chips-choice.png" src="chips.html" style="width: 360px; height: 360px;"/>
 </div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">
@@ -3271,7 +3299,7 @@ C      </span>
 <input class="colorpicker__val js-colorpicker-val" type="text"/>
 </div>
 </div> </div></div><div class="module"><h2>Filter chip</h2><div class="js-lightbox-el" data-template="redline">
-<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1b952ZIVr9YKj47n6GAVckgMgSM53ULH4%2Fspecs-chips-filter.png", "defaultView": "measurements"}'>
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1b952ZIVr9YKj47n6GAVckgMgSM53ULH4/specs-chips-filter.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
 <li class="keyline keyline--horizontal measurement--typography js-measurement-typography" style="top:180px;width:360px;">
@@ -3346,7 +3374,7 @@ C      </span>
 </ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
 <div class="lazy-wrapper" style="width: 360px; height: 360px;">
-<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1b952ZIVr9YKj47n6GAVckgMgSM53ULH4%2Fspecs-chips-filter.png" src="chips.html" style="width: 360px; height: 360px;"/>
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1b952ZIVr9YKj47n6GAVckgMgSM53ULH4/specs-chips-filter.png" src="chips.html" style="width: 360px; height: 360px;"/>
 </div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">
@@ -3369,7 +3397,7 @@ C      </span>
 <input class="colorpicker__val js-colorpicker-val" type="text"/>
 </div>
 </div> </div></div></section></div><div class="col-list"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Input chip</h2><div class="js-lightbox-el" data-template="redline">
-<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1nygxUm01qpHU0krNdV--zwTsgcDZeEeG%2Fspecs-chips-input.png", "defaultView": "measurements"}'>
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1nygxUm01qpHU0krNdV--zwTsgcDZeEeG/specs-chips-input.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
 <li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:247px;width:360px;">
@@ -3476,7 +3504,7 @@ C      </span>
 </ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
 <div class="lazy-wrapper" style="width: 360px; height: 360px;">
-<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1nygxUm01qpHU0krNdV--zwTsgcDZeEeG%2Fspecs-chips-input.png" src="chips.html" style="width: 360px; height: 360px;"/>
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1nygxUm01qpHU0krNdV--zwTsgcDZeEeG/specs-chips-input.png" src="chips.html" style="width: 360px; height: 360px;"/>
 </div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">
@@ -3499,7 +3527,7 @@ C      </span>
 <input class="colorpicker__val js-colorpicker-val" type="text"/>
 </div>
 </div> </div></div><div class="module"><h2>Chips in groups</h2><div class="js-lightbox-el" data-template="redline">
-<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1PMwNpp8Ow45ChuqAjkhUXPvHlNbZXL4s%2Fspecs-chipsingrous.png", "defaultView": "measurements"}'>
+<div class="redline-viewer redline-viewer--inline media-placeholder zoom-target redline--no-thumb js-redline-viewer js-zoom-target" data-comp="RedlineViewer" data-props-redlineviewer='{"artboardSource": "../assets/1PMwNpp8Ow45ChuqAjkhUXPvHlNbZXL4s/specs-chipsingrous.png", "defaultView": "measurements"}'>
 <div class="redline-wrapper js-redline-wrapper">
 <ul class="redline js-redline-measurements js-redline-layer" data-redline-filter="measurements">
 <li class="keyline keyline--vertical measurement--padding js-measurement-padding" style="left:184px;width:360px;">
@@ -3556,7 +3584,7 @@ C      </span>
 </ul><ul class="redline js-redline-notes js-redline-layer" data-redline-filter="notes">
 </ul>
 <div class="lazy-wrapper" style="width: 360px; height: 360px;">
-<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1PMwNpp8Ow45ChuqAjkhUXPvHlNbZXL4s%2Fspecs-chipsingrous.png" src="chips.html" style="width: 360px; height: 360px;"/>
+<img alt="" class="redline-artboard lightbox__image lazy-wrapper__image js-lightbox-image animatable js-redline-image js-lazy-image" data-src="../assets/1PMwNpp8Ow45ChuqAjkhUXPvHlNbZXL4s/specs-chipsingrous.png" src="chips.html" style="width: 360px; height: 360px;"/>
 </div>
 <button class="ruler__trigger js-ruler-trigger"></button>
 <div class="ruler__cursor js-ruler-cursor">

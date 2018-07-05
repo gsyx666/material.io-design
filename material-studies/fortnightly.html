@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="fortnightly"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1088,20 +1088,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1165,6 +1151,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1598,16 +1598,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -2046,7 +2074,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Grid system" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Grid system</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Fortnightly combines a variety of information together, particularly in places such as the landing page. In other places, such as an individual article, there is...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Fortnightly combines a variety of information together, particularly in places such as the landing page. In other places, such as an individual article, there is generous whitespace for content. All pages use the same responsive grid, allowing content to reflow into the screen space available, after certain breakpoints are reached. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1FhlE0PI8wSooJF5qMyZaJl5wiEsEBvVG/casestudies-fortnightly-grid-1a.mp4" src="fortnightly.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2457,7 +2485,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="components-figure-caption-5" preload="metadata">
+<video aria-describedby="components-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1ardixgr7aLYxlBS6a7TTmcXb9C-DUuA1/casestudies-fortnightly-components-textfields-loading-1a.mp4" src="fortnightly.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2574,7 +2602,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Product icon" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Product icon</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Fortnightly’s logo animation reflects the calligraphic nature of its letterforms. Motion can be customized to express a distinct style and personality. Related Article arrow_downward Product...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Fortnightly’s logo animation reflects the calligraphic nature of its letterforms.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 63.1578947368%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-0" preload="metadata">
+<video aria-describedby="motion-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1XtfbGL8wlsNye8E7MOGLqnwIqduesuzf/fortnightly-logo.mp4" src="fortnightly.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2594,7 +2622,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
     "action": "link click",
     "label": "../motion/customization.html#icons-illustrations"}
 ' href="../motion/customization.html#icons-illustrations" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Icons &amp; illustrations</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2641,7 +2669,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Navigation transitions" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Navigation transitions</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Fortnightly uses simple fade through and condensed transitions to complement its reserved approach to branding. The simple transition style helps balance the dense amount of...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Fortnightly uses simple fade through and condensed transitions to complement its reserved approach to branding. The simple transition style helps balance the dense amount of content displayed.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-1" preload="metadata">
+<video aria-describedby="motion-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1B7TtF4An4aObc6MxMIrG5wz8gfvHt5Ef/fortnightly-condensedtransition.mp4" src="fortnightly.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2657,7 +2685,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-2" preload="metadata">
+<video aria-describedby="motion-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1H5lR1i63BMfOQl9yG-TJ9oSNzRobqqpy/fortnightly-fadethrough-desktop.mp4" src="fortnightly.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2677,7 +2705,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
     "action": "link click",
     "label": "../motion/customization.html#speed"}
 ' href="../motion/customization.html#speed" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Speed</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2694,7 +2722,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
     "action": "link click",
     "label": "../motion/customization.html#condensing-transitions"}
 ' href="../motion/customization.html#condensing-transitions" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Condensing transitions</h2>
 <p class="object-card__body"></p>
@@ -2724,7 +2752,7 @@ Fortnightly’s information architecture is organized into a catalog structure. 
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Loading" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Loading</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Fortnightly uses subtle stagger animation on placeholder elements to indicate loading without distracting from the content.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Fortnightly uses subtle stagger animation on placeholder elements to indicate loading without distracting from the content.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-3" preload="metadata">
+<video aria-describedby="motion-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1gaa-7Ba_8Faa19OELiTHpti1rGZmh_Kh/fortnightly-loading.mp4" src="fortnightly.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>

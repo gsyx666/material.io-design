@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Gesture education - Material Design</title>
+    <title>Offline states - Material Design</title>
 
-<meta itemprop="name"        property="og:title"       name="twitter:title"       content="Gesture education" />
-    <meta itemprop="description" property="og:description" name="twitter:description" content="Gesture education helps users understand how to interact with a specific element for the first time." />
-    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1bMYkOR3ZuA3_4CmOlCl4IgUJx5TTl15x/communication-thumbnail-2x1.png" />
-    <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/communication/gesture-education.html" />
+<meta itemprop="name"        property="og:title"       name="twitter:title"       content="Offline states" />
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Offline states allow users to interact with an app without Internet access." />
+    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/assets/1THK7U32G9Jge3lzd63zxiKo2a8BtSZwO/communication-thumbnail-2x1.png" />
+    <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/communication/offline-states.html" />
     <meta property="og:site_name" content="Material Design" />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary" />
@@ -35,8 +35,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <body class="header-show page--article left-rail"
         data-comp="Global "
-        data-slug-id="gestureEducation"
-        data-spec-alias="mio-design-staging"
+        data-slug-id="offlineStates"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -171,23 +171,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </li>
       <li class="breadcrumbs__crumb">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
-           href="gesture-education.html"
+           href="offline-states.html"
            data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>Gesture education</a>
+    "label": "../communication/offline-states.html"}
+'>Offline states</a>
       </li>
       <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
         <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
-           href="gesture-education.html#types"
+           href="offline-states.html#principles"
            data-analytics='  {
     "event": "trackEvent",
     "category": "breadcrumb navigation",
     "action": "nav click",
-    "label": "#types"}
-'>Types</a>
+    "label": "#principles"}
+'>Principles</a>
       </li>
   </ol>
 </nav>
@@ -994,47 +994,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-side-nav__link--active js-header-show"
-              href="gesture-education.html" aria-current="page" data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-            <div class="side-nav__articles">
-              <i class="side-nav__progress-bar">
-                <i class="side-nav__scrub js-submenu-scrub"></i>
-              </i>
-                <div>
-                  <a class="side-nav__article js-anchor-link js-anchor-link-types js-analytics-click" href="gesture-education.html#types" data-section-id="types"
-                     data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "#types"}
-'>
-                    <span class="js-anchor-text">Types</span>
-                  </a>
-                </div>
-                <div>
-                  <a class="side-nav__article js-anchor-link js-anchor-link-how-to-use js-analytics-click" href="gesture-education.html#how-to-use" data-section-id="how-to-use"
-                     data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "#how-to-use"}
-'>
-                    <span class="js-anchor-text">How to use</span>
-                  </a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
               href="help-feedback.html"data-analytics='  {
     "event": "trackEvent",
@@ -1101,6 +1060,58 @@ side-nav__link--active js-header-show"
             Writing
           </a>
 
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+side-nav__link--active js-header-show"
+              href="offline-states.html" aria-current="page" data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
+          </a>
+
+            <div class="side-nav__articles">
+              <i class="side-nav__progress-bar">
+                <i class="side-nav__scrub js-submenu-scrub"></i>
+              </i>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-principles js-analytics-click" href="offline-states.html#principles" data-section-id="principles"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#principles"}
+'>
+                    <span class="js-anchor-text">Principles</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-offline-functionality js-analytics-click" href="offline-states.html#offline-functionality" data-section-id="offline-functionality"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#offline-functionality"}
+'>
+                    <span class="js-anchor-text">Offline functionality</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-offline-settings js-analytics-click" href="offline-states.html#offline-settings" data-section-id="offline-settings"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#offline-settings"}
+'>
+                    <span class="js-anchor-text">Offline settings</span>
+                  </a>
+                </div>
+            </div>
         </li>
     </ul>
   </div>
@@ -1532,16 +1543,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1750,28 +1789,37 @@ side-nav__link--active js-header-show"
         <span class="eyebrow">Contents</span>
         <ul>
             <li class="article__nav-item">
-              <a class="article__nav-link js-anchor-link js-analytics-click" href="gesture-education.html#types" data-section-id="types"
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="offline-states.html#principles" data-section-id="principles"
                  data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#types"}
-'>Types</a>
+    "label": "#principles"}
+'>Principles</a>
             </li>
             <li class="article__nav-item">
-              <a class="article__nav-link js-anchor-link js-analytics-click" href="gesture-education.html#how-to-use" data-section-id="how-to-use"
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="offline-states.html#offline-functionality" data-section-id="offline-functionality"
                  data-analytics='  {
     "event": "trackEvent",
     "category": "content",
     "action": "link click",
-    "label": "#how-to-use"}
-'>How to use</a>
+    "label": "#offline-functionality"}
+'>Offline functionality</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="offline-states.html#offline-settings" data-section-id="offline-settings"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#offline-settings"}
+'>Offline settings</a>
             </li>
         </ul>
       </nav>
     <h1 class="article__title animatable js-anim-trigger">
 
-      Gesture education
+      Offline states
 
           <div class="article-controls">
             
@@ -1781,17 +1829,17 @@ side-nav__link--active js-header-show"
 
       <div class="article__intro-text animatable js-anim-trigger">
       <div>
-<div aria-hidden="true" class="keywords hidden">communications, gesture education</div>
-<h2>Gesture education explains how to interact with an element using a gesture.</h2></div>
+<div aria-hidden="true" class="keywords hidden">communication, offline</div>
+<h2>Offline states allow users to interact with an app without Internet access. </h2></div>
       </div>
   </div>
 
   <hr />
 
   <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger">
-      <section id="types" class="container container--large js-waypoints-trigger article__section" data-section-title="Types" aria-label="Types">
+      <section id="principles" class="container container--large js-waypoints-trigger article__section" data-section-title="Principles" aria-label="Principles">
           <h2 class="article__chapter-title">
-            Types
+            Principles
             <span class="article-controls">
               
               
@@ -1800,45 +1848,99 @@ side-nav__link--active js-header-show"
 
         <div class="article__copy">
           <div>
-<div aria-hidden="true" class="keywords hidden">communications, gesture education</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Partial surface gesture education" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Partial surface gesture education</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>A partial surface gesture affects only a portion of the screen, such as swiping a card. To show how to use a gesture for the...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>A <strong>partial surface gesture</strong> affects only a portion of the screen, such as swiping a card. </p><h2>Display a sample UI</h2><p>To show how to use a gesture for the first time, display a sample UI that mimics the movement of the gesture being represented. </p><h2>Dismissing gesture education</h2><p>The only way to dismiss the sample UI should be when the user performs the gesture being demonstrated. Once a gesture is detected, the gesture indicator should pause, and then disappear. </p><h2>Writing</h2><p>Describe the result of the gesture briefly and clearly.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
-<div class="video-player media-placeholder frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
-<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="types-figure-caption-0" preload="metadata">
-<source data-src="../assets/1D7L0kzgrAVgt-0-JtZWe4S7inTR_fugw/gesture-ed-partial-screen.mp4" src="gesture-education.html" type="video/mp4"> </source></video>
-<div class="video-player__controls">
-<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
-<i class="material-icons video-player__icon">volume_up</i>
-</button>
-<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
-<i class="material-icons video-player__icon">volume_off</i>
-</button>
+<div aria-hidden="true" class="keywords hidden">communication, offline</div>
+<div class="col-list rich-media"><section class="module-module-module col-3"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/0B399W4OW_2GwNWlFU1hQTUF3cUk/graceful.png" src="offline-states.html">
+</img></div>
 </div>
+</figure><h2>Adapt to connection </h2><p>Adapt how your feature or app behaves when the user has a slow, intermittent, or no connection at all.</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/0B399W4OW_2GwdmY5ak12cDlSb2s/form.png" src="offline-states.html">
+</img></div>
 </div>
-<figcaption id="types-figure-caption-0">
-<p>After displaying a sample UI of a card being swiped off the screen, only a left or right swipe will dismiss the gesture education card.</p></figcaption>
-</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Full-screen gesture education" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Full-screen gesture education</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Full-screen gestures affect the entire screen, such as pinching to zoom in. A banner should describe what a full-screen gesture will do. Upon touching the...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p><strong>Full-screen gestures</strong> affect the entire screen, such as pinching to zoom in.</p><h2>Display a banner</h2><p>A banner should describe what a full-screen gesture will do. </p><h2>Dismissing gesture education</h2><p>Upon touching the screen, the screen content should return to its default state, with the gesture indicator removed. The banner should be displayed until the user dismisses it.</p><h2>Writing</h2><p>Describe the result of the gesture briefly and clearly.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
-<div class="video-player media-placeholder frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
-<img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="types-figure-caption-1" preload="metadata">
-<source data-src="../assets/1mWiaW3tSVQ9f_RnXVRvk5nh6MetujIin/gesture-ed-entire-screen.mp4" src="gesture-education.html" type="video/mp4"> </source></video>
-<div class="video-player__controls">
-<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
-<i class="material-icons video-player__icon">volume_up</i>
-</button>
-<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
-<i class="material-icons video-player__icon">volume_off</i>
-</button>
+</figure><h2>Illustrate functionality</h2><p>Use the UI design to illustrate how an offline feature works and communicates its intended purpose. </p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/0B399W4OW_2GwRmx0WHc3aWpLTUU/something.png" src="offline-states.html">
+</img></div>
 </div>
+</figure><h2>Display available content </h2><p>Load available content when the connection is limited, rather than not loading any content.</p></div></section></div></div>
+        </div>
+      </section>
+<hr />      <section id="offline-functionality" class="container container--large js-waypoints-trigger article__section" data-section-title="Offline functionality" aria-label="Offline functionality">
+          <h2 class="article__chapter-title">
+            Offline functionality
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">communication, offline</div>
+<p>If your app has features that are available when offline, and other features that aren’t, it should indicate whether it’s current state is offline or online.</p><p>For offline states, it should provide a place to manage offline files. </p><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "https://developer.android.com/develop/quality-guidelines/building-for-billions-connectivity.html#images"}
+' href="https://developer.android.com/develop/quality-guidelines/building-for-billions-connectivity.html#images" rel="noopener" target="_blank">
+<div class="object-card__copy">
+<h2 class="object-card__title">Make your app usable offline</h2>
+<p class="object-card__body">Cache data locally and simplify network requests</p>
 </div>
-<figcaption id="types-figure-caption-1">
-<p>A banner describes what a full-screen gesture will do, and is displayed until the user dismisses it.</p></figcaption>
+<p class="object-card__label">
+      Related Link
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux"}
+' href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux" rel="noopener" target="_blank">
+<div class="object-card__copy">
+<h2 class="object-card__title">Offline UX Considerations</h2>
+<p class="object-card__body">Design suggestions for both slow networks and offline</p>
+</div>
+<p class="object-card__label">
+      Related Link
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Functionality while offline" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Functionality while offline</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>To communicate that an action in your app is working offline, display the offline pin icon with the text label “offline.”</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><p>To communicate that an action in your app is working offline, display the <a href="https://material.io/tools/icons/?icon=offline_pin&amp;style=baseline" rel="noopener" target="_blank">offline pin icon</a> with the text label “offline.”</p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="offline-functionality-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B399W4OW_2GwMG53SnJrWHZ2RkE/offline-translation.png" src="offline-states.html">
+</img></div>
+</div>
+<figcaption id="offline-functionality-figure-caption-0"><p>The app shows an offline badge when the user performs an action offline.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="offline-functionality-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B399W4OW_2GwZ0liOUhuSDV3Q3c/browser-offline.png" src="offline-states.html">
+</img></div>
+</div>
+<figcaption id="offline-functionality-figure-caption-1"><p>The app shows an offline icon next to the URL when a website is being accessed offline.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle No functionality while offline" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">No functionality while offline</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When features are not available offline, indicate them using the cloud off icon. Only show this icon when the product is offline. When possible, use...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><p>When features are not available offline, indicate them using the <a href="https://material.io/tools/icons/?icon=cloud_off&amp;style=baseline" rel="noopener" target="_blank">cloud off icon</a>. Only show this icon when the product is offline. When possible, use the text label “offline” along with the icon.</p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="offline-functionality-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B399W4OW_2GwNGJIenBxU0NxV1U/search-offline.png" src="offline-states.html">
+</img></div>
+</div>
+<figcaption id="offline-functionality-figure-caption-2"><p>The app indicates when you’re offline and provides helpful tips of what the user can do while offline.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="offline-functionality-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B399W4OW_2GwTmZjSXRoYTFham8/translate-offline.png" src="offline-states.html">
+</img></div>
+</div>
+<figcaption id="offline-functionality-figure-caption-3"><p>The app offers the user to download an offline dictionary when the user is connected again to the Internet for future offline use. </p></figcaption>
 </figure></div></section></div></div></div></div></div>
         </div>
       </section>
-<hr />      <section id="how-to-use" class="container container--large js-waypoints-trigger article__section" data-section-title="How to use" aria-label="How to use">
+<hr />      <section id="offline-settings" class="container container--large js-waypoints-trigger article__section" data-section-title="Offline settings" aria-label="Offline settings">
           <h2 class="article__chapter-title">
-            How to use
+            Offline settings
             <span class="article-controls">
               
               
@@ -1847,8 +1949,14 @@ side-nav__link--active js-header-show"
 
         <div class="article__copy">
           <div>
-<div aria-hidden="true" class="keywords hidden">communications, gesture education</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Targeting &amp; Triggering" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Targeting &amp; Triggering</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Gesture education should be displayed as the user needs it, not just in the first moments of using an app. It should help users interact...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Gesture education should be displayed as the user needs it, not just in the first moments of using an app. It should help users interact with an element or surface in a way they have not done so previously.</p><p>Whether the gesture affects only part of the screen, or the entire screen, similar targeting and triggering guidelines are used.</p></div></section><section class="module col-1"><div class="module"><p> </p><table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><p>Targeting</p></td><td colspan="1" rowspan="1"><p>Triggering</p></td></tr><tr><td colspan="1" rowspan="1"><p>Show gesture education only to users who have not performed the gesture.</p></td><td colspan="1" rowspan="1"><p>Gesture education occurs: </p><ul class="lst-kix_list_1-0 start"><li>During the first-run experience (FRE)   </li><li>In later sessions, if a user has not performed the gesture</li><li>After a major change to the UI</li></ul><p>If a certain gesture is core to the user experience, present it at a contextually relevant moment later in the first-run experience. </p><p>If a gesture is not critical to the experience, show it in a later session at a contextually relevant moment.</p></td></tr></tbody></table></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Volume" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Volume</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Limit the number of gesture education prompts displayed in your app and UI. If a gesture is critical to your user experience, display up to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Limit the number of gesture education prompts displayed in your app and UI. </p><p>If a gesture is critical to your user experience, display up to two prompts during the first-run experience.</p></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Frequency" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Frequency</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Most gesture education prompts should be shown only once. If a gesture is critical to your user experience, display it up to two times in...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Most gesture education prompts should be shown only once.</p><p>If a gesture is critical to your user experience, display it up to two times in distinct sessions.</p></div></section></div></div></div></div></div>
+<div aria-hidden="true" class="keywords hidden">communication, offline</div>
+<p>Provide a place for users to manage their offline settings. If you use icons in your app, mark this destination with the <a href="https://material.io/tools/icons/?icon=offline_pin&amp;style=baseline" rel="noopener" target="_blank">offline pin icon</a>.</p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="offline-settings-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="../assets/0B399W4OW_2GwODVtR0pSaUlESFU/offline-places.png" src="offline-states.html">
+</img></div>
+</div>
+<figcaption id="offline-settings-figure-caption-0"><p>The navigation menu item “Offline areas” (5th in the list) indicates information saved for offline use.</p></figcaption>
+</figure></div><div class="module"></div></section></div></div>
         </div>
       </section>
 
@@ -1856,44 +1964,8 @@ side-nav__link--active js-header-show"
 
   <div class="container container--large">
 
-  <h2>Up next
-      <div class="article-controls">
-        
-      </div>
-  </h2>
 
-<div class="suggested-articles"><div><a aria-label="Help &amp; feedback" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
-    "event": "trackEvent",
-    "category": "suggested articles",
-    "action": "link click",
-    "label": "../communication/help-feedback.html"}
-' href="help-feedback.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1EScQiv863cvd-Fh4TDmJpm1QmVKyu-mK/communication-thumbnail-2x1.png');">
-</div>
-<h3 class="suggested-articles__item-title eyebrow">Communication</h3>
-<h4 class="suggested-articles__item-subtitle">Help &amp; feedback</h4>
-</a><a aria-label="Gestures" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
-    "event": "trackEvent",
-    "category": "suggested articles",
-    "action": "link click",
-    "label": "../interaction/gestures.html"}
-' href="../interaction/gestures.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1iK7_-Y3kWR3F55a87Z6-UzjxLNrwo-sG/interaction-thumbnail-2x1.png');">
-</div>
-<h3 class="suggested-articles__item-title eyebrow">Interaction</h3>
-<h4 class="suggested-articles__item-subtitle">Gestures</h4>
-</a><br>
-<a aria-label="Onboarding" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
-    "event": "trackEvent",
-    "category": "suggested articles",
-    "action": "link click",
-    "label": "../communication/onboarding.html"}
-' href="onboarding.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/18UsiK_BUA_hV5kSG9mqAXd4hT2qoNGZE/communication-thumbnail-2x1.png');">
-</div>
-<h3 class="suggested-articles__item-title eyebrow">Communication</h3>
-<h4 class="suggested-articles__item-subtitle">Onboarding</h4>
-</a></div></div>  </div>
+<div class="suggested-articles"></div>  </div>
 </article>
     </main>
 

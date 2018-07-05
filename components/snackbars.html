@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="snackbars"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1576,16 +1576,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -2085,7 +2113,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Appearing and disappearing" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Appearing and disappearing</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Snackbars appear without warning, and don't require user interaction. They automatically disappear from the screen after a minimum of four seconds, and a maximum of...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Snackbars appear without warning, and don't require user interaction. They automatically disappear from the screen after a minimum of four seconds, and a maximum of ten seconds. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1smqQHvwlE8Nm5nNwHXgvnJ9JDrOt_CB1/01-appear.mp4" src="snackbars.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2098,7 +2126,7 @@ side-nav__link--active js-header-show"
 </div></figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Consecutive snackbars" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Consecutive snackbars</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>When multiple snackbar updates are necessary, they should appear one at a time.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>When multiple snackbar updates are necessary, they should appear one at a time. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="behavior-figure-caption-0" preload="metadata">
+<video aria-describedby="behavior-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Ox5qX5je_tUiv8P9V9tTfGRTd3RTsvxh/02-appearconsecutive.mp4" src="snackbars.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2114,7 +2142,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1hSb4Cnon01EoKlsxAVHiJ2eIpsfsbYCd/02-appearconsecutive-dont.mp4" src="snackbars.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2128,7 +2156,7 @@ side-nav__link--active js-header-show"
 <p class="s-tag-caption dont">Don’t.</p><p>Avoid stacking snackbars on top of one another. </p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1wbCENhhDF1dJ5a0597z8EVDM2qDLyy3w/02-appear-dont.mp4" src="snackbars.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2168,7 +2196,9 @@ side-nav__link--active js-header-show"
 </div>
 <figcaption id="placement-figure-caption-1">
 <p class="s-tag-caption dont">Don’t.</p><p>Avoid placing snackbars in front of navigation components.</p></figcaption>
-</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Snackbars can span the entire width of the screen only when a UI does not use persistent navigation components like app bars or bottom navigation bars.<br>
+Snackbars that span the entire width of a UI can push only FABs up when they appear.<br>
+</br></br></p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1AlECh_HLxZMx1wYFoGCk1uSTpXMjlkPY/snackbars-layout-don-t-edge-to-edge.png" src="snackbars.html">
 </img></div>
@@ -2177,16 +2207,11 @@ side-nav__link--active js-header-show"
 <p class="s-tag-caption caution">Caution.</p><p>Snackbars can span the entire width of a UI. However, they should not appear in front of navigation or other important UI elements like floating action buttons. </p></figcaption>
 </figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Snackbars and floating action buttons (FABs)" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Snackbars and floating action buttons (FABs)</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Snackbars should appear above FABs.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Snackbars should appear above FABs.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1BlhZYfz9EClmRaSVq-sPLwyXVGEQKDlj/snackbars-layout-fab.png" src="snackbars.html">
-</img></div>
-</div>
-</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/194nUYn4Nc6fBOi-44St02VjQNz5q3U27/snackbars-layout-fab-caution.png" src="snackbars.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1BlhZYfz9EClmRaSVq-sPLwyXVGEQKDlj/snackbars-layout-fab.png" src="snackbars.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-3">
-<p class="s-tag-caption caution">Caution.</p><p>The FAB can be pushed up when a snackbar appears, though this can cause distraction if multiple snackbars appear. </p></figcaption>
+<p>Snackbar above a FAB</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
 <div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1_ZrPvLSAYi51IEBunxswjYcHF259G00D/snackbars-layout-fab-dont-1.png" src="snackbars.html">
@@ -2203,22 +2228,24 @@ side-nav__link--active js-header-show"
 <p class="s-tag-caption dont">Don’t.</p><p>Don’t place a snackbar behind a FAB.</p></figcaption>
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Snackbars and persistent footer elements" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Snackbars and persistent footer elements</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Snackbars should appear directly above persistent footer elements.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Snackbars should appear directly above persistent footer elements.  </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1Gkbg2JiXndIslRC_xZvwEWp3t0PD1DgX/snackbars-layout-do-navigation.png" src="snackbars.html">
-</img></div>
-</div>
-</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1B19qxKNDDwFn4wYave2LAtyuXfX18WWV/snackbars-layout-sheets-extended.png" src="snackbars.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-6" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1Gkbg2JiXndIslRC_xZvwEWp3t0PD1DgX/snackbars-layout-do-navigation.png" src="snackbars.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-6">
-<p class="s-tag-caption do">Do.</p><p>Place snackbars in front of medium extended sheets.</p></figcaption>
+<p>Snackbar above persistent footer elements</p></figcaption>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1brTnLGSb_xzBkMBQ2ZjQ47VZjnJRVfoe/snackbars-layout-don-t-push-bottom-bar.png" src="snackbars.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1B19qxKNDDwFn4wYave2LAtyuXfX18WWV/snackbars-layout-sheets-extended.png" src="snackbars.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-7">
+<p class="s-tag-caption do">Do.</p><p>Place snackbars in front of medium extended sheets.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-8" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1brTnLGSb_xzBkMBQ2ZjQ47VZjnJRVfoe/snackbars-layout-don-t-push-bottom-bar.png" src="snackbars.html">
+</img></div>
+</div>
+<figcaption id="placement-figure-caption-8">
 <p class="s-tag-caption dont">Don’t.</p><p>Avoid pushing bottom persistent elements up when snackbars appear.</p></figcaption>
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Snackbars in wide layouts" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Snackbars in wide layouts</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>In wide layouts, snackbars can be left-aligned or center-aligned if they are consistently placed on the same spot at the bottom of the screen.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>In wide layouts, snackbars can be left-aligned or center-aligned if they are consistently placed on the same spot at the bottom of the screen. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
@@ -2232,17 +2259,17 @@ side-nav__link--active js-header-show"
 </div>
 </figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
 <div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-8" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/15PKv_tKP2BwCiapzFGq9_Jo2LFODsPqa/snackbars-container-desktop-dont-flush-edge.png" src="snackbars.html">
-</img></div>
-</div>
-<figcaption id="placement-figure-caption-8">
-<p class="s-tag-caption dont">Don’t.</p><p>Avoid placing snackbars flushed to one edge of the layout.</p></figcaption>
-</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
-<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-9" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1L3VUEbB7iQ0MBHIpeRYevu3zQpDPYfHH/snackbars-layout-desktop-dont-side-to-side.png" src="snackbars.html">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-9" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/15PKv_tKP2BwCiapzFGq9_Jo2LFODsPqa/snackbars-container-desktop-dont-flush-edge.png" src="snackbars.html">
 </img></div>
 </div>
 <figcaption id="placement-figure-caption-9">
+<p class="s-tag-caption dont">Don’t.</p><p>Avoid placing snackbars flushed to one edge of the layout.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="placement-figure-caption-10" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1L3VUEbB7iQ0MBHIpeRYevu3zQpDPYfHH/snackbars-layout-desktop-dont-side-to-side.png" src="snackbars.html">
+</img></div>
+</div>
+<figcaption id="placement-figure-caption-10">
 <p class="s-tag-caption dont">Don’t.</p><p>Avoid placing consecutive snackbars side by side or next to one another.</p></figcaption>
 </figure></div></section></div></div></div></div></div>
         </div>

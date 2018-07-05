@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="systemIcons"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1055,20 +1055,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1132,6 +1118,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1565,16 +1565,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -2175,7 +2203,7 @@ side-nav__link--active js-header-show"
         <div class="article__copy">
           <div>
 <div aria-hidden="true" class="keywords hidden">icons, system</div>
-<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Icons on light backgrounds" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Icons on light backgrounds</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The standard opacity for an active icon on a light background is 87% (#000000). An inactive icon, which is lower in the visual hierarchy, should...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Active icon</h2><p>The standard opacity for an active icon on a light background is 87% (#000000).</p><h2>Inactive icon</h2><p>An inactive icon, which is lower in the visual hierarchy, should have an opacity of 38% (#000000).</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Icons on light backgrounds" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Icons on light backgrounds</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The standard opacity for an active icon with focused state on a light background is 87% (#000000). An active with unfocused state is 54%. An...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Active icon</h2><p>The standard opacity for an active icon with focused state on a light background is 87% (#000000). An active with unfocused state is 54%. </p><h2>Inactive icon</h2><p>An inactive icon, which is lower in the visual hierarchy, should have an opacity of 38% (#000000).</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 105.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="105.0%" data-src="../assets/1iGGlU-MmOCGgvdjMK1cbxb88EEtPKWAB/iconography-systemicons-color-iconslight.png" src="system-icons.html">
 </img></div>
@@ -2197,7 +2225,7 @@ side-nav__link--active js-header-show"
       <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
 </p>
 </a>
-</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Icons on dark backgrounds" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Icons on dark backgrounds</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The standard opacity for an active icon on a dark background is 100% (#FFFFFF). An active with unfocused state is 70%. An inactive icon, which...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Active icon</h2><p>The standard opacity for an active icon on a dark background is 100% (#FFFFFF).  An active with unfocused state is 70%. </p><h2>Inactive icon</h2><p>An inactive icon, which is lower in the visual hierarchy, should have an opacity of 50% (#FFFFFF).</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Icons on dark backgrounds" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Icons on dark backgrounds</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The standard opacity for an active icon with focused state on a dark background is 100% (#FFFFFF). An active with unfocused state is 70%. An...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Active icon</h2><p>The standard opacity for an active icon with focused state on a dark background is 100% (#FFFFFF).  An active with unfocused state is 70%. </p><h2>Inactive icon</h2><p>An inactive icon, which is lower in the visual hierarchy, should have an opacity of 50% (#FFFFFF).</p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 105.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="105.0%" data-src="../assets/1Rn5oUMFzF4aSozTNEW9KVrR3y7H8YVWZ/iconography-systemicons-color-iconsdark.png" src="system-icons.html">
 </img></div>
@@ -2413,8 +2441,8 @@ side-nav__link--active js-header-show"
     "category": "suggested articles",
     "action": "link click",
     "label": "../usability/accessibility.html"}
-' href="https://material.io/design/usability/accessibility.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://material.io/design/assets/1yOCBr49xdljPYwgKe29TVRvMRtLIgo9u/usability-thumbnail-2x1.png');">
+' href="../usability/accessibility.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1yOCBr49xdljPYwgKe29TVRvMRtLIgo9u/usability-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Usability</h3>
 <h4 class="suggested-articles__item-subtitle">Layout and typography</h4>

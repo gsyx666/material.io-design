@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="textFields"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -995,20 +995,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1072,6 +1058,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1598,16 +1598,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1998,15 +2026,15 @@ side-nav__link--active js-header-show"
 <div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="../assets/1Ejie5ILk2-eAB9wBRFG93aJtYV7gJtJV/textfields-annotations-1.png" src="text-fields.html">
 </img></div>
 </div>
-</figure><ol class="lst-kix_yyvr7xhdnb1e-0 start" start="1"><li><h3>Container</h3></li><li><h3>Leading icon (optional)</h3></li><li><h3>Label text</h3></li><li><h3>Input text</h3></li><li><h3>Trailing icon (optional)</h3></li><li><h3>Activation indicator</h3></li><li><h3>Assistive text (optional)</h3></li></ol></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Container" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Container</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Containers improve the discoverability of text fields by creating contrast between the text field and surrounding content. A text field container has a fill and...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>Containers improve the discoverability of text fields by creating contrast between the text field and surrounding content. </p><h2>Fill and stroke</h2><p>A text field container has a fill and a stroke (either around the entire container, or just the bottom edge). The color and thickness of a stroke can change to indicate when the text field is active.</p><h2>Rounded corners</h2><p>The container of an outlined text field has rounded corners, while the container of a filled text field has rounded top corners and square bottom corners. </p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="760px">
-<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+</figure><ol class="lst-kix_yyvr7xhdnb1e-0 start" start="1"><li><h3>Container</h3></li><li><h3>Leading icon (optional)</h3></li><li><h3>Label text</h3></li><li><h3>Input text</h3></li><li><h3>Trailing icon (optional)</h3></li><li><h3>Activation indicator</h3></li><li><h3>Assistive text (optional)</h3></li></ol></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Container" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Container</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Containers improve the discoverability of text fields by creating contrast between the text field and surrounding content. A text field container has a fill and...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>Containers improve the discoverability of text fields by creating contrast between the text field and surrounding content. </p><h2>Fill and stroke</h2><p>A text field container has a fill and a stroke (either around the entire container, or just the bottom edge). The color and thickness of a stroke can change to indicate when the text field is active.</p><h2>Rounded corners</h2><p>The container of an outlined text field has rounded corners, while the container of a filled text field has rounded top corners and square bottom corners. </p></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1M-ZaDIpRiXkZ91XAbYbIem9yIGKlJH98/textfields-anatomy-container.png" src="text-fields.html">
 </img></div>
 </div>
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Label text" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Label text</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Label text is used to inform users as to what information is requested for a text field. Every text field should have a label. Label...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Label text is used to inform users as to what information is requested for a text field. Every text field should have a label.</p><p>Label text should be aligned with the input line, and always visible. It can be placed in the middle of a text field, or rest near the top of the container. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="anatomy-figure-caption-0" preload="metadata">
+<video aria-describedby="anatomy-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Bna_M1j7fpIpDbNOLR1d32fjB7kARjLE/textfields-anatomy-label-text-do.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2019,14 +2047,14 @@ side-nav__link--active js-header-show"
 </div>
 <figcaption id="anatomy-figure-caption-0">
 <p class="s-tag-caption do">Do.</p><p>Label text should always be visible, moving from the middle of the text field to the top (if the field is selected).</p></figcaption>
-</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="760px">
+</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="anatomy-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1bV3UuttijOjZTzAdGHPHJ4BlMy52HRWn/textfields-annotations-labels-dont-1.png" src="text-fields.html">
 </img></div>
 </div>
 <figcaption id="anatomy-figure-caption-1">
 <p class="s-tag-caption dont">Don’t.</p><p>Label text shouldn’t be truncated. Keep it short, clear, and fully visible.</p></figcaption>
-</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="760px">
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="anatomy-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/1YxkT7YL_gCx_4qQczlPkKB-zgY9_dAAq/textfields-annotations-labels-dont-2.png" src="text-fields.html">
 </img></div>
@@ -2040,20 +2068,20 @@ side-nav__link--active js-header-show"
 </div>
 <figcaption id="anatomy-figure-caption-3">
 <p>Required text with asterisk</p></figcaption>
-</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Input text" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Input text</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Input text is text the user has entered into a text field. Input text is text entered by the user. A cursor indicates the current...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="760px">
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Input text" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Input text</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Input text is text the user has entered into a text field. Input text is text entered by the user. A cursor indicates the current...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
 <div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
 <div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="../assets/13tQWdE9vsdEDbwAY9a5FI9Btb3Oae86V/textfields-annotations-2.png" src="text-fields.html">
 </img></div>
 </div>
-</figure></div><div class="module"><p>Input text is text the user has entered into a text field.</p><h3>1. Input text</h3><p>Input text is text entered by the user.</p><h3>2. Cursor </h3><p>A cursor indicates the current location of text input in a field.</p></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Assistive elements" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Assistive elements</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Assistive elements provide additional detail about text entered into text fields. Helper text conveys additional guidance about the input field, such as how it will...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="760px">
-<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 147.368421053%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="147.368421053%" data-src="../assets/1QPDRElkKlvPkRnsAivI5_xjHDcEpQigr/textfields-annotations-3.png" src="text-fields.html">
+</figure></div><div class="module"><p>Input text is text the user has entered into a text field.</p><h3>1. Input text</h3><p>Input text is text entered by the user.</p><h3>2. Cursor </h3><p>A cursor indicates the current location of text input in a field.</p></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Assistive elements" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Assistive elements</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Assistive elements provide additional detail about text entered into text fields. Helper text conveys additional guidance about the input field, such as how it will...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 155.555555556%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="155.555555556%" data-src="../assets/1QPDRElkKlvPkRnsAivI5_xjHDcEpQigr/textfields-annotations-3.png" src="text-fields.html">
 </img></div>
 </div>
 </figure></div><div class="module"><p>Assistive elements provide additional detail about text entered into text fields.</p><h3>1. Helper text </h3><p>Helper text conveys additional guidance about the input field, such as how it will be used. It should only take up a single line, being persistently visible or visible only on focus.</p><h3>2. Error message </h3><p>When text input isn’t accepted, an error message can display instructions on how to fix it. Error messages are displayed below the input line, replacing helper text until fixed.</p><h3>3. Icons </h3><p>Icons can be used to message alerts as well. Pair them with error messages to provide redundant alerts, which are useful when you need to design for colorblind users. </p><h3>4. Character counter</h3><p>Character or word counters should be used if there is a character or word limit. They display the ratio of characters used and the total character limit.</p></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Error text</h2><p>For text fields that validate their content (such as passwords), replace helper text with error text when applicable. Swapping helper text with error text helps prevent new lines of text from being introduced into a layout, thus bumping content to fit it.</p><ul class="lst-kix_9ywjp7dvp6bl-0 start"><li>If only one error is possible, error text describes how to avoid the error </li><li>If multiple errors are possible, error text describes how to avoid the most likely error</li></ul></div></section><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
-<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="anatomy-figure-caption-4" preload="metadata">
+<video aria-describedby="anatomy-figure-caption-4" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1-aJCEgnpvxTuvtYshKU7BuVV4EdPatjE/textfields-anatomy-error.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2067,9 +2095,9 @@ side-nav__link--active js-header-show"
 <figcaption id="anatomy-figure-caption-4">
 <p class="s-tag-caption do">Do.</p><p>Swap helper text with error text.</p></figcaption>
 </figure></div></section><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
-<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="anatomy-figure-caption-5" preload="metadata">
+<video aria-describedby="anatomy-figure-caption-5" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1-GWRVa0l4UaElWB9CLW6k35hmUpX09g8/textfields-anatomy-error-dont.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2106,9 +2134,9 @@ side-nav__link--active js-header-show"
       <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
 </p>
 </a>
-</aside><p></p><div class="col-list rich-media"><section class="module-module col-2 h3-spacing"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="760px">
-<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 147.368421053%;">
-<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="147.368421053%" data-src="../assets/1e2bKV4DXMixXuGWBt2lSTwlQHXq6Pq9-/textfields-annotations-4.png" src="text-fields.html">
+</aside><p></p><div class="col-list rich-media"><section class="module-module col-2 h3-spacing"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 155.555555556%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="155.555555556%" data-src="../assets/1e2bKV4DXMixXuGWBt2lSTwlQHXq6Pq9-/textfields-annotations-4.png" src="text-fields.html">
 </img></div>
 </div>
 </figure></div><div class="module"><h3>1. Icon signifier</h3><p>Icon signifiers can describe the type of input a text field requires, and be touch targets for nested components. For example, a calendar icon may be tapped to reveal a date picker.</p><h3>2. Valid or error icon</h3><p>Iconography can indicate both valid and invalid inputs, making error states clear for colorblind users.</p><h3>3. Clear icon</h3><p>Clear icons let users clear an entire input field. They appear only when input text is present.</p><h3>4. Voice input icon</h3><p>A microphone icon signifies that users can input characters using voice. </p><h3>5. Dropdown icon</h3><p>A dropdown arrow indicates that a text field has a nested selection component.</p></div></section></div></div></div></div></div>
@@ -2129,7 +2157,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Usage" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Filled text fields carry more visual emphasis, making them stand out when surrounded by other content and components.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Filled text fields carry more visual emphasis, making them stand out when surrounded by other content and components.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1V4TTJr8n_fpZkdk4qQIqXB9vJhMegre3/textfields-filled-motion2.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2172,7 +2200,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Usage" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Usage</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Outlined text fields have less visual emphasis than filled text fields, which helps simplify layout in places like forms, where many text fields are placed...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Outlined text fields have less visual emphasis than filled text fields, which helps simplify layout in places like forms, where many text fields are placed together.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1lqW9hDYVzYAVXnOtAHlVh4E9o09vK5oZ/textfields-outline-motion1.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2208,7 +2236,7 @@ side-nav__link--active js-header-show"
 <div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Text fields can display user input in the following ways:</p><ul class="lst-kix_ivs2ipkygnig-0 start"><li><strong>Single line text fields</strong> display only one line of text</li><li><strong>Multi-line text fields</strong> grow to accommodate multiple lines of text</li><li><strong>Text areas</strong> are fixed-height fields</li></ul><hr class="spacer" role="separator"/><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1Wp0W2DNhQfZq3bhLq7EDSvMXhi0y8kwr/textfields-input-motion2.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2221,7 +2249,7 @@ side-nav__link--active js-header-show"
 </div></figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Single-line fields</h2><p>In single-line fields, as the cursor reaches the right field edge, text longer than the input line automatically scrolls left. </p><p>Single-line fields are not suitable for collecting long responses. For those, use a multi-line text field or text area instead.</p></div></section><section class="figure-figure col-2"><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1nsI20VAObijg3UMEv1JoKrV_rzRc8dsJ/textfields-input-multiline.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2234,7 +2262,7 @@ side-nav__link--active js-header-show"
 </div></figure><h2>Multi-line fields</h2><p>Multi-line text fields show all user input at once. Overflow text causes the text field to expand (shifting screen elements downward), and text wraps onto a new line. </p><p>These fields initially appear as single-line fields, which is useful for compact layouts that need to be able to accomodate large amounts of text. </p></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1p3r_LfcfFF_m3zp5oYa419ZY5bfgiMld/textfields-input-textareas.mp4" src="text-fields.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2584,10 +2612,6 @@ C      </span>
 <li class="measurement measurement--vertical measurement--dimensions measurement--pos-left js-measurement-dimensions" style="top:162px;width:56px;left:207px;">
 <span class="measurement__value">
 56      </span>
-</li>
-<li class="measurement measurement--horizontal measurement--dimensions measurement--pos-top js-measurement-dimensions" style="left:224px;width:312px;top:144px;">
-<span class="measurement__value">
-312      </span>
 </li>
 <li class="measurement measurement--horizontal measurement--padding measurement--pos-bottom js-measurement-padding" style="left:224px;width:12px;top:234px;">
 <span class="measurement__value measurement__value--offset">

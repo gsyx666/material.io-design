@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="textLegibility"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1033,20 +1033,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1110,6 +1096,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1543,16 +1543,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1794,7 +1822,7 @@ side-nav__link--active js-header-show"
       Text legibility
 
           <div class="article-controls">
-            
+
           </div>
     </h1>
 
@@ -1813,8 +1841,8 @@ side-nav__link--active js-header-show"
           <h2 class="article__chapter-title">
             Legibility standards
             <span class="article-controls">
-              
-              
+
+
             </span>
           </h2>
 
@@ -1827,8 +1855,8 @@ side-nav__link--active js-header-show"
     "category": "object card",
     "action": "link click",
     "label": "../usability/accessibility.html#accessibility"}
-' href="https://material.io/design/usability/accessibility.html#accessibility" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../assets/133aIcAWe9mgvWL087n87i5Q2cSDScLDd/usability-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/assets/133aIcAWe9mgvWL087n87i5Q2cSDScLDd/usability-thumbnail-1x1-circle.png');"></div>
+' href="../usability/accessibility.html#accessibility" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/133aIcAWe9mgvWL087n87i5Q2cSDScLDd/usability-thumbnail-1x1-circle.png" style="background-image: url('../assets/133aIcAWe9mgvWL087n87i5Q2cSDScLDd/usability-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Accessibility</h2>
 <p class="object-card__body">Accessible design allows users of all abilities to navigate, understand, and use your UI successfully.</p>
@@ -1855,15 +1883,21 @@ side-nav__link--active js-header-show"
       <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
 </p>
 </a>
-</aside><p></p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle WCAG standards" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">WCAG standards</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>All text should be legible and meet accessibility standards. The Web Content Accessibility Guidelines (WCAG 2.0) level AA requires a 4.5.1 color contrast between text...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>All text should be legible and meet accessibility standards. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="noopener" target="_blank">The Web Content Accessibility Guidelines (WCAG 2.0)</a> level AA requires a 4.5.1 color contrast between text and background for normal text, and 3:1 to large text. </p><p>To learn more about color, contrast, and accessibility design, read <a href="https://material.googleplex.com/usability/accessibility.html#" rel="noopener" target="_blank">Material Design Accessibility.</a></p></div></section></div></div></div></div></div>
+</aside><p></p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle WCAG standards" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">WCAG standards</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>All text should be legible and meet accessibility standards. The Web Content Accessibility Guidelines (WCAG 2.0) level AA requires a 4.5.1 color contrast between text...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>All text should be legible and meet accessibility standards. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="noopener" target="_blank">The Web Content Accessibility Guidelines (WCAG 2.0)</a> level AA requires a 4.5.1 color contrast between text and background for normal text, and 3:1 to large text. </p><p>To learn more about color, contrast, and accessibility design, read <a class="js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "../usability/accessibility.html"}
+' href="../usability/accessibility.html">
+  Material Design Accessibility</a>.</p></div></section></div></div></div></div></div>
         </div>
       </section>
 <hr />      <section id="text-backgrounds" class="container container--large js-waypoints-trigger article__section" data-section-title="Text backgrounds" aria-label="Text backgrounds">
           <h2 class="article__chapter-title">
             Text backgrounds
             <span class="article-controls">
-              
-              
+
+
             </span>
           </h2>
 
@@ -1933,8 +1967,8 @@ side-nav__link--active js-header-show"
           <h2 class="article__chapter-title">
             Text types
             <span class="article-controls">
-              
-              
+
+
             </span>
           </h2>
 
@@ -1977,7 +2011,7 @@ side-nav__link--active js-header-show"
 
   <h2>Up next
       <div class="article-controls">
-        
+
       </div>
   </h2>
 
@@ -1996,8 +2030,8 @@ side-nav__link--active js-header-show"
     "category": "suggested articles",
     "action": "link click",
     "label": "../usability/accessibility.html"}
-' href="https://material.io/design/usability/accessibility.html">
-<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://material.io/design/assets/1yOCBr49xdljPYwgKe29TVRvMRtLIgo9u/usability-thumbnail-2x1.png');">
+' href="../usability/accessibility.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1yOCBr49xdljPYwgKe29TVRvMRtLIgo9u/usability-thumbnail-2x1.png');">
 </div>
 <h3 class="suggested-articles__item-title eyebrow">Usability</h3>
 <h4 class="suggested-articles__item-subtitle">Color and contrast</h4>

@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body class="header-show page--article left-rail"
         data-comp="Global "
         data-slug-id="crane"
-        data-spec-alias="mio-design-staging"
+        data-spec-alias="mio-design"
  >
 
 
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
 </a>
   <nav class="header__nav" role="navigation">
-    <ul class="header__nav-list header__nav-list--cleared">
+    <ul class="header__nav-list header__nav-list--selected">
           <li class="header__nav-item  js-header-item">
     <a href="https://material.io/"
         class="header__nav-link js-analytics-click"
@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="header__nav-indicator"></span>
     </a>
   </li>
-          <li class="header__nav-item  js-header-item">
+          <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
     <a href="https://material.io/design"
         class="header__nav-link js-analytics-click"
         data-analytics='  {
@@ -1088,20 +1088,6 @@ side-nav__link--active js-header-show"
         <li>
           <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
 "
-              href="../communication/gesture-education.html"data-analytics='  {
-    "event": "trackEvent",
-    "category": "left rail navigation",
-    "action": "nav click",
-    "label": "../communication/gesture-education.html"}
-'>
-            Gesture education
-          </a>
-
-        </li>
-
-        <li>
-          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
-"
               href="../communication/help-feedback.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
@@ -1165,6 +1151,20 @@ side-nav__link--active js-header-show"
     "label": "../communication/writing.html"}
 '>
             Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
           </a>
 
         </li>
@@ -1598,16 +1598,44 @@ side-nav__link--active js-header-show"
 
 
       <li class="side-nav__menu-item">
-          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
-             href="../usability.html"
-             data-analytics='  {
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
     "event": "trackEvent",
     "category": "left rail navigation",
     "action": "nav click",
-    "label": "../usability"}
+    "label": "../usability/accessibility.html"}
 '>
-            Usability
+            Accessibility
           </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
       </li>
 
 
@@ -1932,7 +1960,7 @@ side-nav__link--active js-header-show"
 <div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="../assets/10o5IbEbDt5axb8z8vwC-pJh6WyWTCgjT/masonry-crane.png" src="crane.html">
 </img></div>
 </div>
-</figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Flexible aesthetic" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Flexible aesthetic</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Along with being both functional and informative, the Crane app provides a variety of filters to customize content so it’s relevant to the user. To...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Along with being both functional and informative, the Crane app provides a variety of filters to customize content so it’s relevant to the user. </p><p>To make it easy for users to understand this flexibility, interactions are centered around the use of a backdrop component. Changes to preferences or filters on the backdrops back layer immediately update content found on the front layers of the backdrop. For example, when a user is looking for a flight on Crane, they input information such as destination and dates on the back layer. After this inputting this information, flights that fit their preferences are shown in the front layer. This interplay reinforces how Crane tailors it’s content to the preference of the user, presenting options in a way that is both bold and classy, direct but respectful.  </p></div></section></div></div></div></div></div>
+</figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Flexible aesthetic" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Flexible aesthetic</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Along with being both functional and informative, the Crane app provides a variety of filters to customize content so it’s relevant to the user. To...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Along with being both functional and informative, the Crane app provides a variety of filters to customize content so it’s relevant to the user. </p><p>To make it easy for users to understand this flexibility, interactions are centered around the use of a backdrop component. Changes to preferences or filters on the backdrops back layer immediately update content found on the front layers of the backdrop. For example, when a user is looking for a flight on Crane, they input information such as destination and dates on the back layer. After inputting this information, flights that fit their preferences are shown in the front layer. This interplay reinforces how Crane tailors it’s content to the preference of the user, presenting options in a way that is both bold and classy, direct but respectful.  </p></div></section></div></div></div></div></div>
         </div>
       </section>
 <hr />      <section id="product-architecture" class="container container--large js-waypoints-trigger article__section" data-section-title="Product architecture" aria-label="Product architecture">
@@ -1995,6 +2023,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../components/lists.html#lists"}
 ' href="../components/lists.html#lists" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="../assets/1cIfap6uWJWc2t3lZgjkvIF-asVpw7qGd/list-thumbnail-1x1-circle.png" style="background-image: url('../assets/1cIfap6uWJWc2t3lZgjkvIF-asVpw7qGd/list-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Lists</h2>
 <p class="object-card__body">Lists are continuous, vertical display of text or images.</p>
@@ -2007,7 +2036,7 @@ side-nav__link--active js-header-show"
 </aside><p></p><div class="col-list rich-media"><section class="module-module col-2 h2-spacing"><div class="module"><h2>Main sections</h2><p>The Crane app has three main sections:</p><ul class="lst-kix_37cbmcgeuwl7-0 start"><li>Fly</li><li>Sleep</li><li>Eat</li></ul><p>Navigate to these main sections by using the tabs along the top of the screen. </p><p>These tabs are nested in the back layer of a backdrop component, which also contains relevant filters and contextual actions.</p><h2>Content filtering</h2><p>Users can quickly customize Crane’s content according to their preferences. The back layer contains controls that affect the content displayed on the front layer, allowing users to view content customized for them.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="product-architecture-figure-caption-1" preload="metadata">
+<video aria-describedby="product-architecture-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1ZL4CiG4FN1MxyTuSqZqU_xX_V5pDakCs/navtransitions-peer.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2038,7 +2067,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Grid system" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Grid system</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Crane uses a responsive grid system, which has flexible columns and padding that can resize depending on the screen width (such as mobile, tablet, and...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Crane uses a responsive grid system, which has flexible columns and padding that can resize depending on the screen width (such as  mobile, tablet, and desktop). Content is stacked in columns, which vertically expand and contract upon user interaction. </p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1dXh-pna6vu5Tx16khdkLuWPRJTEkgVyE/casestudies-crane-grid-1a.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2120,7 +2149,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Elevation" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Elevation</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Crane’s UI uses color to express elevation differences between elements, rather than shadows. For example, cards show the boundaries of their containers by having a...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-figure col-2 h2-spacing"><div class="module"><h2>Using color</h2><p>Crane’s UI uses color to express elevation differences between elements, rather than shadows. For example, cards show the boundaries of their containers by having a color distinct from the background, without casting shadows.</p><h2>The backdrop shadow</h2><p>The one instance that Crane uses shadow to express elevation is when content scrolls in the front layer of the backdrop component. In this case, the default behavior of the backdrop remains in place, producing a shadow to separate the front layer subheader from the content scrolling behind it. </p></div><div class="figure"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmuted="" preload="metadata">
+<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1df7NTSaM4cVkrurAhFwKHqrZemqkcSAX/casestudies-crane-elevation.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2376,7 +2405,7 @@ side-nav__link--active js-header-show"
 </figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Cards" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Cards</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Crane uses cards to show detailed search results, such as flight options with departure and arrival times, cost, airport, and carrier information. Shrine’s cards appear...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>Crane uses cards to show detailed search results, such as flight options with departure and arrival times, cost, airport, and carrier information. </p><h2>Vertical card collection</h2><p>Shrine’s cards appear in a vertically stacked card collection. Color indicates a card’s container by having a white fill color that contrasts with the light purple background color. Crane’s cards don’t cast shadows, allowing them to have very little padding between each card, for easy scannability. </p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="components-figure-caption-2" preload="metadata">
+<video aria-describedby="components-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1DKDzxNMp1QfSWSMWKizM5gcXrnNvPHhR/crane-cardtransition.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2443,7 +2472,7 @@ side-nav__link--active js-header-show"
 </aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>On tablet and desktop, a card expands when tapped to reveal more information and allow users to take action on the item. When a card in a collection is expanded, all other cards in the collection are given a white overlay with an 80% opacity to give emphasis to the expanded card.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="components-figure-caption-3" preload="metadata">
+<video aria-describedby="components-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1_cVZt9nO-pQ5YU-1OR807iE4ap_m70a8/casestudies-crane-cards-desktop-1a.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2628,7 +2657,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Stepper" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Stepper</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Steppers make it easy for Crane users to book flights, lodging, and make dining reservations. Crane uses one style of stepper for desktop and tablet,...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Steppers make it easy for Crane users to book flights, lodging, and make dining reservations. Crane uses one style of stepper for desktop and tablet, and another for mobile. </p><p>On mobile, steps are surfaced on the back layer of the backdrop, with the related form on the front layer. If the user wishes to see more of the front layer, Crane’s stepper has a collapsed state that lets the user know where they are in the stepper process at the top of the screen.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="components-figure-caption-12" preload="metadata">
+<video aria-describedby="components-figure-caption-12" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1PC-0RgEUfQsMX7NSnalaO4bQZkdCzMrI/casestudies-crane-stepper-mobile-1a.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2666,7 +2695,7 @@ side-nav__link--active js-header-show"
 <div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Launch screen" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Launch screen</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Character animation, emphasized easing, and staggers set a sophisticated and premium tone. Product icons are the visual expression of a brand’s products, services, and tools....</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Character animation, emphasized easing, and staggers set a sophisticated and premium tone.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-0" preload="metadata">
+<video aria-describedby="motion-figure-caption-0" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1wPlQquaAQbSX6oCU25H95uJjxC7KGJX7/01-launchscreen.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2703,7 +2732,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#speed"}
 ' href="../motion/customization.html#speed" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Speed</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2720,7 +2749,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#sequencing"}
 ' href="../motion/customization.html#sequencing" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Sequencing</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2733,7 +2762,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Navigation transitions" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Navigation transitions</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Crane’s navigation transitions use emphasized easing and longer durations to add a sophisticated tone. Motion can be customized to express a distinct style and personality....</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Crane’s navigation transitions use emphasized easing and longer durations to add a sophisticated tone.</p></div></section><section class="module-module col-2 h2-spacing"><div class="module"><h2>Parent child</h2><hr class="spacer" role="separator"/><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-1" preload="metadata">
+<video aria-describedby="motion-figure-caption-1" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1bFcK0n-1_2OS96kLnT6IdOtonf6rgCbX/02-navtransitions.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2748,7 +2777,7 @@ side-nav__link--active js-header-show"
 </figure></div><div class="module"><h2>Peer</h2><hr class="spacer" role="separator"/><figure class="inline-media inline-media--video" data-maxwidth="720px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-2" preload="metadata">
+<video aria-describedby="motion-figure-caption-2" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1KpXIlA9LetBUtyxpJGndIzXYfqiawiZU/03-navtransitions-peer.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
@@ -2767,7 +2796,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#speed"}
 ' href="../motion/customization.html#speed" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Speed</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2784,7 +2813,7 @@ side-nav__link--active js-header-show"
     "action": "link click",
     "label": "../motion/customization.html#sequencing"}
 ' href="../motion/customization.html#sequencing" rel="noopener" target="_blank">
-<div class="object-card__image" data-image-path="../https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://material.io/design/https://storage.googleapis.com/spec-host/mio-design-staging%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__image" data-image-path="../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png" style="background-image: url('../assets/1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn/motion-thumbnail-1x1-circle.png');"></div>
 <div class="object-card__copy">
 <h2 class="object-card__title">Sequencing</h2>
 <p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
@@ -2814,7 +2843,7 @@ side-nav__link--active js-header-show"
 </aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-expanded="true" aria-label="Toggle Stagger" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Stagger</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Staggers are used when new lists or cards cards enter the screen. The cascade effect gives the transition a polished tone.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Staggers are used when new lists or cards cards enter the screen. The cascade effect gives the transition a polished tone.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
 <div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
 <img alt="loader" aria-hidden="true" class="ui-loader" src="../static/m2/images/loader.svg"/>
-<video class="video-player__video animatable js-video-player js-lazy-video" controls="" loopmutedaria-describedby="motion-figure-caption-3" preload="metadata">
+<video aria-describedby="motion-figure-caption-3" class="video-player__video animatable js-video-player js-lazy-video" controls="" loop="" muted="" preload="metadata">
 <source data-src="../assets/1v2s1X11nHUnsBE1tY030qrsd9xHZGIEi/04-cascade.mp4" src="crane.html" type="video/mp4"> </source></video>
 <div class="video-player__controls">
 <button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
